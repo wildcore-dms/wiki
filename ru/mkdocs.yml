@@ -2,7 +2,7 @@ site_name: WildcoreDMS документация
 theme:
   language: ru
   name: material
-  logo: /assets/logo.png
+  logo: assets/logo.png
 extra:
   alternate:
     - name: Русский
