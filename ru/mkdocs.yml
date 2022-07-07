@@ -15,8 +15,7 @@ nav:
      - "Требования": requirements.md
      - "Установка": install.md
      - "Базовая настройка": basic-settings.md
-  - "Утилита wca-tool":
-      - "Введение": wca-tool/index.md
+  - "Утилита wca-tool":  wca-tool/index.md
   - "Веб-интерфейс":
       - "Введение": web-interface/index.md
       - "Использование прокси": web-interface/use-proxy.md
