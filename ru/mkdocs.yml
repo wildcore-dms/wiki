@@ -42,7 +42,4 @@ nav:
         - "Регистрация ОНУ": components/zte_unregistered_onts.md
   - "Утилита wca-tool":  wca-tool/index.md
   - "Решение проблем": troubleshooting/index.md
-  - "Отчет о баге": contact/bug-reporting.md
-  - "Запрос на добавление оборудования": contact/request-add-devices.md
-  - "Запрос расширения функционала": contact/add-features.md
   - "Контакты": contact/contacts.md
