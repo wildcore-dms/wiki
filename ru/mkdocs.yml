@@ -14,7 +14,7 @@ nav:
   - "Начало работы":
      - "Требования": requirements.md
      - "Установка": install.md
-     - "Базовая настройка": basic-settings.md
+     - "Начало работы с веб": basic-settings.md
   - "Утилита wca-tool":  wca-tool/index.md
   - "Веб-интерфейс":
       - "Введение": web-interface/index.md
