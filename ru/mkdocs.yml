@@ -15,7 +15,6 @@ nav:
      - "Требования": requirements.md
      - "Установка": install.md
      - "Начало работы с веб": basic-settings.md
-  - "Утилита wca-tool":  wca-tool/index.md
   - "Веб-интерфейс":
       - "Введение": web-interface/index.md
       - "Использование прокси": web-interface/use-proxy.md
@@ -41,8 +40,9 @@ nav:
         - "Олты ZTE": components/zte_olts.md
         - "Роутеры Mikrotik": components/router_os.md
         - "Регистрация ОНУ": components/zte_unregistered_onts.md
+  - "Утилита wca-tool":  wca-tool/index.md
   - "Решение проблем": troubleshooting/index.md
   - "Отчет о баге": contact/bug-reporting.md
-  - "Поддержка оборудования": contact/request-add-devices.md
-  - "Расширение функционала": contact/add-features.md
+  - "Запрос на добавление оборудования": contact/request-add-devices.md
+  - "Запрос расширения функционала": contact/add-features.md
   - "Контакты": contact/contacts.md
