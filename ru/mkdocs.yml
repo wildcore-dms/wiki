@@ -11,7 +11,7 @@ extra:
 
 nav:
   - "Главная": index.md
-  - "Стоимость": cost.md
+  - "Ценовая политика": cost.md
   - "Начало работы":
      - "Требования": requirements.md
      - "Установка": install.md
