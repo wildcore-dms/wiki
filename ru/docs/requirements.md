@@ -18,12 +18,14 @@
     * Linux (Ubuntu/Debian)
     * MacOS (not tested)
     * WSL2 (linux on windows, not tested)
-* Установленный Docker (>=20.10) с плагином docker-compose
+* Установленный Docker (>=20.10) с плагином docker-compose (рекомендуется использовать только официальную документацию и устанавливать актуальную версию)
 * [**wca-tool** - утилита для управления WildcoreDMS (установка, обновление).](wca-tool/index.md)     
 
 
 ## Дополнительно
-Для установки докер рекомендуется использовать официальную документацию Docker - [docs.docker.com](https://docs.docker.com/engine/install/).        
+*!!!Ubuntu 20+ - устанавливать docker через предлагаемые сервисы при установке системы нельзя, не будет работать сеть!!!*    
+    
+Документация по установке Docker - [docs.docker.com](https://docs.docker.com/engine/install/).        
 
 *Указанные выше характеристики рекомендуются для 50 свитчей/10 ОЛТов или более*    
    
