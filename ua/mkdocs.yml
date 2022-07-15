@@ -1,6 +1,5 @@
 site_name: WildcoreDMS документация
 theme:
-  language: ua
   name: material
   logo: assets/logo.png
 extra:
