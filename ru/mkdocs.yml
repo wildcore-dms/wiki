@@ -8,6 +8,9 @@ extra:
     - name: Русский
       link: /ru/
       lang: ru
+    - name: Українська
+      link: /ua/
+      lang: ua
 
 nav:
   - "Главная": index.md
