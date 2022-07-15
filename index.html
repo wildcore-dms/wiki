@@ -1,7 +1,18 @@
 <html>
 <head>
     <title>WildcoreDMS documentation</title>
-    <meta http-equiv="refresh" content="0; url=/ru" />
 </head>
-<body></body>
+<body>
+<script>
+    let lang = window.navigator.language
+    switch (lang) {
+        case 'uk':
+            window.location = '/ua/'
+            break;
+        default:
+            window.location = '/ru/'
+    }
+</script>
+</body>
+
 </html>
