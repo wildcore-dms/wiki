@@ -1,4 +1,4 @@
-site_name: WildcoreDMS документация
+site_name: WildcoreDMS документація
 theme:
   name: material
   logo: assets/logo.png
@@ -12,37 +12,37 @@ extra:
       lang: ua
 
 nav:
-  - "Главная": index.md
-  - "Ценовая политика": cost.md
-  - "Начало работы":
-     - "Требования": requirements.md
-     - "Установка": install.md
-     - "Начало работы с веб": basic-settings.md
-  - "Веб-интерфейс":
-      - "Введение": web-interface/index.md
-      - "Использование прокси": web-interface/use-proxy.md
-  - "Консоль":
-      - "О консоли": cli/index.md
-  - "Модульность":
-      - "О компонентах": components/index.md
-      - "Компоненты":
-        - "Алерты": components/alerts.md
-        - "Автообнаружение": components/autodiscovery.md
-        - "Диагностика": components/diagnostic.md
-        - "События": components/events.md
-        - "История FDB": components/fdb_history.md
-        - "ICMP-пингер": components/pinger.md
-        - "Импорт Prometheus": components/prometheus_wrapper.md
-        - "Поиск устройств": components/search_device.md
-        - "Свитчи": components/switches.md
-        - "Свитчи D-Link": components/dlink_switches.md
-        - "Свитчи Edge-Core": components/edgecore_switches.md
-        - "Cвитчи Huawei": components/huawei_switches.md
-        - "Олты BDcom": components/bdcom_olts.md
-        - "Олты C-Data": components/c_data_interfaces.md
-        - "Олты ZTE": components/zte_olts.md
-        - "Роутеры Mikrotik": components/router_os.md
-        - "Регистрация ОНУ": components/zte_unregistered_onts.md
-  - "Утилита wca-tool":  wca-tool/index.md
-  - "Решение проблем": troubleshooting/index.md
-  - "Контакты": contact/contacts.md
+  - "Головна": index.md
+  - "Цінова політика": cost.md
+  - "Початок роботи":
+     - "Вимоги": requirements.md
+     - "Встановлення": install.md
+     - "Початок роботи з веб": basic-settings.md
+  - "Веб-інтерфейс":
+      - "Вступ": web-interface/index.md
+      - "Використання проксі": web-interface/use-proxy.md
+  - "Термінал":
+      - "Про термінал": cli/index.md
+  - "Модульність":
+      - "Про компоненти": components/index.md
+      - "Компоненти":
+        - "Сповіщення": components/alerts.md
+        - "Автовиявлення": components/autodiscovery.md
+        - "Діагностика": components/diagnostic.md
+        - "Події": components/events.md
+        - "Історія FDB": components/fdb_history.md
+        - "ICMP-пінгер": components/pinger.md
+        - "Імпорт Prometheus": components/prometheus_wrapper.md
+        - "Пошук пристроїв": components/search_device.md
+        - "Світчі": components/switches.md
+        - "Світчі D-Link": components/dlink_switches.md
+        - "Світчі Edge-Core": components/edgecore_switches.md
+        - "Cвітчі Huawei": components/huawei_switches.md
+        - "Олти BDcom": components/bdcom_olts.md
+        - "Олти C-Data": components/c_data_interfaces.md
+        - "Олти ZTE": components/zte_olts.md
+        - "Роутери Mikrotik": components/router_os.md
+        - "Реєстрація ОНУ": components/zte_unregistered_onts.md
+  - "Утиліта wca-tool":  wca-tool/index.md
+  - "Вирішення проблем": troubleshooting/index.md
+  - "Контакти": contact/contacts.md
