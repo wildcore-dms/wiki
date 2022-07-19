@@ -23,7 +23,7 @@ You can change some parameters in /opt/wildcore-dms/.env file, as listen ports f
 
 ## Часті проблеми при встановленні
 ### Не встановлений docker-compose-plugin 
-Зазвичай помилка виглядає таким виглядом:       
+Зазвичай помилка виглядає таким чином:       
 ![](assets/no-docker-compose-plugin.jpg)
 
 Вимагається, щоб в системі був встановлений docker-compose як плагін до докеру, а не як окрема утиліта.    
