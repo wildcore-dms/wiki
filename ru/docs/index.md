@@ -26,7 +26,7 @@
 * **dlink_switches** - Работа со свитчами от Dlink
 * **edgecore_switches** - Работа со свитчами от Edge-Core
 * **events** - События. Позволяет просматривать и сохранять историю по оборудованию/интерфейсам на основе созданных правил promQL
-* **fdb_history** - хранит историю FDB на интерфейсе/ОНУ
+* **fdb_history** - хранит историю FDB и позволяет отображать по интерфейсу/ОНУ
 * **huawei_olts** - Работа с ОЛТ от Huawei
 * **huawei_switches** - Работа с свитчами от Huawei
 * **huawei_onts_registration** - Регистрация ОНУек на Huawei
