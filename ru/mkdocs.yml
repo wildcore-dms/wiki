@@ -27,10 +27,10 @@ nav:
   - "Модульность":
       - "О компонентах": components/index.md
       - "Компоненты":
-        - "Алерты": components/alerts.md
+        - "События": components/events.md
+        - "Уведомления": components/notifications.md
         - "Автообнаружение": components/autodiscovery.md
         - "Диагностика": components/diagnostic.md
-        - "События": components/events.md
         - "История FDB": components/fdb_history.md
         - "ICMP-пингер": components/pinger.md
         - "Импорт Prometheus": components/prometheus_wrapper.md

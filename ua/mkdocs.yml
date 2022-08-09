@@ -26,7 +26,7 @@ nav:
   - "Модульність":
       - "Про компоненти": components/index.md
       - "Компоненти":
-        - "Сповіщення": components/alerts.md
+        - "Сповіщення": components/notifications.md
         - "Автовиявлення": components/autodiscovery.md
         - "Діагностика": components/diagnostic.md
         - "Події": components/events.md
