@@ -13,7 +13,6 @@ extra:
 
 nav:
   - "Головна": index.md
-  - "Цінова політика": cost.md
   - "Початок роботи":
      - "Вимоги": requirements.md
      - "Встановлення": install.md
@@ -46,3 +45,4 @@ nav:
   - "Утиліта wca-tool":  wca-tool/index.md
   - "Вирішення проблем": troubleshooting/index.md
   - "Контакти": contact/contacts.md
+  - "Цінова політика": cost.md
