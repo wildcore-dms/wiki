@@ -14,35 +14,35 @@ extra:
 nav:
   - "Головна": index.md
   - "Початок роботи":
-     - "Вимоги": requirements.md
-     - "Встановлення": install.md
-     - "Початок роботи з веб": basic-settings.md
+      - "Вимоги": requirements.md
+      - "Встановлення": install.md
+      - "Початок роботи з веб": basic-settings.md
   - "Веб-інтерфейс":
-      - "Вступ": web-interface/index.md
+      - "Введення": web-interface/index.md
       - "Використання проксі": web-interface/use-proxy.md
-  - "Термінал":
-      - "Про термінал": cli/index.md
-  - "Модульність":
-      - "Про компоненти": components/index.md
-      - "Компоненти":
-        - "Сповіщення": components/notifications.md
-        - "Автовиявлення": components/autodiscovery.md
-        - "Діагностика": components/diagnostic.md
-        - "Події": components/events.md
-        - "Історія FDB": components/fdb_history.md
-        - "ICMP-пінгер": components/pinger.md
-        - "Імпорт Prometheus": components/prometheus_wrapper.md
-        - "Пошук пристроїв": components/search_device.md
-        - "Світчі": components/switches.md
-        - "Світчі D-Link": components/dlink_switches.md
-        - "Світчі Edge-Core": components/edgecore_switches.md
-        - "Cвітчі Huawei": components/huawei_switches.md
-        - "Олти BDcom": components/bdcom_olts.md
-        - "Олти C-Data": components/c_data_interfaces.md
-        - "Олти ZTE": components/zte_olts.md
-        - "Роутери Mikrotik": components/router_os.md
-        - "Реєстрація ОНУ": components/zte_unregistered_onts.md
+  - "Консоль": cli/index.md
+  - "Робота з обладнанням": system/how_works_with_device.md
+  - "Опитувач обладнання": system/poller.md
+  - "Модульність(компоненти)": components/index.md
+  - "Компоненти":
+      - "Події": components/events.md
+      - "Повідомлення": components/notifications.md
+      - "Автовиявлення": components/autodiscovery.md
+      - "Історія FDB": components/fdb_history.md
+      #- "ICMP-пингер": components/pinger.md
+      #- "Импорт Prometheus": components/prometheus_wrapper.md
+      #- "Поиск устройств": components/search_device.md
+      #- "Свитчи": components/switches.md
+      - "Світчі D-Link": components/dlink_switches.md
+      - "Світчі Edge-Core": components/edgecore_switches.md
+      - "Світчі Huawei": components/huawei_switches.md
+      - "ОЛТи BDcom": components/bdcom_olts.md
+      - "ОЛТы C-Data": components/c_data_interfaces.md
+      - "ОЛТы ZTE": components/zte_olts.md
+      - "Роутери Mikrotik": components/router_os.md
+      - "Реєстрація ОНУ на ZTE": components/zte_unregistered_onts.md
+      - "Реєстрація ОНУ на Huawei": components/huawei_onts_registration.md
   - "Утиліта wca-tool":  wca-tool/index.md
   - "Вирішення проблем": troubleshooting/index.md
   - "Контакти": contact/contacts.md
-  - "Цінова політика": cost.md
+  - "Вартість продукту": cost.md
