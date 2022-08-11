@@ -4,17 +4,23 @@
 </head>
 <body>
 <script>
-    let lang = window.navigator.language
-    switch (lang) {
-        case 'uk':
+    function changeLang() {
+        let lang = window.navigator.language
+        if (/^uk.*/.test(lang)) {
             window.location = '/uk/'
-            break;
-        case 'ru':
+            return
+        }
+        if (/^ua.*/.test(lang)) {
+            window.location = '/uk/'
+            return;
+        }
+        if (/^ru.*/.test(lang)) {
             window.location = '/ru/'
-            break;
-        default:
-            window.location = '/en/'
+            return;
+        }
+        window.location = '/en/'
     }
+    changeLang()
 </script>
 </body>
 
