@@ -12,7 +12,7 @@ sudo docker compose up -d --build
 sleep 10
 wca cache:flush
 wca cache:redis:flush-all
-````
+```
 
 ## Звернення на підтримку
 

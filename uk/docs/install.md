@@ -4,7 +4,7 @@
 Виконайте команду
 ```shell
 sudo wca-tool --key=YOUR_AGENT_KEY install
-````
+```
 *YOUR_AGENT_KEY - ключ агента, який ви отримали при зверненні (див. вимоги)*
 Процес установки займає деякий час (зазвичай 10-15 хвилин).
 
@@ -15,7 +15,7 @@ Now, you can use wildcoreDMS URL: http://<service ip|domain>:8088
 Default login/password - admin/admin
 
 Ви можете змінити деякі параметри в /opt/wildcore-dms/.env file, as listen ports for example
-````
+```
 
 Після інсталяції перейдіть до веб-панелі.
 За замовчуванням панель доступна на порту `8088`, а дефотлний логін/пароль для входу – admin/admin.
@@ -32,7 +32,7 @@ Default login/password - admin/admin
 
 1. Встановіть пакет `docker-compose-plugin` для вашої ОС (дивіться інструкції встановлення в офіційній документації docker - [docs.docker.com](https://docs.docker.com/engine/install/))
 2. Перевірте, що він дійсно працює – команда `docker compose version` повинна повертати версію плагіна.
-3. Продовжте встановлення wildcoreDMS командою ``sudo wca-tool update```
+3. Продовжте встановлення wildcoreDMS командою ```sudo wca-tool update```
 
 ### Агент вимкнено
 Після успішного встановлення, при спробі входу - відображається повідомлення

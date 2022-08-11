@@ -27,4 +27,5 @@ If you have trouble setting up, need advice or help, you can:
 ## Development order
 If you need an **individual** solution (for example, integration with self-written billing, other services)
 or there is no desire / opportunity to expect the introduction of equipment or certain functionality, but you need it here and now - there is the possibility of paid development.
+     
 Contact - [contact@wildcore.tools](mailto:contact@wildcore.tools) for details.

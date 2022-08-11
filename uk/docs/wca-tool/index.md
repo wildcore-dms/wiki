@@ -6,16 +6,16 @@
 ## Встановлення/Оновлення
 ```shell
 sudo curl -L "https://releases.wildcore.tools/wca-tool/latest/wca-tool-$(uname -s)-$(uname -m)" -o /usr/local/bin/wca- tool && sudo chmod +x /usr/local/bin/wca-tool
-````
+```
 **Перевірка успішності встановлення**
 Виконати таку команду:
 ```shell
 wca-tool --version
-````
+```
 У консолі має повернути номер встановленої версії:
 ```shell
 wca-tool version 0.2.5
-````
+```
    
 ## Використання
 **Виконайте `wca-tool --help` для отримання списку підтримуваних команд**
@@ -47,28 +47,28 @@ GLOBAL OPTIONS:
 
 COPYRIGHT:
    wildcore DMS by wildcore.tools @ 2022
-````
+```
 ### Приклади
 **Установка wildcoreDMS**
 ```shell
 sudo wca-tool --key=YOUR_AGENT_KEY install
-````
+```
 
 **Оновлення wildcoreDMS до останньої версії**
 ```shell
 sudo wca-tool update
-````
+```
 *Ключ при оновленні можна не вказувати, він буде прочитаний із системи*
 
 **Оновлення на певну версію (знижувати версію не рекомендується)**
 ```shell
 sudo wca-tool update --dev --version=RELEASE_VERSION
-````
+```
 *Ключ при оновленні можна не вказувати, він буде прочитаний із системи*
 
 **Створення бекапів (наприклад, оновленням на іншу мінорну версію)**
 ```shell
 sudo wca-tool backup
-````
+```
 *При створенні бекапа система буде зупинена*
 *Бекапи створюються в каталозі `/opt/wildcore-dms-backups`*

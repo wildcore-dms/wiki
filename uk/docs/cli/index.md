@@ -4,6 +4,7 @@
 ## Про роботу з wca cli
 
 **Виконайте команду `wca list` щоб отримати список підтримуваних команд**
+
 ```shell
 $ wca list
 WCAA CLI 0.1
@@ -43,7 +44,7 @@ Available commands:
  device-model
   device-model:list Table of device models
 ...
-````
+```
 
 **Кожна команда може мати свої аргументи та параметри. Для того, щоб дізнатися, які параметри є у команди - допишіть `--help` після команди.**
 Наприклад,
@@ -67,7 +68,7 @@ Options:
       --ansi|--no-ansi Force (or disable --no-ansi) ANSI output
   -n, --no-interaction Do not ask any interactive question
   -v|vv|vvv, --verbose Збільшення verbosity messages: 1 for normal output;
-````
+```
 
 ## Популярні команди
 

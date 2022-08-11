@@ -12,30 +12,30 @@ A complete list of components can be viewed on the following tabs.
 **List of supported components - ```wca component:list```**
 ```shell
 $ wca component:list
-+--------------------+--------------------- -----------------------------------------+-------- -+-----------+---------------+----------------+
-| key | description | enabled | installed | Has installer | Has controller |
-+--------------------+--------------------- -----------------------------------------+-------- -+-----------+---------------+----------------+
-| autodiscovery | Scan networks and automatic add devices | Yes | Yes | Yes | Yes |
-| bdcom_olts | Working with BDcom OLTs | Yes | Yes | Yes | Yes |
-| c_data_interfaces | Working with C-Data OLTs | Yes | Yes | yes | yes |
-| diagnostic | Rest API interfaces for network diag | Yes | Yes | Yes | Yes |
-| dlink_switches | Working with D-Link switches | Yes | Yes | Yes | Yes |
-| edgecore_switches | Working with Edge-Core switches | yes | Yes | Yes | No |
-| events | Realize events functional | yes | yes | Yes | Yes |
-| fdb_history | Implement API for working with history DFB | yes | yes | Yes | No |
-| huawei_olts | Working with Huawei OLTs | yes | Yes | Yes | Yes |
-| huawei_onts_registration | ONTs registration for Huawei OLTs | Yes | yes | Yes | Yes |
-| huawei_switches | Working with Huawei switches | Yes | yes | yes | No |
-| notifications | Sending notifications over Telegram/Email | yes | yes | yes | yes |
-| pinger | ICMP pinger | Yes | Yes | Yes | Yes |
-| prometheus_wrapper | Prometheus integration(Working with Prometheus API) | Yes | Yes | Yes | Yes |
-| router_os | Working with routerOS | Yes | Yes | Yes | Yes |
-| search device | Rest API interfaces for search devices over IP or MAC-address | Yes | Yes | Yes | Yes |
-| switches | Rest API interfaces for working with L2 switches | yes | yes | Yes | Yes |
-| vsolution_olts | Working with V-Sol OLTs | Yes | Yes | Yes | Yes |
-| zte_olts | Working with ZTE OLTs | Yes | Yes | Yes | yes |
-| zte_unregistered_onts | ONTs registration on ZTE OLTs | Yes | yes | Yes | Yes |
-+--------------------+--------------------- -----------------------------------------+-------- -+-----------+---------------+----------------+
++--------------------------+---------------------------------------------------------------+---------+-----------+---------------+----------------+
+| Key                      | Description                                                   | Enabled | Installed | Has installer | Has controller |
++--------------------------+---------------------------------------------------------------+---------+-----------+---------------+----------------+
+| autodiscovery            | Scan networks and automatic add devices                       | Yes     | Yes       | Yes           | Yes            |
+| bdcom_olts               | Working with BDcom OLTs                                       | Yes     | Yes       | Yes           | Yes            |
+| c_data_interfaces        | Working with C-Data OLTs                                      | Yes     | Yes       | Yes           | Yes            |
+| diagnostic               | Rest API interfaces for network diag                          | Yes     | Yes       | Yes           | Yes            |
+| dlink_switches           | Working with D-Link switches                                  | Yes     | Yes       | Yes           | Yes            |
+| edgecore_switches        | Working with Edge-Core switches                               | Yes     | Yes       | Yes           | No             |
+| events                   | Realize events functional                                     | Yes     | Yes       | Yes           | Yes            |
+| fdb_history              | Realize API for working with history DFB                      | Yes     | Yes       | Yes           | No             |
+| huawei_olts              | Working with Huawei OLTs                                      | Yes     | Yes       | Yes           | Yes            |
+| huawei_onts_registration | ONTs registration for Huawei OLTs                             | Yes     | Yes       | Yes           | Yes            |
+| huawei_switches          | Working with Huawei switches                                  | Yes     | Yes       | Yes           | No             |
+| notifications            | Sending notifications over Telegram/Email                     | Yes     | Yes       | Yes           | Yes            |
+| pinger                   | ICMP pinger                                                   | Yes     | Yes       | Yes           | Yes            |
+| prometheus_wrapper       | Prometheus integration(Working with Prometheus API)           | Yes     | Yes       | Yes           | Yes            |
+| router_os                | Working with routerOS                                         | Yes     | Yes       | Yes           | Yes            |
+| search_device            | Rest API interfaces for search devices over IP or MAC-address | Yes     | Yes       | Yes           | Yes            |
+| switches                 | Rest API interfaces for working with L2 switches              | Yes     | Yes       | Yes           | Yes            |
+| vsolution_olts           | Working with V-Sol OLTs                                       | Yes     | Yes       | Yes           | Yes            |
+| zte_olts                 | Working with ZTE OLTs                                         | Yes     | Yes       | Yes           | Yes            |
+| zte_unregistered_onts    | ONTs registration on ZTE OLTs                                 | Yes     | Yes       | Yes           | Yes            |
++--------------------------+---------------------------------------------------------------+---------+-----------+---------------+----------------+
 ```
 **Component Management**
 
