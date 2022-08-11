@@ -1,6 +1,6 @@
 site_name: WildcoreDMS документація
 theme:
-  language: bg
+  language: uk
   name: material
   logo: assets/logo.png
 extra:
@@ -9,8 +9,8 @@ extra:
       link: /en/
       lang: en
     - name: Українська
-      link: /ua/
-      lang: ua
+      link: /uk/
+      lang: uk
     - name: Русский
       link: /ru/
       lang: ru

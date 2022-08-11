@@ -9,8 +9,8 @@ extra:
       link: /en/
       lang: en
     - name: Українська
-      link: /ua/
-      lang: ua
+      link: /uk/
+      lang: uk
     - name: Русский
       link: /ru/
       lang: ru
