@@ -1,0 +1,78 @@
+The system has a console utility - **wca**.
+This utility extends some functionality that is not available in the web interface, such as clearing the cache or performing migrations.
+
+## About working with wca cli
+
+**Run `wca list` to get a list of supported commands**
+```shell
+$ wca list
+WCAA CLI 0.1
+
+Usage:
+  command [options] [arguments]
+
+options:
+  -h, --help Display help for the given command. When no command is given display help for the list command
+  -q, --quiet Do not output any message
+  -V, --version Display this application version
+      --ansi|--no-ansi Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction Do not ask any interactive question
+  -v|vv|vvv, --verbose Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+Available commands:
+  completion Dump the shell completion script
+  help Display help for a command
+  list List commands
+ alerts
+  alerts:send-alerts Send alerts by event
+  alerts:telegram-bot Send alerts by event
+ component
+  component:control Components control
+  component:dependencies
+  component:list Return list of supported components
+ device
+  device:add Create new device
+  device:delete Delete device
+  device:list Table of devices
+  device:update Edit device
+ device access
+  device-access:add Create new device access
+  device-access:delete Delete access device
+  device-access:edit Update device access
+  device-access:list Table of device accesses
+ device model
+  device-model:list Table of device models
+...
+```
+
+**Each command can have its own arguments and parameters. To find out what options a command has, add `--help` after the command.**
+For example,
+```shell
+$ wca switcher-core:call --help
+Usage:
+  switcher-core:call [options] [--] <ip> <module> [<arguments>...]
+
+Arguments:
+  ip device ip address
+  module name
+  arguments Arguments. For example interface=pon0/1/1
+
+options:
+  -t, --telnet|--no-telnet Print telnet output
+  -m, --meta=META Show meta [default: false]
+  -s, --source=SOURCE Source to use. Can be device(every call from device),store(every call from store) and cache(if not found in store - can be call from device) [default: "device"]
+  -h, --help Display help for the given command. When no command is given display help for the list command
+  -q, --quiet Do not output any message
+  -V, --version Display this application version
+      --ansi|--no-ansi Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction Do not ask any interactive question
+  -v|vv|vvv, --verbose Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+```
+
+## Popular commands
+
+* `wca cache:clear` - clear system cache
+* `wca autodiscovery:scan` - search for devices, so as not to wait until the scheduler completes
+* `wca system:check-subscription` - check agent key in wildcore system. If your agent has been disabled (notification when trying to login) - this command will help determine the reason
+* `wca supervisor:processes-list` - will show which background processes are running.
+* `wca supervisor:control` - allows you to control background processes. For example, restart the telegram bot after changing the settings.

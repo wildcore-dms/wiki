@@ -1,0 +1,64 @@
+site_name: WildcoreDMS documentation
+theme:
+  language: en
+  name: material
+  logo: assets/logo.png
+extra:
+  alternate:
+    - name: English
+      link: /en/
+      lang: en
+    - name: Українська
+      link: /ua/
+      lang: ua
+    - name: Русский
+      link: /ru/
+      lang: ru
+#    - name: Polski
+#      link: /pl/
+#      lang: pl
+#    - name: Deutsch
+#      link: /de/
+#      lang: de
+#    - name: български
+#      link: /bg/
+#      lang: bg
+#    - name: ქართული
+#      link: /ka/
+#      lang: ka
+
+nav:
+  - "Home": index.md
+  - "Beginning of work":
+     - "Requirements": requirements.md
+     - "Installation": install.md
+     - "Getting started with the web": basic-settings.md
+  - "Web interface":
+      - "Introduction": web-interface/index.md
+      - "Use proxy": web-interface/use-proxy.md
+  - "Console": cli/index.md
+  - "Working with equipment": system/how_works_with_device.md
+  - "Hardware Poller": system/poller.md
+  - "About components": components/index.md
+  - "Components":
+    - "Events": components/events.md
+    - "Notifications": components/notifications.md
+    - "Autodiscovery": components/autodiscovery.md
+    #- "History of FDB": components/fdb_history.md
+    #- "ICMP pinger": components/pinger.md
+    #- "Import Prometheus": components/prometheus_wrapper.md
+    #- "Search devices": components/search_device.md
+    #- "Switches": components/switches.md
+    #- "D-Link Switches": components/dlink_switches.md
+    #- "Edge-Core Switches": components/edgecore_switches.md
+    #- "Huawei switches": components/huawei_switches.md
+    #- "BDcom olts": components/bdcom_olts.md
+    #- "C-Data Olts": components/c_data_interfaces.md
+    #- "ZTE Olts": components/zte_olts.md
+    #- "Mikrotik routers": components/router_os.md
+    - "Registration of ONU on ZTE": components/zte_unregistered_onts.md
+    #- "Registration of ONU on Huawei": components/huawei_onts_registration.md
+  - "wca-tool utility": wca-tool/index.md
+  - "Troubleshooting": troubleshooting/index.md
+  - "Contacts": contact/contacts.md
+  - "Cost": cost.md

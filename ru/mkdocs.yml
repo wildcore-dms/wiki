@@ -5,12 +5,15 @@ theme:
   logo: assets/logo.png
 extra:
   alternate:
-    - name: Русский
-      link: /ru/
-      lang: ru
+    - name: English
+      link: /en/
+      lang: en
     - name: Українська
       link: /ua/
       lang: ua
+    - name: Русский
+      link: /ru/
+      lang: ru
 
 nav:
   - "Главная": index.md
