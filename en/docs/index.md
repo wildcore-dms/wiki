@@ -32,6 +32,7 @@ thereby:
 * **huawei_onts_registration** - ONUec registration on Huawei
 * **notifications** - Allows you to send notifications via telegram/email on events and actions
 * **pinger** - Monitors equipment via ICMP, displays current status in dashboard and device list.
+* **pon_boxes** - PON-boxes allowed create boxes. 
 * **prometheus_wrapper** - Works with the prometheus API. Allows you to display graphs in the web interface for traffic, signal levels, temperature, errors
 * **router_os** - Work with routers from Mikrotik
 * **switches** - a component that implements a standardized API for working with switches
