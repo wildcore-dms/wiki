@@ -3,7 +3,7 @@ Before starting the installation, you must obtain an agent key (wildcoreDMS soft
 At the time of beta testing, the following ways to get a key are available:
 
 * Send request to contact@wildcore.tools
-* Fill out an application on the site [wildcore.tools](https://wildcore.tools), button "Request beta"
+* Submit a request on the site [wildcore.tools](https://wildcore.tools), button "Request beta"
 * Write to our telegram group - [@WildCoreDMS](https://t.me/wildcore_dms_channel)
 
 ## Equipment requirements
@@ -19,7 +19,7 @@ At the time of beta testing, the following ways to get a key are available:
 * MacOS (not tested)
 * WSL2 (linux on windows, not tested)
 * Installed Docker (>=20.10) with docker-compose plugin (it is recommended to use only official documentation and install the latest version)
-* [**wca-tool** - утилита для управления WildcoreDMS (установка, обновление).](wca-tool/index.md)
+* [**wca-tool** - utility for managing WildcoreDMS (installation, update).](wca-tool/index.md)
 
 
 ## Optional

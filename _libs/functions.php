@@ -18,8 +18,8 @@ function parseDoc($path)
         $matchId = 0;
         $replacementLineBlocks = [];
         if(!$asIsTypes['code'] && !$asIs && trim($line) !== '') {
-            if(preg_match_all('/!?\[.*?\]\(.*?\)/', $line, $matches)) {
-                foreach ($matches[0] as $matchContent) {
+            if(preg_match_all('/!?\[.*?\]\((.*?)\)/', $line, $matches)) {
+                foreach ($matches[1] as $matchContent) {
                     $line = str_replace($matchContent, "{{RPL[{$matchId}]}}", $line);
                     $replacementLineBlocks[$matchId] = $matchContent;
                     $matchId++;

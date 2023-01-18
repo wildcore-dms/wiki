@@ -19,7 +19,7 @@ wca cache:redis:flush-all
 Before applying:
 
 1. **Make sure you are using the latest version of the agent and wca-tool**
-2. Run the commands described in ["Решение почти всех проблем"](#_2)
+2. Run the commands described in ["Solving almost all problems"](#_2)
 3. Make sure the server has stable access to the hardware (like ping and snmpwalk)
 
 If the steps above did not solve the problem, when contacting, try to describe as much as possible the actions that cause the problem, specify:
@@ -32,5 +32,5 @@ If the steps above did not solve the problem, when contacting, try to describe a
 * Describe what exactly is wrong, even if it is obvious to you (but everyone understands in their own way))))
 * What access to the equipment was provided (community - RO or RW, login / password as a user or administrator)
 
-[Контакты поддержки](/ru/contact/contacts/#_2)
+[Support Contacts](/ru/contact/contacts/#_2)
 

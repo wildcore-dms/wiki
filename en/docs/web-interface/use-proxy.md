@@ -13,8 +13,8 @@ If desired, you can set up system proxying through nginx/apache or any other pro
 The system needs to be informed that a proxy is being used.
 You need to change the following settings:
 
-* PROXY_ENABLEDu003dtrue
-* PROXY REAL_IP_HEADER u003d X-Forwarded-For
+* PROXY_ENABLED=true
+* PROXY REAL_IP_HEADER = X-Forwarded-For
 
 You can make changes both through the web interface (on the /config/system/configuration page, Agent parameters tab), and in the /opt/wildcore-dms/.env file
 
