@@ -11,6 +11,8 @@ extra:
     - name: Українська
       link: /uk/
       lang: uk
+    - name: български
+      link: /bg/
     - name: Русский
       link: /ru/
       lang: ru
