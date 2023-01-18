@@ -19,13 +19,13 @@
 * MacOS (not tested)
 * WSL2 (linux on windows, no tested)
 * Встановлений Docker (>=20.10) з плагіном docker-compose (рекомендується використовувати лише офіційну документацію та встановлювати актуальну версію)
-* [**wca-tool** - утилита для управления WildcoreDMS (установка, обновление).](wca-tool/index.md)
+* [**wca-tool** - утиліта для керування WildcoreDMS (установка, оновлення).](wca-tool/index.md)
 
 
 ## Додатково
 *<span style="color: darkred;">Ubuntu 20+ - встановлювати docker через пропоновані сервіси, при встановленні системи НЕ МОЖНА, не буде працювати мережа</span>*
 
-Документація із встановлення Docker - [docs.docker.com](https://docs.docker.com/engine/install/).
+Документація встановлення Docker - [docs.docker.com](https://docs.docker.com/engine/install/).
 
 *Наведені вище характеристики рекомендуються для 50 світчів/10 ОЛТів або більше*
 

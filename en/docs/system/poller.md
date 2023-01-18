@@ -64,8 +64,8 @@ It makes sense to increase the number of instances if you notice that the interv
 
 Recommendations for setting the maximum number of instances:
 
-* _Based on RAM:_ (total memory - 3.5Gb) / 0.25Gb u003d max amount
-* _CPU based:_ 2.5 * number of cores u003d max number
+* _Based on RAM:_ (total memory - 3.5Gb) / 0.25Gb = max amount
+* _CPU based:_ 2.5 * number of cores = max number
 
 
 ### Disable collection attempts from inaccessible hardware

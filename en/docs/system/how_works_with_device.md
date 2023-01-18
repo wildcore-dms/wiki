@@ -5,7 +5,7 @@ The wildcore system can communicate with the hardware via **snmp version 2c**,
 via **console**(ssh/telnet), as well as via **API** (for RouterOS).
 
 It is possible to specify ports in equipment access if your network uses non-standard ports
-<img srcu003d"../../assets/device_access_editing.png" widthu003d"700"/>
+<img src="../../assets/device_access_editing.png" width="700"/>
 
 ## Setting the parameters for working with equipment
 

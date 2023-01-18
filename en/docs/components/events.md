@@ -22,7 +22,7 @@ The component has no dependencies.
 
 
 ### Setting up event generation
-[alertmanager](https://prometheus.io/docs/alerting/latest/alertmanager/) is used to generate events. The web interface has a configuration page that allows you to manage alertmanager rules.
+To generate events, use [alertmanager](https://prometheus.io/docs/alerting/latest/alertmanager/). The web interface has a configuration page that allows you to manage alertmanager rules.
 ![](../assets/event_configuration.png)
 
 1. Button for adding a new rule

@@ -16,7 +16,7 @@ Upon successful registration - a notification of successful registration will be
 * In case of an error on any of the commands, the execution of the commands will be suspended.
 The execution can be suspended already after the entered commands for the ONU registration itself.
 In this case, you need to find under the ONU, under which number it was registered and manually configure it through the engineer on the OLT (or delete it and try to register again);
-* [twig](https://twig.symfony.com/) is used to generate the template. Use the official documentation for the template engine to find out what features are available. For example, branching(if-else);
+* To generate the template, use [twig](https://twig.symfony.com/). Use the official documentation for the template engine to find out what features are available. For example, branching(if-else);
 * If you have some unique settings on each individual OLT - you can specify them in the additional device parameters and use them in the template or parameters. A common practice is to specify custom vlans (for individual ports or the entire device). Such parameters will be available in the `device.params` object
 
 
@@ -26,24 +26,24 @@ In this case, you need to find under the ONU, under which number it was register
 ![](../assets/zte_unreg_list.png)
 
 ** ONU registration form **
-![](../assets/zte_reg_form.png)<a idu003d"reg_form"></a>
+![](../assets/zte_reg_form.png)<a id="reg_form"></a>
 
 ### Registration configuration
 **Configuration Page**
 ![](../assets/zte_reg_conf_global.png)
 
-**Parameter settings tab**<a idu003d"config_params"></a>
+**Parameter settings tab**<a id="config_params"></a>
 ![](../assets/zte_reg_form_params_block.png)
 
 1. Device and ONU selection block. Only ZTE OLTs are displayed in the device list. You need to select a device and an unregistered ONU to get a list of dynamic parameters.
 2. Variables available after selecting the device and ONU, which can be used in the settings of the registration form fields
 3. Registration form field
 
-**Template settings tab**<a idu003d"config_template"></a>
+**Template settings tab**<a id="config_template"></a>
 ![](../assets/zte_reg_conf_template.png)
 
 1. Device and ONU selection block. Only ZTE OLTs are displayed in the device list. You need to select a device and an unregistered ONU to get a list of dynamic parameters.
-2. Registration form prepared on [вкладке параметров](#config_params)
+2. Registration form prepared in [options tab](#config_params)
 3. Variables available after selecting a device, ONU and filling in the form parameters that can be used to compose a template
 4. Block for changing the template (under the template you can also view the generated set of commands)
 
