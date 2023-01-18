@@ -13,8 +13,8 @@ If desired, you can set up system proxying through nginx/apache or any other pro
 The system needs to be informed that a proxy is being used.
 You need to change the following settings:
 
-* PROXY_ENABLED=true
-* PROXY_REAL_IP_HEADER = X-Forwarder-For
+* PROXY_ENABLEDu003dtrue
+* PROXY REAL_IP_HEADER u003d X-Forwarded-For
 
 You can make changes both through the web interface (on the /config/system/configuration page, Agent parameters tab), and in the /opt/wildcore-dms/.env file
 
@@ -23,14 +23,14 @@ _Proxy_REAL_IP_HEADER header name must match what is specified in the proxy conf
 
 
 ### Configuration example for nginx
-```
+``` 
 server {
     listen 80;
     listen 443 ssl;
     ssl_certificate /etc/nginx/ssl/cert.pem;
     ssl_certificate_key /etc/nginx/ssl/privkey.pem;
     ssl_protocols TLSv1.2;
-    ssl_ciphers 'ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE- RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256';
+    ssl_ciphers 'ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256';
     ssl_prefer_server_ciphers on;
     add_header Strict-Transport-Security max-age=15768000;
 
@@ -38,7 +38,7 @@ server {
     gzip_comp_level 5;
     gzip_disable "msie6";
     gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;
-    
+
     server_name wildcore.example.com;
     location / {
        proxy_set_header X-Forwarder-For $remote_addr;
@@ -46,3 +46,5 @@ server {
     }
 }
 ```
+
+

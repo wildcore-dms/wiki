@@ -3,7 +3,7 @@
 ## Installation
 Execute the command
 ```shell
-sudo wca-tool --key=YOUR_AGENT_KEY install
+sudo wca-tool --key=YOUR_AGENT_KEY install 
 ```
 *YOUR_AGENT_KEY - the agent key that you received upon contacting (see requirements)*
 The installation process takes some time (usually 10-15 minutes).
@@ -31,8 +31,8 @@ It is required that docker-compose be installed on the system as a plugin for do
 To fix the problem:
 
 1. Install the `docker-compose-plugin` package for your OS (see installation instructions in the official docker documentation - [docs.docker.com](https://docs.docker.com/engine/install/))
-2. Check that it actually works - the `docker compose version` command should return the version of the plugin.
-3. Continue installing wildcoreDMS with ```sudo wca-tool update```
+2. Check that it really works - the `docker compose version` command should return the plugin version.
+3. Continue installing wildcoreDMS with the command ```sudo wca-tool update```
 
 ### Agent disabled
 After successful installation, when you try to login - a message is displayed
@@ -40,16 +40,16 @@ After successful installation, when you try to login - a message is displayed
 This problem may be related to the installation of the system on "weak" servers (less than indicated in the recommendations)
 Solved as follows:
 
-1. We are waiting for 5-10 minutes (the DBMS should start. You can also follow the launch with the command `docker logs -f wca-db`)
-2. Run the command `docker exec -it wca composer install`
-3. Run the command `wca migration:migrate --up *:*`
-   1. If during the execution of the command we received a connection to the database (for example, Connection refused) - return to point 1.
-4. Run the command `wca system:check`
+1. We are waiting for 5-10 minutes (the DBMS should start. You can also follow the launch with the `docker logs -f wca-db` command)
+2. Execute the command `docker exec -it wca composer install`
+3. Execute the command `wca migration:migrate --up *:*`
+1. If during the execution of the command we received a connection to the database (for example, Connection refused) - return to point 1.
+4. Execute the command `wca system:check`
 5. Trying to re-login through the web interface
 
 
 ### Network related errors
-May appear as log entries like: `Connection refused`, `Connection timeout`, `Forbidden`
+Can be manifested by entries in logs like: `Connection refused`, `Connection timeout`, `Forbidden`
 
 Recommended actions:
 
@@ -57,4 +57,6 @@ Recommended actions:
 2. Make sure that this address is available from the server (check the availability with the same curl in case of HTTP)
 3. If everything is fine with the answer - check that everything is fine with the docker (installed according to the official dock, there were no old versions and the version was installed specifically for your system)
 
-After fixing the problem, you can perform an additional installation with the `wca-tool update` command.
+After the problem is fixed, the reinstallation can be performed with the `wca-tool update` command.
+
+

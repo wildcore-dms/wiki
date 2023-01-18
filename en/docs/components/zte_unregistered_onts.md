@@ -3,20 +3,20 @@ This component checks for unregistered ONUs on ZTE OLTs.
 It also allows registration of new/unregistered ONUs by filling out a short form.
 
 ## How it works?
-After an unregistered ONU is detected, it starts to be displayed in the list (on the dashboard, for all devices and in the device itself).     
-When you click the "Register" button, a registration form opens.    
-Form fields to fill out are dynamically generated based on parameters prepared by the engineer.     
-After filling in the form fields and pressing the register button, a list of commands for registering an ONU is compiled based on a template, entered parameters and parameters received from the device and an unregistered ONU.     
-If the template compilation is successful, the commands will be executed on the OLT.     
-Upon successful registration - a notification of successful registration will be displayed and automatically redirected to a new ONU.    
+After an unregistered ONU is detected, it starts to be displayed in the list (on the dashboard, for all devices and in the device itself).
+When you click the "Register" button, a registration form opens.
+The form fields to fill out are dynamically generated based on parameters prepared by the engineer.
+After filling in the form fields and pressing the register button, a list of commands for registering an ONU is compiled based on a template, entered parameters and parameters received from the device and an unregistered ONU.
+If the template compilation is successful, the commands will be executed on the OLT.
+Upon successful registration - a notification of successful registration will be displayed and automatically redirected to a new ONU.
 
 ### Notes
 
 * The entire console output on registration can be viewed in the equipment call logs (multi_console_command module), both for successful registration and in case of an error;
 * In case of an error on any of the commands, the execution of the commands will be suspended.
-  The execution can be suspended already after the entered commands for the ONU registration itself.
-  In this case, you need to find under the ONU, under which number it was registered and manually configure it through the engineer on the OLT (or delete it and try to register again);
-* To generate the template, use [twig](https://twig.symfony.com/). Use the official documentation for the template engine to find out what features are available. For example, branching(if-else);
+The execution can be suspended already after the entered commands for the ONU registration itself.
+In this case, you need to find under the ONU, under which number it was registered and manually configure it through the engineer on the OLT (or delete it and try to register again);
+* [twig](https://twig.symfony.com/) is used to generate the template. Use the official documentation for the template engine to find out what features are available. For example, branching(if-else);
 * If you have some unique settings on each individual OLT - you can specify them in the additional device parameters and use them in the template or parameters. A common practice is to specify custom vlans (for individual ports or the entire device). Such parameters will be available in the `device.params` object
 
 
@@ -26,24 +26,24 @@ Upon successful registration - a notification of successful registration will be
 ![](../assets/zte_unreg_list.png)
 
 ** ONU registration form **
-![](../assets/zte_reg_form.png)<a id="reg_form"></a>
+![](../assets/zte_reg_form.png)<a idu003d"reg_form"></a>
 
 ### Registration configuration
 **Configuration Page**
 ![](../assets/zte_reg_conf_global.png)
 
-**Parameter settings tab**<a id="config_params"></a>
+**Parameter settings tab**<a idu003d"config_params"></a>
 ![](../assets/zte_reg_form_params_block.png)
 
 1. Device and ONU selection block. Only ZTE OLTs are displayed in the device list. You need to select a device and an unregistered ONU to get a list of dynamic parameters.
-2. Variables available after selecting a device and ONU, which can be used in the settings of the registration form fields
+2. Variables available after selecting the device and ONU, which can be used in the settings of the registration form fields
 3. Registration form field
 
-**Template settings tab**<a id="config_template"></a>
+**Template settings tab**<a idu003d"config_template"></a>
 ![](../assets/zte_reg_conf_template.png)
 
 1. Device and ONU selection block. Only ZTE OLTs are displayed in the device list. You need to select a device and an unregistered ONU to get a list of dynamic parameters.
-2. Registration form prepared in [parameters tab](#config_params)
+2. Registration form prepared on [вкладке параметров](#config_params)
 3. Variables available after selecting a device, ONU and filling in the form parameters that can be used to compose a template
 4. Block for changing the template (under the template you can also view the generated set of commands)
 
@@ -75,7 +75,7 @@ You can use these variables to generate the template as well as the behavior of 
 ### A typical parameter configuration block (for example, type is a choice from preset values)
 ![](../assets/zte_param.png)
 
-1. **Key(key)*** - By the name of the key, it will be possible to access the value of the parameter in the template, which will be available by params.KEY_NAME. It is advisable to enter keys only in Latin and, if necessary, use underscores;
+1. **Key(key)*** - By the name of the key, it will be possible to access the parameter value in the template, which will be available by params.KEY_NAME. It is advisable to enter keys only in Latin and, if necessary, use underscores;
 2. **Displayed name*** - The name of the field that will be displayed in the registration form;
 3. **Flag "required"** - indicates that during registration, this field must be filled in (or selected in case of dropout);
 4. **Parameter type*** - Parameter type. You must select one of the following;
@@ -113,10 +113,10 @@ _* - required field_
 
 
 ## Command pattern
-The template is used to create a list of commands to be executed on the OLT during ONU registration.     
-When composing a template, you must use variables.     
-Under the template block, there is another block that compiles the template and allows you to view the final list of commands that will be executed on the hardware.     
-Compilation of the final list of commands will work only when choosing equipment, ONU. It is also recommended to fill out the form.     
+The template is used to create a list of commands to be executed on the OLT during ONU registration.
+When composing a template, you must use variables.
+Below the template block is another block that compiles the template and allows you to view the final list of commands that will be executed on the hardware.
+Compilation of the final list of commands will work only when choosing equipment, ONU. It is also recommended to fill out the form.
 
 ![](../assets/zte_template_with_live.png)
 
@@ -128,3 +128,4 @@ Compilation of the final list of commands will work only when choosing equipment
 * Add an unregistered ONU in the network on this OLT
 
 This will allow you to understand in more detail what variables are and how they are filled.
+

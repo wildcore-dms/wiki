@@ -52,4 +52,4 @@ _Все вышеперечисленные компоненты предоста
 * ZTE (ОЛТы)
 * Mikrotik (роутеры)
 
-Полный список поддерживаемого оборудования по моделям - [https://github.com/meklis/switcher-core/blob/master/docs/DEVICES.md](https://github.com/meklis/switcher-core/blob/master/docs/DEVICES.md)
+Полный список поддерживаемого оборудования по моделям - [https://github.com/meklis/switcher-core/blob/master/docs/DEVICES.md](https://github.com/meklis/switcher-core/blob/master/docs/DEVICES.md)  

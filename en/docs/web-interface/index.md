@@ -1,4 +1,4 @@
-The web interface is a SPA application([wiki](https://ru.wikipedia.org/wiki/%D0%9E%D0%B4%D0%BD%D0%BE%D1%81%D1%82% D1%80%D0%B0%D0%BD%D0%B8%D1%87%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%B8%D0%BB%D0% BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5)),
+The web interface is a SPA application([wiki](https://ru.wikipedia.org/wiki/%D0%9E%D0%B4%D0%BD%D0%BE%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%87%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5)),
 which works Wildcore DMS API.
 
 
@@ -38,3 +38,4 @@ which works Wildcore DMS API.
 3. Save button
 4. Setting up notifications (displayed if the notifications component is present). Allows you to add contacts and configure notification settings.
 5. Block sessions. Allows you to see your active sessions, where you logged in from, from which device and when you last used it.
+

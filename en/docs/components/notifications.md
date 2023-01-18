@@ -27,12 +27,12 @@ For this reason, they are divided into different groups and have different setti
 4. Template alert(create event)*
 5. Template resolved(completion of event)*
 6. Template notification(action)*
-7. An example of an object generated for a notification. If this is an action (notification), the parameter event = null. In case this event is action = null.
-   These variables can be used to generate notification text.
+7. An example of an object generated for a notification. If this is an action (notification), the parameter event u003d null. In case this event is action u003d null.
+These variables can be used to generate notification text.
 
-_*Template engine [twig](https://twig.symfony.com/)_ is used
+_* Template engine [twig](https://twig.symfony.com/)_ is used
 
-### Setting up a sending channel - Email
+### Setting up the sending channel - Email
 ![](../assets/notification_sending_channel_email.png)
 
 1. Address of your SMTP server (IP or domain)
@@ -45,8 +45,8 @@ _*Template engine [twig](https://twig.symfony.com/)_ is used
 8. Setting up templates (more detailed description in the telegram block)
 
 
-### Configuring rules for sending by actions (notifications) <a id="action_rules_conf"></a>
-On the settings page for sending actions, you can specify which actions should generate a notification.
+### Configuring rules for sending by actions (notifications) <a idu003d"action_rules_conf"></a>
+On the page for setting actions for sending, you can specify which actions should generate a notification.
 You can also add some conditions, for example, send only if the action ended with an error.
 ![](../assets/notification_add_action.png)
 
@@ -56,7 +56,7 @@ You can also add some conditions, for example, send only if the action ended wit
 4. Send if action fails
 5. Send if the action was successful
 
-### Configuring rules for sending on events <a id="event_rules_conf"></a>
+### Configuring rules for sending on events <a idu003d"event_rules_conf"></a>
 ![](../assets/notification_add_event.png)
 
 1. Remove the rule
@@ -65,7 +65,7 @@ You can also add some conditions, for example, send only if the action ended wit
 4. Whether to generate a notification when the event ends. Relevant, for example, when creating an event about a hardware restart.
 5. How many seconds to wait before sending a notification. If the event ends earlier, the notification will be canceled. This setting only applies to alert notifications, resolved is always sent immediately.
 
-### Configuring contacts and sending rules in user account <a id="config_contact"></a>
+### Configuring contacts and sending rules in user account <a idu003d"config_contact"></a>
 ![](../assets/notification_contact_config.png)
 
 1. Click edit contact in account settings / edit user to get a popup window with contact settings
@@ -79,16 +79,18 @@ You can also add some conditions, for example, send only if the action ended wit
 ### Channel setup
 1. Go to the settings of the telegram sending channel
 2. Specify the name of the bot, the key and save
-3. Restart the bot with the command ```wca supervisor:control telegram-bot restart``` (so that the incoming message handler receives new settings)
+3. Restart the bot with the ```wca supervisor:control telegram-bot restart``` command (so that the incoming message handler receives new settings)
 
 ### Add contacts
 1. Go to account settings / change user and add the phone number used in telegram.
-   ![](../assets/notification_contact_config_block.png)
+![](../assets/notification_contact_config_block.png)
 2. After adding a contact - go to your bot and send /start or any other message.
-   In response, the bot should request the transfer of a contact number. After transmitting the contact number, the bot should respond with the following:
-   ![](../assets/notification_tg_success_registered.png)
+In response, the bot should request the transfer of a contact number. After transmitting the contact number, the bot should respond with the following:
+![](../assets/notification_tg_success_registered.png)
 3. Reload the account settings page - a new contact with the Telegram type should appear.
 
 **Sending notifications via Telegram is configured!**
-Further, you can fine-tune [what notifications you want to receive for this contact] (#config_contact),
-[what events](#event_rules_conf) and [what actions](#action_rules_conf)
+Further, you can fine-tune [какие уведомления хотите получать по этому контакту](#config_contact),
+[какие события](#event_rules_conf) and [какие действия](#action_rules_conf)
+
+

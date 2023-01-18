@@ -20,7 +20,7 @@ When adding, the following fields are taken from the device: device name, locati
 2. Subnet in CIDR format for finding equipment
 3. Used device access
 4. Group of devices to which you want to add the found device
-     
+
 ### Setting
 1. Add the necessary equipment accesses _(Device management -> Accesses page)_ - you must specify the community / login / password
 2. Create the required device groups _(Device management -> Groups page)_
@@ -28,7 +28,9 @@ When adding, the following fields are taken from the device: device name, locati
 4. Save discovery rules
 
 The search for new equipment is made every half hour (*/30) from 6 am to 11 pm.
-You can access these options through the scheduler settings _(Configuration -> Schedule configuration page)_.
+You can access these settings through the scheduler settings _(Configuration -> Schedule configuration page)_.
 
 
 It is also possible to start scanning manually without waiting for the scheduler to start with the command - ```wca autodiscovery:scan```.
+
+

@@ -1,7 +1,10 @@
 #!/usr/bin/env php
 <?php
+
+require __DIR__ . '/_libs/functions.php';
+
 // npm install -g google-translate-cli
-if(count($argv) < 3) {
+if (count($argv) < 3) {
     die("Source and target languages must be setted in arguments\n");
 }
 $source = $argv[1];
@@ -14,22 +17,14 @@ foreach (getAllFiles($source) as $path) {
     if (!preg_match('/^.*\.(md)$/', $path)) {
         continue;
     }
-    $dstPath = preg_replace("/^(.*?)\/(.*)$/", "$target/\$2", $path );
+    $dstPath = preg_replace("/^(.*?)\/(.*)$/", "$target/\$2", $path);
     echo "Process $path -> $dstPath \n";
-    exec("cat $path | translate -s $source -t $target > $dstPath");
-}
+    echo "Parse $path\n";
+    $parsedLines = parseDoc($path);
+    echo "Parse finished. Found lines - " . count($parsedLines) . "\n";
+    echo "Translate...\n";
+    $document = translateLines($parsedLines, $source, $target);
+    echo "Translate finished...\n";
 
-
-function getAllFiles($directory = './')
-{
-    $result = [];
-    $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory), RecursiveIteratorIterator::SELF_FIRST );
-    /** @var $fileInfo SplFileInfo */
-    foreach ($iterator as $fileInfo ) {
-
-        if ($fileInfo->isFile()) {
-            $result[] = $fileInfo->getPathname();
-        }
-    }
-    return $result;
+    file_put_contents($dstPath, $document);
 }

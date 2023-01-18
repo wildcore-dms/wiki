@@ -3,7 +3,7 @@ The hardware poller runs in the background and collects some information from th
 By default, 10 collector instances work. This means that data can be collected from up to 10 different devices at the same time.
 
 ## What is it needed for?
-The data received from the equipment by the interrogator is used for:
+The data received from the equipment by the questionnaire is used for:
 
 * Update caches - for faster page loading
 * Collection of historical data - for example, plotting signal
@@ -37,7 +37,7 @@ The system has the ability to change the polling intervals (in seconds), as well
 After the changes, save the changes to the system.
 
 ### Changing polling intervals and pollers by device
-It is also possible to rewrite poller settings for a specific device. It makes sense, for example, if you have several olts with a small amount of ONUs, and one, of the same model, "packed" to the eyeballs.
+It is also possible to rewrite poller settings for a specific device. It makes sense, for example, if you have several olts with a small number of ONUs, and one, of the same model, "packed" to the eyeballs.
 ![](../assets/edit_device_pollers.png)
 Setting up the poller block is similar to setting up by device model.
 
@@ -59,14 +59,15 @@ _It should be taken into account that disabling ports only affects the saving of
 
 ### Changing the number of running poller instances
 You can specify the required number of running instances through the **POLLER_COUNT_PROCS** parameter (in the /opt/wildcore-dms/.env file or via the web interface, in the system settings).
-     
+
 It makes sense to increase the number of instances if you notice that the interval for collecting data from equipment is much larger than the specified interval for the model / device.
-        
+
 Recommendations for setting the maximum number of instances:
 
-* _Based on RAM:_ (total memory - 3.5Gb) / 0.25Gb = max amount
-* _CPU based:_ 2.5 * number of cores = max number
- 
+* _Based on RAM:_ (total memory - 3.5Gb) / 0.25Gb u003d max amount
+* _CPU based:_ 2.5 * number of cores u003d max number
+
 
 ### Disable collection attempts from inaccessible hardware
 If the **POLLER_IGNORE_DOWN** parameter is set to _true_ - before starting work with the equipment, its availability via ICMP will be checked.
+

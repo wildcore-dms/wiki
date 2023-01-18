@@ -40,15 +40,18 @@ $ wca component:list
 **Component Management**
 
 * ```wca component:control COMPONENT_NAME install``` - install component
-* ```wca component:control COMPONENT_NAME enable``` - enable the installed component
+* ```wca component:control COMPONENT_NAME enable``` - enable installed component
 * ```wca component:control COMPONENT_NAME disable``` - disable installed component
 
 
 ## Components inside the system can
 * Extend Rest API capabilities (add your own endpoints)
 * Listen and respond to events in the system (event observers)
-* Expand the list of console commands (`wca` command)
+* Expand the list of console commands (command `wca`)
 * Expand the list of rules for user roles
 * Interact both with the system and with other components
 * Perform migrations (change the structure of the database)
 * Manage commands in the scheduler
+
+
+
