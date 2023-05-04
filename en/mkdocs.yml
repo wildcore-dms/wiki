@@ -2,7 +2,7 @@ site_name: WildcoreDMS
 theme:
   language: en
   name: material
-  logo: assets/logo.png
+  logo: assets/wildcore_logo.png
 extra:
   alternate:
     - name: English
@@ -29,13 +29,12 @@ extra:
 
 nav:
   - "Home": index.md
-  - "Beginning of work":
-     - "Requirements": requirements.md
+  - "Pre requirements": requirements.md
+  - "Install & Updating":
      - "Installation": install.md
      - "Updating": update.md
-     - "Web after install": web-after-install.md
   - "Web interface":
-      - "Introduction": web-interface/index.md
+      - "After install": web-after-install.md
       - "Use proxy": web-interface/use-proxy.md
   - "Console": cli/index.md
   - "Working with equipment": system/how_works_with_device.md
@@ -46,6 +45,7 @@ nav:
     - "Notifications": components/notifications.md
     - "Autodiscovery": components/autodiscovery.md
     - "OLTs": components/olts.md
+    - "OLTs control": components/olts_control.md
     #- "ICMP pinger": components/pinger.md
     #- "Import Prometheus": components/prometheus_wrapper.md
     #- "Search devices": components/search_device.md

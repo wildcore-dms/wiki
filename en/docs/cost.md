@@ -7,7 +7,7 @@ We provide an opportunity to join testing and development.
 ## What happens when the beta test ends?
 After the release of the stable version, some components will be distributed on a paid basis (by subscription).
 
-_ Estimated release date for the steel version is **August 2023**_
+_Estimated release date for the steel version is **August 2023**_
 
 ### What will be the cost?
 The system and part of the basic components will be provided free of charge, but it will also be possible to connect paid components.
@@ -15,7 +15,7 @@ Receiving system updates will remain free.
 
 You will also be given the opportunity to receive support and maintenance in the process of work (from the initial installation on your server to staff training).
 
-_At the moment, the cost of the components has not yet been determined, stay tuned._
+*At the moment, the cost of the components has not yet been determined, stay tuned.*
 
 ## Support during the beta test
 We are constantly working on improving the system and documentation, but some points may not be entirely clear or complicated (for example, setting up an ONU registration).

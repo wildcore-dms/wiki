@@ -23,7 +23,8 @@ You can change some parameters in /opt/wildcore-dms/.env file, as listen ports f
 ```
 
 After installation, go to the web panel.
-By default, the panel is available on port `8088`, and the default login/password is admin/admin.
+By default, the panel is available on port `8088`,     
+and the default login/password is **admin/admin**.
 
 
 ## Frequent installation problems

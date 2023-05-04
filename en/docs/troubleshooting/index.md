@@ -8,7 +8,6 @@ Run the following commands to rule out possible problems:
 cd /opt/wildcore-dms 
 sudo docker compose down --remove-orphans
 sudo docker compose up -d --build 
-# Здесь требуется подождать некоторое время, пока запустятся все контейнеры. Если используется HDD - увеличьте время вдвое
 sleep 10 
 wca cache:flush
 wca cache:redis:flush-all
