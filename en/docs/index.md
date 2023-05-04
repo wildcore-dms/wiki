@@ -20,31 +20,32 @@ thereby:
 * API - integrate wildcoreDMS with billing or other systems
 
 ### System components
+* **analytics** - Allow see current status and history of device, interfaces and ONTs
 * **autodiscovery** - Search and automatically add supported equipment on the network
-* **bdcom_olts** - Work with OLT from BDcom
-* **c_data_interfaces** - Working with OLT from C-Data
-* **dlink_switches** - Working with switches from Dlink
-* **edgecore_switches** - Working with switches from Edge-Core
 * **events** - Events. Allows you to view and save the history of equipment/interfaces based on the created promQL rules
 * **fdb_history** - stores FDB history and allows display by interface/ONU
-* **huawei_olts** - Work with OLT from Huawei
-* **huawei_switches** - Working with switches from Huawei
-* **huawei_onts_registration** - ONUec registration on Huawei
 * **notifications** - Allows you to send notifications via telegram/email on events and actions
 * **pinger** - Monitors equipment via ICMP, displays current status in dashboard and device list.
 * **pon_boxes** - Allows you to manage PON boxes.
 * **prometheus_wrapper** - Works with the prometheus API. Allows you to display graphs in the web interface for traffic, signal levels, temperature, errors
 * **router_os** - Work with routers from Mikrotik
-* **switches** - a component that implements a standardized API for working with switches
-* **vsolution_olts** - Working with OLT from V-Sol
-* **zte_olts** - Work with OLT from ZTE
+* **olts** - a component that implements a standardized API for working with olts
+* **switches** - a component that implements a standardized API for working with switches 
+* **olts_control** - a component realize simple ONT management(reboot, change description, disable/enable, reset, etc)
+* **switches_control** - a component realize simple switch port management(disable/enable, description, etc)
 * **zte_unregistered_onts** - Registration of ONUs on ZTE
+* **huawei_onts_registration** - ONUec registration on Huawei
 
 _All of the above components are provided with the system at the time of beta testing_
 
 ### Supported Hardware
+* Alcatel (switches)
+* Cisco (switches)
 * Dlink (switches)
 * Edge-Core (switches)
+* Eltex (switches)
+* HP (switches)
+* Dell (switches)
 * Huawei (switches, OLTs)
 * BDcom (OLTs)
 * C-data (OLTs)

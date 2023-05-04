@@ -1,25 +1,21 @@
-*At the moment, the only way to install and work is provided inside the docker with installation via wca-tool.*
- 
-#### 1. Install actual version of wca-tool     
+# Updating
+
+**1. Update wca-tool to actual version (information about the current version in our telegram channel)**
 ```shell
 sudo curl -L "https://releases.wildcore.tools/wca-tool/latest/wca-tool-$(uname -s)-$(uname -m)" -o /usr/local/bin/wca-tool && sudo chmod +x /usr/local/bin/wca-tool
 ```
 
-#### 2. Run command for install DMS 
+**2. Run command for update DMS** 
 ```shell
-sudo wca-tool --key=YOUR_AGENT_KEY install 
+sudo wca-tool update
 ```
-**The installation process takes some time (usually 10-15 minutes).**   
-
-*YOUR_AGENT_KEY - the agent key that you received upon contacting (see requirements)*    
+**The update process takes some time (usually 10-15 minutes).**   
 
 If the installation is successful, a message will be displayed
 ```shell
-WildcoreDMS success installed!
-Now, you can use wildcoreDMS by URL: http://<service ip|domain>:8088
-Default login/password - admin/admin
-
-You can change some parameters in /opt/wildcore-dms/.env file, as listen ports for example
+...
+WildcoreDMS success updated to version ...
+...
 ```
 
 After installation, go to the web panel.

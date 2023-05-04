@@ -3,10 +3,10 @@ This utility extends some functionality that is not available in the web interfa
 
 ## About working with wca cli
 
-**Run the command `wca list` to get a list of supported commands**
+**Run the command `wca` to get a list of supported commands**
 ```shell
-$ wca list
-WCAA CLI 0.1
+$ wca
+WildcoreDMS 0.17.018
 
 Usage:
   command [options] [arguments]
@@ -23,9 +23,11 @@ Available commands:
   completion                                      Dump the shell completion script
   help                                            Display help for a command
   list                                            List commands
- alerts
-  alerts:send-alerts                              Send alerts by event
-  alerts:telegram-bot                             Send alerts by event
+ api
+  api:routes-list                                 List of routes
+  api:rules-list                                  List of rules
+ autodiscovery
+  autodiscovery:scan                              Run autodiscovery scanner
  component
   component:control                               Components control
   component:dependencies                          Component dependencies
@@ -35,13 +37,13 @@ Available commands:
   device:delete                                   Delete device
   device:list                                     Table of devices
   device:update                                   Edit device
- device-access
-  device-access:add                               Create new device access
-  device-access:delete                            Delete access device
-  device-access:edit                              Update device access
-  device-access:list                              Table of device accesses
- device-model
-  device-model:list                               Table of device models
+ live_traffic
+  live_traffic:view                               View realtime traffic on interface
+ logs
+  logs:clear                                      Clear switcher_core_actions table
+ migration
+  migration:components-migrate                    Migrate migrations. Default used up migrations
+  migration:list                                  Flush all keys in cache
 ...
 ```
 

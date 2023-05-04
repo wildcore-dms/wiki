@@ -32,7 +32,8 @@ nav:
   - "Beginning of work":
      - "Requirements": requirements.md
      - "Installation": install.md
-     - "Getting started with the web": basic-settings.md
+     - "Updating": update.md
+     - "Web after install": web-after-install.md
   - "Web interface":
       - "Introduction": web-interface/index.md
       - "Use proxy": web-interface/use-proxy.md
@@ -44,7 +45,7 @@ nav:
     - "Events": components/events.md
     - "Notifications": components/notifications.md
     - "Autodiscovery": components/autodiscovery.md
-    #- "History of FDB": components/fdb_history.md
+    - "OLTs": components/olts.md
     #- "ICMP pinger": components/pinger.md
     #- "Import Prometheus": components/prometheus_wrapper.md
     #- "Search devices": components/search_device.md
@@ -62,3 +63,5 @@ nav:
   - "Troubleshooting": troubleshooting/index.md
   - "Contacts": contact/contacts.md
   - "Cost": cost.md
+  - "Changelog":
+      - "0.17 (04.2023)": changelogs/0.17.md
