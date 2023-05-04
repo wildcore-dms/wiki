@@ -11,11 +11,6 @@ extra:
     - name: Українська
       link: /uk/
       lang: uk
-    - name: български
-      link: /bg/
-    - name: Русский
-      link: /ru/
-      lang: ru
 nav:
   - "Головна": index.md
   - "Початок роботи":

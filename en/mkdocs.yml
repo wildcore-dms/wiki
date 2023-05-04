@@ -11,21 +11,6 @@ extra:
     - name: Українська
       link: /uk/
       lang: uk
-    - name: Русский
-      link: /ru/
-      lang: ru
-#    - name: Polski
-#      link: /pl/
-#      lang: pl
-#    - name: Deutsch
-#      link: /de/
-#      lang: de
-#    - name: български
-#      link: /bg/
-#      lang: bg
-#    - name: ქართული
-#      link: /ka/
-#      lang: ka
 
 nav:
   - "Home": index.md
@@ -59,7 +44,8 @@ nav:
     #- "Mikrotik routers": components/router_os.md
     - "Registration of ONU on ZTE": components/zte_unregistered_onts.md
     #- "Registration of ONU on Huawei": components/huawei_onts_registration.md
-  - "wca-tool utility": wca-tool/index.md
+  - "API": api/index.md
+  - "WCA-TOOL utility": wca-tool/index.md
   - "Troubleshooting": troubleshooting/index.md
   - "Contacts": contact/contacts.md
   - "Cost": cost.md
