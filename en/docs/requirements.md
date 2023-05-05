@@ -15,9 +15,9 @@ At the time of beta testing, the following ways to get a key are available:
 
 ## Software Requirements
 * Operating system
-* Linux (Ubuntu/Debian/CentOS/Fedora)
-* MacOS (not tested)
-* WSL2 (linux on windows, not tested)
+    * Linux (Ubuntu/Debian/CentOS/Fedora)
+    * MacOS (not tested)
+    * WSL2 (linux on windows, not tested)
 * Installed Docker (>=20.10) with docker-compose plugin (it is recommended to use only official documentation and install the latest version)
 * [**wca-tool** - utility for managing WildcoreDMS (installation, update).](wca-tool/index.md)
 
