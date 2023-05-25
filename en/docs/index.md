@@ -46,6 +46,8 @@ _All of the above components are provided with the system at the time of beta te
 * Eltex (switches)
 * HP (switches)
 * Dell (switches)
+* UBNT (switches)
+* TP-LINK (switches)
 * Huawei (switches, OLTs)
 * BDcom (OLTs)
 * C-data (OLTs)
