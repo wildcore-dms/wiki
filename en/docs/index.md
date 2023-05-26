@@ -14,8 +14,8 @@ thereby:
 * Work in docker
 * Easy installation and updating - using a special utility, installation and updating is done in a few commands
 * Easy system setup - after installation, you only need to add devices and users
-* Advanced configuration of user roles, access to equipment and functionality - all in order to provide employees with only the necessary functionality
-* Logging of user actions, work with equipment, work scheduler.
+* Role-Based Access Control (RBAC)
+* Logging of user actions, work with equipment, work scheduler
 * Collection of metrics in Prometheus
 * API - integrate wildcoreDMS with billing or other systems
 
@@ -25,8 +25,8 @@ thereby:
 * **events** - Events. Allows you to view and save the history of equipment/interfaces based on the created promQL rules
 * **fdb_history** - stores FDB history and allows display by interface/ONU
 * **notifications** - Allows you to send notifications via telegram/email on events and actions
-* **pinger** - Monitors equipment via ICMP, displays current status in dashboard and device list.
-* **pon_boxes** - Allows you to manage PON boxes.
+* **pinger** - Monitors equipment via ICMP, displays current status in dashboard and device list
+* **pon_boxes** - Allows you to manage PON boxes
 * **prometheus_wrapper** - Works with the prometheus API. Allows you to display graphs in the web interface for traffic, signal levels, temperature, errors
 * **router_os** - Work with routers from Mikrotik
 * **olts** - a component that implements a standardized API for working with olts
