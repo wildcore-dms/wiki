@@ -3,7 +3,7 @@ Before starting the installation, you must obtain an agent key (wildcoreDMS soft
 At the time of beta testing, the following ways to get a key are available:
 
 * Send request to contact@wildcore.tools
-* Submit a request on the site [wildcore.tools](https://wildcore.tools), button "Request beta"
+* Submit a request on the site [wildcore.tools](https://wildcore.tools), button "Request beta" (check spam, please)
 * Write to our group in telegram - [@WildCoreDMS](https://t.me/wildcore_dms_channel)
 
 ## Equipment requirements
