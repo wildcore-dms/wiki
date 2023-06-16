@@ -8,7 +8,7 @@ We provide an opportunity to join testing and development.
 Once out of beta, current agents will not be immediately disabled.     
 We will contact all active clients, warn about the need for payments and find a suitable method.          
       
-_Estimated release date for the steel version is **August-September 2023**_     
+_Estimated end of beta-testing is **August-September 2023**_     
 
 ### What will be the cost?
 Basically pricing for agent: **$0.01** for each one interface/ONU (everything counts - active, inactive, disabled, PON port, etc.);     
@@ -19,17 +19,20 @@ For example, if you have 300 interfaces, you can buy agent for interfaces - 1000
 Also, if you have 10001 interfaces, you must buy subscription for 11000 interfaces minimal.     
    
 
-**Optionally, you can connect additional functionality (does not depend on the number of interfaces):**      
-- ONU registration on Huawei/ZTE - 10$/month     
-- Links and network topology - 10$/month     
-- Pon-boxes - 5$/month     
-- Sending notifications - 5$/month     
+**Optionally, you can connect additional functionality (does not depend on the number of interfaces):**
+ 
+- ONU registration on Huawei/ZTE - 10$/month
+- Links and network topology - 10$/month
+- Pon-boxes - 5$/month
+- Sending notifications - 5$/month
 
 **The subscription can be as:**     
+
 - monthly     
 - annual (with discount 10%)     
  
 **Example of cost calculation:**     
+
 - You have 4500 interfaces     
 - You want to use additional functionally as ONU registration and notifications     
 
