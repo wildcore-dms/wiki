@@ -19,19 +19,19 @@ For example, if you have 300 interfaces, you can buy agent for interfaces - 1000
 Also, if you have 10001 interfaces, you must buy subscription for 11000 interfaces minimal.     
    
 
-**Optionally, you can connect additional functionality (does not depend on the number of interfaces):** 
-+ ONU registration on Huawei/ZTE - 10$/month
-+ Links and network topology - 10$/month
-+ Pon-boxes - 5$/month
-+ Sending notifications - 5$/month    
+**Optionally, you can connect additional functionality (does not depend on the number of interfaces):**      
+- ONU registration on Huawei/ZTE - 10$/month     
+- Links and network topology - 10$/month     
+- Pon-boxes - 5$/month     
+- Sending notifications - 5$/month     
 
-**The subscription can be as:**
-- monthly
-- annual (with discount 10%)
+**The subscription can be as:**     
+- monthly     
+- annual (with discount 10%)     
  
-**Example of cost calculation:** 
-- You have 4500 interfaces
-- You want to use additional functionally as ONU registration and notifications
+**Example of cost calculation:**     
+- You have 4500 interfaces     
+- You want to use additional functionally as ONU registration and notifications     
 
 Cost for month: (5000 * 0,01$) + 10$ + 5$ = 65$      
 Cost for annual: ((5000 * 0,01$) + 10$ + 5$) * 12 * 0,9 = 702$    
