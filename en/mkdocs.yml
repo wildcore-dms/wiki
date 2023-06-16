@@ -8,9 +8,9 @@ extra:
     - name: English
       link: /en/
       lang: en
-    - name: Українська
-      link: /uk/
-      lang: uk
+#    - name: Українська
+#      link: /uk/
+#      lang: uk
 
 nav:
   - "Home": index.md
