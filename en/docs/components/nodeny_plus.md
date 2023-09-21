@@ -67,3 +67,4 @@ Then, save key `e6cadf08-e4d3-42b3-b48b-bf0a86393b38`. Its key will be used in b
                1. Web address of wildcore system, for example - http://wildcore.company.com:8088    
                2. User auth key. The above describes how to get the key   
                3. Where to get diagnostic data from. Could be from cache or device. If a cache is specified, to update the diag data you need to click 'update' on the device on the wildcore page
+4. Create user in nodeny database (GRANT SELECT)
