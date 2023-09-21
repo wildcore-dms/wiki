@@ -43,6 +43,7 @@ nav:
     #- "ZTE Olts": components/zte_olts.md
     #- "Mikrotik routers": components/router_os.md
     - "Registration of ONU on ZTE": components/zte_unregistered_onts.md
+    - "Billing NoDeny Plus": components/nodeny_plus.md
     #- "Registration of ONU on Huawei": components/huawei_onts_registration.md
   - "API": api/index.md
   - "WCA-TOOL utility": wca-tool/index.md
