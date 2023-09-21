@@ -19,6 +19,19 @@ The component allows you to interact with NoDeny plus billing.
 * Wildcore, version 0.18+
 
 ## Installation
+
+### In billing
+1. Download latest version of module from github - [meklis/wildcore-nodeny-module](https://github.com/meklis/wildcore-nodeny-module/releases)
+2. Install module in billing using [Nodeny instruction](https://wiki.nodeny.com.ua/index.php?title=%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D0%B5%D0%B9)
+3. Create user in nodeny database (with grants - SELECT), for wildcore
+4. Configure module in billing
+    *  From admin go to Settings->Modules->WildcoreDMS
+       ![olts](./../assets/nodeny_plus_billing_config.png)
+       1. Web address of wildcore system, for example - http://wildcore.company.com:8088    
+       2. User auth key. The [block below](#generate-auth-key-for-billing-) describes how to generate a key
+       3. Where to get diagnostic data from. Could be from cache or device. If a cache is specified, to update the diag data you need to click 'update' on the device on the wildcore page
+
+
 ### In Wildcore
 #### Configure component  
 After update, when component `nodeny_plus` is installed, go to     
@@ -58,13 +71,3 @@ Output will be as
 ```
 Then, save key `e6cadf08-e4d3-42b3-b48b-bf0a86393b38`. Its key will be used in billing
 
-### In billing
-1. Download latest version of module from github - [meklis/wildcore-nodeny-module](https://github.com/meklis/wildcore-nodeny-module/releases)
-2. Install module in billing using [Nodeny instruction](https://wiki.nodeny.com.ua/index.php?title=%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D0%B5%D0%B9)
-3. Configure module in billing
-    *  From admin go to Settings->Modules->WildcoreDMS
-       ![olts](./../assets/nodeny_plus_billing_config.png) 
-               1. Web address of wildcore system, for example - http://wildcore.company.com:8088    
-               2. User auth key. The above describes how to get the key   
-               3. Where to get diagnostic data from. Could be from cache or device. If a cache is specified, to update the diag data you need to click 'update' on the device on the wildcore page
-4. Create user in nodeny database (GRANT SELECT)
