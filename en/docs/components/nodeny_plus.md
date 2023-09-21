@@ -50,8 +50,8 @@ After update, when component `nodeny_plus` is installed, go to
 **5. If its option is enabled, when client MAC address found, founded interfaces by description will filtered. The description must match the name on the billing**    
 **6. If its option is enabled, system will check topology(links)**     
      _If a link is detected, this port will be ignored_     
-     
-Check for wildcore URL is correct in `Web panel` block      
+
+#### Check for wildcore URL is correct in `Web panel` block      
 Example of URL - `http://wildcore.company.com:8088`  
 ![](./../assets/nodeny_plus_config_wildcore_address.png)   
 
