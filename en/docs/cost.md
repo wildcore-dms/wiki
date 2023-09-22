@@ -8,7 +8,7 @@ We provide an opportunity to join testing and development.
 Once out of beta, current agents will not be immediately disabled.     
 We will contact all active clients, warn about the need for payments and find a suitable method.          
       
-_Estimated end of beta-testing is **August-September 2023**_     
+_Estimated end of beta-testing is **November 2023**_     
 
 ### What will be the cost?
 Basically pricing for agent: **$0.01** for each one interface/ONU (everything counts - active, inactive, disabled, PON port, etc.);     
