@@ -4,6 +4,8 @@ We provide an opportunity to join testing and development.
 
 **Use, leave suggestions, report problems found.**    
 
+**!Beta test keys are not issued for the Russian Federation**
+
 ## What happens when the beta test ends?
 Once out of beta, current agents will not be immediately disabled.     
 We will contact all active clients, warn about the need for payments and find a suitable method.          
