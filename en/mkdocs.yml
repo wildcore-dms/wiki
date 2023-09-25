@@ -51,6 +51,9 @@ nav:
   - "API":
       - "Main": api/index.md
       - "Examples": api/examples.md
+      - "Objects":
+          - "General responses": api/objects/objects.md
+          - "Modules(switcher-core)": api/objects/module_responses.md
 
   - "WCA-TOOL utility": wca-tool/index.md
   - "Troubleshooting": troubleshooting/index.md
