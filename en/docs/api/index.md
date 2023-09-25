@@ -26,7 +26,6 @@ In block security, set field trusted network list, in CIDR (10.0.0.0/8 for examp
 
 _Requests without a key but on a trusted network will show up from the builtin **sys** user_    
 
-
 ## Documentation
 API methods, example of responses are documented in [postman wildcoreAPI](https://documenter.getpostman.com/view/6612340/TWDRqyW4) _(The documentation may not contain all the information of you need)_     
       
