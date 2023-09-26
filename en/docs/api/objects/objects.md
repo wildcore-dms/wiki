@@ -14,14 +14,27 @@ Objects represented in Golang format
     Iface <a href="#deviceinterface">DeviceInterface</a>  `json:"iface,omitempty"`
     Diagnostic struct {
         Data map[string]interface{} `json:"data,omitempty"` // <a href="./../module_responses">See modules in responses</a>
-        Meta map[string]interface{} `json:"meta,omitempty"`
+        Meta map[string]<a href="#metadiagnostic">MetaDiagnostic</a> `json:"meta,omitempty"`
     } `json:"diagnostic,omitempty"`
     DeviceStatus struct {
         Data <a href="#system-device-module">SystemData</a> `json:"data,omitempty"`
-        Error any `json:"error,omitempty"`
+        Error *string `json:"error,omitempty"`
     } `json:"device_status,omitempty"`
 } 
 </code></pre>
+
+### MetaDiagnostic
+``` 
+type MetaDiagnostic struct {
+	Time      string `json:"time"`
+	Source    string `json:"source"`
+	FromCache bool   `json:"from_cache"`
+	Hash      string `json:"hash"`
+	Error     *string    `json:"error"`
+	DeviceIP  string `json:"device_ip"`
+}
+```
+
 
 ### DeviceInterface
 <pre><code>
