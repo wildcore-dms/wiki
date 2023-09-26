@@ -57,3 +57,5 @@ _All of the above components are provided with the system at the time of beta te
 
 Full list of supported hardware by models - [https://github.com/meklis/switcher-core/blob/master/docs/DEVICES.md](https://github.com/meklis/switcher-core/blob/master/docs/DEVICES.md)
 
+
+### ❗ We are not working with Russian Federation and Belarus
