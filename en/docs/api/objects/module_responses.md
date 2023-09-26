@@ -12,7 +12,7 @@
 
 ### Vendor 
 ```
-Vendor struct {
+type Vendor struct {
     Vendor      string `json:"vendor"`
     Model       string `json:"model"`
     ModelID     string `json:"model_id"`
@@ -50,7 +50,7 @@ type Ident  struct {
 
 ### Reasons  
 ```
-Reasons struct {
+type Reasons struct {
     HistoryTable *[]struct {
         DownReason string `json:"down_reason"`
         DeregTime  string `json:"dereg_time"`
@@ -86,7 +86,7 @@ type Counters struct {
 
 ### Optical info
 ```
-Optical struct {
+type Optical struct {
     OltRx    *float64 `json:"olt_rx,omitempty"`
     OltTx    *float64 `json:"olt_tx,omitempty"`
     Rx       *float64 `json:"rx,omitempty"`
@@ -99,7 +99,7 @@ Optical struct {
 ### UNI interface info
 In diagnostic - returns always as array of objects  
 ``` 
-Uni []struct {
+type Uni []struct {
     Num        string `json:"num"`
     Status     string `json:"status"`
     AdminState string `json:"admin_state"`
@@ -113,7 +113,7 @@ Uni []struct {
 
 ### UNI interface info (ZTE)
 ``` 
-Uni []struct {
+type Uni []struct {
     Num          string `json:"num"`
     Speed        string `json:"speed"`
     Status       string `json:"status"`
@@ -126,7 +126,7 @@ Uni []struct {
  
 ### FDB table 
 ```cpp 
-Fdb         []struct {
+type Fdb         []struct {
     VirtualPort int    `json:"_virtual_port"`
     VlanID      int    `json:"vlan_id"`
     MacAddress  string `json:"mac_address"`
@@ -136,7 +136,7 @@ Fdb         []struct {
 ```
 ### Configuration (ZTE)
 ```
-Configuration struct {
+type Configuration struct {
     Type           string `json:"type"`
     State          string `json:"state"`
     Password       string `json:"password"`
@@ -187,7 +187,7 @@ type Profiles      struct {
 
 ### Profiles (ZTE)
 ```
-Profiles struct {
+type Profiles struct {
     Line    []string `json:"line"`
     Remote  []string `json:"remote"`
     Traffic []string `json:"traffic"`
@@ -199,7 +199,7 @@ Profiles struct {
 
 ### Interface (General)
 ```
-Interface struct {
+type Interface struct {
     ID   string `json:"id"`
     Name string `json:"name"`
     Key  string `json:"_key"`
@@ -209,7 +209,7 @@ Interface struct {
 
 ### Interface (Huawei)
 ``` 
-Interface struct {
+type Interface struct {
     ID         int    `json:"id"`
     Name       string `json:"name"`
     PhysicalID string `json:"_physical_id"`
@@ -223,7 +223,7 @@ Interface struct {
 
 ### FDB 
 ```
-Fdb []struct {
+type Fdb []struct {
     VlanID     string `json:"vlan_id"`
     Status     string `json:"status"`
     MacAddress string `json:"mac_address"`
@@ -232,7 +232,7 @@ Fdb []struct {
 
 ### Link info (Dlink)
 ```
-LinkInfo []struct {
+type LinkInfo []struct {
     MediumType       string `json:"medium_type"`
     Type             string `json:"type"`
     LastChange       string `json:"last_change"`
@@ -247,7 +247,7 @@ LinkInfo []struct {
 
 ### Link info (Huawei)
 ```
-LinkInfo []struct {
+type LinkInfo []struct {
     OperStatus string `json:"oper_status"`
     NwayStatus string `json:"nway_status"`
     AdminState string `json:"admin_state"`
@@ -259,7 +259,7 @@ LinkInfo []struct {
 
 ### Errors 
 ```
-Errors struct {
+type Errors struct {
     InErrors    string `json:"in_errors"`
     OutErrors   string `json:"out_errors"`
     InDiscards  string `json:"in_discards"`
@@ -269,7 +269,7 @@ Errors struct {
 
 ### Cable diagnostic (Dlink)
 ```
-CableDiag struct {
+type CableDiag struct {
     Pairs []struct {
         Number int    `json:"number"`
         Status string `json:"status"`
@@ -279,7 +279,7 @@ CableDiag struct {
 ```
 ### Cable diagnostic (Huawei)
 ```
-CableDiag struct {
+type CableDiag struct {
     Status string `json:"status"`
     Length string `json:"length"`
 } `json:"cable_diag"`
@@ -287,7 +287,7 @@ CableDiag struct {
 
 ### Counters 
 ```
-Counters struct {
+type Counters struct {
     InOctets         string `json:"in_octets"`
     OutOctets        string `json:"out_octets"`
     OutMulticastPkts string `json:"out_multicast_pkts"`
@@ -299,14 +299,14 @@ Counters struct {
 
 ### Description 
 ```
-Description struct {
+type Description struct {
     Description string `json:"description"`
 } `json:"description"`
 ```
 
 ### Vlans 
 ```
-Vlans []struct {
+type Vlans []struct {
 		ID   string `json:"id"`
 		Name string `json:"name"`
 		Type string `json:"type"`
