@@ -4,7 +4,8 @@ We provide an opportunity to join testing and development.
 
 **Use, leave suggestions, report problems found.**    
 
-## ! Keys are not issued for the Russian Federation and Belarus
+
+### ❗ Keys are not issued for the Russian Federation and Belarus
 
 ## What happens when the beta test ends?
 Once out of beta, current agents will not be immediately disabled.     
