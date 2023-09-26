@@ -128,8 +128,3 @@ curl --location --request GET "http://${WILDCORE_SERVER}/api/v1/component/diagno
 * **INTERFACE_ID** - ID of interface, returned in _interface.id_
 
 [See detailed response objects here](./objects/objects.md)
-
-
-## Get information from Switches 
-Please, go to postman for search more information - **Private/Components/Switches**   
-
