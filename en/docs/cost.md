@@ -13,35 +13,55 @@ We will contact all active clients, warn about the need for payments and find a 
       
 _Estimated end of beta-testing is **November 2023**_     
 
-### What will be the cost?
-Basically pricing for agent: **$0.01** for each one interface/ONU (everything counts - active, inactive, disabled, PON port, etc.);     
-For the duration of the subscription, you can receive software updates and support.     
-       
-Minimal step for count interfaces - **1000**     
-For example, if you have 300 interfaces, you can buy agent for interfaces - 1000 minimal(10$ per month).     
-Also, if you have 10001 interfaces, you must buy subscription for 11000 interfaces minimal.     
-   
+[//]: # ()
+[//]: # (### What will be the cost?)
 
-**Optionally, you can connect additional functionality (does not depend on the number of interfaces):**
- 
-- ONU registration on Huawei/ZTE - 10$/month
-- Links and network topology - 10$/month
-- Pon-boxes - 5$/month
-- Sending notifications - 5$/month
+[//]: # (Basically pricing for agent: **$0.01** for each one interface/ONU &#40;everything counts - active, inactive, disabled, PON port, etc.&#41;;     )
 
-**The subscription can be as:**     
+[//]: # (For the duration of the subscription, you can receive software updates and support.     )
 
-- monthly     
-- annual (with discount 10%)     
- 
-**Example of cost calculation:**     
+[//]: # (       )
+[//]: # (Minimal step for count interfaces - **1000**     )
 
-- You have 4500 interfaces     
-- You want to use additional functionally as ONU registration and notifications     
+[//]: # (For example, if you have 300 interfaces, you can buy agent for interfaces - 1000 minimal&#40;10$ per month&#41;.     )
 
-Cost for month: (5000 * 0,01$) + 10$ + 5$ = 65$      
-Cost for annual: ((5000 * 0,01$) + 10$ + 5$) * 12 * 0,9 = 702$    
+[//]: # (Also, if you have 10001 interfaces, you must buy subscription for 11000 interfaces minimal.     )
 
+[//]: # (   )
+[//]: # ()
+[//]: # (**Optionally, you can connect additional functionality &#40;does not depend on the number of interfaces&#41;:**)
+
+[//]: # ( )
+[//]: # (- ONU registration on Huawei/ZTE - 10$/month)
+
+[//]: # (- Links and network topology - 10$/month)
+
+[//]: # (- Pon-boxes - 5$/month)
+
+[//]: # (- Sending notifications - 5$/month)
+
+[//]: # ()
+[//]: # (**The subscription can be as:**     )
+
+[//]: # ()
+[//]: # (- monthly     )
+
+[//]: # (- annual &#40;with discount 10%&#41;     )
+
+[//]: # ( )
+[//]: # (**Example of cost calculation:**     )
+
+[//]: # ()
+[//]: # (- You have 4500 interfaces     )
+
+[//]: # (- You want to use additional functionally as ONU registration and notifications     )
+
+[//]: # ()
+[//]: # (Cost for month: &#40;5000 * 0,01$&#41; + 10$ + 5$ = 65$      )
+
+[//]: # (Cost for annual: &#40;&#40;5000 * 0,01$&#41; + 10$ + 5$&#41; * 12 * 0,9 = 702$    )
+
+[//]: # ()
 
 ## Support during the beta test
 We are constantly working on improving the system and documentation, but some points may not be entirely clear or complicated (for example, setting up an ONU registration).
