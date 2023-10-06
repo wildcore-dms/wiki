@@ -5,7 +5,7 @@ site_name: WildcoreDMS
 theme:
   language: en
   name: material
-  logo: assets/wildcore_logo.png
+  logo: assets/logo.png
 extra:
   alternate:
     - name: English
