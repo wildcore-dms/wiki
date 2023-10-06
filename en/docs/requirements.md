@@ -1,9 +1,9 @@
 ## Agent Key
-Before starting the installation, you must obtain an agent key (wildcoreDMS software).
-At the time of beta testing, the following ways to get a key are available:
+Before starting the installation, you must obtain an agent key (wildcoreDMS software).   
+There are posible methods for get key:       
 
 * Send request to contact@wildcore.tools
-* Registrate on cabinet.wildcore.tools and create agent, adding subscription (registration confirmation - check spam, please)
+* Registrate on [cabinet.wildcore.tools](https://cabinet.wildcore.tools) and create agent, adding subscription (registration confirmation - check spam, please)
 * Write to our group in telegram - [@WildCoreDMS](https://t.me/wildcore_dms_channel)
 
 ## Equipment requirements

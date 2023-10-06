@@ -59,9 +59,15 @@ function translateLines($lines, $srcLang, $destLang) {
             continue;
         }
         if($line['as_is']) {
-            $document .= $line['content'] . "\n";
+            $document .= $line['content'] . "     \n";
             continue;
         }
+        $hasNewLineMD = '' ;
+        if(preg_match('/.*[ ]{2}$/', $line['content'])) {
+            echo "END LINE FOUND \n";
+            $hasNewLineMD = '    ';
+        }
+
         $content = str_replace('"', "\\\"", $line['content']);
         $translated = trim(exec("trans -b $srcLang:$destLang \"$content\""));
         if($line['replacement_blocks']) {
@@ -69,7 +75,7 @@ function translateLines($lines, $srcLang, $destLang) {
                 $translated = str_replace("{{RPL[{$num}]}}", $value, $translated);
             }
         }
-        $document .= $translated . "\n";
+        $document .= $translated . $hasNewLineMD . "\n";
     }
     $document = str_replace("u003d", "=", $document);
     return $document;

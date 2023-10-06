@@ -13,36 +13,48 @@ extra:
       lang: uk
 nav:
   - "Головна": index.md
-  - "Початок роботи":
-      - "Вимоги": requirements.md
+  - "Вимоги до обладнання": requirements.md
+  - "Встановлення та оновлення":
       - "Встановлення": install.md
-      - "Початок роботи з веб": basic-settings.md
+      - "Оновлення": update.md
   - "Веб-інтерфейс":
-      - "Введення": web-interface/index.md
+      - "Після встановлення": web-after-install.md
       - "Використання проксі": web-interface/use-proxy.md
   - "Консоль": cli/index.md
-  - "Робота з обладнанням": system/how_works_with_device.md
-  - "Опитувач обладнання": system/poller.md
-  - "Модульність(компоненти)": components/index.md
+  - "Робота з облананням": system/how_works_with_device.md
+  - "Опитувач обладнанная": system/poller.md
+  - "Про компоненти": components/index.md
   - "Компоненти":
       - "Події": components/events.md
-      - "Повідомлення": components/notifications.md
-      - "Автовиявлення": components/autodiscovery.md
-      #- "Історія FDB": components/fdb_history.md
-      #- "ICMP-пингер": components/pinger.md
-      #- "Импорт Prometheus": components/prometheus_wrapper.md
-      #- "Поиск устройств": components/search_device.md
-      #- "Свитчи": components/switches.md
-      #- "Світчі D-Link": components/dlink_switches.md
-      #- "Світчі Edge-Core": components/edgecore_switches.md
-      #- "Світчі Huawei": components/huawei_switches.md
-      #- "ОЛТи BDcom": components/bdcom_olts.md
-      #- "ОЛТы C-Data": components/c_data_interfaces.md
-      #- "ОЛТы ZTE": components/zte_olts.md
-      #- "Роутери Mikrotik": components/router_os.md
-      - "Реєстрація ОНУ на ZTE": components/zte_unregistered_onts.md
-      #- "Реєстрація ОНУ на Huawei": components/huawei_onts_registration.md
-  - "Утиліта wca-tool":  wca-tool/index.md
+      - "Сповіщення": components/notifications.md
+      - "Autodiscovery": components/autodiscovery.md
+      - "ОЛТи": components/olts.md
+      - "Управління ОЛТ": components/olts_control.md
+      #- "ICMP pinger": components/pinger.md
+      #- "Import Prometheus": components/prometheus_wrapper.md
+      #- "Search devices": components/search_device.md
+      #- "Switches": components/switches.md
+      #- "D-Link Switches": components/dlink_switches.md
+      #- "Edge-Core Switches": components/edgecore_switches.md
+      #- "Huawei switches": components/huawei_switches.md
+      #- "BDcom olts": components/bdcom_olts.md
+      #- "C-Data Olts": components/c_data_interfaces.md
+      #- "ZTE Olts": components/zte_olts.md
+      #- "Mikrotik routers": components/router_os.md
+      - "Регістрація ОНУ на ZTE": components/zte_unregistered_onts.md
+      - "Біллінг NoDeny Plus": components/nodeny_plus.md
+    #- "Registration of ONU on Huawei": components/huawei_onts_registration.md
+  - "АПІ":
+      - "Головна": api/index.md
+      - "Приклади": api/examples.md
+      - "Об'єкти":
+          - "Відповіть АПІ": api/objects/objects.md
+          - "Відповіть модулів (дігностика)": api/objects/module_responses.md
+
+  - "WCA-TOOL": wca-tool/index.md
   - "Вирішення проблем": troubleshooting/index.md
+  - "Вартість": prices.md
   - "Контакти": contact/contacts.md
-  - "Вартість продукту": cost.md
+  - "Історія версій":
+      - "0.17 (05.2023)": changelogs/0.17.md
+      - "0.18 (10.2023)": changelogs/0.18.md

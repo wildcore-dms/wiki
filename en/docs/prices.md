@@ -2,7 +2,7 @@
 
 
 ### For Ukraine (for individuals)
-Basically pricing for agent: **$0.01** for each one interface/ONU (everything counts - active, inactive, disabled, PON port, etc.);  
+Basically pricing for agent: **$0.01** for each one interface/ONU (everything counts - active, inactive, disabled, PON port, etc.);    
 Minimal step for count interfaces - **1000**
 
 **Additional functionality (does not depend on the number of interfaces):**
@@ -28,15 +28,19 @@ Minimal step for count interfaces - **1000**
 
 
 ### For another countries (for individuals)
-Basically pricing for agent: **$0.02** for each one interface/ONU (everything counts - active, inactive, disabled, PON port, etc.);  
+**Only the amount actually received is credited. The commission on payments is 1.5%.**       
+**Also take into account your bank's commission.**   
+
+
+Basically pricing for agent: **$0.01** for each one interface/ONU (everything counts - active, inactive, disabled, PON port, etc.);  
 Minimal step for count interfaces - **1000**
 
 **Additional functionality (does not depend on the number of interfaces):**
 
-- ONU registration on Huawei/ZTE - $20 per month
-- Links and network topology - $20 per month
-- Pon-boxes - $10 per month
-- Sending notifications - $10 per month
+- ONU registration on Huawei/ZTE - $10 per month
+- Links and network topology - $10 per month
+- Pon-boxes - $5 per month
+- Sending notifications - $5 per month
 
 **The subscription can be as:**
 
@@ -107,4 +111,5 @@ At the moment, payment is only possible with bank transfer.
 </table>       
 
 _For pays in UAH, deposit will be converted to $ in NBU rate_
-  
+
+### Have a questions? 

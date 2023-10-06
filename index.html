@@ -6,14 +6,18 @@
 <script>
     function changeLang() {
         let lang = window.navigator.language
-        // if (/^uk.*/.test(lang)) {
-        //     window.location = '/uk/'
-        //     return
-        // }
-        // if (/^ua.*/.test(lang)) {
-        //     window.location = '/uk/'
-        //     return;
-        // }
+        if (/^uk.*/.test(lang)) {
+            window.location = '/uk/'
+            return
+        }
+        if (/^ua.*/.test(lang)) {
+            window.location = '/uk/'
+            return;
+        }
+        if (/^ru.*/.test(lang)) {
+            window.location = '/uk/'
+            return;
+        }
         window.location = '/en/'
     }
     changeLang()
