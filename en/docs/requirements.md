@@ -3,7 +3,7 @@ Before starting the installation, you must obtain an agent key (wildcoreDMS soft
 At the time of beta testing, the following ways to get a key are available:
 
 * Send request to contact@wildcore.tools
-* Submit a request on the site [wildcore.tools](https://wildcore.tools), button "Request beta" (check spam, please)
+* Registrate on cabinet.wildcore.tools and create agent, adding subscription (registration confirmation - check spam, please)
 * Write to our group in telegram - [@WildCoreDMS](https://t.me/wildcore_dms_channel)
 
 ## Equipment requirements
@@ -18,17 +18,9 @@ At the time of beta testing, the following ways to get a key are available:
     * Linux (Ubuntu/Debian/CentOS/Fedora)
     * MacOS (not tested)
     * WSL2 (linux on windows, not tested)
-* Installed Docker (>=20.10) with docker-compose plugin (it is recommended to use only official documentation and install the latest version)
 * [**wca-tool** - utility for managing WildcoreDMS (installation, update).](wca-tool/index.md)
 
 
-## Optional
-*<span style="color: darkred;">Ubuntu 20+ - install docker through the offered services, DO NOT install the system, the network will not work</span>*
-
-Docker installation documentation - [docs.docker.com](https://docs.docker.com/engine/install/).
-
-*The specifications above are recommended for 50 switches/10 OLTs*       
-
-
+*The specifications above are recommended for 50 switches/10 OLTs*
 
 *It is recommended not to exceed 10k interfaces (ports, ONU) and 300 devices per instance*

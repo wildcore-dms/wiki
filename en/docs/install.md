@@ -39,19 +39,7 @@ To fix the problem:
 1. Install the `docker-compose-plugin` package for your OS (see installation instructions in the official docker documentation - [docs.docker.com](https://docs.docker.com/engine/install/))
 2. Check that it really works - the `docker compose version` command should return the plugin version.
 3. Continue installing wildcoreDMS with the command ```sudo wca-tool update```
-
-### Agent disabled
-After successful installation, when you try to login - a message is displayed
-![](assets/agent-disabled.png)
-This problem may be related to the installation of the system on "weak" servers (less than indicated in the recommendations)
-Solved as follows:
-
-1. We are waiting for 5-10 minutes (the DBMS should start. You can also follow the launch with the `docker logs -f wca-db` command)
-2. Execute the command `wca migration:migrate --up *:*`
-3. If during the execution of the command we received a connection to the database (for example, Connection refused) - return to point 1.
-4. Execute the command `wca system:check`
-5. Trying to re-login through the web interface
-
+ 
 
 ### Network related errors
 Can be manifested by entries in logs like: `Connection refused`, `Connection timeout`, `Forbidden`
