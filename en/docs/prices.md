@@ -14,7 +14,7 @@ Minimal step for count interfaces - **1000**
 
 
 ### For Ukraine (for legal entities)
-**Only for clients paying over $200 per month**
+**Only for clients paying over $100 per month**
 
 Basically pricing for agent: **$0.02** for each one interface/ONU (everything counts - active, inactive, disabled, PON port, etc.);  
 Minimal step for count interfaces - **1000**
