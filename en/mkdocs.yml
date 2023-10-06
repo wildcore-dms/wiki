@@ -57,6 +57,7 @@ nav:
 
   - "WCA-TOOL utility": wca-tool/index.md
   - "Troubleshooting": troubleshooting/index.md
+  - "Prices": prices.md
   - "Contacts": contact/contacts.md
   - "Changelog":
       - "0.17 (05.2023)": changelogs/0.17.md
