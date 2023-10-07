@@ -5,7 +5,7 @@ The web interface of the system is built on the basis of [SPA](https://en.wikipe
 The interface operates without page reload, representing a full-fledged web application.    
 Thus, even with "slow" internet speed, the user can use the system.
 
-### Docker Operation
+### Works in Docker
 We use [Docker](https://en.wikipedia.org/wiki/Docker).     
 Thanks to Docker, you no longer have to install software of specific versions, deal with dependencies, and install necessary libraries.    
 All you need to install the system is to download and run the [wca-tool](../wca-tool/index.md) utility.    
@@ -13,6 +13,37 @@ The utility will install Docker and other necessary software for running.
 
 ### Real-time Equipment Operation
 This method of obtaining information is best suited for accurate and fast equipment diagnostics.
+
+#### Displaying Equipment Information and Status
+With the system, you can obtain real-time information about the equipment.
+
+- For OLT
+    - Availability via SNMP and ICMP
+    - CPU/RAM/Temperature
+    - Port list
+    - MAC/SN of ONUs
+    - ONU status
+    - FDB table
+    - Signal levels
+    - List and status of Ethernet ports on ONUs
+    - Causes of downtime
+    - Traffic
+    - Errors
+- For Switch
+    - Availability via SNMP and ICMP
+    - CPU/RAM/Temperature
+    - Port status
+    - Errors
+    - Traffic
+    - FDB table
+    - Cable diagnostics (DDM SFP module)
+
+
+#### Equipment Management
+For OLT, functions such as ONU reboot, ONU removal, ONU reset, ONU shutdown, and more are available.   
+For some switch models, port management is also available.
+
+_* Functionality may vary depending on the type of equipment, manufacturer, and model_
 
 ### Background Information Collection from Equipment
 Background pollers collect information about FDB, port/ONU status, errors, traffic, and more.    
