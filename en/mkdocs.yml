@@ -17,6 +17,7 @@ extra:
 
 nav:
   - "Home": index.md
+  - "Features": features/main.md
   - "Pre requirements": requirements.md
   - "Install & Updating":
      - "Installation": install.md

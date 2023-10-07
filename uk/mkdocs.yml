@@ -13,6 +13,7 @@ extra:
       lang: uk
 nav:
   - "Головна": index.md
+  - "Функціонал": features/main.md
   - "Вимоги до обладнання": requirements.md
   - "Встановлення та оновлення":
       - "Встановлення": install.md
