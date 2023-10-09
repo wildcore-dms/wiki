@@ -23,6 +23,7 @@ nav:
      - "Installation": install.md
      - "Updating": update.md
   - "Web interface":
+      - "View": web-interface/main.md
       - "After install": web-after-install.md
       - "Use proxy": web-interface/use-proxy.md
   - "Console": cli/index.md

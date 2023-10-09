@@ -19,6 +19,7 @@ nav:
       - "Встановлення": install.md
       - "Оновлення": update.md
   - "Веб-інтерфейс":
+      - "Вигляд": web-interface/main.md
       - "Після встановлення": web-after-install.md
       - "Використання проксі": web-interface/use-proxy.md
   - "Консоль": cli/index.md
