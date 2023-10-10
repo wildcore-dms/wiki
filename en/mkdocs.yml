@@ -36,6 +36,7 @@ nav:
     - "Autodiscovery": components/autodiscovery.md
     - "OLTs": components/olts.md
     - "OLTs control": components/olts_control.md
+    - "Config backups": components/oxidized.md
     #- "ICMP pinger": components/pinger.md
     #- "Import Prometheus": components/prometheus_wrapper.md
     #- "Search devices": components/search_device.md

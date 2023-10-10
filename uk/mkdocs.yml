@@ -32,6 +32,7 @@ nav:
       - "Autodiscovery": components/autodiscovery.md
       - "ОЛТи": components/olts.md
       - "Управління ОЛТ": components/olts_control.md
+      - "Бекапи конфігурації": components/oxidized.md
       #- "ICMP pinger": components/pinger.md
       #- "Import Prometheus": components/prometheus_wrapper.md
       #- "Search devices": components/search_device.md
