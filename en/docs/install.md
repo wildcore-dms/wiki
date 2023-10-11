@@ -11,7 +11,8 @@ sudo wca-tool --key=YOUR_AGENT_KEY install
 ```
 **The installation process takes some time (usually 10-15 minutes).**   
 
-*YOUR_AGENT_KEY - the agent key that you received upon contacting (see requirements)*    
+*YOUR_AGENT_KEY - the agent key that you received upon contacting (see requirements) or from your cabinet*    
+![img.png](img.png)
 
 If the installation is successful, a message will be displayed
 ```shell
