@@ -138,7 +138,7 @@ _* - Обов'язкове поле_
 
 
 ## Рекомендації щодо налаштування
-* Додайте ZTE OLT
+* Додайте ZTE/Huawei OLT
 * Додати незареєстрований ONU в мережу на цьому OLT
 
 Це дозволить вам більш детально зрозуміти, що таке змінні, як вони заповнюються та на живому прикладі побачити генерацію команд
@@ -153,11 +153,11 @@ src="https://www.youtube.com/embed/YTPYlFeyUzc">
 
 
 #### Реєстрація ОНУ на ZTE (@quantum_nintendo)
-* [Інструкція .txt](onts_registration/WC_ZTE_REG_quantum_nintendo.txt){: download }
-* [Компонент.json](onts_registration/zte_unregistered_onts_quantum_nintendo.json){: download }
+* [Інструкція .txt](onts_registration/WC_ZTE_REG_quantum_nintendo.txt) 
+* [Компонент.json](onts_registration/zte_unregistered_onts_quantum_nintendo.json) 
 
 #### Реєстрація ОНУ на ZTE (@spirit_crasher)
-* [Компонент.json](onts_registration/zte_unregistered_onts_spirit_crasher.json){: download }
+* [Компонент.json](onts_registration/zte_unregistered_onts_spirit_crasher.json) 
 
 #### Реєстрація ОНУ на Huawei 
-* [Компонент.json](onts_registration/huawei_onts_registration.json){: download }
+* [Компонент.json](onts_registration/huawei_onts_registration.json) 
