@@ -14,6 +14,7 @@ sudo wca-tool --key=YOUR_AGENT_KEY install
 *YOUR_AGENT_KEY - ключ агента, який ви отримали в особистому кабінеті*    
 ![img.png](img.png)
 
+
 Якщо встановлення пройшло успішно, з’явиться повідомлення
 ```shell     
 WildcoreDMS success installed!     

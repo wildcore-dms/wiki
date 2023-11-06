@@ -70,7 +70,7 @@ If desired, you can store the configuration in Git.
 The system includes a component for ONU registration, allowing registration by filling out a simple form.      
 Unregistered (new) ONUs are displayed in a widget on the main page and in the device dashboard.
 
-Learn more about [ONU registration](../components/zte_unregistered_onts.md)
+Learn more about [ONU registration](../components/onts_registration.md)
 
 
 

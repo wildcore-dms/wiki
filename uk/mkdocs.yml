@@ -3,6 +3,8 @@ theme:
   language: uk
   name: material
   logo: assets/wildcore_logo.png
+markdown_extensions:
+  - attr_list
 extra:
   alternate:
     - name: English
@@ -44,7 +46,9 @@ nav:
       #- "C-Data Olts": components/c_data_interfaces.md
       #- "ZTE Olts": components/zte_olts.md
       #- "Mikrotik routers": components/router_os.md
-      - "Регістрація ОНУ на ZTE": components/zte_unregistered_onts.md
+      - "Реєстрація ОНУ": components/onts_registration.md
+      - "Пристрої моніторингу": components/sensors.md
+      - "Біллінг MikBill": components/mikbill_integration.md
       - "Біллінг NoDeny Plus": components/nodeny_plus.md
     #- "Registration of ONU on Huawei": components/huawei_onts_registration.md
   - "АПІ":
@@ -61,3 +65,4 @@ nav:
   - "Історія версій":
       - "0.17 (05.2023)": changelogs/0.17.md
       - "0.18 (10.2023)": changelogs/0.18.md
+      - "0.19 (11.2023)": changelogs/0.19.md

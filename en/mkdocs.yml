@@ -36,8 +36,9 @@ nav:
     - "Autodiscovery": components/autodiscovery.md
     - "OLTs": components/olts.md
     - "OLTs control": components/olts_control.md
+    - "Registration of ONU": components/onts_registration.md
     - "Config backups": components/oxidized.md
-    #- "ICMP pinger": components/pinger.md
+      #- "ICMP pinger": components/pinger.md
     #- "Import Prometheus": components/prometheus_wrapper.md
     #- "Search devices": components/search_device.md
     #- "Switches": components/switches.md
@@ -48,7 +49,8 @@ nav:
     #- "C-Data Olts": components/c_data_interfaces.md
     #- "ZTE Olts": components/zte_olts.md
     #- "Mikrotik routers": components/router_os.md
-    - "Registration of ONU on ZTE": components/zte_unregistered_onts.md
+    - "Sensors": components/sensors.md
+    - "Billing MikBill": components/mikbill_integration.md
     - "Billing NoDeny Plus": components/nodeny_plus.md
     #- "Registration of ONU on Huawei": components/huawei_onts_registration.md
   - "API":
@@ -65,3 +67,4 @@ nav:
   - "Changelog":
       - "0.17 (05.2023)": changelogs/0.17.md
       - "0.18 (10.2023)": changelogs/0.18.md
+      - "0.19 (11.2023)": changelogs/0.19.md
