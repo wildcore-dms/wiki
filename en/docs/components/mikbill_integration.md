@@ -103,7 +103,7 @@ For this, the subscriber must have an added device: onu/ont type. The billing wi
 For this, the subscriber must specify the switch and port; the billing will search for the device in Wildcore by IP (device type: SWITCH, the switch's IP in the Mikbill directory must match the switch's IP in Wildcore)      
 ![](../assets/mikbill/wildcore_card_switch.jpg)
 
-Also, the Mikbill employee's login/password must match the login/password in Wildcore, and their role must have the corresponding rights:
+Also, the Mikbill employee's login  must match the login  in Wildcore, and their role must have the corresponding rights:
 
 - User management → Update self information
 - OLTs → Info from OLTs
