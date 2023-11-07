@@ -23,6 +23,10 @@ Values are obtained through SNMP.
 - system
 - sensors_data
 
+## Screenshots
+![](../assets/sensors/sensor_view.png)
+![](../assets/sensors/sensor_config.png)
+![](../assets/sensors/sensor_config_1.png)
 
 ## Notes
 ### Obtained Values

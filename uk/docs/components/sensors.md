@@ -24,6 +24,10 @@
 - system
 - sensors_data    
 
+## Скріншоти
+![](../assets/sensors/sensor_view.png)
+![](../assets/sensors/sensor_config.png)
+![](../assets/sensors/sensor_config_1.png)
 
 ## Примітки    
 ### Отримуванні значення
