@@ -19,8 +19,7 @@
 * Wildcore, версія 0.18+
 
 ## Встановлення
-
-### У виставленні рахунків
+### В біллінгу
 1. Завантажте останню версію модуля з github - [meklis/wildcore-nodeny-module](https://github.com/meklis/wildcore-nodeny-module/releases)
 2. Встановіть модуль у білінг за допомогою [інструкції Nodeny](https://wiki.nodeny.com.ua/index.php?title=%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D0%B5%D0%B9)
 3. Створіть користувача в базі даних nodeny (з грантами - SELECT), для wildcore
