@@ -15,7 +15,7 @@ There are posible methods for get key:
 
 ## Software Requirements
 * Operating system
-    * Linux (Ubuntu/Debian/CentOS/Fedora)
+    * Linux (Ubuntu/Debian)
     * MacOS (not tested)
     * WSL2 (linux on windows, not tested)
 * [**wca-tool** - utility for managing WildcoreDMS (installation, update).](wca-tool/index.md)
