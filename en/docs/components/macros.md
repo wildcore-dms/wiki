@@ -1,4 +1,5 @@
 !!! abstract
+    
     **Macros** is a component delivered separately, which allows the user to enhance System's functions by executing custom CLI commands on their devices, utilizing a simple graphical interface, i.e. viewing logs, snooping or even VLAN management on specified ports.
 
 ## A macro consists of 4 key elements:
@@ -22,6 +23,7 @@
 **Here we will go through the macro creation process step-by-step.**
 
 !!! note "" 
+    
     The specific `Roles` and Device `Models` will vary depending on your setup.
     
     Macros can be found in **Configuration** drop-down in the left-side drawer.
@@ -35,9 +37,11 @@
 ![](../assets/macros/macros_add_new_macros_common.png)
 
 !!! info
+    
     - Choose a **Name** that reflects the purpose of your macro from the first glance. - **Description** allows you to describe features or direct it's user. - In **Roles** drop-down you can select which user roles are permitted to execute this macro. - **Models** field allows you to select specific devices on which the macro can be run. - **Display for** allows you to customize where exactly this macro can be run, i.e. on a whole `Device` or a only on a `Port` or a `ONU`. - **Display output** defines whether you want to get feedback from all commands executed by the macro, just the last one or no output at all.
 
 !!! example 
+    
     ![](../assets/macros/macros_add_new_macros_common_filled_out.png)
 
 #### **Parameters** tab
@@ -45,6 +49,7 @@
 ![](../assets/macros/macros_add_new_macros_parameters.png)
 
 !!! info 
+    
     - **Device** drop-down allows you to select a device, on which this macro will be run and load it's **Parameters**. - **Interfaces** loads an additional parameter `iface`, which stores this port's description.
     
     After you select the desired device, you can press the **Add parameter** button.
@@ -67,9 +72,11 @@
     -   **Visible condition** field defines whether a macro shown
 
 !!! example 
+    
     ![](../assets/macros/macros_add_new_macros_command_card_filled_out.png)
 
 !!! tip 
+    
     ![](../assets/macros/macros_command_card_draganddrop_button.png) button allows drag-and-drop reordering of the **Parameters**
 
 #### Template tab
@@ -97,6 +104,7 @@
 > Here are the **Displayed name** and values we specified earlier in the **Parameters** tab.
 
 !!! tip 
+    
     **Preview** button allows you to see what the command will look like when it's executed on selected device
 
 > By pressing **Execute** button, the macro is run and the result is displayed in a new pop-up, if the **Display output** was set to anything other than **Not display**.
