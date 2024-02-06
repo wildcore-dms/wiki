@@ -1,4 +1,4 @@
-> !!! abstract
+!!! abstract
     **Macros** is a component delivered separately, which allows the user to enhance System's functions by executing custom CLI commands on their devices, utilizing a simple graphical interface, i.e. viewing logs, snooping or even VLAN management on specified ports.
 
 ## A macro consists of 4 key elements:
