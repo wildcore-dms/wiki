@@ -1,7 +1,17 @@
+# pip install mkdocs-callouts
 plugins:
   - search
   - autorefs
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
+  - attr_list
 site_name: WildcoreDMS
+site_url: http://127.0.0.1:8000/
 theme:
   language: en
   name: material
