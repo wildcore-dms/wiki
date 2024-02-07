@@ -67,6 +67,7 @@
         -   **Choose from predefined** allows you to manually specify a list of parameters to be selected from during macro execution
         -   **Choose from variables** is used to select a parameter from those provided by the select device, i.e. `{{user.name}}`
         -   **Field for input (with default value)** allows the user to manually enter the required parameters during macro execution
+
     -   **Visible condition** field defines whether a macro shown, i.e. `!iface` hides it from device's `Interface` panel 
 
 !!! example 
