@@ -60,10 +60,13 @@
 
 !!! info
 
-    -   **Key** is the CLI command, run on your devices
-    !!! note
-        Consult your devices' manuals to get commands specific to your devices
-    - **Displayed name** is a shorthand for your macro in a device's control panel **Macro** tab
+    -   **Property** is the `{{params}}` object property name, used to access its value in the **Template**
+
+!!! example ""
+    
+    {{params.property}}
+
+    -   **Property display name** is a short description for your propery, displayed in the macro execution pop-up
     -   **Required** checkbox allows you to specify a **Parameter** which has to be selected during **Macro** execution
     -   From **Parameter type** you can select how the parameters for this command are specified:
     -   **Choose from predefined** allows you manually to specify a list of parameters to be selected from at macro execution time
