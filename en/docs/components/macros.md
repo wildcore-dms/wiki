@@ -60,15 +60,14 @@
 
 !!! info
 
-    -   **Property** is the `{{params}}` object property name, used to access its value in the **Template**
-    `{{params.property}}`
+    -   **Property** is the `{{params}}` object property name, used to access its value in the **Template**, using `{{params.property}}`
     -   **Property display name** is a short description for your propery, displayed in the macro execution pop-up
     -   **Required** checkbox allows you to specify a **Parameter** which has to be selected during **Macro** execution
     -   From **Parameter type** you can select how the parameters for this command are specified:
-        -   **Choose from predefined** allows you manually to specify a list of parameters to be selected from at macro execution time
-        -   **Choose from variables** is used to select a parameter from those provided by the device, i.e. `{{user.name}}`
-        -   **Field for input (with default value)** allows the user to manually enter the required parameters at macro execution time
-        -   **Visible condition** field defines whether a macro shown
+        -   **Choose from predefined** allows you to manually specify a list of parameters to be selected from during macro execution
+        -   **Choose from variables** is used to select a parameter from those provided by the select device, i.e. `{{user.name}}`
+        -   **Field for input (with default value)** allows the user to manually enter the required parameters during macro execution
+    -   **Visible condition** field defines whether a macro shown, i.e. `!iface` hides it from device's `Interface` panel 
 
 !!! example 
     
