@@ -62,9 +62,9 @@
 
     -   **Property** is the `{{params}}` object property name, used to access its value in the **Template**
 
-!!! example ""
+    !!! example ""
     
-    {{params.property}}
+        {{params.property}}
 
     -   **Property display name** is a short description for your propery, displayed in the macro execution pop-up
     -   **Required** checkbox allows you to specify a **Parameter** which has to be selected during **Macro** execution
