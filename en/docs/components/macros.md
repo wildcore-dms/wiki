@@ -38,7 +38,12 @@
 
 !!! info
     
-    - Choose a **Name** that reflects the purpose of your macro from the first glance. - **Description** allows you to describe features or direct it's user. - In **Roles** drop-down you can select which user roles are permitted to execute this macro. - **Models** field allows you to select specific devices on which the macro can be run. - **Display for** allows you to customize where exactly this macro can be run, i.e. on a whole `Device` or a only on a `Port` or a `ONU`. - **Display output** defines whether you want to get feedback from all commands executed by the macro, just the last one or no output at all.
+    - Choose a **Name** that reflects the purpose of your macro from the first glance. 
+    - **Description** allows you to describe features or direct it's user. 
+    - In **Roles** drop-down you can select which user roles are permitted to execute this macro. 
+    - **Models** field allows you to select specific devices on which the macro can be run. 
+    - **Display for** allows you to customize where exactly this macro can be run, i.e. on a whole `Device` or a only on a `Port` or a `ONU`. 
+    - **Display output** defines whether you want to get feedback from all commands executed by the macro, just the last one or no output at all.
 
 !!! example 
     
