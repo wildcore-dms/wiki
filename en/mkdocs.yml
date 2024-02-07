@@ -16,6 +16,8 @@ theme:
   language: en
   name: material
   logo: assets/wildcore_logo.png
+  features:
+    - content.code.copy
 extra:
   alternate:
     - name: English
