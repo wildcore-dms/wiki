@@ -49,7 +49,12 @@ Here we will go through the macro creation process step-by-step.
 
 !!! info
     
-    - Choose a **Name** that reflects the purpose of your macro from the first glance. - **Description** allows you to describe features or direct it's user. - In **Roles** drop-down you can select which user roles are permitted to execute this macro. - **Models** field allows you to select specific devices on which the macro can be run. - **Display for** allows you to customize where exactly this macro can be run, i.e. on a whole `Device` or a only on a `Port` or a `ONU`. - **Display output** defines whether you want to get feedback from all commands executed by the macro, just the last one or no output at all.
+    - Choose a **Name** that reflects the purpose of your macro from the first glance.
+    - **Description** allows you to describe features or direct it's user.
+    - In **Roles** drop-down you can select which user roles are permitted to execute this macro.
+    - **Models** field allows you to select specific devices on which the macro can be run.
+    - **Display for** allows you to customize where exactly this macro can be run, i.e. on a whole `Device` or a only on a `Port` or a `ONU`.
+    - **Display output** defines whether you want to get feedback from all commands executed by the macro, just the last one or no output at all.
 
 !!! example 
     
@@ -71,16 +76,15 @@ Here we will go through the macro creation process step-by-step.
 
 !!! info
 
-    -   **Key** is the CLI command, run on your devices
-    !!! note
-        Consult your devices' manuals to get commands specific to your devices
-    - **Displayed name** is a shorthand for your macro in a device's control panel **Macro** tab
+    -   **Property** is the `{{params}}` object property name, used to access its value in the **Template**, using `{{params.property}}`
+    -   **Property display name** is a short description for your propery, displayed in the macro execution pop-up
     -   **Required** checkbox allows you to specify a **Parameter** which has to be selected during **Macro** execution
     -   From **Parameter type** you can select how the parameters for this command are specified:
-    -   **Choose from predefined** allows you manually to specify a list of parameters to be selected from at macro execution time
-    -   **Choose from variables** is used to select a parameter from those provided by the device, i.e. `{{user.name}}`
-    -   **Field for input (with default value)** allows the user to manually enter the required parameters at macro execution time
-    -   **Visible condition** field defines whether a macro shown
+        -   **Choose from predefined** allows you to manually specify a list of parameters to be selected from during macro execution
+        -   **Choose from variables** is used to select a parameter from those provided by the select device, i.e. `{{user.name}}`
+        -   **Field for input (with default value)** allows the user to manually enter the required parameters during macro execution
+
+    -   **Visible condition** field defines whether a macro shown, i.e. `!iface` hides it from device's `Interface` panel 
 
 !!! example 
     

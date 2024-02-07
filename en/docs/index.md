@@ -35,9 +35,7 @@ thereby:
 * **switches_control** - a component realize simple switch port management(disable/enable, description, etc)
 * **zte_unregistered_onts** - Registration of ONUs on ZTE
 * **huawei_onts_registration** - ONUec registration on Huawei
-
-_All of the above components are provided with the system at the time of beta testing_
-
+ 
 ### Supported Hardware
 * Alcatel (switches)
 * Cisco (switches)
@@ -53,9 +51,10 @@ _All of the above components are provided with the system at the time of beta te
 * C-data (OLTs)
 * V-Solution (OLTs)
 * ZTE (OLTs)
-* Mikrotik (routers)
+* Mikrotik (routers, switches)
 
-Full list of supported hardware by models - [https://github.com/meklis/switcher-core/blob/master/docs/DEVICES.md](https://github.com/meklis/switcher-core/blob/master/docs/DEVICES.md)
+!!! tip
+    Full list of supported hardware by models - [https://github.com/meklis/switcher-core/blob/master/docs/DEVICES.md](https://github.com/meklis/switcher-core/blob/master/docs/DEVICES.md)
 
 
-### ❗ We are not working with Russian Federation and Belarus
+!!! warning "We are not working with Russian Federation and Belarus"

@@ -9,19 +9,21 @@ sudo curl -L "https://releases.wildcore.tools/wca-tool/latest/wca-tool-$(uname -
 ```shell
 sudo wca-tool --key=YOUR_AGENT_KEY install 
 ```
-**The installation process takes some time (usually 10-15 minutes).**   
-
-*YOUR_AGENT_KEY - the agent key that you received upon contacting (see requirements) or from your cabinet*    
-![img.png](img.png)
+!!! tip
+    **YOUR_AGENT_KEY** - the agent key that you received upon contacting (see requirements) or from your cabinet   
+    ![img.png](img.png)  
+!!! note
+    The installation process takes some time (usually 10-15 minutes)
 
 If the installation is successful, a message will be displayed
-```shell
-WildcoreDMS success installed!
-Now, you can use wildcoreDMS by URL: http://<service ip|domain>:8088
-Default login/password - admin/admin
-
-You can change some parameters in /opt/wildcore-dms/.env file, as listen ports for example
-```
+!!! 
+    ```shell
+    WildcoreDMS success installed!
+    Now, you can use wildcoreDMS by URL: http://<service ip|domain>:8088
+    Default login/password - admin/admin
+    
+    You can change some parameters in /opt/wildcore-dms/.env file, as listen ports for example
+    ```
 
 After installation, go to the web panel.
 By default, the panel is available on port `8088`,     
