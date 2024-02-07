@@ -10,6 +10,9 @@ markdown_extensions:
   - md_in_html
   - pymdownx.superfences
   - attr_list
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
 site_name: WildcoreDMS
 site_url: http://127.0.0.1:8000/
 theme:
@@ -59,6 +62,7 @@ nav:
     #- "C-Data Olts": components/c_data_interfaces.md
     #- "ZTE Olts": components/zte_olts.md
     #- "Mikrotik routers": components/router_os.md
+    - "Macros": components/macros.md
     - "Sensors": components/sensors.md
     - "Billing MikBill": components/mikbill_integration.md
     - "Billing NoDeny Plus": components/nodeny_plus.md

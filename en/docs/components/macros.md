@@ -1,38 +1,49 @@
-!!! abstract
+# Macros
+
+!!! abstract "Overview"
     
     **Macros** is a component delivered separately, which allows the user to enhance System's functions by executing custom CLI commands on their devices, utilizing a simple graphical interface, i.e. viewing logs, snooping or even VLAN management on specified ports.
 
-## A macro consists of 4 key elements:
+## Macros menu
 
-#### Macro description:
+#### Common tab
 
 > Here it's name, users and device models which are allowed to run it and visibility areas are specified. The latter allows greater customization and interface decluttering by hiding the macros that are not applicable to selected `Device`/`Port`/`ONU`.
 
-#### Parameters:
+#### Parameters tab
 
 > This is the body of the macro.
 >
-> `Device` here the device on which the macro is run is specified and `Variables` are loaded from cache as a JSON structure for ease of access. With `Interfaces` drop-down you can select an interface on which the macro would be executed and an additional parameter `iface` is loaded, which contains information about this interface. `Add parameter` button creates a new entry where the actual command to execute is specified.
+> In the `Device` field, the device on which the macro is run is specified and `Variables` are loaded from cache as a JSON structure for ease of access. 
 
-#### Template
+> With `Interfaces` drop-down you can select a specific interface on which the should be executed, after which an additional property `iface` is loaded. It contains information about this interface. 
 
-> Templates are built with [**Twig**](https://twig.symfony.com/) template engine, therefore it is possible to include `Variables` in the commands, create and assign custom variables, as well as branching and text permutations, inside the template. See [Documentation](https://twig.symfony.com/doc/3.x/templates.html) for reference.
+> `Add parameter` button creates a new entry where the `{{params}}` object properties can be specified, which can be accessed by the macro (see **Template** section).
 
-# Workflow
+#### Template tab
 
-**Here we will go through the macro creation process step-by-step.**
+> Templates are built with [**Twig**](https://twig.symfony.com/) template engine, therefore it is possible to include variables in the commands, create and assign custom variables, as well as branching and text permutations, inside the template. 
 
-!!! note "" 
+> See [Twig Documentation](https://twig.symfony.com/doc/3.x/templates.html) for reference.
+
+## Workflow
+
+Here we will go through the macro creation process step-by-step.
+
+!!! warning "" 
     
     The specific `Roles` and Device `Models` will vary depending on your setup.
     
-    Macros can be found in **Configuration** drop-down in the left-side drawer.
-    ![](../assets/macros/macros_sidebar.png)
-    
-    
-    Press ![](../assets/macros/macros_add_new.png) button in top-left corner of the **Macros** screen to create a new one.
+!!! note ""    
 
-#### Fill out the **Common** tab
+    Use the **Configuration** drop-down menu in the left-side drawer to find the **Macros** menu.
+    ![](../assets/macros/macros_sidebar.png){ align=left }
+    
+!!! tip ""
+
+    Press the **Add** button in the upper-left corner of the **Macros** screen to create a new one.
+
+#### Common
 
 ![](../assets/macros/macros_add_new_macros_common.png)
 
