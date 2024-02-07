@@ -47,6 +47,7 @@ nav:
     - "OLTs": components/olts.md
     - "OLTs control": components/olts_control.md
     - "Registration of ONU": components/onts_registration.md
+    - "Macros": components/macros.md
     - "Config backups": components/oxidized.md
       #- "ICMP pinger": components/pinger.md
     #- "Import Prometheus": components/prometheus_wrapper.md
