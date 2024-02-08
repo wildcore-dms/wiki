@@ -85,9 +85,5 @@ nav:
   - "Troubleshooting": troubleshooting/index.md
   - "Prices": prices.md
   - "Contacts": contact/contacts.md
-  - "Changelog":
-      - "0.17 (05.2023)": changelogs/0.17.md
-      - "0.18 (10.2023)": changelogs/0.18.md
-      - "0.19 (11.2023)": changelogs/0.19.md
-      - "0.20 (12.2023)": changelogs/0.20.md
+  - "Changelog": changelog.md
 
