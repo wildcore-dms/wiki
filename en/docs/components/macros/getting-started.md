@@ -67,7 +67,8 @@ Here we will go through the macro creation process step-by-step.
         ![](../../assets/macros/macros_add_new_macros_parameters_filledout.png)
 
 5. Press the **Add parameter** button. New **Parameter** card appears. Fill out the required fields in the **Parameter** card.
-    ![](../../assets/macros/macros_add_new_macros_parameter_card_empty.png){align = right}
+
+    ![](../../assets/macros/macros_add_new_macros_parameter_card_empty.png)
 
     !!! info
 
