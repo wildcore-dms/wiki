@@ -31,15 +31,17 @@
 Here we will go through the macro creation process step-by-step.
 
 1. Use the **Configuration** drop-down menu in the left-side drawer to find the **Macros** menu. 
-![](../../assets/macros/macros_sidebar.png)
+    ![](../../assets/macros/macros_sidebar.png)
 
-2. Macros screen opens. Press the **Add new** button to create a new one.
-![](../../assets/macros/macros_main_screen.png)
-
+2. **Macros** screen opens. Press the **Add new** button in the upper-left corner to create a new one.
+    ![](../../assets/macros/macros_main_screen.png)
+    
     **Add New Macro** screen opens.
+    
 
 3. Fill out the **Common** tab
-![](../../assets/macros/macros_add_new_macros_common.png)
+
+    ![](../../assets/macros/macros_add_new_macros_common.png)
 
     !!! info
         - Choose a **Name** that reflects the purpose of your macro from the first glance.
