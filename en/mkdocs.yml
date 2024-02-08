@@ -13,6 +13,7 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.mark
   - pymdownx.tilde
+  - tables
 site_name: WildcoreDMS
 site_url: http://127.0.0.1:8000/
 theme:
@@ -52,7 +53,9 @@ nav:
     - "OLTs": components/olts.md
     - "OLTs control": components/olts_control.md
     - "Registration of ONU": components/onts_registration.md
-    - "Macros": components/macros.md
+    - "Macros":
+        - "Getting started": components/macros.md
+        - "Parameter type options": components/macros_paramater_types_options.md
     - "Config backups": components/oxidized.md
       #- "ICMP pinger": components/pinger.md
     #- "Import Prometheus": components/prometheus_wrapper.md
@@ -65,7 +68,7 @@ nav:
     #- "C-Data Olts": components/c_data_interfaces.md
     #- "ZTE Olts": components/zte_olts.md
     #- "Mikrotik routers": components/router_os.md
-    - "Macros": components/macros.md
+    # - "Macros": components/macros.md
     - "Sensors": components/sensors.md
     - "Billing MikBill": components/mikbill_integration.md
     - "Billing NoDeny Plus": components/nodeny_plus.md

@@ -1,0 +1,3 @@
+-   **Predefined values** allows you to manually specify a list of parameters to be selected from during macro execution
+-   **Device variables** is used to select a parameter from those provided by the selected device, i.e. `{{user.name}}`
+-   **Input field (with value source)** allows the user to manually enter the required parameters during macro execution, and/or select one from those provided by the selected **Device**
