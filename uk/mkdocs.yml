@@ -3,7 +3,17 @@ theme:
   language: uk
   name: material
   logo: assets/wildcore_logo.png
+
+plugins:
+  - search
+  - autorefs
 markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
   - attr_list
 extra:
   alternate:
@@ -29,6 +39,7 @@ nav:
   - "Опитувач обладнанная": system/poller.md
   - "Про компоненти": components/index.md
   - "Компоненти":
+      - "Макроси": components/macros.md
       - "Події": components/events.md
       - "Сповіщення": components/notifications.md
       - "Autodiscovery": components/autodiscovery.md
@@ -62,8 +73,4 @@ nav:
   - "Вирішення проблем": troubleshooting/index.md
   - "Вартість": prices.md
   - "Контакти": contact/contacts.md
-  - "Історія версій":
-      - "0.17 (05.2023)": changelogs/0.17.md
-      - "0.18 (10.2023)": changelogs/0.18.md
-      - "0.19 (11.2023)": changelogs/0.19.md
-      - "0.20 (12.2023)": changelogs/0.20.md
+  - "Історія версій": changelog.md

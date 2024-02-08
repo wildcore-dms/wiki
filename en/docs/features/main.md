@@ -73,6 +73,11 @@ Unregistered (new) ONUs are displayed in a widget on the main page and in the de
 Background pollers collect information about FDB, port/ONU status, errors, traffic, and more.    
 This data is used to obtain interface history, build graphs, and generate notifications.
 
+### Equipment on map
+Allow set map coordinates and see devices and ONTs on map   
+!!! note Detail on maps
+    ![map](../assets/map.png)
+
 ### Flexible Access Rights Configuration for Users
 Thanks to advanced access rights and roles configuration, you have the ability to restrict certain functionality for users.   
 For example, you can prohibit a technician from mounting or managing PON ports or restarting equipment.    

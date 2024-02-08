@@ -100,9 +100,13 @@ Here we will go through the macro creation process step-by-step.
     !!! info
         You can create a **Template** from scratch or use one of the examples below.
         
-        For syntax refer to [Twig Documentation for Designers](https://twig.symfony.com/doc/3.x/templates.html).
+        
 
         After you've filled out the **Chosen template** block **Live result** shows the result of your **Template** compilation and the exact command that will be executed on a selected **Device**.
+
+        For syntax refer to [**Twig Documentation for Designers**](https://twig.symfony.com/doc/3.x/templates.html).
+
+        Find more Template examples [**here**](./twig-examples.md)
     ??? example
         ![](../../assets/macros/macros_add_new_macros_template_tab_filled_out.png)
 
