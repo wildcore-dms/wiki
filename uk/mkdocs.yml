@@ -39,6 +39,7 @@ nav:
   - "Опитувач обладнанная": system/poller.md
   - "Про компоненти": components/index.md
   - "Компоненти":
+      - "Макроси": components/macros.md
       - "Події": components/events.md
       - "Сповіщення": components/notifications.md
       - "Autodiscovery": components/autodiscovery.md
