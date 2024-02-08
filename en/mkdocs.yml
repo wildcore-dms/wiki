@@ -65,7 +65,6 @@ nav:
     #- "C-Data Olts": components/c_data_interfaces.md
     #- "ZTE Olts": components/zte_olts.md
     #- "Mikrotik routers": components/router_os.md
-    - "Macros": components/macros.md
     - "Sensors": components/sensors.md
     - "Billing MikBill": components/mikbill_integration.md
     - "Billing NoDeny Plus": components/nodeny_plus.md
