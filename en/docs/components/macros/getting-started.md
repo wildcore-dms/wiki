@@ -11,7 +11,7 @@
 
     Pick and choose different combinations for different **User Roles** for additional security.
 
-    ![](../assets/macros/macros_role_permissions_settings.png)
+    ![](../../assets/macros/macros_role_permissions_settings.png)
 
 !!! danger "Warning"
     Macros only work on Devices that support `multi_console_command`, see [more](https://github.com/meklis/switcher-core/blob/master/docs/DEVICES.md).
@@ -31,15 +31,15 @@
 Here we will go through the macro creation process step-by-step.
 
 1. Use the **Configuration** drop-down menu in the left-side drawer to find the **Macros** menu. 
-![](../assets/macros/macros_sidebar.png)
+![](../../assets/macros/macros_sidebar.png)
 
 2. Macros screen opens. Press the **Add new** button to create a new one.
-![](../assets/macros/macros_main_screen.png)
+![](../../assets/macros/macros_main_screen.png)
 
     **Add New Macro** screen opens.
 
 3. Fill out the **Common** tab
-![](../assets/macros/macros_add_new_macros_common.png)
+![](../../assets/macros/macros_add_new_macros_common.png)
 
     !!! info
         - Choose a **Name** that reflects the purpose of your macro from the first glance.
@@ -49,11 +49,11 @@ Here we will go through the macro creation process step-by-step.
         - **Display for** allows you to customize where exactly this macro can be run, i.e. on a whole `Device` or only on a `Port` or a `ONU`.
         - **Display output** defines whether you want to get feedback from all commands executed by the macro, just the last one or no output at all.
     ??? example
-        ![](../assets/macros/macros_add_new_macros_common_filled_out.png)
+        ![](../../assets/macros/macros_add_new_macros_common_filled_out.png)
 
 4. Parameters
 
-    ![](../assets/macros/macros_add_new_macros_parameters.png)
+    ![](../../assets/macros/macros_add_new_macros_parameters.png)
     !!! info 
         
         - **Device** drop-down allows you to select a device, on which this macro will be run and load it's **Parameters**. 
@@ -62,10 +62,10 @@ Here we will go through the macro creation process step-by-step.
         Selecting a **Device** at this stage is optional, you can press the **Add parameter** button right away.
 
     ??? example 
-        ![](../assets/macros/macros_add_new_macros_parameters_filledout.png)
+        ![](../../assets/macros/macros_add_new_macros_parameters_filledout.png)
 
 5. Press the **Add parameter** button. New **Parameter** card appears. Fill out the required fields in the **Parameter** card.
-    ![](../assets/macros/macros_add_new_macros_parameter_card_empty.png){align = right}
+    ![](../../assets/macros/macros_add_new_macros_parameter_card_empty.png){align = right}
 
     !!! info
 
@@ -77,14 +77,14 @@ Here we will go through the macro creation process step-by-step.
 
     ??? example
         
-        ![](../assets/macros/macros_add_new_macros_parameter_card_filled_out.png)
+        ![](../../assets/macros/macros_add_new_macros_parameter_card_filled_out.png)
 
     !!! tip 
         
-        ![](../assets/macros/macros_command_card_draganddrop_button.png) button allows drag-and-drop reordering of the **Parameters**
+        ![](../../assets/macros/macros_command_card_draganddrop_button.png) button allows drag-and-drop reordering of the **Parameters**
 
 6. Select a **Device** and an **Interface** in the **Template** tab.
-    ![](../assets/macros/macros_add_new_macros_template_tab_empty.png)
+    ![](../../assets/macros/macros_add_new_macros_template_tab_empty.png)
 
     !!! info
         This step is optional and is required to get the cached variables from the device for ease of access.
@@ -92,10 +92,10 @@ Here we will go through the macro creation process step-by-step.
         A new **Parameters form** block will appear, which shows the **Parameters** you've created in the *previous* step.
 
     ??? example
-        ![](../assets/macros/macros_add_new_macros_template_tab_device_selected.png)
+        ![](../../assets/macros/macros_add_new_macros_template_tab_device_selected.png)
 
 7. Create a **Twig**-style **Template** for your macro.
-    ![](../assets/macros/macros_template_block_emtpy.png)
+    ![](../../assets/macros/macros_template_block_emtpy.png)
 
     !!! info
         You can create a **Template** from scratch or use one of the examples below.
@@ -104,7 +104,7 @@ Here we will go through the macro creation process step-by-step.
 
         After you've filled out the **Chosen template** block **Live result** shows the result of your **Template** compilation and the exact command that will be executed on a selected **Device**.
     ??? example
-        ![](../assets/macros/macros_add_new_macros_template_tab_filled_out.png)
+        ![](../../assets/macros/macros_add_new_macros_template_tab_filled_out.png)
 
         ```
         show {{params.show_type}}
@@ -114,17 +114,17 @@ Here we will go through the macro creation process step-by-step.
 
     !!! tip
         Your macro will apear in the **Configuration** > **Macros** list, along with the **Edit**, **Delete**, **Clone** and **Import** buttons.
-        ![](../assets/macros/macros_macro_in_the_list.png)
+        ![](../../assets/macros/macros_macro_in_the_list.png)
 
 ## Macro usage
 
 To use the macro created in the **Creating a basic macro** section, navigate to the **Device**/**Port** you specified for it and select the **Macros** tab.
 
-![](../assets/macros/macros_device_macros_tab.png)
+![](../../assets/macros/macros_device_macros_tab.png)
 
 When you click **Execute** button, a new dialogue will pop up.
 
-![](../assets/macros/macros_device_running_macro.png)
+![](../../assets/macros/macros_device_running_macro.png)
 
 Here are the **Displayed name** and values we specified earlier in the **Parameters** tab.
 

@@ -54,8 +54,8 @@ nav:
     - "OLTs control": components/olts_control.md
     - "Registration of ONU": components/onts_registration.md
     - "Macros":
-        - "Getting started": components/macros.md
-        - "Parameter type options": components/macros_paramater_types_options.md
+        - "Getting started": components/macros/getting-started.md
+        - "Parameter type options": components/macros/macros_paramater_types_options.md
     - "Config backups": components/oxidized.md
       #- "ICMP pinger": components/pinger.md
     #- "Import Prometheus": components/prometheus_wrapper.md
