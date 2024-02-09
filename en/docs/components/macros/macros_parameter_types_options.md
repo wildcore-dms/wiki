@@ -91,10 +91,10 @@
     
     The evaluated expression determines the display name in the **Parameter** dropdown selector for each item.
 
+    To access the value of an object's property `${item.<property>}` syntax is used.
+
     !!! tip
         You can leave it empty if the values inside the array are simple data types, i.e. `string`, `int` etc.
-
-    To access the value of an object's property `${item.<property>}` syntax is used.
 
     ??? info
         Some **Devices** have `interface` object properties inside the variables they provide.
@@ -132,7 +132,7 @@
 
     ![](../../assets/macros/parameter_types_dropdown_variables_value-source.png)
 
-    This drowdown allows selection of a **Device** variable property storing a "simple" type value, such as `string`, `int` etc.
+    This dropdown allows selection of a **Device** variable property storing a "simple" type value, such as `string`, `int` etc.
 
 
 
@@ -154,7 +154,7 @@
 
     ![](../../assets/macros/parameter_types_input_default.png)
 
-    An *optional* field that allows you to set a default value for the **Parameter**.
+    This is an *optional* field that allows you to set a default value for the **Parameter**.
 
 
 !!! quote ""
