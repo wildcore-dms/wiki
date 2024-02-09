@@ -75,7 +75,7 @@ Here we will go through the macro creation process step-by-step.
         -   **Property** is the `{{params}}` object property name, used to access its value in the **Template**, using `{{params.property}}`
         -   **Property display name** is a short description for your propery, displayed in the macro execution pop-up
         -   **Required** checkbox allows you to specify a **Parameter** which has to be selected during **Macro** execution
-        -   To help you choose the right **Parameter type** see [**Parameter type options**](./macros_parameter_types_options.md)
+        -   To help you choose the right **Parameter type** see [**Parameter type options**](./macros_parameter_type_options.md)
         -   **Visibility condition** field defines whether a macro shown, i.e. `!iface` hides it from device's `Interface` panel 
 
     ??? example
