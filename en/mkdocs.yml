@@ -58,8 +58,8 @@ nav:
     - "Registration of ONU": components/onts_registration.md
     - "Macros":
         - "Getting started": components/macros/getting-started.md
-        - "Parameter type options": components/macros/macros_parameter_type_options.md
-        - "Twig templates examples": components/macros/twig-examples.md
+        - "Parameter type options": components/macros/parameter_type_options.md
+        - "Twig template examples": components/macros/twig-examples.md
     - "Config backups": components/oxidized.md
       #- "ICMP pinger": components/pinger.md
     #- "Import Prometheus": components/prometheus_wrapper.md
