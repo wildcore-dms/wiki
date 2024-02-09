@@ -24,7 +24,7 @@
     3. **Roles:** *feel free to select ****Roles**** appropriate to run this macro*
     4. **Model vendors filter:** for the purpose of this demonstration we use the vendor `ZTE`
     5. **Models:** `[ZTE C300 (FW 1.2), ZTE C320 (FW 1.2), ZTE C320]`
-    6. **Displaye for:** `ONU`
+    6. **Display for:** `ONU`
     7. **Display output:** `All commands`
 
 ### **Parameters tab**
@@ -72,11 +72,12 @@
             // For the purpose of this demonstration 
             // we selected the Speed of 100MB 
             // in the dropdown above
-            // and a device with Interface g0/0
+            // and a device with Interface epon-onu_1/1/1:1
 
             conf t
-            interface g0/0  // Our {{iface.name}} variable became the g0/0 port for example, 
-                            // which we selected in the Device and Interface dropdowns
+            interface epon-onu_1/1/1:1  // Our {{iface.name}} variable became the epon-onu_1/1/1:1 
+                                        // interface of a ZTE C320 device, 
+                                        // which we selected in the Device and Interface dropdowns
 
             tcont 1 name T-INET profile UP-100MB    // Here you can see {{params.speed}} 
                                                     // became the value we selected in the Speed parameter dropdown
@@ -88,7 +89,7 @@
             // The other static commands have been left unchanged
             ```
 
-The macro is now ready to use
+The macro is now ready to use.
 
 Navigate to a device and an interface applicable for this macro and find the macro we just created in the **Macros** tab.
 
@@ -99,9 +100,9 @@ Navigate to a device and an interface applicable for this macro and find the mac
 
     ![](../../assets/macros/twig_examples_onu_screen.png)
 
-    As you can see we can select **Speed** from the drop-down, for the user to set, and have a few buttons.
+    You can select the desired **Speed** from the dropdown and find a few buttons below.
 
-    When you press the **Preview** button, you can see the same result as in the **Live preview** of the macro creation **Template** tab.
+    When you press the Preview button, you see the same result as in the **Live preview** of the macro creation **Template** tab.
     
     ![](../../assets/macros/twig_examples_preview_executed_commands.png)
 
@@ -109,11 +110,11 @@ Navigate to a device and an interface applicable for this macro and find the mac
         Always be careful about running any macros on live hardware.
 
 
-    The **Execute** button behaves as expected, it sends the commands to the device's interface, in this case `epon-onu_1/1/1:1`.
+    The **Execute** button sends the commands to the selected device's interface, in this case `epon-onu_1/1/1:1`.
 
     !!! warning ""
         We will not actually **Execute** the macro in this demonstration for safety purposes.
 
         You can see some successfull macro executions in the next sections of this page.
 
-##
+## WIP
