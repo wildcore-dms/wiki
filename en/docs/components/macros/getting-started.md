@@ -2,7 +2,7 @@
 
 !!! abstract "Overview"
     
-    **Macros** is a component delivered separately, which allows the user to enhance System's functions by executing custom CLI commands on their devices, utilizing a simple graphical interface, i.e. viewing logs, snooping or even VLAN management on specified ports.
+    "**Macros** is a component delivered separately, which allows the user to enhance the System's functions by executing custom CLI commands on their devices, utilizing a simple graphical interface, i.e.,, viewing logs, snooping, or even VLAN management on specified ports."
 
 !!! warning "Attention"
     Creation and macro usage require specific **Role Permissions** settings.
@@ -18,28 +18,37 @@
 
 ## Macros menu
 
-| Name    | Description                          |
-| ----------- | ------------------------------------ |
-| **Common**        | Here it's name, users and device models which are allowed to run it and visibility areas are specified. The latter allows greater customization and interface decluttering by hiding the macros that are not applicable to selected   |
-| **Parameters**      | This is the body of the macro. In the **Device** field, the device on which the macro is run is specified and **Variables** are loaded from cache as a JSON structure for ease of access. With **Interfaces** drop-down you can select a specific interface on which the should be executed, after which an additional property `iface` is loaded. It contains information about this interface. **Add parameter** button creates a new entry where the `{{params}}` object properties can be specified, which can be accessed by the macro (see **Template** section).  |
-| **Template**    | Templates are built with [**Twig**](https://twig.symfony.com/) template engine, therefore it is possible to include variables in the commands, create and assign custom variables, as well as branching and text permutations, inside the template. See [Twig Documentation](https://twig.symfony.com/doc/3.x/templates.html) for reference.|
+!!! info
+    **Macros** menu can be found under **Configuration > Macros** in the left-side drawer.
+
+    Here you can create a new macro from scratch or **Import** a premade one.
+
+    ![](../../assets/macros/macros_menu_first_time.png)
+
+    *Opening the ****Macros**** menu for the first time*
+
+
 
 
 
 ## Creating a basic macro
 
-Here we will go through the macro creation process step-by-step.
+In this section we will go through the macro creation process step-by-step.
 
-1. Use the **Configuration** drop-down menu in the left-side drawer to find the **Macros** menu. 
-    ![](../../assets/macros/macros_sidebar.png)
 
-2. **Macros** screen opens. Press the **Add new** button in the upper-left corner to create a new one.
-    ![](../../assets/macros/macros_main_screen.png)
-    
-    **Add New Macro** screen opens.
-    
+1. On the **Macros** screen press the **Add new** button in the upper-left corner to create a new one.
 
-3. Fill out the **Common** tab
+    !!! info
+
+        | Name            | Description                          |
+        | --------------- | ------------------------------------ |
+        | **Common**      | Here, the name, users, and device models allowed to run it, as well as visibility areas, are specified. The latter allows greater customization and interface decluttering by hiding macros that are not applicable to the selected context. |
+        | **Parameters**  | This section encompasses the body of the macro. In the **Device** field, the device on which the macro runs is specified, and **Variables** are loaded from cache as a JSON structure for <br>With the **Interfaces** drop-down, you can select a specific interface on which the macro should be executed, after which an additional property `iface` is loaded, containing information about this interface.<br>The **Add parameter** button creates a new entry where the `{{params}}` object properties can be specified, which can then be accessed by the macro (see **Template** section). |
+        | **Template**    | Templates are built with the [**Twig**](https://twig.symfony.com/) template engine, allowing for the inclusion of variables in commands, creation and assignment of custom variables, as well as branching and text permutations within the template. Refer to the [Twig Documentation](https://twig.symfony.com/doc/3.x/templates.html) for further details. |
+
+
+
+2. Fill out the **Common** tab
 
     ![](../../assets/macros/macros_add_new_macros_common.png)
 
@@ -48,12 +57,12 @@ Here we will go through the macro creation process step-by-step.
         - **Description** allows you to describe features or direct it's user.
         - In **Roles** drop-down you can select which user roles are permitted to execute this macro.
         - **Models** field allows you to select specific devices on which the macro can be run.
-        - **Display for** allows you to customize where exactly this macro can be run, i.e. on a whole `Device` or only on a `Port` or a `ONU`.
+        - **Display for** allows you to customize where exactly this macro can be run, i.e., on a whole `Device` or only on a `Port` or a `ONU`.
         - **Display output** defines whether you want to get feedback from all commands executed by the macro, just the last one or no output at all.
     ??? example
         ![](../../assets/macros/macros_add_new_macros_common_filled_out.png)
 
-4. Parameters
+3. Parameters
 
     ![](../../assets/macros/macros_add_new_macros_parameters.png)
     !!! info 
@@ -66,17 +75,18 @@ Here we will go through the macro creation process step-by-step.
     ??? example 
         ![](../../assets/macros/macros_add_new_macros_parameters_filledout.png)
 
-5. Press the **Add parameter** button. New **Parameter** card appears. Fill out the required fields in the **Parameter** card.
+4. Press the **Add parameter** button. A new **Parameter** card will appear. Fill out the required fields in the **Parameter** card.
 
     ![](../../assets/macros/macros_add_new_macros_parameter_card_empty.png)
 
     !!! info
 
-        -   **Property** is the `{{params}}` object property name, used to access its value in the **Template**, using `{{params.property}}`
-        -   **Property display name** is a short description for your propery, displayed in the macro execution pop-up
-        -   **Required** checkbox allows you to specify a **Parameter** which has to be selected during **Macro** execution
-        -   To help you choose the right **Parameter type** see [**Parameter type options**](./macros_parameter_type_options.md)
-        -   **Visibility condition** field defines whether a macro shown, i.e. `!iface` hides it from device's `Interface` panel 
+        - **Property**: This is the `{{params}}` object property name, used to access its value in the **Template** by using `{{params.property}}`.
+        - **Property display name**: Provide a short description for your property, which will be displayed in the macro execution pop-up.
+        - **Required** checkbox: Specify whether the parameter must be selected during macro execution.
+        - To help you choose the right **Parameter type**, refer to the [**Parameter type options**](./macros_parameter_type_options.md).
+        - **Visibility condition**: This field defines whether the macro is shown. For example, `!iface` hides it from the device's `Interface` panel.
+
 
     ??? example
         
@@ -86,7 +96,7 @@ Here we will go through the macro creation process step-by-step.
         
         ![](../../assets/macros/macros_command_card_draganddrop_button.png) button allows drag-and-drop reordering of the **Parameters**
 
-6. Select a **Device** and an **Interface** in the **Template** tab.
+5. Select a **Device** and an **Interface** in the **Template** tab.
     ![](../../assets/macros/macros_add_new_macros_template_tab_empty.png)
 
     !!! info
@@ -97,31 +107,39 @@ Here we will go through the macro creation process step-by-step.
     ??? example
         ![](../../assets/macros/macros_add_new_macros_template_tab_device_selected.png)
 
-7. Create a **Twig**-style **Template** for your macro.
-    ![](../../assets/macros/macros_template_block_emtpy.png)
+6. Create a **Twig**-style **Template** for your macro.
+    ![](../../assets/macros/macros_template_block_empty.png)
 
     !!! info
         You can create a **Template** from scratch or use one of the examples below.
-        
-        
 
-        After you've filled out the **Chosen template** block **Live result** shows the result of your **Template** compilation and the exact command that will be executed on a selected **Device**.
+        After you've filled out the **Chosen template** block, **Live result** shows the result of your **Template** compilation and the exact command that will be executed on a selected **Device**.
 
         For syntax refer to [**Twig Documentation for Designers**](https://twig.symfony.com/doc/3.x/templates.html).
 
-        Find more Template examples [**here**](./twig-examples.md)
-    ??? example
+        Find more **Template** examples [**here**](./twig-examples.md)
+
         ![](../../assets/macros/macros_add_new_macros_template_tab_filled_out.png)
 
         ```
         show {{params.show_type}}
         ```
     
-8. Press **Create** button
+7. Press **Create** button
 
     !!! tip
-        Your macro will apear in the **Configuration** > **Macros** list, along with the **Edit**, **Delete**, **Clone** and **Import** buttons.
+        All your macros are shown in the **Macros** menu as a table, along with the **Edit**, **Delete**, **Clone** and **Import** buttons.
         ![](../../assets/macros/macros_macro_in_the_list.png)
+
+        | Icon | Name | Description |
+        | ---- | ---- | ----------- |
+        | ![](../../assets/macros/macros_edit_button.png) | Edit | Use this button to edit a saved macro. |
+        | ![](../../assets/macros/macros_delete_button.png) | Delete | Use this button to delete a macro. |
+        | ![](../../assets/macros/macros_clone_button.png) | Clone | Use this button to create a copy of a macro. |
+        | ![](../../assets/macros/macros_export_button.png) | Export | Use this button to save a macro locally in `JSON` format.<br> The **Roles** seleted are removed for safety. |         
+
+           
+
 
 ## Macro usage
 
