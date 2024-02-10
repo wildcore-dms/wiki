@@ -2,7 +2,7 @@
 
 !!! abstract "Overview"
     
-    "**Macros** is a component delivered separately, which allows the user to enhance the System's functions by executing custom CLI commands on their devices, utilizing a simple graphical interface, i.e.,, viewing logs, snooping, or even VLAN management on specified ports."
+    **Macros** is a component delivered separately, which allows the user to enhance the System's functions by executing custom CLI commands on their devices, utilizing a simple graphical interface, i.e., viewing logs, snooping, or even VLAN management on specified ports.
 
 !!! warning "Attention"
     Creation and macro usage require specific **Role Permissions** settings.
@@ -15,6 +15,9 @@
 
 !!! danger "Warning"
     Macros only work on Devices that support `multi_console_command`, see [more](https://github.com/meklis/switcher-core/blob/master/docs/DEVICES.md).
+
+!!! tip
+    You can find and download macro examples on our [demo website](https://demo.wildcore.tools/config/macros) and find detailed explanations of some sample macros on the [Twig template examples](./twig-examples.md) page.
 
 ## Macros menu
 

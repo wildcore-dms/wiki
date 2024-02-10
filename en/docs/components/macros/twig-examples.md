@@ -220,12 +220,12 @@ Refer to the [**Parameter type options**](./parameter_type_options.md) page as n
             Tagged
             ```
         - **Visibility condition:**
-
-            Here we reference the previous parameter, **Action**, and set the **Type** parameter to be show only when the selected action is `'Add'`.
-
             ```
             params.action === 'Add'
             ```
+
+            ??? info
+                Here we reference the previous parameter, **Action**, and set the **Type** parameter to be show only when the selected action is `'Add'`.
 
     3. **VLAN** parameter:
         - **Property:** `vlan`
@@ -234,12 +234,14 @@ Refer to the [**Parameter type options**](./parameter_type_options.md) page as n
         - **Parameter type:** `Dropdown list from variables`
         - **Value source:** `data.vlans`
 
-            This device variable stores an array of objects, properties of which describe the VLANs we want to configure.
+            ??? info
+                This device variable stores an array of objects, properties of which describe the VLANs we want to configure.
 
         - **Visibility condition:** *empty*
         - **Item name:** `${item.name}  (${item.id})`
 
-            We choose the VLAN's `name` and `id` properties to be shown in the drop-down for convenience.
+            ??? info
+                We choose the VLAN's `name` and `id` properties to be shown in the drop-down for convenience.
 
     4. **Port** parameter:
         - **Property:** `port`
@@ -248,10 +250,11 @@ Refer to the [**Parameter type options**](./parameter_type_options.md) page as n
         - **Parameter type:** `Dropdown list from variables`
         - **Value source:** `interfaces_list`
         - **Visibility condition:** `!iface`
-            
-            This condition hides the parameter from screens that provide the `iface` variable from a device, such as selected intefaces.
 
-            Therefore, when running this macro from a **Device** screen, we can select a specific interface from the drop-down, otherwise, it's not shown.
+            ??? info
+                This condition hides the parameter from screens that provide the `iface` variable from a device, such as selected intefaces.
+
+                Therefore, when running this macro from a **Device** screen, we can select a specific interface from the drop-down, otherwise, it's not shown.
 
         - **Item name:** `${item.name}`
 
@@ -260,9 +263,10 @@ Refer to the [**Parameter type options**](./parameter_type_options.md) page as n
 !!! quote ""
     1. **Device** and **Interface:** *feel free to select a ****Device**** and/or an ****Interface**** applicable to this macro*
 
-        For this demonstration we select a `D-Link DES-1228/ME` device and no **Interface**.
+        ??? info
+            For this demonstration we select a `D-Link DES-1228/ME` device and no **Interface**.
 
-    2. **Parameters form:** *depending on whether you selected an ****Interface****, you will be presented with the parameters we specified in the previous step*
+    2. **Parameters form:** 
 
         For this demonstration we select:
 
@@ -270,7 +274,15 @@ Refer to the [**Parameter type options**](./parameter_type_options.md) page as n
         - **Type:** `Untagged` 
         - **VLAN name:** `sw802 (802)` 
         - **Port**: `1/1`
-    3. **Variables:** Here are the variables from the selected **Device** and **Interface**, as well as `params` property, which stores the values of our `action`, `type`, `vlan` and `port` parameters.
+
+        ??? info
+            You are presented with the parameters we specified in the previous step.
+
+            **Type** drop-down is only visible when the **Action** is set to `Add`, **Port** is only visible when we haven't selected an **Interface**. 
+
+    3. **Variables:** 
+
+        Here are the variables from the selected **Device** and **Interface**, as well as `params` property, which stores the values of our `action`, `type`, `vlan` and `port` parameters.
 
         ``` json
         "params": {
@@ -293,15 +305,16 @@ Refer to the [**Parameter type options**](./parameter_type_options.md) page as n
         }, 
         ```
 
-        `_display_name` property here is the **Item name** variable we specified in the previous step.
+        ??? info
+            `_display_name` property here is the **Item name** variable we specified in the previous step.
 
-        We specified `${item.name}` for our **Port** parameter, but we could also leave it empty since it evaluates to this by default.
+            We specified `${item.name}` for our **Port** parameter, but we could also leave it empty since it evaluates to this by default.
 
     4. **Template block:**
 
         - **Chosen template:** 
             ``` twig
-            {# Block of setting variables inside template #}
+            {# Block for setting variables inside the template #}
             {% set port = params.port %}
             {% if iface %}
             {% set port = iface %}
