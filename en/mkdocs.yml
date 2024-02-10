@@ -19,12 +19,13 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 site_name: WildcoreDMS
 site_url: http://127.0.0.1:8000/
+repo_url: https://github.com/wildcore-dms/wiki
 theme:
-  language: en
+  language: uk
   name: material
-  logo: assets/wildcore_logo.png
   features:
-    - content.code.copy
+    - navigation.footer
+  logo: assets/wildcore_logo.png
 extra:
   alternate:
     - name: English

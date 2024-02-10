@@ -1,7 +1,10 @@
-site_name: WildcoreDMS
+site_name: WildcoreDMS wiki
+repo_url: https://github.com/wildcore-dms/wiki
 theme:
   language: uk
   name: material
+  features:
+    - navigation.footer
   logo: assets/wildcore_logo.png
 
 plugins:
@@ -15,6 +18,7 @@ markdown_extensions:
   - md_in_html
   - pymdownx.superfences
   - attr_list
+
 extra:
   alternate:
     - name: English
