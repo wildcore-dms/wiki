@@ -326,8 +326,10 @@ The macro is now ready to use.
 
 Navigate to a device and an interface applicable for this macro and find the macro we just created in the **Macros** tab.
 
-For this demonstration, we selected a `ZTE 320` **Device** and it's `epon-onu_1/1/1:1` **Interface**.
+For this demonstration, we selected a `D-Link DES-1228/ME` **Device**.
 
+**WIP**
+<!-- 
 ![](../../assets/macros/twig_examples_onu_screen.png)
 
 This time you can select the desired **Speed** from the dropdown and look at a **Preview**.
@@ -337,4 +339,4 @@ This time you can select the desired **Speed** from the dropdown and look at a *
 The **Execute** button sends the commands to the selected device's interface, in this case `epon-onu_1/1/1:1`.
 
 !!! warning ""
-    We will not actually **Execute** the macro in this demonstration for safety purposes.
+    We will not actually **Execute** the macro in this demonstration for safety purposes. -->
