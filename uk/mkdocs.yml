@@ -39,7 +39,10 @@ nav:
   - "Опитувач обладнанная": system/poller.md
   - "Про компоненти": components/index.md
   - "Компоненти":
-      - "Макроси": components/macros.md
+      - "Макроси":
+        - "З чого почати": components/macros/getting-started.md
+        - "Опції типів параметрів": components/macros/parameter_type_options.md
+        - "Приклади шаблонів Twig": components/macros/twig-examples.md
       - "Події": components/events.md
       - "Сповіщення": components/notifications.md
       - "Autodiscovery": components/autodiscovery.md

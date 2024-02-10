@@ -46,7 +46,7 @@ In this section we will go through the macro creation process step-by-step.
         | Name            | Description                          |
         | --------------- | ------------------------------------ |
         | **Common**      | Here, the name, users, and device models allowed to run it, as well as visibility areas, are specified. The latter allows greater customization and interface decluttering by hiding macros that are not applicable to the selected context. |
-        | **Parameters**  | This section encompasses the body of the macro. In the **Device** field, the device on which the macro runs is specified, and **Variables** are loaded from cache as a JSON structure for <br>With the **Interfaces** drop-down, you can select a specific interface on which the macro should be executed, after which an additional property `iface` is loaded, containing information about this interface.<br>The **Add parameter** button creates a new entry where the `{{params}}` object properties can be specified, which can then be accessed by the macro (see **Template** section). |
+        | **Parameters**  | This section encompasses the **Parameters** of the macro. In the **Device** field, the device on which the macro runs is specified, and **Variables** are loaded from cache as a JSON structure for ease of access.<br>With the **Interfaces** drop-down, you can select a specific interface on which the macro would be executed, after which an additional variable `iface` is loaded, that contains information about this interface.<br>The **Add parameter** button creates a new entry where the `{{params}}` object properties can be specified, which can then be accessed by the macro (see **Template** section). |
         | **Template**    | Templates are built with the [**Twig**](https://twig.symfony.com/) template engine, allowing for the inclusion of variables in commands, creation and assignment of custom variables, as well as branching and text permutations within the template. Refer to the [Twig Documentation](https://twig.symfony.com/doc/3.x/templates.html) for further details. |
 
 
@@ -71,15 +71,17 @@ In this section we will go through the macro creation process step-by-step.
     ![](../../assets/macros/macros_add_new_macros_parameters.png)
     !!! info 
         
-        - **Device** drop-down allows you to select a device, on which this macro will be run and load it's **Parameters**. 
-        - **Interfaces** loads an additional parameter `iface`, which stores this port's description.
+        - **Device** drop-down allows you to select a device, on which this macro will be run and load it's **Variables**. 
+        - **Interfaces** loads an additional variable `iface`, which stores this port's description.
         
         Selecting a **Device** at this stage is optional, you can press the **Add parameter** button right away.
 
     ??? example 
         ![](../../assets/macros/macros_add_new_macros_parameters_filledout.png)
 
-4. Press the **Add parameter** button. A new **Parameter** card will appear. Fill out the required fields in the **Parameter** card.
+4. Press the **Add parameter** button, a new **Parameter** card will appear. 
+
+    Fill out the required fields in the **Parameter** card.
 
     ![](../../assets/macros/macros_add_new_macros_parameter_card_empty.png)
 
@@ -121,7 +123,7 @@ In this section we will go through the macro creation process step-by-step.
 
         For syntax refer to [**Twig Documentation for Designers**](https://twig.symfony.com/doc/3.x/templates.html).
 
-        Find more **Template** examples [**here**](./twig-examples.md)
+        Find more **Template** examples [**here**](./twig-examples.md).
 
         ![](../../assets/macros/macros_add_new_macros_template_tab_filled_out.png)
 
@@ -132,7 +134,7 @@ In this section we will go through the macro creation process step-by-step.
 7. Press **Create** button
 
     !!! tip
-        All your macros are shown in the **Macros** menu as a table, along with the **Edit**, **Delete**, **Clone** and **Import** buttons.
+        All your macros are shown in the **Macros** menu as a table, along with the **Edit**, **Delete**, **Clone** and **Export** buttons.
         ![](../../assets/macros/macros_macro_in_the_list.png)
 
         | Icon | Name | Description |
