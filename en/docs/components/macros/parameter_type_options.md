@@ -93,6 +93,8 @@
 
     To access the value of an object's property `${item.<property>}` syntax is used.
 
+    By default, it's `${item.name}`, when this field is empty.
+
     !!! tip
         You can leave it empty if the values inside the array are simple data types, i.e. `string`, `int` etc.
 

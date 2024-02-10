@@ -5,35 +5,110 @@
     
     Feel free to copy and try them out!
 
-!!! danger "Warning"
-    Be cautious when running the code on your devices.
-
 !!! warning "Attention"
     Commands may vary depending on your setup. 
     
     Refer to your device's manual for applicable commands.
 
+## Looking at ONU configuration
 
-## Changing the client's speed limit
+This example demonstrates a basic **Template** setup without any **Parameters**, that simply displays information.
 
-### **Common tab**
+### Common tab
 
 !!! quote ""
-    1. **Name:** `Change client's speed limit`
+    1. **Name:** `Display ONU configuration`
     2. **Description:** *feel free to enter a descriptive overview of this macro*
     3. **Roles:** *feel free to select ****Roles**** appropriate to run this macro*
     4. **Model vendors filter:** for the purpose of this demonstration we use the vendor `ZTE`
-    5. **Models:** `[ZTE C300 (FW 1.2), ZTE C320 (FW 1.2), ZTE C320]`
+    5. **Models:** `ZTE C320`
     6. **Display for:** `ONU`
     7. **Display output:** `All commands`
 
 ### **Parameters tab**
 
+For this demonstration, we skip this tab since we don't need any **Parameters**.
+
+### **Template tab**
+
+!!! quote ""
+    1. **Device** and **Interface:** *feel free to select a ****Device**** and/or an ****Interface**** applicable to this macro*
+    2. **Parameters form:** Since we don't have any **Parameters**, this section is not displayed.
+    3. **Variables:** Here are the variables from the selected **Device** and **Interface**.
+    4. **Template block:**
+
+        - **Chosen template:**
+        
+            This is the input field that defines your macro, containing the specific CLI commands that are executed on the selected **Device** and/or **Interface**, combined with any Parameters you choose, if applicable.
+
+            Here we use the `iface` variable that the selected device provides.
+
+            ``` twig
+            show run int {{iface.name}}
+            show onu conf {{iface.name}}
+            ```
+
+        - **Live result:**
+        
+            Here you can see the result of this **Template**'s compilation, the exact command that will run on your hardware.
+
+            For the purpose of this demonstration we selected a `ZTE C320` device and `epon-onu_1/1/1:1` inteface.
+
+            ``` shell
+            show run int epon-onu_1/1/1:1
+            show onu run conf epon-onu_1/1/1:1
+            ```
+
+            Our `{{iface.name}}` variable evaluated to `epon-onu_1/1/1:1` and the other static commands have been left unchanged.
+
+Press the **Create** button and the macro is ready to use.
+
+### Running the macro
+
+Navigate to a device and an interface applicable for this macro and find the macro we just created in the **Macros** tab.
+
+!!! tip 
+    Since we selected `ONU` at the **Display for** step, the macro will only be visible on the appropriate sreen.
+
+For this demonstration, we selected a `ZTE 320` **Device** and it's `gpon-onu_1/2/1:1` **Interface**.
+
+![](../../assets/macros/twig_examples_onu_screen_display_config.png)
+
+Since we don't have any **Parameters**, the message **This macro has no parameters** is displayed instead.
+
+When you press the **Preview** button, you can see it works the same way as shown in the **Live preview** on the **Template** tab.
+
+![](../../assets/macros/twig_examples_onu_display_config_preview_executed_commands.png)
+
+The **Execute** button sends the commands to the selected device's interface, in this case `gpon-onu_1/2/1:1`.
+
+![](../../assets/macros/twig_examples_display_config_results.png)
+
+
+
+
+## Changing the client's speed limit
+
+### Common tab
+
+Fill out this tab according to your requirements.
+
+??? example
+    1. **Name:** `Change client's speed limit`
+    2. **Description:** `Select a speed limit from the dropdown to be applied to the client's connection`
+    3. **Roles:** `Operator`
+    4. **Model vendors filter:** `ZTE`
+    5. **Models:** `ZTE C320`
+    6. **Display for:** `ONU`
+    7. **Display output:** `All commands`
+
+### Parameters tab
+
 !!! quote ""
     1. Add a new **Parameter**.
     2. **Property:** `speed`
-    3. **Property display name:** : `Speed`
-    4. **Required:** *feel free to set this checkbox as you wish*
+    3. **Property display name:** `Speed`
+    4. **Required:** `False`
     5. **Parameter type:** `Dropdown list from predefined`
 
         Here we use predefined values to help the user choose the right one conveniently.
@@ -42,19 +117,18 @@
         100MB
         1GB
         ```
-    7. **Visibility condition:** *feel free to fill this out appropriately for your setup*
+    7. **Visibility condition:** *empty*
 
-### **Template tab**
+### Template tab
 
 !!! quote ""
-    1. **Device** and **Interface:** *feel free to select a **Device** and an **Interface** applicable to this macro*
+    1. **Device** and **Interface:** *feel free to select a ****Device**** and/or an ****Interface**** applicable to this macro*
     2. **Parameters form:** Here's the dropdown for the **Speed** property from the previous tab.
-    3. **Variables:** Here are the variables from the selected **Device** and **Interface**.
+    3. **Variables:** Here are the variables from the selected **Device** and **Interface**, as well as `params` property which stores the values of the parameters we specified earlier.
     4. **Template block:**
 
-        - **Chosen template:** This is the input field that defines your macro, the specific CLI command that are run on the selected **Device** and/or **Interface**, combined with **Parameters** you chose.
-
-            ```
+        - **Chosen template:** 
+            ``` twig
             conf t
             interface {{iface.name}}
             tcont 1 name T-INET profile UP-{{params.speed}}
@@ -63,58 +137,204 @@
             wr
             ```
 
-        - **Live result:** Here you can see the result of this **Template**'s compilation, the exact command that will run on your hardware. 
+        - **Live result:**
 
-            !!! danger "" 
-                Be sure to check every **Template** before using on a real **Device**!
+            For the purpose of this demonstration we selected the **Speed** of `100MB` in the dropdown above and a `ZTE C320` device with an Interface `epon-onu_1/1/1:1`.
 
-            ```
-            // For the purpose of this demonstration 
-            // we selected the Speed of 100MB 
-            // in the dropdown above
-            // and a device with Interface epon-onu_1/1/1:1
-
+            ``` shell
             conf t
-            interface epon-onu_1/1/1:1  // Our {{iface.name}} variable became the epon-onu_1/1/1:1 
-                                        // interface of a ZTE C320 device, 
-                                        // which we selected in the Device and Interface dropdowns
-
-            tcont 1 name T-INET profile UP-100MB    // Here you can see {{params.speed}} 
-                                                    // became the value we selected in the Speed parameter dropdown
-
-            gemport 1 traffic-limit downstream DOWN-100MB   // Same here
+            interface epon-onu_1/1/1:1
+            tcont 1 name T-INET profile UP-100MB
+            gemport 1 traffic-limit downstream DOWN-100MB
             end
             wr
-
-            // The other static commands have been left unchanged
             ```
 
+            Similar to the previous example, `{{iface.name}}` evaluated to `epon-onu_1/1/1:1`, and `{{params.speed}}` stored the value we selected in the Speed dropdown.
+
 The macro is now ready to use.
+
+### Running the macro
 
 Navigate to a device and an interface applicable for this macro and find the macro we just created in the **Macros** tab.
 
 !!! tip 
     Since we selected `ONU` at the **Display for** step, the macro will only be visible on the appropriate sreen.
 
-    For this demonstration, we selected a `ZTE 320` **Device** and it's `epon-onu_1/1/1:1` **Interface**.
+For this demonstration, we selected a `ZTE 320` **Device** and it's `epon-onu_1/1/1:1` **Interface**.
 
-    ![](../../assets/macros/twig_examples_onu_screen.png)
+![](../../assets/macros/twig_examples_onu_screen.png)
 
-    You can select the desired **Speed** from the dropdown and find a few buttons below.
+This time you can select the desired **Speed** from the dropdown and look at a **Preview**.
 
-    When you press the Preview button, you see the same result as in the **Live preview** of the macro creation **Template** tab.
+![](../../assets/macros/twig_examples_preview_executed_commands.png)
+
+The **Execute** button sends the commands to the selected device's interface, in this case `epon-onu_1/1/1:1`.
+
+!!! warning ""
+    We will not actually **Execute** the macro in this demonstration for safety purposes.
+
+
+## Managing a VLAN
+
+This macro involves more **Parameters** compared to the previous one. 
+
+Refer to the [**Parameter type options**](./parameter_type_options.md) page as needed.
+
+### Common tab
+
+!!! quote ""
+    1. **Name:** `VLAN control`
+    2. **Description:** `Manage VLANs on a selected port`
+    3. **Roles:** `Operator, Engineer`
+    4. **Model vendors filter:** `D-Link`
+    5. **Models:** `D-Link DES-1228/ME ...` 
     
-    ![](../../assets/macros/twig_examples_preview_executed_commands.png)
+        *feel free to select more appropriate devices, we will use this one for demonstration*
+    6. **Display for:** `Device, Port`
+    7. **Display output:** `All commands`
 
-    !!! danger ""
-        Always be careful about running any macros on live hardware.
+### Parameters tab
 
+!!! quote ""
+    1. **Action** parameter:
+        - **Property:** `action`
+        - **Property display name:** `Action`
+        - **Required:** `True`
+        - **Parameter type:** `Dropdown list from predefined`
+        - **Predefined values list:**
+            ```
+            Add
+            Delete
+            ```
+        - **Visibility condition:** *empty*
 
-    The **Execute** button sends the commands to the selected device's interface, in this case `epon-onu_1/1/1:1`.
+    2. **Type** parameter:
+        - **Property:** `type`
+        - **Property display name:** `Type`
+        - **Required:** `False`
+        - **Parameter type:** `Dropdown list from predefined`
+        - **Predefined values list:**
+            ```
+            Untagged
+            Tagged
+            ```
+        - **Visibility condition:**
 
-    !!! warning ""
-        We will not actually **Execute** the macro in this demonstration for safety purposes.
+            Here we reference the previous parameter, **Action**, and set the **Type** parameter to be show only when the selected action is `'Add'`.
 
-        You can see some successfull macro executions in the next sections of this page.
+            ```
+            params.action === 'Add'
+            ```
 
-## WIP
+    3. **VLAN** parameter:
+        - **Property:** `vlan`
+        - **Property display name:** `VLAN`
+        - **Required:** `True`
+        - **Parameter type:** `Dropdown list from variables`
+        - **Value source:** `data.vlans`
+
+            This device variable stores an array of objects, properties of which describe the VLANs we want to configure.
+
+        - **Visibility condition:** *empty*
+        - **Item name:** `${item.name}  (${item.id})`
+
+            We choose the VLAN's `name` and `id` properties to be shown in the drop-down for convenience.
+
+    4. **Port** parameter:
+        - **Property:** `port`
+        - **Property display name:** `Port`
+        - **Required:** `False`
+        - **Parameter type:** `Dropdown list from variables`
+        - **Value source:** `interfaces_list`
+        - **Visibility condition:** `!iface`
+            
+            This condition hides the parameter from screens that provide the `iface` variable from a device, such as selected intefaces.
+
+            Therefore, when running this macro from a **Device** screen, we can select a specific interface from the drop-down, otherwise, it's not shown.
+
+        - **Item name:** `${item.name}`
+
+### Template tab
+
+!!! quote ""
+    1. **Device** and **Interface:** *feel free to select a ****Device**** and/or an ****Interface**** applicable to this macro*
+
+        For this demonstration we select a `D-Link DES-1228/ME` device and no **Interface**.
+
+    2. **Parameters form:** *depending on whether you selected an ****Interface****, you will be presented with the parameters we specified in the previous step*
+
+        For this demonstration we select:
+
+        - **Action:** `Add` 
+        - **Type:** `Untagged` 
+        - **VLAN name:** `sw802 (802)` 
+        - **Port**: `1/1`
+    3. **Variables:** Here are the variables from the selected **Device** and **Interface**, as well as `params` property, which stores the values of our `action`, `type`, `vlan` and `port` parameters.
+
+        ``` json
+        "params": {
+            "action": "Add",
+            "type": "Untagged",
+            "vlan": {
+                "name": "sw802",
+                "id": "802",
+                "ports": { /* 3 items */ },
+                 "_display_name": "sw802 (802)"
+            },
+            "port": {
+                "id": 5026,
+                "type": "FE",
+                "name": "1/1",
+                "bind_key": "1",
+                "status": "Down",
+                "_display_name": "1/1"
+            }
+        }, 
+        ```
+
+        `_display_name` variable here is the **Item name** variable we specified in the previous step.
+
+        As you can see we haven't specified one for our **Port** parameter, and by default it's `${item.name}`.
+
+    4. **Template block:**
+
+        - **Chosen template:** 
+            ``` twig
+            {# Block of setting variables inside template #}
+            {% set port = params.port %}
+            {% if iface %}
+            {% set port = iface %}
+            {% endif %}
+
+            {# Template block #}
+            {% if params.action == 'Delete' %}
+            config vlan {{params.vlan.name}} delete {{port.bind_key}}
+            {% else %}
+            config vlan {{params.vlan.name}} add {{params.type | lower }} {{port.bind_key}}
+            {% endif %}
+            ```
+
+        - **Live result:**
+            ``` shell
+            config vlan sw802 add untagged 1
+            ```
+
+The macro is now ready to use.
+
+### Running the macro
+
+Navigate to a device and an interface applicable for this macro and find the macro we just created in the **Macros** tab.
+
+For this demonstration, we selected a `ZTE 320` **Device** and it's `epon-onu_1/1/1:1` **Interface**.
+
+![](../../assets/macros/twig_examples_onu_screen.png)
+
+This time you can select the desired **Speed** from the dropdown and look at a **Preview**.
+
+![](../../assets/macros/twig_examples_preview_executed_commands.png)
+
+The **Execute** button sends the commands to the selected device's interface, in this case `epon-onu_1/1/1:1`.
+
+!!! warning ""
+    We will not actually **Execute** the macro in this demonstration for safety purposes.
