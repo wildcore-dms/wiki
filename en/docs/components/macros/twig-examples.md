@@ -38,28 +38,32 @@ For this demonstration, we skip this tab since we don't need any **Parameters**.
     4. **Template block:**
 
         - **Chosen template:**
-        
-            This is the input field that defines your macro, containing the specific CLI commands that are executed on the selected **Device** and/or **Interface**, combined with any Parameters you choose, if applicable.
-
-            Here we use the `iface` variable that the selected device provides.
 
             ``` twig
             show run int {{iface.name}}
             show onu conf {{iface.name}}
             ```
 
+            ???+ info
+                This is the input field that defines your macro, containing the specific CLI commands that are executed on the selected **Device** and/or **Interface**, combined with any Parameters you choose, if applicable.
+
+                Here we use the `iface` variable that the selected device provides.
+
         - **Live result:**
         
-            Here you can see the result of this **Template**'s compilation, the exact command that will run on your hardware.
-
-            For the purpose of this demonstration we selected a `ZTE C320` device and `epon-onu_1/1/1:1` inteface.
+            
 
             ``` shell
             show run int epon-onu_1/1/1:1
             show onu run conf epon-onu_1/1/1:1
             ```
 
-            Our `{{iface.name}}` variable evaluated to `epon-onu_1/1/1:1` and the other static commands have been left unchanged.
+            ???+ info
+                Here you can see the result of this **Template**'s compilation, the exact command that will run on your hardware.
+
+                For the purpose of this demonstration we selected a `ZTE C320` device and `epon-onu_1/1/1:1` interface.
+                
+                Our `{{iface.name}}` variable evaluated to `epon-onu_1/1/1:1` and the other static commands have been left unchanged.
 
 Press the **Create** button and the macro is ready to use.
 
@@ -111,7 +115,9 @@ Fill out this tab according to your requirements.
     4. **Required:** `False`
     5. **Parameter type:** `Dropdown list from predefined`
 
-        Here we use predefined values to help the user choose the right one conveniently.
+        ???+ info
+            Here we use predefined values to help the user choose the right one conveniently.
+
     6. **Predefined values list:**
         ```
         100MB
@@ -139,8 +145,6 @@ Fill out this tab according to your requirements.
 
         - **Live result:**
 
-            For the purpose of this demonstration we selected the **Speed** of `100MB` in the dropdown above and a `ZTE C320` device with an Interface `epon-onu_1/1/1:1`.
-
             ``` shell
             conf t
             interface epon-onu_1/1/1:1
@@ -150,7 +154,11 @@ Fill out this tab according to your requirements.
             wr
             ```
 
-            Similar to the previous example, `{{iface.name}}` evaluated to `epon-onu_1/1/1:1`, and `{{params.speed}}` stored the value we selected in the Speed dropdown.
+            ???+ info
+                For the purpose of this demonstration we selected the **Speed** of `100MB` in the dropdown above and a `ZTE C320` device with an Interface `epon-onu_1/1/1:1`.
+
+
+                Similar to the previous example, `{{iface.name}}` evaluated to `epon-onu_1/1/1:1`, and `{{params.speed}}` stored the value we selected in the Speed dropdown.
 
 The macro is now ready to use.
 
