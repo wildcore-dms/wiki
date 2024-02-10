@@ -293,9 +293,9 @@ Refer to the [**Parameter type options**](./parameter_type_options.md) page as n
         }, 
         ```
 
-        `_display_name` variable here is the **Item name** variable we specified in the previous step.
+        `_display_name` property here is the **Item name** variable we specified in the previous step.
 
-        As you can see we haven't specified one for our **Port** parameter, and by default it's `${item.name}`.
+        We specified `${item.name}` for our **Port** parameter, but we could also leave it empty since it evaluates to this by default.
 
     4. **Template block:**
 
@@ -324,19 +324,16 @@ The macro is now ready to use.
 
 ### Running the macro
 
-Navigate to a device and an interface applicable for this macro and find the macro we just created in the **Macros** tab.
+Navigate to a device and/or an interface applicable for this macro and find the macro we just created in the **Macros** tab.
 
 For this demonstration, we selected a `D-Link DES-1228/ME` **Device**.
 
-**WIP**
-<!-- 
-![](../../assets/macros/twig_examples_onu_screen.png)
+![](../../assets/macros/twig_examples_manage_vlan_parameters.png)
 
-This time you can select the desired **Speed** from the dropdown and look at a **Preview**.
+**Preview:**
 
-![](../../assets/macros/twig_examples_preview_executed_commands.png)
+![](../../assets/macros/twig_examples_manage_vlan_preview.png)
 
-The **Execute** button sends the commands to the selected device's interface, in this case `epon-onu_1/1/1:1`.
+**Execution:**
 
-!!! warning ""
-    We will not actually **Execute** the macro in this demonstration for safety purposes. -->
+![](../../assets/macros/twig_examples_manage_vlan_execution_success.png)
