@@ -1,42 +1,42 @@
-# Parameter type options
+# Опції типів параметрів
 
 !!! abstract "Overview"
     
-    This section explains the options you have for **Parameter type** field in the **Parameter** creation card in a **Macro**.
+    Цей розділ містить пояснення щодо опцій, які ви маєте, поля **Тип параметру** у картці створення **Параметру** макроса.
 
-## Parameter types
-!!! info
-    **Parameter type** is an option that allows you to select a specific source for the value of your parameter.
+## Типи параметрів
+!!! info "Інформація"
+    **Тип параметру** це опція, що дозволяє вибрати конкретне джерело значення вашого параметру.
 
-    All **Parameters** are *Optional*, unless the **Required** checkbox is ticked.
-
-
-| Type                              | Description | Value data type | Selector type |
-| --------------------------------- | ----------- | --------------- | ------------- |
-| **Dropdown list from predefined** | Allows the macro author to manually specify a list of parameters to be selected from during macro execution | `string` | Dropdown |
-| **Dropdown list from variables**  | Allows dropdown parameter selection from an `Array`-like type variable provided by the selected **Device**.<br>See **Detailed overview** section below for usage with `Object` type variables. | `string`,<br>`int`,<br> `Object` | Dropdown |
-| **Input field with value source** | Allows the user to manually enter the required parameters during macro execution, and/or select one from those provided by the selected **Device**, i.e. `{{user.name}}` | `string` | Dropdown, Input field |
-| **Input field**                   | Allows the user to manually enter the required parameters during macro execution | `string` | Input field |
+    Усі **Параметри** є *опціональними*, якщо не встановлено галочку **Обов'язковий**.
 
 
+| Тип                               | Опис | Тип даних значення | Тип селектора |
+| --------------------------------- | ---- | ------------------ | ------------- |
+| **Випадний список з запропонованих** | Дозволяє автору макроса заздалегідь визначити список значень, що може набувати цей параметр. | `string` | Випадний список |
+| **Випадний список зі змінних**  | Дозволяє обрати параметр з представлених у змінній типу `Array`, наданою обраним **Пристроєм**.<br>Див. розділ **Детальний огляд** знизу, для використання зі змінними типу `Object`. | `string`,<br>`int`,<br> `Object`  | Випадний список |
+| **Текстове поле зі змінною**    | Дозволяє користувачеві вручну ввести необхідні параметри під час виконання макросу, та додатково заздалегідь обрати один з наданих **Пристроєм**, напр. `{{user.name}}`. | `string` | Випадний список, Текстове поле |
+| **Текстове поле**               | Дозволяє користувачеві вручну ввести необхідні параметри під час виконання макросу.  | `string` | Текстове поле |
 
-## Detailed overview
 
-### Dropdown list from predefined
+
+## Детальний опис
+
+### Випадний список з запропонованих
 
 !!! quote ""
 
     ![](../../assets/macros/parameter_types_dropdown_predefined.png)
 
-**Available parameter fields:**
+**Доступні поля параметру:**
 
 !!! quote ""
 
     ![](../../assets/macros/parameter_types_dropdown_predefined_list.png)
 
-    This `multiline` input field allows you to specify a list of values that the user can select from during macro execution.
+    Це багаторядкове текстове поле дозволяє заздалегідь визначити список значень, які користувач може обрати під час виконання макроса.
 
-    Each separate value has to be specified on its own line, i.e.
+    Кожне окреме значення має бути визначене на окремому рядку, наприклад:
 
     ``` 
     value_1
@@ -44,123 +44,121 @@
     value_3
     ```
 
-    This creates a dropdown selector in the **Template** tab and on the macro execution pop-up.
+    Це створює випадний список з цими значеннями на вкладці **Шаблону** та у спливаючому вікні під час виконання макросу.
 
     ![](../../assets/macros/parameter_types_dropdown_predefined_template_selector.png)
 
-    !!! tip
-        Select a device from **Device** list to see the dropdown selector in the **Template** tab.
+    !!! tip "Підказка"
+        Оберіть **Пристрій** зі списку на сторінці **Шаблон**, щоб побачити блок **Форма Параметрів**, та щойно створений **Параметр** у ньому.
         
-        It's name is shown above it and corresponds to the **Property display name** value of the parameter.
+        Його назва зазначене над ним, та відповідає значенню поля **Відображувана назва властивості** цього параметру.
     
-    The selected value updates the `params` object property with the name that's specified in the **Property** field in its **Parameter** card.
+    Обране значення оновлює властивість об'єкту `params` з ключем, що відповідає зазначеному у полі **Властивість** у картці параметру.
         
     ![](../../assets/macros/parameter_types_dropdown_predefined_updated_params.png)
 
-    !!! info 
-        `"values_list"` here is the **Property** of this **Parameter**.
+    !!! info "Інформація" 
+        Тут, `"values_list"` є ключем **Властивості** цього **Параметру**.
 
-        It can be accessed with `params.<property>` in the template, i.e. `{{params.values_list}}` in this case.
+        Доступ до значення цієї властивості можна отримати у **Шаблоні** за допомогою `params.<property>`, наприклад `{{params.values_list}}` у даному випадку.
 
-### Dropdown list from variables
+### Випадний список зі змінних
 
 !!! quote ""
     
     ![](../../assets/macros/parameter_types_dropdown_variables.png)
 
-**Available parameter fields:**
+**Доступні поля параметру:**
 
 !!! quote ""
     
     ![](../../assets/macros/parameter_types_dropdown_variables_value-source.png)
 
-    This dropdown lets you to select an `Array`-like variable from a **Device**.
+    Цей випадний список дозволяє обрати змінну типу `Array`, надану обраним **Пристроєм**.
 
-    The variable's values are listed below for convenience.
+    Значення, що зберігаются у цьому масиві, відображені знизу для зручності.
 
     ![](../../assets/macros/parameter_types_dropdown_variables_value-source_selected.png)
 
-    !!! info
-        The data type of stored values inside the array influences your workflow with the following **Available parameter field**.
+    !!! info "Інформація"
+        Тип даних значень, що зберігаються у обраному масиві, впливає на роботу з наступним **Доступним полем параметру**.
 
 !!! quote ""
 
     ![](../../assets/macros/parameter_types_dropdown_variables_item_name.png)
 
-    This input field accepts scoped JavaScript expressions to access properties of `Objects` within the selected array. 
+    Це текстове поле приймає JavaScript-вирази для доступу до властивостей об'єктів всередині обраного масиву.
     
-    The evaluated expression determines the display name in the **Parameter** dropdown selector for each item.
+    Оброблений вираз визначає відображувану назву у випадному списку **Параметру** для кожного елемента масиву.
 
-    To access the value of an object's property `${item.<property>}` syntax is used.
+    Для доступу до властивостей об'єктів використовується синтаксис `${item.<властивість>}`.
 
-    By default, it's `${item.name}`, when this field is empty.
+    За замовчуванням, коли це поле пусте, це `${item.name}`.
 
-    !!! tip
-        You can leave it empty if the values inside the array are simple data types, i.e. `string`, `int` etc.
+    !!! tip "Підказка"
+        Ви можете залишити це поле пустим, якщо елементи масиву є "простими" за типом, такі як: `string`, `int` абощо.
 
-    ??? info
-        Some **Devices** have `interface` object properties inside the variables they provide.
+    ??? info "Інформація"
+        Деякі **Пристрої** мають властивість `interface` всередині змінних, які надають.
 
-        In JavaScript, `interface` is a *keyword* and thus can't be used as a variable inside a context, so this is the current workaround.
+        У JavaScript, `interface` є *ключовим словом*, і таким чином не може бути використане як назва змінної всередині контексту, це поточний спосіб обійти це обмеження.
     
-    ??? example
-        1. Set your **Property** and **Property display name**, `port` and `Port` for this demonstration.
-        2. Set **Parameter type** to **Dropdown list from variables**.
-        3. Set the **Value source** to an array containing objects, `interfaces_list` in this case.
-        4. Set the **Item name** to `${item.name} - ${item.status}`. 
+    ??? example "Приклад"
+        1. Вкажіть **Властивість** та **Відображувану назву властивості**, `port` і `Порт` у даній демонстрації.
+        2. Вкажіть **Тип параметру** як **Випадний список зі змінних**.
+        3. Вкажіть масив з об'єктами як **Джерело значеннь**, `interfaces_list` у даному випадку.
+        4. Вкажіть наступне **Назва елементу**: `${item.name} - ${item.status}`. 
         
-            `name` and `status` are properties of the objects inside the array, as can be seen in the **Variants** field.
+            `name` і `status` є ключами властивостей об'єктів всередині масиву, що можна побачити у полі нижче.
         
             ![](../../assets/macros/parameter_types_dropdown_variables_value-source_example_parameter.png)
 
-        5. Go to the **Template** tab and select a device that has `interfaces_list` as one of its variables.
-        6. **Port** dropdown will appear, which has a list of the objects inside the `interfaces_list`, represented by the value of **Item name** field.
+        5. Перейдіть до вкладки **Шаблон**, та оберіть **Пристрій**, що має змінну `interfaces_list`.
+        6. З'явиться випадний список **Порт**, що має список об'єктів масиву `interfaces_list`, кожен з яких представлений обробленим значенням поля **Назва елементу**.
             
-            Item selected here will correspond to the object inside the `interfaces_list` array, and it's other properties can be accessed in the template.
+            Елемент, обраний тут, відповідатиме об'єкту всередині масиву `interfaces_list`, а його інші властивості стають доступними для використання у шаблоні.
 
             ![](../../assets/macros/parameter_types_dropdown_variables_value-source_example_template.png)
 
 
 
-### Input field with value source
+### Текстове поле зі змінною
 
 !!! quote ""
     
     ![](../../assets/macros/parameter_types_input_with_value.png)
 
-**Available parameter fields:**
+**Доступні поля параметру:**
 
 !!! quote ""
 
     ![](../../assets/macros/parameter_types_dropdown_variables_value-source.png)
 
-    This dropdown allows selection of a **Device** variable property storing a "simple" type value, such as `string`, `int` etc.
-
-
+    Цей випадний список дозволяє обрати змінну простого типу, надану обраним **Пристроєм**, такого як `string`, `int` абощо.
 
 !!! quote ""
 
     ![](../../assets/macros/parameter_types_input_with_value_regex.png)
 
-    This input field lets you define a pattern to filter the user's input in the **Input field** part of this **Parameter** in the **Template** tab and during macro execution.
+    Це текстове поле дозволяє визначити регулярний вираз для фільтрації введених користувачем у текстове поле **Параметру** значень у вкладці **Шаблон**, та під час виконання макросу.
 
-### Input field
+### Текстове поле
 
 !!! quote ""
     
     ![](../../assets/macros/parameter_types_input.png)
 
-**Available parameter fields:**
+**Доступні поля параметру:**
 
 !!! quote ""
 
     ![](../../assets/macros/parameter_types_input_default.png)
 
-    This is an *optional* field that allows you to set a default value for the **Parameter**.
+    Це *необов'язкове* поле, що дозволяє задати значення змінної **Параметру** за замовчуванням.
 
 
 !!! quote ""
 
     ![](../../assets/macros/parameter_types_input_with_value_regex.png)
 
-    This input field lets you define a pattern to filter the user's input in the **Input field** part of this **Parameter** in the **Template** tab and during macro execution.
+    Це текстове поле дозволяє визначити регулярний вираз для фільтрації введених користувачем у текстове поле **Параметру** значень у вкладці **Шаблон**, та під час виконання макросу.

@@ -49,7 +49,7 @@
     ![](../../assets/macros/parameter_types_dropdown_predefined_template_selector.png)
 
     !!! tip
-        Select a device from **Device** list to see the dropdown selector in the **Template** tab.
+        Select a device from the **Device** list to see the dropdown selector in the **Template** tab.
         
         It's name is shown above it and corresponds to the **Property display name** value of the parameter.
     
@@ -81,7 +81,7 @@
     ![](../../assets/macros/parameter_types_dropdown_variables_value-source_selected.png)
 
     !!! info
-        The data type of stored values inside the array influences your workflow with the following **Available parameter field**.
+        The data type of stored values inside the array influences your workflow with the following **Available parameter** field.
 
 !!! quote ""
 
