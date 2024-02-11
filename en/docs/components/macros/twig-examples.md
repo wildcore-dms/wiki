@@ -233,7 +233,7 @@ Refer to the [**Parameter type options**](./parameter_type_options.md) page as n
             ```
 
             ??? info
-                Here we reference the previous parameter, **Action**, and set the **Type** parameter to be show only when the selected action is `'Add'`.
+                Here we reference the previous parameter, **Action**, and set the **Type** parameter to be shown only when the selected action is `'Add'`.
 
     3. **VLAN** parameter:
         - **Property:** `vlan`
@@ -260,7 +260,7 @@ Refer to the [**Parameter type options**](./parameter_type_options.md) page as n
         - **Visibility condition:** `!iface`
 
             ??? info
-                This condition hides the parameter from screens that provide the `iface` variable from a device, such as selected intefaces.
+                This condition hides the parameter from screens that provide the `iface` variable from a device, such as selected interfaces.
 
                 Therefore, when running this macro from a **Device** screen, we can select a specific interface from the drop-down, otherwise, it's not shown.
 

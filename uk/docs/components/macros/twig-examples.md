@@ -32,7 +32,7 @@
 ### **Шаблон**
 
 !!! quote ""
-    1. **Пристрій** та **Інтерфейс:** *можете обрати ****Пристрій**** та/або ****Інтерфейс****, що підходять для виконання цього макроса*
+    1. **Пристрій** та **Інтерфейс:** *можете обрати ****Пристрій**** та/або ****Інтерфейс****, що підходять для виконання цього макросу*
     2. **Форма Параметрів:** З огляду на те, що ми не маємо жодних параметрів, цей розділ не відображається.
     3. **Змінні:** Тут можна побачити змінні, отримані з **Пристрою** та **Інтерфейсу**.
     4. **Блок шаблону:**
@@ -65,7 +65,7 @@
 
 Натисніть кнопку **Створити** і ваш макрос готовий до використання.
 
-### Виконання макроса
+### Виконання макросу
 
 Перейдіть до пристрою та його інтерфейсу, застосовного до цього макросу, і знайдіть макрос, який ми щойно створили, у вкладці **Макроси**.
 
@@ -78,7 +78,7 @@
 
 Так як ми не вказали жодних **Параметрів** для цього макросу, відповідне повідомлення **Цей макрос не має параметрів** відображається натомість.
 
-Коли ви натиснете кнопку **Попередній перегляд**, ви можете побачити, що вона працює так само як поле **Результат** у вкладці **Шаблон** на сторінці створення макроса.
+Коли ви натиснете кнопку **Попередній перегляд**, ви можете побачити, що вона працює так само як поле **Результат** у вкладці **Шаблон** на сторінці створення макросу.
 
 ![](../../assets/macros/twig_examples_onu_display_config_preview_executed_commands.png)
 
@@ -109,7 +109,7 @@ Fill out this tab according to your requirements.
 !!! quote ""
     1. Додайте новий **Параметр**.
     2. **Властивість:** `speed`
-    3. **Швидкість:** `Швидкість`
+    3. **Відображувана назва властивості:** `Швидкість`
     4. **Обов'язковий:** `Ні`
     5. **Тип параметру:** `Випадний список з запропонованих`
 
@@ -126,9 +126,9 @@ Fill out this tab according to your requirements.
 ### Шаблон
 
 !!! quote ""
-    1. **Пристрій** та **Інтерфейс:** *можете обрати ****Пристрій**** та/або ****Інтерфейс****, що підходять для виконання цього макроса*
+    1. **Пристрій** та **Інтерфейс:** *можете обрати ****Пристрій**** та/або ****Інтерфейс****, що підходять для виконання цього макросу*
     2. **Форма Параметрів:** Тут ми маємо випадний список для параметру **Швидкість** з попередньої вкладки.
-    3. **Змінні:** Тут можна побачити змінні, отримані з **Пристрою** та **Інтерфейсу**., а також властивість `params`, що зберігає значення параметрів, обраних вище.
+    3. **Змінні:** Тут можна побачити змінні, отримані з **Пристрою** та **Інтерфейсу**, а також властивість `params`, що зберігає значення параметрів, обраних вище.
     4. **Блок шаблону:**
 
         - **Обраний шаблон:** 
@@ -159,7 +159,7 @@ Fill out this tab according to your requirements.
 
 Цей макрос готовий до використання.
 
-### Виконання макроса
+### Виконання макросу
 
 Перейдіть до пристрою та його інтерфейсу, застосовного до цього макросу, і знайдіть макрос, який ми щойно створили, у вкладці **Макроси**.
 
@@ -182,115 +182,115 @@ Fill out this tab according to your requirements.
     З міркувань безпеки, ми не будемо виконувати макрос у цій демонстрації.
 
 
-## Управління VLAN
+## Керування VLAN
 
-This macro involves more **Parameters** compared to the previous one. 
+Цей макрос включає в себе білше **Параметрів**, у порівнянні з попередніми. 
 
-Refer to the [**Parameter type options**](./parameter_type_options.md) page as needed.
+За потреби, зверніться до сторінки [**Опції типів параметрів**](./parameter_type_options.md).
 
 ### Загальне
 
 !!! quote ""
-    1. **Назва:** `VLAN control`
-    2. **Опис:** `Manage VLANs on a selected port`
-    3. **Ролі:** `Operator, Engineer`
+    1. **Назва:** `Керування VLAN`
+    2. **Опис:** `Керування VLAN на вибраному порту`
+    3. **Ролі:** `Інженер`
     4. **Фільтр за виробником:** `D-Link`
     5. **Моделі:** `D-Link DES-1228/ME ...` 
     
-        *feel free to select more appropriate devices, we will use this one for demonstration*
+        *можете обрати більше підходящих пристроїв, ми використовуватимо цей для демонстрації*
 
-    6. **Показувати для:** `Device, Port`
-    7. **Відображення результатів:** `All commands`
+    6. **Показувати для:** `Пристрій, Порт`
+    7. **Відображення результатів:** `Усі команди`
 
 ### Параметри
 
 !!! quote ""
-    1. **Action** parameter:
-        - **Property:** `action`
-        - **Property display name:** `Action`
-        - **Required:** `True`
-        - **Parameter type:** `Dropdown list from predefined`
-        - **Predefined values list:**
+    1.  Параметр **Дія**:
+        - **Властивість:** `action`
+        - **Відображувана назва властивості:** `Дія`
+        - **Обов'язковий:** `Так`
+        - **Тип параметру:** `Випадний список з запропонованих`
+        - **Список запропонованих значень:**
             ```
-            Add
-            Delete
+            Додати
+            Видалити
             ```
-        - **Visibility condition:** *empty*
+        - **Умови видимості:** *залишаємо порожнім*
 
-    2. **Type** parameter:
-        - **Property:** `type`
-        - **Property display name:** `Type`
-        - **Required:** `False`
-        - **Parameter type:** `Dropdown list from predefined`
-        - **Predefined values list:**
+    2. Параметр **Тип**:
+        - **Властивість:** `type`
+        - **Відображувана назва властивості:** `Тип`
+        - **Обов'язковий:** `Ні`
+        - **Тип параметру:** `Випадний список з запропонованих`
+        - **Список запропонованих значень:**
             ```
-            Untagged
-            Tagged
+            Без тегу
+            З тегом
             ```
-        - **Visibility condition:**
+        - **Умови видимості:**
             ```
             params.action === 'Add'
             ```
 
             ??? info
-                Here we reference the previous parameter, **Action**, and set the **Type** parameter to be show only when the selected action is `'Add'`.
+                Тут ми звертаємося до попереднього параметру, **Дія**, і виставляємо відображення параметру **Тип**, лише коли вибраною дією є `'Додати'`.
 
-    3. **VLAN** parameter:
-        - **Property:** `vlan`
-        - **Property display name:** `VLAN`
-        - **Required:** `True`
-        - **Parameter type:** `Dropdown list from variables`
-        - **Value source:** `data.vlans`
-
-            ??? info
-                This device variable stores an array of objects, properties of which describe the VLANs we want to configure.
-
-        - **Visibility condition:** *empty*
-        - **Item name:** `${item.name}  (${item.id})`
+    3. Параметр **VLAN**:
+        - **Властивість:** `vlan`
+        - **Відображувана назва властивості:** `VLAN`
+        - **Обов'язковий:** `Так`
+        - **Тип параметру:** `Випадний список зі змінних`
+        - **Джерело значень:** `data.vlans`
 
             ??? info
-                We choose the VLAN's `name` and `id` properties to be shown in the drop-down for convenience.
+                Ця змінна з пристрою зберігає масив об'єктів, властивості яких описують VLAN мережі, якими ми хочемо керувати.
+
+        - **Умови видимості:** *залишаємо порожнім*
+        - **Назва елементу:** `${item.name}  (${item.id})`
+
+            ??? info
+                Обираємо властивості VLAN `name` та `id` для показу у випадному списку для зручності.
 
     4. **Port** parameter:
-        - **Property:** `port`
-        - **Property display name:** `Port`
-        - **Required:** `False`
-        - **Parameter type:** `Dropdown list from variables`
-        - **Value source:** `interfaces_list`
-        - **Visibility condition:** `!iface`
+        - **Властивість:** `port`
+        - **Відображувана назва властивості:** `Port`
+        - **Обов'язковий:** `False`
+        - **Тип параметру:** `Випадний список зі змінних`
+        - **Джерело значень:** `interfaces_list`
+        - **Умови видимості:** `!iface`
 
             ??? info
-                This condition hides the parameter from screens that provide the `iface` variable from a device, such as selected intefaces.
+                Ця умова приховує параметр з екранів, які надають змінну `iface`, такі як обрані інтерфейси.
 
-                Therefore, when running this macro from a **Device** screen, we can select a specific interface from the drop-down, otherwise, it's not shown.
+                Таким чином, коли ми запускаємо цей макрос з екрану **Пристрою**, ми можемо обрати окремий інтерфейс з випадного списку, у іншому випадку цей параметр відсутній.
 
-        - **Item name:** `${item.name}`
+        - **Назва елементу:** `${item.name}`
 
 ### Шаблон
 
 !!! quote ""
-    1. **Device** and **Interface:** *feel free to select a ****Device**** and/or an ****Interface**** applicable to this macro*
+    1. **Пристрій** та **Інтерфейс:** *можете обрати ****Пристрій**** та/або ****Інтерфейс****, що підходять для виконання цього макросу*
 
         ??? info
-            For this demonstration we select a `D-Link DES-1228/ME` device and no **Interface**.
+            Для цієї демонстрації ми обрали пристрій `D-Link DES-1228/ME` і залишили поле **Інтерфейс** порожнім.
 
     2. **Форма Параметрів:** 
 
-        For this demonstration we select:
+        Для цієї демонстрації ми обрали:
 
-        - **Action:** `Add` 
-        - **Type:** `Untagged` 
-        - **VLAN name:** `sw802 (802)` 
-        - **Port**: `1/1`
+        - **Дія:** `Додати` 
+        - **Тип:** `Без тегу` 
+        - **VLAN:** `sw802 (802)` 
+        - **Порт**: `1/1`
 
         ??? info
-            You are presented with the parameters we specified in the previous step.
+            Тут представлені параметри, які ми створили у попередьному кроці.
 
-            **Type** drop-down is only visible when the **Action** is set to `Add`, **Port** is only visible when we haven't selected an **Interface**. 
+            Випадний список **Тип** видимий лише коли параметр **Дія** встановлений на `Додати`, а **Порт** лише коли ми не обрали **Інтерфейс**.
 
-    3. **Variables:** 
+    3. **Змінні:** 
 
-        Here are the variables from the selected **Device** and **Interface**, as well as `params` property, which stores the values of our `action`, `type`, `vlan` and `port` parameters.
+        Тут можна побачити змінні, отримані з **Пристрою**, а також властивість `params`, що зберігає значення параметрів `action`, `type`, `vlan` і `port`, обраних вище.
 
         ``` json
         "params": {
@@ -314,22 +314,22 @@ Refer to the [**Parameter type options**](./parameter_type_options.md) page as n
         ```
 
         ??? info
-            `_display_name` property here is the **Item name** variable we specified in the previous step.
+            Властивість `_display_name` відповідає обчисленій змінній у полі **Назва елементу**, яке ми заповнили у попередньому кроці.
 
-            We specified `${item.name}` for our **Port** parameter, but we could also leave it empty since it evaluates to this by default.
+            Ми обрали `${item.name}` для параметру **Порт**, але могли б залишити пустим, так як це значення поля за замовчуванням.
 
     4. **Блок шаблону:**
 
         - **Обраний шаблон:** 
             ``` twig
-            {# Block for setting variables inside the template #}
+            {# Блок оголошення і визначення змінних всередині шаблону #}
             {% set port = params.port %}
             {% if iface %}
             {% set port = iface %}
             {% endif %}
 
-            {# Template block #}
-            {% if params.action == 'Delete' %}
+            {# Блок шаблону #}
+            {% if params.action == 'Видалити' %}
             config vlan {{params.vlan.name}} delete {{port.bind_key}}
             {% else %}
             config vlan {{params.vlan.name}} add {{params.type | lower }} {{port.bind_key}}
@@ -341,20 +341,20 @@ Refer to the [**Parameter type options**](./parameter_type_options.md) page as n
             config vlan sw802 add untagged 1
             ```
 
-The macro is now ready to use.
+Макрос готовий до використання.
 
-### Running the macro
+### Виконання макросу
 
-Navigate to a device and/or an interface applicable for this macro and find the macro we just created in the **Macros** tab.
+Перейдіть до пристрою або його інтерфейсу, застосовного до цього макросу, і знайдіть макрос, який ми щойно створили, у вкладці **Макроси**.
 
-For this demonstration, we selected a `D-Link DES-1228/ME` **Device**.
+Для цієї демонстрації ми обрали **Пристрій** `D-Link DES-1228/ME`.
 
 ![](../../assets/macros/twig_examples_manage_vlan_parameters.png)
 
-**Preview:**
+**Попередній перегляд:**
 
 ![](../../assets/macros/twig_examples_manage_vlan_preview.png)
 
-**Execution:**
+**Виконання:**
 
 ![](../../assets/macros/twig_examples_manage_vlan_execution_success.png)
