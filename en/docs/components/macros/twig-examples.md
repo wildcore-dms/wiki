@@ -1,6 +1,6 @@
 # Twig template examples
 
-!!! info "Overview"
+!!! abstract "Overview"
     This page presents basic **Macros** submitted by our users, along with explanations. 
     
     Feel free to copy and try them out!
@@ -129,7 +129,7 @@ Fill out this tab according to your requirements.
 
 !!! quote ""
     1. **Device** and **Interface:** *feel free to select a ****Device**** and/or an ****Interface**** applicable to this macro*
-    2. **Parameters form:** Here's the dropdown for the **Speed** property from the previous tab.
+    2. **Parameters form:** Here's the dropdown for the **Speed** parameter from the previous tab.
     3. **Variables:** Here are the variables from the selected **Device** and **Interface**, as well as `params` property which stores the values of the parameters we specified earlier.
     4. **Template block:**
 

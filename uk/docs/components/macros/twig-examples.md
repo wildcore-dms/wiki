@@ -1,57 +1,55 @@
-# Twig template examples
+# Приклади шаблонів Twig
 
-!!! info "Overview"
-    This page presents basic **Macros** submitted by our users, along with explanations. 
-    
-    Feel free to copy and try them out!
+!!! abstract "Огляд"
+    Ця сторінка представляє кілька простих **Макросів**, надісланих нашими користувачами, разом з поясненнями.
 
-!!! warning "Attention"
-    Commands may vary depending on your setup. 
-    
-    Refer to your device's manual for applicable commands.
+    Ви можете скопіювати їх та спробувати!
 
-## Looking at ONU configuration
+!!! warning "Увага"
+    Команди можуть відрізнятися, залежно від пристроїв, що ви використовуєте.
 
-This example demonstrates a basic **Template** setup without any **Parameters**, that simply displays information.
+    Відповідні команди, див. у посібнику до вашого пристрою.
 
-### Common tab
+## Перегляд конфігурації ONU
 
-!!! quote ""
-    1. **Name:** `Display ONU configuration`
-    2. **Description:** *feel free to enter a descriptive overview of this macro*
-    3. **Roles:** *feel free to select ****Roles**** appropriate to run this macro*
-    4. **Model vendors filter:** for the purpose of this demonstration we use the vendor `ZTE`
-    5. **Models:** `ZTE C320`
-    6. **Display for:** `ONU`
-    7. **Display output:** `All commands`
+Цей приклад демонструє простий **Шаблон** без **Параметрів**, який просто відображає інформацію.
 
-### **Parameters tab**
-
-For this demonstration, we skip this tab since we don't need any **Parameters**.
-
-### **Template tab**
+### Загальне
 
 !!! quote ""
-    1. **Device** and **Interface:** *feel free to select a ****Device**** and/or an ****Interface**** applicable to this macro*
-    2. **Parameters form:** Since we don't have any **Parameters**, this section is not displayed.
-    3. **Variables:** Here are the variables from the selected **Device** and **Interface**.
-    4. **Template block:**
+    1. **Назва:** `Перегляд інформації ONU`
+    2. **Опис:** *можете вказати детальний опис цього макросу*
+    3. **Ролі:** *можете обрати належні для виконання цього макросу ****Ролі***
+    4. **Фільтр за виробником:** Для цілей цієї демонстрації, ми оберемо виробника `ZTE`
+    5. **Моделі:** `ZTE C320`
+    6. **Показувати для:** `ONU`
+    7. **Відображення результатів:** `Усі команди`
 
-        - **Chosen template:**
+### **Параметри**
+
+Для цієї демонстрації нам не потрібні **Параметри**, тому ми пропускаємо цю вкладку.
+
+### **Шаблон**
+
+!!! quote ""
+    1. **Пристрій** та **Інтерфейс:** *можете обрати ****Пристрій**** та/або ****Інтерфейс****, що підходять для виконання цього макроса*
+    2. **Форма Параметрів:** З огляду на те, що ми не маємо жодних параметрів, цей розділ не відображається.
+    3. **Змінні:** Тут можна побачити змінні, отримані з **Пристрою** та **Інтерфейсу**.
+    4. **Блок шаблону:**
+
+        - **Обраний шаблон:**
 
             ``` twig
             show run int {{iface.name}}
             show onu conf {{iface.name}}
             ```
 
-            ???+ info
-                This is the input field that defines your macro, containing the specific CLI commands that are executed on the selected **Device** and/or **Interface**, combined with any Parameters you choose, if applicable.
+            ???+ info "Інформація"
+                Це текстове поле, яке визначає ваш макрос. Воно містить конкретні CLI команди, що будуть виконуватись на обраному **Пристрої** та/або **Інтерфейсі**, у поєднанні з будь-якими параметрами або змінними, де це доречно.
 
-                Here we use the `iface` variable that the selected device provides.
+                Тут ми використовуємо змінну `iface`, яку надав нам обраний **Пристрій**.
 
-        - **Live result:**
-        
-            
+        - **Результат:**
 
             ``` shell
             show run int epon-onu_1/1/1:1
@@ -59,81 +57,81 @@ For this demonstration, we skip this tab since we don't need any **Parameters**.
             ```
 
             ???+ info
-                Here you can see the result of this **Template**'s compilation, the exact command that will run on your hardware.
+                Тут ви можете побачити результат компіляції **Шаблону**, конкретні команди, що будуть виконані на вашому пристрої.
 
-                For the purpose of this demonstration we selected a `ZTE C320` device and `epon-onu_1/1/1:1` interface.
+                Для цілей цієї демонстрації, ми обрали пристрій `ZTE C320` та інтерфейс `epon-onu_1/1/1:1`.
                 
-                Our `{{iface.name}}` variable evaluated to `epon-onu_1/1/1:1` and the other static commands have been left unchanged.
+                Наша змінна `{{iface.name}}` отримала значення `epon-onu_1/1/1:1` а інші статичні команди були залишені без змін.
 
-Press the **Create** button and the macro is ready to use.
+Натисніть кнопку **Створити** і ваш макрос готовий до використання.
 
-### Running the macro
+### Виконання макроса
 
-Navigate to a device and an interface applicable for this macro and find the macro we just created in the **Macros** tab.
+Перейдіть до пристрою та його інтерфейсу, застосовного до цього макросу, і знайдіть макрос, який ми щойно створили, у вкладці **Макроси**.
 
-!!! tip 
-    Since we selected `ONU` at the **Display for** step, the macro will only be visible on the appropriate sreen.
+!!! tip "Підказка"
+    Так як ми обрали `ONU` у полі **Відображати для**, цей макрос буде відображений лише на відповідному екрані.
 
-For this demonstration, we selected a `ZTE 320` **Device** and it's `gpon-onu_1/2/1:1` **Interface**.
+Для цієї демонстрації ми обрали **Пристрій** `ZTE 320` і його **Інтерфейс** `gpon-onu_1/2/1:1`.
 
 ![](../../assets/macros/twig_examples_onu_screen_display_config.png)
 
-Since we don't have any **Parameters**, the message **This macro has no parameters** is displayed instead.
+Так як ми не вказали жодних **Параметрів** для цього макросу, відповідне повідомлення **Цей макрос не має параметрів** відображається натомість.
 
-When you press the **Preview** button, you can see it works the same way as shown in the **Live preview** on the **Template** tab.
+Коли ви натиснете кнопку **Попередній перегляд**, ви можете побачити, що вона працює так само як поле **Результат** у вкладці **Шаблон** на сторінці створення макроса.
 
 ![](../../assets/macros/twig_examples_onu_display_config_preview_executed_commands.png)
 
-The **Execute** button sends the commands to the selected device's interface, in this case `gpon-onu_1/2/1:1`.
+Кнопка **Виконати** відправляє команди до обраного інтерфейсу пристрою, у нашому випадку це `gpon-onu_1/2/1:1` .
 
 ![](../../assets/macros/twig_examples_display_config_results.png)
 
 
 
 
-## Changing the client's speed limit
+## Зміна обмеження швидкості
 
-### Common tab
+### Загальне
 
 Fill out this tab according to your requirements.
 
 ??? example
-    1. **Name:** `Change client's speed limit`
-    2. **Description:** `Select a speed limit from the dropdown to be applied to the client's connection`
-    3. **Roles:** `Operator`
-    4. **Model vendors filter:** `ZTE`
-    5. **Models:** `ZTE C320`
-    6. **Display for:** `ONU`
-    7. **Display output:** `All commands`
+    1. **Назва:** `Зміна обмеження швидкості`
+    2. **Опис:** `Оберіть обмеження швидкості у випадаючому списку, яке буде застосовано до з'єднання клієнта `
+    3. **Ролі:** `Оператор`
+    4. **Фільтр за виробником:** `ZTE`
+    5. **Моделі:** `ZTE C320`
+    6. **Показувати для:** `ONU`
+    7. **Відображення результатів:** `Усі команди`
 
-### Parameters tab
+### Параметри
 
 !!! quote ""
-    1. Add a new **Parameter**.
-    2. **Property:** `speed`
-    3. **Property display name:** `Speed`
-    4. **Required:** `False`
-    5. **Parameter type:** `Dropdown list from predefined`
+    1. Додайте новий **Параметр**.
+    2. **Властивість:** `speed`
+    3. **Швидкість:** `Швидкість`
+    4. **Обов'язковий:** `Ні`
+    5. **Тип параметру:** `Випадний список з запропонованих`
 
-        ???+ info
-            Here we use predefined values to help the user choose the right one conveniently.
+        ???+ info "Інформація"
+            Тут ми пропонуємо користувачу значення, для більш зручного вибору правильного.
 
-    6. **Predefined values list:**
+    6. **Список запропонованих значень:**
         ```
         100MB
         1GB
         ```
-    7. **Visibility condition:** *empty*
+    7. **Умови видимості:** *залишимо це поле порожнім*
 
-### Template tab
+### Шаблон
 
 !!! quote ""
-    1. **Device** and **Interface:** *feel free to select a ****Device**** and/or an ****Interface**** applicable to this macro*
-    2. **Parameters form:** Here's the dropdown for the **Speed** property from the previous tab.
-    3. **Variables:** Here are the variables from the selected **Device** and **Interface**, as well as `params` property which stores the values of the parameters we specified earlier.
-    4. **Template block:**
+    1. **Пристрій** та **Інтерфейс:** *можете обрати ****Пристрій**** та/або ****Інтерфейс****, що підходять для виконання цього макроса*
+    2. **Форма Параметрів:** Тут ми маємо випадний список для параметру **Швидкість** з попередньої вкладки.
+    3. **Змінні:** Тут можна побачити змінні, отримані з **Пристрою** та **Інтерфейсу**., а також властивість `params`, що зберігає значення параметрів, обраних вище.
+    4. **Блок шаблону:**
 
-        - **Chosen template:** 
+        - **Обраний шаблон:** 
             ``` twig
             conf t
             interface {{iface.name}}
@@ -143,7 +141,7 @@ Fill out this tab according to your requirements.
             wr
             ```
 
-        - **Live result:**
+        - **Результат:**
 
             ``` shell
             conf t
@@ -155,32 +153,33 @@ Fill out this tab according to your requirements.
             ```
 
             ???+ info
-                For the purpose of this demonstration we selected the **Speed** of `100MB` in the dropdown above and a `ZTE C320` device with an Interface `epon-onu_1/1/1:1`.
+                Для цілей цієї демонстрації, ми обрали **Швидкість** `100MB` у випадному списку вище, а також пристрій `ZTE C320` і його інтерфейс `epon-onu_1/1/1:1`.
 
+                Як і в попередньому прикладі, змінна `{{iface.name}}` отримала значення `epon-onu_1/1/1:1`, а `{{params.speed}}` зберіг значення, яке ми обрали у випадному списку **Швидкість**.
 
-                Similar to the previous example, `{{iface.name}}` evaluated to `epon-onu_1/1/1:1`, and `{{params.speed}}` stored the value we selected in the Speed dropdown.
+Цей макрос готовий до використання.
 
-The macro is now ready to use.
+### Виконання макроса
 
-### Running the macro
+Перейдіть до пристрою та його інтерфейсу, застосовного до цього макросу, і знайдіть макрос, який ми щойно створили, у вкладці **Макроси**.
 
-Navigate to a device and an interface applicable for this macro and find the macro we just created in the **Macros** tab.
+!!! tip "Підказка"
+    Так як ми обрали `ONU` у полі **Відображати для**, цей макрос буде відображений лише на відповідному екрані.
 
-!!! tip 
-    Since we selected `ONU` at the **Display for** step, the macro will only be visible on the appropriate sreen.
-
-For this demonstration, we selected a `ZTE 320` **Device** and it's `epon-onu_1/1/1:1` **Interface**.
+Для цієї демонстрації ми обрали **Пристрій** `ZTE 320` і його **Інтерфейс** `gpon-onu_1/1/1:1`.
 
 ![](../../assets/macros/twig_examples_onu_screen.png)
 
-This time you can select the desired **Speed** from the dropdown and look at a **Preview**.
+Цього разу ми можемо обрати бажану **Швидкість** з випадного меню. 
+
+**Попередній перегляд:**
 
 ![](../../assets/macros/twig_examples_preview_executed_commands.png)
 
-The **Execute** button sends the commands to the selected device's interface, in this case `epon-onu_1/1/1:1`.
+Кнопка **Виконати** відправляє команди до обраного інтерфейсу пристроя, на цей раз `epon-onu_1/1/1:1`.
 
 !!! warning ""
-    We will not actually **Execute** the macro in this demonstration for safety purposes.
+    З міркувань безпеки, ми не будемо виконувати макрос у цій демонстрації.
 
 
 ## Managing a VLAN
@@ -189,20 +188,21 @@ This macro involves more **Parameters** compared to the previous one.
 
 Refer to the [**Parameter type options**](./parameter_type_options.md) page as needed.
 
-### Common tab
+### Загальне
 
 !!! quote ""
-    1. **Name:** `VLAN control`
-    2. **Description:** `Manage VLANs on a selected port`
-    3. **Roles:** `Operator, Engineer`
-    4. **Model vendors filter:** `D-Link`
-    5. **Models:** `D-Link DES-1228/ME ...` 
+    1. **Назва:** `VLAN control`
+    2. **Опис:** `Manage VLANs on a selected port`
+    3. **Ролі:** `Operator, Engineer`
+    4. **Фільтр за виробником:** `D-Link`
+    5. **Моделі:** `D-Link DES-1228/ME ...` 
     
         *feel free to select more appropriate devices, we will use this one for demonstration*
-    6. **Display for:** `Device, Port`
-    7. **Display output:** `All commands`
 
-### Parameters tab
+    6. **Показувати для:** `Device, Port`
+    7. **Відображення результатів:** `All commands`
+
+### Параметри
 
 !!! quote ""
     1. **Action** parameter:
@@ -266,7 +266,7 @@ Refer to the [**Parameter type options**](./parameter_type_options.md) page as n
 
         - **Item name:** `${item.name}`
 
-### Template tab
+### Шаблон
 
 !!! quote ""
     1. **Device** and **Interface:** *feel free to select a ****Device**** and/or an ****Interface**** applicable to this macro*
@@ -274,7 +274,7 @@ Refer to the [**Parameter type options**](./parameter_type_options.md) page as n
         ??? info
             For this demonstration we select a `D-Link DES-1228/ME` device and no **Interface**.
 
-    2. **Parameters form:** 
+    2. **Форма Параметрів:** 
 
         For this demonstration we select:
 
@@ -318,9 +318,9 @@ Refer to the [**Parameter type options**](./parameter_type_options.md) page as n
 
             We specified `${item.name}` for our **Port** parameter, but we could also leave it empty since it evaluates to this by default.
 
-    4. **Template block:**
+    4. **Блок шаблону:**
 
-        - **Chosen template:** 
+        - **Обраний шаблон:** 
             ``` twig
             {# Block for setting variables inside the template #}
             {% set port = params.port %}
@@ -336,7 +336,7 @@ Refer to the [**Parameter type options**](./parameter_type_options.md) page as n
             {% endif %}
             ```
 
-        - **Live result:**
+        - **Результат:**
             ``` shell
             config vlan sw802 add untagged 1
             ```
