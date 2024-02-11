@@ -182,7 +182,7 @@ Fill out this tab according to your requirements.
     З міркувань безпеки, ми не будемо виконувати макрос у цій демонстрації.
 
 
-## Managing a VLAN
+## Управління VLAN
 
 This macro involves more **Parameters** compared to the previous one. 
 
