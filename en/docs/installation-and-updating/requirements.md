@@ -24,7 +24,7 @@
 | Required software |
 | ---- |
 | [**Docker**](https://www.docker.com/) |
-| [**wca-tool**](wca-tool/index.md) |
+| [**wca-tool**](../wca-tool/index.md) |
 
 !!! note 
     *The specifications above are recommended for 50 switches/10 OLTs*
