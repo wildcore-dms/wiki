@@ -38,10 +38,10 @@ extra:
 nav:
   - "Home": index.md
   - "Features": features/main.md
-  - "Pre requirements": requirements.md
-  - "Install & Updating":
-     - "Installation": install.md
-     - "Updating": update.md
+  - "Installation & Updating":
+     - "Getting started": installation-and-updating/getting-started.md
+     - "Updating": installation-and-updating/update.md
+     - "System requirements": installation-and-updating/requirements.md
   - "Web interface":
       - "View": web-interface/main.md
       - "After install": web-after-install.md
