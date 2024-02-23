@@ -5,10 +5,10 @@
     This page provides an overview of the **WildcoreDMS** onboarding process, from installation to running it.
 
 !!! warning "Note"
-    At the moment, the only way to install the **WildcoreDMS** is through our custom `wca-tool`, using a custom **Docker** container.
+    At the moment, the only way to install the **WildcoreDMS** is through our custom `wca-tool`, using **Docker**.
 
 !!! warning "Note"
-    Prior to installation, ensure that your system meets the [System requirements](./requirements.md)
+    Prior to installation, ensure that your system meets the [System requirements](./requirements.md).
 
 ## Registration
 
@@ -23,28 +23,28 @@
 
     ![](../assets/onboarding/registration_filled_out.png)
 
-3. Confirm your registration
+3. Confirm your registration.
 
     Please verify your registration by checking the email inbox you provided. In a few minutes, an email from `noreply@wildcore.tools` should arrive.
     
     !!! tip
         If you experience delays, kindly check your **Spam** folder.
 
-    Once received, please press the Confirm Email button inside the email.
+    Once received, please press the **Confirm Email** button inside the email.
 
     ![](../assets/onboarding/confirm_email.png)
 
-4. Log in with your email and password
+4. Log in with your email and password.
 
     ![](../assets/onboarding/registration_confirmed.png)
 
 ## Creating an Agent
 
-1. Log in into your personal **Cabinet**
+1. Log in into your personal **Cabinet**.
 
     ![](../assets/onboarding/cabinet.png)
 
-2. Activate your Trial Agent
+2. Activate your Trial Agent.
 
     Press the **Activate TRIAL** button in the **Active agents** panel, read the pop-up carefully and agree to it.
 
@@ -57,7 +57,7 @@
 
 ## Installation
 
-1. Install the latest version of the `wca-tool`
+1. Install the latest version of the `wca-tool`.
 
     ``` shell
     sudo curl -L "https://releases.wildcore.tools/wca-tool/latest/wca-tool-$(uname -s)-$(uname -m)" -o /usr/local/bin/wca-tool && sudo chmod +x /usr/local/bin/wca-tool
@@ -67,7 +67,7 @@
 
     ![](../assets/onboarding/agents_agent_key.png)
 
-3. Run the following command to install the **WildcoreDMS**
+3. Run the following command to install the **WildcoreDMS**.
 
     ``` shell
     sudo wca-tool --key=YOUR_AGENT_KEY install 
@@ -116,7 +116,7 @@ Usually the error looks like this:
 !!! success "Solution:"
 
     1. Install the `docker-compose-plugin` package for your operating system (refer to the installation instructions in the official [**Docker** documentation](https://docs.docker.com/engine/install/).
-    2. Verify its functionality by running the command docker compose version, which should return the plugin version.
+    2. Verify its functionality by running the command `docker compose version`, which should return the plugin version.
     3. Proceed with the **WildcoreDMS** installation by executing `sudo wca-tool update`.
  
 

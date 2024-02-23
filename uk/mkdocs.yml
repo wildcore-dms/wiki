@@ -32,8 +32,9 @@ nav:
   - "Функціонал": features/main.md
   - "Вимоги до обладнання": requirements.md
   - "Встановлення та оновлення":
-      - "Встановлення": install.md
-      - "Оновлення": update.md
+     - "Початок роботи": installation-and-updating/getting-started.md
+     - "Оновлення": installation-and-updating/update.md
+     - "Системні вимоги": installation-and-updating/requirements.md
   - "Веб-інтерфейс":
       - "Вигляд": web-interface/main.md
       - "Після встановлення": web-after-install.md
