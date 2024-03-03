@@ -161,6 +161,6 @@ src="https://www.youtube.com/embed/YTPYlFeyUzc">
 * [Component.json](onts_registration/huawei_onts_registration.json)
 * [Component.json](onts_registration/huawei_onts_registration_qnq.json)
 
-#### ONU Registration on Huawei QinQ
+#### ONU Registration on Huawei with QinQ
 * [Component.json](onts_registration/huawei_onts_registration_qnq.json)
 * [Additional OLT parameters.json](onts_registration/olt_additional_parameters.json)

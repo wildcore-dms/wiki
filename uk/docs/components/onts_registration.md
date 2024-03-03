@@ -163,6 +163,6 @@ src="https://www.youtube.com/embed/YTPYlFeyUzc">
 * [Компонент.json](onts_registration/huawei_onts_registration.json) 
 
 
-#### Реєстрація ОНУ на Huawei QinQ
+#### Реєстрація ОНУ на Huawei з QinQ
 * [Компонент.json](onts_registration/huawei_onts_registration_qnq.json)
 * [Додаткові параметри OLT.json](onts_registration/olt_additional_parameters.json)
