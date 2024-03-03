@@ -153,7 +153,7 @@ src="https://www.youtube.com/embed/YTPYlFeyUzc">
 
 
 #### Реєстрація ОНУ на ZTE (@quantum_nintendo)
-* [Інструкція .txt](onts_registration/WC_ZTE_REG_quantum_nintendo.txt) 
+* [Інструкція.txt](onts_registration/WC_ZTE_REG_quantum_nintendo.txt) 
 * [Компонент.json](onts_registration/zte_unregistered_onts_quantum_nintendo.json) 
 
 #### Реєстрація ОНУ на ZTE (@spirit_crasher)
@@ -161,3 +161,8 @@ src="https://www.youtube.com/embed/YTPYlFeyUzc">
 
 #### Реєстрація ОНУ на Huawei 
 * [Компонент.json](onts_registration/huawei_onts_registration.json) 
+
+
+#### Реєстрація ОНУ на Huawei QinQ
+* [Компонент.json](onts_registration/huawei_onts_registration_qnq.json)
+* [Додаткові параметри OLT.json](onts_registration/olt_additional_parameters.json)

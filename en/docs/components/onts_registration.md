@@ -151,11 +151,16 @@ src="https://www.youtube.com/embed/YTPYlFeyUzc">
 
 
 #### ONU Registration on ZTE (@quantum_nintendo)
-* [Instructions .txt](onts_registration/WC_ZTE_REG_quantum_nintendo.txt) 
+* [Instructions.txt](onts_registration/WC_ZTE_REG_quantum_nintendo.txt) 
 * [Component.json](onts_registration/zte_unregistered_onts_quantum_nintendo.json) 
 
 #### ONU Registration on ZTE (@spirit_crasher)
 * [Component.json](onts_registration/zte_unregistered_onts_spirit_crasher.json) 
 
 #### ONU Registration on Huawei
-* [Component.json](onts_registration/huawei_onts_registration.json) 
+* [Component.json](onts_registration/huawei_onts_registration.json)
+* [Component.json](onts_registration/huawei_onts_registration_qnq.json)
+
+#### ONU Registration on Huawei QinQ
+* [Component.json](onts_registration/huawei_onts_registration_qnq.json)
+* [Additional OLT parameters.json](onts_registration/olt_additional_parameters.json)

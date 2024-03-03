@@ -8,7 +8,7 @@
             "order": 0,
             "value": "",
             "required": true,
-            "visible_if": "",
+            "visible_if": "user.name == 'Admin'",
             "regular_expr": "",
             "default_value": "",
             "variants_list": "Abonent\nSwitch\nManaged switch",
@@ -21,7 +21,7 @@
             "order": 1,
             "value": "",
             "required": true,
-            "visible_if": "",
+            "visible_if": "user.name == \"Admin\"",
             "regular_expr": "",
             "default_value": "LINE USER 921",
             "variants_list": "",
@@ -34,7 +34,7 @@
             "order": 2,
             "value": "",
             "required": true,
-            "visible_if": "",
+            "visible_if": "user.name == \"Admin\"",
             "regular_expr": "",
             "default_value": "",
             "variants_list": "",
@@ -47,7 +47,7 @@
             "order": 3,
             "value": "",
             "required": true,
-            "visible_if": "",
+            "visible_if": "user.name == \"Admin\"",
             "regular_expr": "^[0-9]{1,4}$",
             "default_value": "",
             "variants_list": "901\n914\n915\n916\n917\n918\n919\n920\n921\n922\n923\n924\n925\n926\n927\n928\n929\n930\n931\n932",
@@ -66,5 +66,8 @@
             "variants_list": "",
             "source_parameter_key": ""
         }
-    ]
+    ],
+    "templates_v2": {
+        "main": "{% set srvProfile = params.ont_srvprofile %}\n{% set lineProfile = params.ont_lineprofile %}\n{% set iface = \"#{onu.interface._frame}/#{onu.interface._slot}/#{onu.interface._port}\"%}\n{% set vlan = params.ont_vlan %}\n{% if user.name == 'Admin' %}\n{% set srvProfile = \"gpon_ftth\" %}\n{% set lineProfile = \"gpon_ftth\" %}\n{% set vlan = device.params.ifaces[iface].vlan %}\n{% endif %}\n\n\n{% if  params.device_purpose == 'Abonent' %}\nconf \ninterface gpon {{onu.interface._frame}}/{{onu.interface._slot}}\nont add {{onu.interface._port}} {{free_onu_numbers.first}} sn-auth {{onu.serial}} omci ont-lineprofile-name \"{{lineProfile}}\" ont-srvprofile-name \"{{srvProfile}}\" desc \"{{params.device_description}}\" <cr>\nont port native-vlan {{onu.interface._port}} {{free_onu_numbers.first}} eth 1 vlan 100 priority 0\nquit\nservice-port vlan {{vlan}} gpon {{onu.interface._frame}}/{{onu.interface._slot}}/{{onu.interface._port}} ont {{free_onu_numbers.first}} gemport 1 multi-service user-vlan 100 tag-transform translate-and-add inner-vlan {{free_onu_numbers.first + 1}} inner-priority 0 <cr>\nsave <cr>\nquit\n{% elseif  params.device_purpose == 'Switch' %}\nconf \ninterface gpon {{onu.interface._frame}}/{{onu.interface._slot}}\nont add {{onu.interface._port}} {{free_onu_numbers.first}} sn-auth {{onu.serial}} omci ont-lineprofile-name \"{{params.ont_lineprofile}}\" ont-srvprofile-name \"{{params.ont_srvprofile}}\" desc \"{{params.device_description}}\" <cr>\nquit\nservice-port vlan {{params.ont_vlan}} gpon {{onu.interface._frame}}/{{onu.interface._slot}}/{{onu.interface._port}} ont {{free_onu_numbers.first}} gemport 1 multi-service user-vlan {{params.ont_vlan}} tag-transform translate <cr>\nservice-port vlan {{params.ont_vlan}} gpon {{onu.interface._frame}}/{{onu.interface._slot}}/{{onu.interface._port}} ont {{free_onu_numbers.first}} gemport 2 multi-service user-vlan {{params.ont_vlan}} tag-transform translate <cr>\nsave <cr>\nquit\n{% elseif  params.device_purpose == 'Managed switch' %}\nconf \ninterface gpon {{onu.interface._frame}}/{{onu.interface._slot}}\nont add {{onu.interface._port}} {{free_onu_numbers.first}} sn-auth {{onu.serial}} omci ont-lineprofile-name \"{{params.ont_lineprofile}}\" ont-srvprofile-name \"{{params.ont_srvprofile}}\" desc \"{{params.device_description}}\"\nont port native-vlan {{onu.interface._port}} {{free_onu_numbers.first}} eth 1 vlan {{params.ont_vlan}} priority 0\nquit\nservice-port vlan {{params.ont_vlan}} gpon {{onu.interface._frame}}/{{onu.interface._slot}}/{{onu.interface._port}} ont {{free_onu_numbers.first}} gemport 1 multi-service user-vlan {{params.ont_vlan}} <cr>\nsave <cr>\nquit \n{% endif %} "
+    }
 }

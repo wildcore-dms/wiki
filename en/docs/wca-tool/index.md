@@ -1,5 +1,3 @@
-## About
-
 !!! abstract "Overview"
 
     `wca-tool` is a console utility that allows the installation and upgrading of WildcoreDMS.
