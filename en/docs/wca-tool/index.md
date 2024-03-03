@@ -96,7 +96,8 @@ sudo wca-tool --key=YOUR_AGENT_KEY install
 sudo wca-tool update 
 ```
 
-*The key can be omitted during the update, it will be read from the system*
+!!! tip
+    The key can be omitted during the update, it will be read from the system.
 
 #### Upgrade WildcoreDMS to a specific version
 
@@ -107,15 +108,10 @@ sudo wca-tool update --dev --version=RELEASE_VERSION
 !!! warning ""
     We do not recommend downgrading your current WildcoreDMS installation.
 
-
-*The key can be omitted during the update, it will be read from the system*
-
 #### Creating backups
 
 !!! warning
     Backing up and restoring from a backup is only possible, if the system is in default mode (no DMS/Prometheus separation, no collectors, etc.)
-
-    Restoring from a backup removes the previously installed system.
 
     Only **WildcoreDMS** versions `0.21.2` and above support this feature.
 
@@ -131,6 +127,10 @@ If the backup process was successful, the following message will be displayed:
 Backup /opt/wildcore-dms-backups/290270907272424.tar.gz success created! 
 If you need - you can restore backup by command ./wca-tool restore --path <backup path>
 ```
+
+#### Restoration from a backup
+!!! warning
+    Restoring from a backup removes the previous installation completely.
 
 To restore from a backup, run
 
