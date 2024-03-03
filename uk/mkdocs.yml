@@ -30,7 +30,6 @@ extra:
 nav:
   - "Головна": index.md
   - "Функціонал": features/main.md
-  - "Вимоги до обладнання": requirements.md
   - "Встановлення та оновлення":
      - "Початок роботи": installation-and-updating/getting-started.md
      - "Оновлення": installation-and-updating/update.md
