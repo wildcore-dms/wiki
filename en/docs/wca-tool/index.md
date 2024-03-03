@@ -6,7 +6,7 @@
 
 ## Installation
 
-To install the `wca-tool` utility, run the following command:
+To install the `wca-tool`, run the following command:
 
 ``` shell
 sudo curl -L "https://releases.wildcore.tools/wca-tool/latest/wca-tool-$(uname -s)-$(uname -m)" -o /usr/local/bin/wca-tool && sudo chmod +x /usr/local/bin/wca-tool
@@ -23,34 +23,6 @@ The console should return the installed version number:
 ```
 wca-tool version 0.21.1
 ```
-
-## Updating
-
-To update the `wca-tool` utility, run the following command:
-
-```
-wca-tool update
-```
-
-It will check for new versions and update it if necessary.
-
-If you already have the latest version installed, the following message will be displayed:
-
-```
-$ wca-tool update
-INFO[2024-02-29 00:10:32] Received update command                      
-INFO[2024-02-29 00:10:32] Enabled check version before update          
-INFO[2024-02-29 00:10:32] Installed version - 0.21.1, latest version - 0.21.1 
-INFO[2024-02-29 00:10:32] Istalled latest version, exiting...  
-```
-
-You can use this command in cron, i.e.:
-
-```
-0 0 * * * wca-tool update
-```
-
-To force an update, use the `--no-check` flag, which will skip the version check and install the latest version.
 
 ## Usage
 Run `wca-tool --help` to get a list of supported commands.
@@ -92,12 +64,38 @@ sudo wca-tool --key=YOUR_AGENT_KEY install
 
 #### Update WildcoreDMS to the latest version
 
+To update the **WildcoreDMS**, run the following command:
+
 ```
-sudo wca-tool update 
+wca-tool update
 ```
+
+It will check for new versions and update it if necessary.
 
 !!! tip
     The key can be omitted during the update, it will be read from the system.
+
+
+
+If you already have the latest version installed, the following message will be displayed:
+
+```
+$ wca-tool update
+INFO[2024-02-29 00:10:32] Received update command                      
+INFO[2024-02-29 00:10:32] Enabled check version before update          
+INFO[2024-02-29 00:10:32] Installed version - 0.21.1, latest version - 0.21.1 
+INFO[2024-02-29 00:10:32] Istalled latest version, exiting...  
+```
+
+You can use this command in cron, i.e.:
+
+```
+0 0 * * * wca-tool update
+```
+
+To force an update, use the `--no-check` flag, which will skip the version check and install the latest version.
+
+
 
 #### Upgrade WildcoreDMS to a specific version
 

@@ -3,9 +3,9 @@
 
     Він також надає можливість створення та відтворення резервних копій, а також оновлення до версій з гілки Розробки.
 
-## Встановлення
+## Встановлення та оновлення `wca-tool`
 
-Щоб встановити інструмент `wca-tool`, виконайте наступну команду:
+Щоб встановити або оновити інструмент `wca-tool`, виконайте наступну команду:
 
 ``` shell
 sudo curl -L "https://releases.wildcore.tools/wca-tool/latest/wca-tool-$(uname -s)-$(uname -m)" -o /usr/local/bin/wca-tool && sudo chmod +x /usr/local/bin/wca-tool
@@ -19,36 +19,8 @@ wca-tool --version
 Консоль має повернути номер встановленої версії:
 
 ```
-wca-tool version 0.21.1
+wca-tool version 0.5.1
 ```
-
-## Оновлення
-
-Щоб оновити інструмент `wca-tool`, виконайте наступну команду:
-
-```
-wca-tool update
-```
-
-Вона перевірить наявніть нових версій, та встановить їх, якщо це необхідно.
-
-Якщо у вас вже встановлена найновіша версія, буде виведено наступне повідомлення:
-
-```
-$ wca-tool update
-INFO[2024-02-29 00:10:32] Received update command                      
-INFO[2024-02-29 00:10:32] Enabled check version before update          
-INFO[2024-02-29 00:10:32] Installed version - 0.21.1, latest version - 0.21.1 
-INFO[2024-02-29 00:10:32] Istalled latest version, exiting...  
-```
-
-Ви можете використовувати цю команду в `cron`, наприклад:
-
-```
-0 0 * * * wca-tool update
-```
-
-Щоб оновитися примусово, використайте аргумент `--no-check`, що пропустить перевірку встановленої версії та встановить найновішу.
 
 ## Використання
 Щоб отримати повний список доступних функцій, виконайте команду `wca-tool --help`:
@@ -62,7 +34,7 @@ USAGE:
    ./wca-tool [global options] command [command options] [arguments...]
 
 VERSION:
-   0.2.5
+   0.5.1
 
 COMMANDS:
    install   Install new wildcoreDMS instance
@@ -84,18 +56,43 @@ COPYRIGHT:
 ```
 
 #### Встановлення WildcoreDMS
+
+Щоб встановити WildcoreDMS, виконайте наступну команду:
 ```
 sudo wca-tool --key=YOUR_AGENT_KEY install 
 ```
 
 #### Оновлення WildcoreDMS до найновішої версії
 
+Щоб оновити **WildcoreDMS**, виконайте наступну команду:
+
 ```
 sudo wca-tool update 
 ```
 
+Вона перевірить наявніть нових версій, та встановить їх, якщо це необхідно.
+
 !!! tip "Підказка"
     Ключ агента можна опустити під час оновлення, він буде зчитаний з системи.
+
+Якщо у вас вже встановлена найновіша версія, буде виведено наступне повідомлення:
+
+```
+$ wca-tool update
+INFO[2024-02-29 00:10:32] Received update command                      
+INFO[2024-02-29 00:10:32] Enabled check version before update          
+INFO[2024-02-29 00:10:32] Installed version - 0.21.2, latest version - 0.21.2 
+INFO[2024-02-29 00:10:32] Istalled latest version, exiting...  
+```
+
+Ви можете використовувати цю команду в `cron`, наприклад:
+
+```
+0 0 * * * wca-tool update
+```
+
+Щоб оновитися примусово, використайте аргумент `--no-check`, що пропустить перевірку встановленої версії та встановить найновішу.
+
 
 #### Оновлення WildcoreDMS до конкретної версії
 
