@@ -109,7 +109,7 @@ sudo wca-tool update --dev --version=RELEASE_VERSION
 #### Creating backups
 
 !!! warning
-    Backing up and restoring from a backup is only possible, if the system is in default mode (no DMS/Prometheus separation, no collectors, etc.)
+    Backing up and restoring from a backup is only possible, if the system is in default mode (no DMS/Prometheus separation, no pollers, etc.)
 
     Only **WildcoreDMS** versions `0.21.2` and above support this feature.
 

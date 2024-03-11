@@ -43,8 +43,9 @@ nav:
      - "Updating": installation-and-updating/update.md
      - "System requirements": installation-and-updating/requirements.md
   - "Web interface":
-      - "View": web-interface/main.md
-      - "After install": web-after-install.md
+      - "Overview": web-interface/main.md
+      - "Dashboard Overview": web-interface/dashboard-overview.md
+      - "After install": web-interface/web-after-install.md
       - "Use proxy": web-interface/use-proxy.md
   - "Console": cli/index.md
   - "Working with equipment": system/how_works_with_device.md
