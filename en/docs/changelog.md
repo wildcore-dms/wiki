@@ -1,4 +1,19 @@
-???+ note "0.21 (02.2024)"
+???+ note "0.22 (03.2024)"
+    **New features** 
+     
+    - Added new device types - ICMP device. You can use them to set a ping (for example, a subscriber, or power control), without working with it
+    - Added the "Pinger" tab in switches, which displays crash logs and current status information
+    - Added pon-port signatures in the ONU tree
+    - Added EPON support to Huawei MA56xx/MA58xx
+    - Added display of ONU firmware version on C-Data FD16xx
+    - Added new map sources - Google Streets and Google Hybrid
+    - Mikbill sync users, added detect and update ONT coordinates
+    - Added an option in the settings to select the source of maps (by default - Google streets)
+    - Added the ability to disable FDB collection for a specific interface/ONU (in this case, the FDB history will be cleared)
+
+    [More...](./changelogs/0.22.md)
+
+??? note "0.21 (02.2024)"
     **Added components**
 
     - [macros](./components/macros.md) - allow extend functionally of system (beta-test, will be payed in future)
