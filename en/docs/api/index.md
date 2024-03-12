@@ -30,3 +30,6 @@ _Requests without a key but on a trusted network will show up from the builtin *
 API methods, example of responses are documented in [postman wildcoreAPI](https://documenter.getpostman.com/view/6612340/TWDRqyW4) _(The documentation may not contain all the information of you need)_     
       
 Also, since the web panel is built on the SPA framework, you can view the called API methods (via F12) and use them
+
+## Development 
+For PHP developers added SDK (testing) - [github.com/meklis/wildcore-api-client](https://github.com/meklis/wildcore-api-client), [examples](https://github.com/meklis/wildcore-api-client/tree/master/examples)    
