@@ -36,6 +36,7 @@ nav:
      - "Системні вимоги": installation-and-updating/requirements.md
   - "Веб-інтерфейс":
       - "Вигляд": web-interface/main.md
+      - "Огляд Дешборду": web-interface/dashboard-overview.md
       - "Після встановлення": web-interface/web-after-install.md
       - "Використання проксі": web-interface/use-proxy.md
   - "Консоль": cli/index.md
