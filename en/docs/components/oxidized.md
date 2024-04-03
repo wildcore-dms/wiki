@@ -30,20 +30,20 @@ In the system settings, there is an Oxidized block allowing you to configure som
 4. **Timeout** - Time to take a backup, in seconds.
 
 _When changing parameters marked (*), you will need to restart the system with the command:_
-```shell 
+```shell linenums="1"
 cd /opt/wildcore-dms && docker compose up -d --build
 ```
 ## Storing Configurations in Your Git Repository
 _To send the configuration to your Git, you need to have Git installed and configured in your system._
 
 **1. Set up a local repository**
-```shell
+```shell linenums="1"
 git config --global --add safe.directory /opt/wildcore-dms/var/oxidized/configs.git
 git remote add origin <YOUR REPOSITORY>
 git push --set-upstream origin master
 ```
 **2. Add a cron task to send changes**
-```shell
+```shell linenums="1"
 */5 * * * * cd /opt/wildcore-dms/var/oxidized/configs.git && git push --set-upstream origin master
 ```
 
@@ -53,11 +53,11 @@ Also, you can contact us to add the required equipment (if it's already in Wildc
 
 For Wildcore to work with your personal instance, change the address to Oxidized in the system settings.
 Also, for Oxidized to receive a list of equipment for collection, specify the following config:
-```yaml
+```yaml linenums="1"
 source:
   default: http
   http:
-    url: http://<АДРЕСА СИСТЕМИ WILDCORE>/api/v1/component/oxidized/internal/devices-list
+    url: http://<WILDCORE_SYSTEM_ADDRESS>/api/v1/component/oxidized/internal/devices-list
     scheme: http
     delimiter: !ruby/regexp /:/
     read_timeout: 120

@@ -2,15 +2,16 @@
 Objects represented in Golang format
 
 ### ApiSuccessResponse
-<pre><code>type ApiSuccessResponse struct {
+```cpp linenums="1"
+type ApiSuccessResponse struct {
 	StatusCode int                `json:"statusCode,omitempty"`
 	Meta       interface{}        `json:"meta,omitempty"`
 	Data       <a href="#diagnosticresponse" >DiagnosticResponse</a> `json:"data,omitempty"`
 }
-</code></pre>
-
+```
 ### DiagnosticResponse
-<pre><code>type DiagnosticResponse struct {
+```cpp linenums="1"
+type DiagnosticResponse struct {
     Iface <a href="#deviceinterface">DeviceInterface</a>  `json:"iface,omitempty"`
     Diagnostic struct {
         Data map[string]interface{} `json:"data,omitempty"` // <a href="./../module_responses">See modules in responses</a>
@@ -21,10 +22,10 @@ Objects represented in Golang format
         Error *string `json:"error,omitempty"`
     } `json:"device_status,omitempty"`
 } 
-</code></pre>
+```
 
 ### MetaDiagnostic
-``` 
+```cpp linenums="1"
 type MetaDiagnostic struct {
 	Time      string `json:"time"`
 	Source    string `json:"source"`
@@ -37,30 +38,30 @@ type MetaDiagnostic struct {
 
 
 ### DeviceInterface
-<pre><code>
+```cpp linenums="1"
 type DeviceInterface struct {
-    CreatedAt     string                    `json:"created_at,omitempty"`
-    UpdatedAt     string                    `json:"updated_at,omitempty"`
-    Device        <a href="#device">Device</a>                    `json:"device"`
-    BindKey       string                    `json:"bind_key,omitempty"`
-    Name          string                    `json:"name,omitempty"`
-    Type          string                    `json:"type,omitempty"`
-    Params        *map[string]interface{}   `json:"params,omitempty"`
-    BillingLink   string                    `json:"billing_link,omitempty"`
-    IP            string                    `json:"ip,omitempty"`
-    Agreement     string                    `json:"agreement,omitempty"`
-    Description   string                    `json:"description,omitempty"`
-    Status        string                    `json:"status,omitempty"`
-    PollEnabled   bool                      `json:"poll_enabled,omitempty"`
-    ParentBindKey string                    `json:"parent_bind_key,omitempty"`
-    Coordinates   map[string]interface{}    `json:"coordinates,omitempty"`
-    Comment       string                    `json:"comment,omitempty"`
-    ID            int                       `json:"id,omitempty"`
+    CreatedAt     string                       `json:"created_at,omitempty"`
+    UpdatedAt     string                       `json:"updated_at,omitempty"`
+    Device        <a href="#device">Device</a> `json:"device"`
+    BindKey       string                       `json:"bind_key,omitempty"`
+    Name          string                       `json:"name,omitempty"`
+    Type          string                       `json:"type,omitempty"`
+    Params        *map[string]interface{}      `json:"params,omitempty"`
+    BillingLink   string                       `json:"billing_link,omitempty"`
+    IP            string                       `json:"ip,omitempty"`
+    Agreement     string                       `json:"agreement,omitempty"`
+    Description   string                       `json:"description,omitempty"`
+    Status        string                       `json:"status,omitempty"`
+    PollEnabled   bool                         `json:"poll_enabled,omitempty"`
+    ParentBindKey string                       `json:"parent_bind_key,omitempty"`
+    Coordinates   map[string]interface{}       `json:"coordinates,omitempty"`
+    Comment       string                       `json:"comment,omitempty"`
+    ID            int                          `json:"id,omitempty"`
 }
-</code></pre>
+```
 
 ### Device
-<pre><code>
+```cpp linenums="1"
 type Device  struct {
     IP                  string                 `json:"ip,omitempty"`
     Location            string                 `json:"location,omitempty"`
@@ -84,10 +85,10 @@ type Device  struct {
     Enabled     bool                           `json:"enabled,omitempty"`
     ID          int                            `json:"id,omitempty"`
 } 
-</code></pre>
+```
 
 ### DeviceModel
-``` 
+```cpp linenums="1"
 type DeviceModel struct {
     Name        string                  `json:"name,omitempty"`
     Key         string                  `json:"key,omitempty"`
@@ -103,7 +104,7 @@ type DeviceModel struct {
 ```
 
 ### DeviceAccess
-``` 
+```cpp linenums="1"
 type DeviceAccess struct {
     Params map[string]interface{} `json:"params,omitempty"`
     Name string                   `json:"name,omitempty"`
@@ -113,7 +114,8 @@ type DeviceAccess struct {
 
 
 ### System (Device module)
-<pre><code>type ModuleDataSystem struct {
+```cpp linenums="1"
+type ModuleDataSystem struct {
     Descr            string `json:"descr,omitempty"`
     Uptime           string `json:"uptime,omitempty"`
     UptimeSec        string `json:"uptime_sec,omitempty"`
@@ -149,4 +151,4 @@ type DeviceAccess struct {
         Modules []string `json:"modules,omitempty"`
     } `json:"meta,omitempty"`
 } `json:"data,omitempty"`
-</code></pre>
+```

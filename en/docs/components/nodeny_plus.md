@@ -58,13 +58,13 @@ Example of URL - `http://wildcore.company.com:8088`
 After finish config - click 'Save' in top of page     
 #### Generate auth key for billing    
 Open console in server and write command
-```
+```shell linenums="1"
 sudo wca user:generate-key admin 365d
 ```
 * `admin` - username in wildcore system. Billing will be used from its user; 
 * `365d` - key expiration
 Output will be as 
-```
+```shell
 +-----+--------------+--------------------------------------+---------------------+
 | ID  | User         | Key                                  | Expired At          |
 +-----+--------------+--------------------------------------+---------------------+

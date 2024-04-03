@@ -37,33 +37,27 @@ For this demonstration, we skip this tab since we don't need any **Parameters**.
     3. **Variables:** Here are the variables from the selected **Device** and **Interface**.
     4. **Template block:**
 
-        - **Chosen template:**
+        ```twig linenums="1" title="Chosen template:"
+        show run int {{iface.name}}
+        show onu conf {{iface.name}}
+        ```
 
-            ``` twig
-            show run int {{iface.name}}
-            show onu conf {{iface.name}}
-            ```
+        ???+ info
+            This is the input field that defines your macro, containing the specific CLI commands that are executed on the selected **Device** and/or **Interface**, combined with any Parameters you choose, if applicable.
 
-            ???+ info
-                This is the input field that defines your macro, containing the specific CLI commands that are executed on the selected **Device** and/or **Interface**, combined with any Parameters you choose, if applicable.
+            Here we use the `iface` variable that the selected device provides.
 
-                Here we use the `iface` variable that the selected device provides.
+        ```shell linenums="1" title="Live result:"
+        show run int epon-onu_1/1/1:1
+        show onu run conf epon-onu_1/1/1:1
+        ```
 
-        - **Live result:**
-        
+        ???+ info
+            Here you can see the result of this **Template**'s compilation, the exact command that will run on your hardware.
+
+            For the purpose of this demonstration we selected a `ZTE C320` device and `epon-onu_1/1/1:1` interface.
             
-
-            ``` shell
-            show run int epon-onu_1/1/1:1
-            show onu run conf epon-onu_1/1/1:1
-            ```
-
-            ???+ info
-                Here you can see the result of this **Template**'s compilation, the exact command that will run on your hardware.
-
-                For the purpose of this demonstration we selected a `ZTE C320` device and `epon-onu_1/1/1:1` interface.
-                
-                Our `{{iface.name}}` variable evaluated to `epon-onu_1/1/1:1` and the other static commands have been left unchanged.
+            Our `{{iface.name}}` variable evaluated to `epon-onu_1/1/1:1` and the other static commands have been left unchanged.
 
 Press the **Create** button and the macro is ready to use.
 
@@ -119,7 +113,7 @@ Fill out this tab according to your requirements.
             Here we use predefined values to help the user choose the right one conveniently.
 
     6. **Predefined values list:**
-        ```
+        ``` linenums="1"
         100MB
         1GB
         ```
@@ -133,32 +127,30 @@ Fill out this tab according to your requirements.
     3. **Variables:** Here are the variables from the selected **Device** and **Interface**, as well as `params` property which stores the values of the parameters we specified earlier.
     4. **Template block:**
 
-        - **Chosen template:** 
-            ``` twig
-            conf t
-            interface {{iface.name}}
-            tcont 1 name T-INET profile UP-{{params.speed}}
-            gemport 1 traffic-limit downstream DOWN-{{params.speed}}
-            end
-            wr
-            ```
-
-        - **Live result:**
-
-            ``` shell
-            conf t
-            interface epon-onu_1/1/1:1
-            tcont 1 name T-INET profile UP-100MB
-            gemport 1 traffic-limit downstream DOWN-100MB
-            end
-            wr
-            ```
-
-            ???+ info
-                For the purpose of this demonstration we selected the **Speed** of `100MB` in the dropdown above and a `ZTE C320` device with an Interface `epon-onu_1/1/1:1`.
+        ```twig linenums="1" title="Chosen template:"
+        conf t
+        interface {{iface.name}}
+        tcont 1 name T-INET profile UP-{{params.speed}}
+        gemport 1 traffic-limit downstream DOWN-{{params.speed}}
+        end
+        wr
+        ```
 
 
-                Similar to the previous example, `{{iface.name}}` evaluated to `epon-onu_1/1/1:1`, and `{{params.speed}}` stored the value we selected in the Speed dropdown.
+        ```shell linenums="1" title="Live result:"
+        conf t
+        interface epon-onu_1/1/1:1
+        tcont 1 name T-INET profile UP-100MB
+        gemport 1 traffic-limit downstream DOWN-100MB
+        end
+        wr
+        ```
+
+        ???+ info
+            For the purpose of this demonstration we selected the **Speed** of `100MB` in the dropdown above and a `ZTE C320` device with an Interface `epon-onu_1/1/1:1`.
+
+
+            Similar to the previous example, `{{iface.name}}` evaluated to `epon-onu_1/1/1:1`, and `{{params.speed}}` stored the value we selected in the Speed dropdown.
 
 The macro is now ready to use.
 
@@ -211,7 +203,7 @@ Refer to the [**Parameter type options**](./parameter_type_options.md) page as n
         - **Required:** `True`
         - **Parameter type:** `Dropdown list from predefined`
         - **Predefined values list:**
-            ```
+            ``` linenums="1"
             Add
             Delete
             ```
@@ -223,12 +215,12 @@ Refer to the [**Parameter type options**](./parameter_type_options.md) page as n
         - **Required:** `False`
         - **Parameter type:** `Dropdown list from predefined`
         - **Predefined values list:**
-            ```
+            ``` linenums="1"
             Untagged
             Tagged
             ```
         - **Visibility condition:**
-            ```
+            ``` linenums="1"
             params.action === 'Add'
             ```
 
@@ -292,7 +284,7 @@ Refer to the [**Parameter type options**](./parameter_type_options.md) page as n
 
         Here are the variables from the selected **Device** and **Interface**, as well as `params` property, which stores the values of our `action`, `type`, `vlan` and `port` parameters.
 
-        ``` json
+        ``` json  linenums="1"
         "params": {
             "action": "Add",
             "type": "Untagged",
@@ -320,26 +312,24 @@ Refer to the [**Parameter type options**](./parameter_type_options.md) page as n
 
     4. **Template block:**
 
-        - **Chosen template:** 
-            ``` twig
-            {# Block for setting variables inside the template #}
-            {% set port = params.port %}
-            {% if iface %}
-            {% set port = iface %}
-            {% endif %}
+        ``` twig  linenums="1" title="Chosen template"
+        {# Block for setting variables inside the template #}
+        {% set port = params.port %}
+        {% if iface %}
+        {% set port = iface %}
+        {% endif %}
 
-            {# Template block #}
-            {% if params.action == 'Delete' %}
-            config vlan {{params.vlan.name}} delete {{port.bind_key}}
-            {% else %}
-            config vlan {{params.vlan.name}} add {{params.type | lower }} {{port.bind_key}}
-            {% endif %}
-            ```
+        {# Template block #}
+        {% if params.action == 'Delete' %}
+        config vlan {{params.vlan.name}} delete {{port.bind_key}}
+        {% else %}
+        config vlan {{params.vlan.name}} add {{params.type | lower }} {{port.bind_key}}
+        {% endif %}
+        ```
 
-        - **Live result:**
-            ``` shell
-            config vlan sw802 add untagged 1
-            ```
+        ``` shell  linenums="1" title="Live result"
+        config vlan sw802 add untagged 1
+        ```
 
 The macro is now ready to use.
 

@@ -39,7 +39,7 @@
 
         - **Обраний шаблон:**
 
-            ``` twig
+            ``` twig linenums="1"
             show run int {{iface.name}}
             show onu conf {{iface.name}}
             ```
@@ -51,7 +51,7 @@
 
         - **Результат:**
 
-            ``` shell
+            ``` shell 
             show run int epon-onu_1/1/1:1
             show onu run conf epon-onu_1/1/1:1
             ```
@@ -117,7 +117,7 @@ Fill out this tab according to your requirements.
             Тут ми пропонуємо користувачу значення, для більш зручного вибору правильного.
 
     6. **Список запропонованих значень:**
-        ```
+        ``` linenums="1"
         100MB
         1GB
         ```
@@ -132,7 +132,7 @@ Fill out this tab according to your requirements.
     4. **Блок шаблону:**
 
         - **Обраний шаблон:** 
-            ``` twig
+            ``` twig linenums="1"
             conf t
             interface {{iface.name}}
             tcont 1 name T-INET profile UP-{{params.speed}}
@@ -211,7 +211,7 @@ Fill out this tab according to your requirements.
         - **Обов'язковий:** `Так`
         - **Тип параметру:** `Випадний список з запропонованих`
         - **Список запропонованих значень:**
-            ```
+            ``` linenums="1"
             Додати
             Видалити
             ```
@@ -223,12 +223,12 @@ Fill out this tab according to your requirements.
         - **Обов'язковий:** `Ні`
         - **Тип параметру:** `Випадний список з запропонованих`
         - **Список запропонованих значень:**
-            ```
+            ``` linenums="1"
             Untagged
             Tagged
             ```
         - **Умови видимості:**
-            ```
+            ``` linenums="1"
             params.action === 'Add'
             ```
 
@@ -292,7 +292,7 @@ Fill out this tab according to your requirements.
 
         Тут можна побачити змінні, отримані з **Пристрою**, а також властивість `params`, що зберігає значення параметрів `action`, `type`, `vlan` і `port`, обраних вище.
 
-        ``` json
+        ``` json linenums="1"
         "params": {
             "action": "Add",
             "type": "Untagged",
@@ -321,7 +321,7 @@ Fill out this tab according to your requirements.
     4. **Блок шаблону:**
 
         - **Обраний шаблон:** 
-            ``` twig
+            ``` twig linenums="1"
             {# Блок оголошення і визначення змінних всередині шаблону #}
             {% set port = params.port %}
             {% if iface %}

@@ -59,7 +59,7 @@
 
 1. Install the latest version of the `wca-tool`.
 
-    ``` shell
+    ```shell linenums="1"
     sudo curl -L "https://releases.wildcore.tools/wca-tool/latest/wca-tool-$(uname -s)-$(uname -m)" -o /usr/local/bin/wca-tool && sudo chmod +x /usr/local/bin/wca-tool
     ```
 
@@ -69,7 +69,7 @@
 
 3. Run the following command to install the **WildcoreDMS**.
 
-    ``` shell
+    ```shell linenums="1"
     sudo wca-tool --key=YOUR_AGENT_KEY install 
     ```
 
@@ -78,7 +78,7 @@
 
 If the installation was successful, the following message will be displayed:
 
-```
+```{ .shell .no-copy }
     WildcoreDMS (version x.xx.x) success installed!
     Now, you can use wildcoreDMS by URL: http://<service ip|domain>:8088
     Default login/password - admin/admin

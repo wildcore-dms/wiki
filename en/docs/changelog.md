@@ -16,7 +16,7 @@
 ??? note "0.21 (02.2024)"
     **Added components**
 
-    - [macros](./components/macros.md) - allow extend functionally of system (beta-test, will be payed in future)
+    - [macros](./components/macros/getting-started.md) - allow extend functionally of system (beta-test, will be a paid feature in future)
 
     **New fearures**
     

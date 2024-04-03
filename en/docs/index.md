@@ -54,7 +54,7 @@ thereby:
 * Mikrotik (routers, switches)
 
 !!! tip
-    Full list of supported hardware by models - [https://github.com/meklis/switcher-core/blob/master/docs/DEVICES.md](https://github.com/meklis/switcher-core/blob/master/docs/DEVICES.md)
+    [Here](https://htmlpreview.github.io/?https://raw.githubusercontent.com/meklis/switcher-core/master/docs/device_info.html) you can find the full list of supported hardware by models.
 
 
 !!! warning "We are not working with Russian Federation and Belarus"

@@ -31,6 +31,6 @@ The search for new equipment is made every half hour (*/30) from 6 am to 11 pm.
 You can access these settings through the scheduler settings _(Configuration -> Schedule configuration page)_.
 
 
-It is also possible to start scanning manually without waiting for the scheduler to start with the command - ```wca autodiscovery:scan```.
+It is also possible to start scanning manually without waiting for the scheduler to start with the command - `wca autodiscovery:scan`.
 
 

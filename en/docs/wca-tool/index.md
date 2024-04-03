@@ -8,26 +8,26 @@
 
 To install the `wca-tool`, run the following command:
 
-``` shell
+``` shell linenums="1"
 sudo curl -L "https://releases.wildcore.tools/wca-tool/latest/wca-tool-$(uname -s)-$(uname -m)" -o /usr/local/bin/wca-tool && sudo chmod +x /usr/local/bin/wca-tool
 ```  
 
 To check if the installation was performed correctly, run the following command:
 
-``` 
+``` shell linenums="1"
 wca-tool --version
 ``` 
 
 The console should return the installed version number:
 
-```
+``` { .shell .no-copy }
 wca-tool version 0.21.1
 ```
 
 ## Usage
 Run `wca-tool --help` to get a list of supported commands.
 
-```
+```{ .shell .no-copy }
 $ wca-tool --help
 NAME:
    wca-tool - Cli tool for install/update/upgrade wildcoreDMS
@@ -58,7 +58,7 @@ COPYRIGHT:
 ```
 
 #### WildcoreDMS installation
-```
+```shell linenums="1"
 sudo wca-tool --key=YOUR_AGENT_KEY install 
 ```
 
@@ -66,7 +66,7 @@ sudo wca-tool --key=YOUR_AGENT_KEY install
 
 To update the **WildcoreDMS**, run the following command:
 
-```
+```shell linenums="1"
 wca-tool update
 ```
 
@@ -79,7 +79,7 @@ It will check for new versions and update it if necessary.
 
 If you already have the latest version installed, the following message will be displayed:
 
-```
+```{ .shell .no-copy }
 $ wca-tool update
 INFO[2024-02-29 00:10:32] Received update command                      
 INFO[2024-02-29 00:10:32] Enabled check version before update          
@@ -89,7 +89,7 @@ INFO[2024-02-29 00:10:32] Istalled latest version, exiting...
 
 You can use this command in cron, i.e.:
 
-```
+```shell linenums="1"
 0 0 * * * wca-tool update
 ```
 
@@ -99,7 +99,7 @@ To force an update, use the `--no-check` flag, which will skip the version check
 
 #### Upgrade WildcoreDMS to a specific version
 
-```
+```shell linenums="1"
 sudo wca-tool update --dev --version=RELEASE_VERSION
 ```
 
@@ -117,11 +117,13 @@ sudo wca-tool update --dev --version=RELEASE_VERSION
     - Backup creation no longer requires system shutdown.
     - Backup content now encompasses system files, configurations, database dumps, and TSBD snapshots (Prometheus metrics).
 
-To create a backup, run `wca-tool backup`.
+To create a backup, run `wca-tool backup`. 
+
+This requires the `rsync` utility, which can be installed on a Ubuntu/Debian system with `sudo apt update && apt -y install rsync`.
 
 If the backup process was successful, the following message will be displayed:
 
-```
+```{ .shell .no-copy }
 Backup /opt/wildcore-dms-backups/290270907272424.tar.gz success created! 
 If you need - you can restore backup by command ./wca-tool restore --path <backup path>
 ```
@@ -132,12 +134,12 @@ If you need - you can restore backup by command ./wca-tool restore --path <backu
 
 To restore from a backup, run
 
-```
+```shell linenums="1"
 wca-tool restore --path /opt/wildcore-dms-backups/290270907272424.tar.gz
 ```
 
 If the restoration process was successful, the following message will be displayed:
 
-```
+```{ .shell .no-copy }
 WildcoreDMS success restored from backup /opt/wildcore-dms-backups/290270907272424.tar.gz!
 ```

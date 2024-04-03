@@ -9,8 +9,8 @@ Or, using the Notifications component, you can configure sending events or user 
 A complete list of components can be viewed on the following tabs.
 
 ## Manage components (via console)
-**List of supported components - ```wca component:list```**
-```shell
+**List of supported components - `wca component:list`**
+```{ .shell .no-copy}
 $ wca component:list
 +--------------------------+------------------------------------------------------------------+---------+-----------+---------------+----------------+
 | Key                      | Description                                                      | Enabled | Installed | Has installer | Has controller |
@@ -39,9 +39,9 @@ $ wca component:list
 ```
 **Component Management**
 
-* ```wca component:control COMPONENT_NAME install``` - install component
-* ```wca component:control COMPONENT_NAME enable``` - enable installed component
-* ```wca component:control COMPONENT_NAME disable``` - disable installed component
+* `wca component:control COMPONENT_NAME install` - install component
+* `wca component:control COMPONENT_NAME enable` - enable installed component
+* `wca component:control COMPONENT_NAME disable` - disable installed component
 
 
 ## Components inside the system can

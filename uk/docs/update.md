@@ -1,18 +1,18 @@
 # Оновлення
 
 **1. Оновлення wca-tool до актуальної версії (інформація про актуальну версію в нашому телеграм-каналі)**
-```shell     
+```shell linenums="1"
 sudo curl -L "https://releases.wildcore.tools/wca-tool/latest/wca-tool-$(uname -s)-$(uname -m)" -o /usr/local/bin/wca-tool && sudo chmod +x /usr/local/bin/wca-tool     
 ```     
 
 **2. Виконати команду для оновлення DMS**
-```shell     
+```shell linenums="1"
 sudo wca-tool update     
 ```     
 **Процес оновлення займає деякий час (зазвичай 10-15 хвилин).**    
 
 Якщо оновлення пройшло успішно, з’явиться повідомлення
-```shell     
+```{ .shell .no-copy}
 ...     
 WildcoreDMS success updated to version ...     
 ...     

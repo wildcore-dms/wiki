@@ -15,13 +15,13 @@ Possible query parameters:
 * **only_active_mac** - flag (1|0) for searching by parameter mac_address. If setted 1 - will be returned only by active mac_address
 
 Example of request:
-```shell
+```shell linenums="1"
 curl --location --request GET "http://${WILDCORE_SERVER}/api/v1/device-interface/search?device_id=${DEVICE_ID}&interface_name=${INTERFACE_NAME}" \
 --header "X-Auth-Key: ${AUTH_KEY}" 
 ```
 
 Example of response: 
-```json
+```json linenums="1"
 {
     "statusCode": 200,
     "meta": null,
@@ -117,11 +117,12 @@ Example of response:
 Returning diagnostic information from device 
 
 ### Example of request:   
-```shell
+```shell linenums="1"
 curl --location --request GET "http://${WILDCORE_SERVER}/api/v1/component/diagnostic/interface/${INTERFACE_ID}/diag?from=${FROM}" \
 --header "X-Auth-Key: ${AUTH_KEY}"
 ```
-* **FROM** - Variants: 
+
+* **FROM** Variants: 
     * **device** - Load from device
     * **cache** - Load from cache (If cache not exist or expired - will loading from device)
     * **store** - Load from cache

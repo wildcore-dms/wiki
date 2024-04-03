@@ -23,7 +23,7 @@ _Proxy_REAL_IP_HEADER header name must match what is specified in the proxy conf
 
 
 ### Configuration example for nginx
-``` 
+```nginx linenums="1"
 server {
     listen 80;
     listen 443 ssl;

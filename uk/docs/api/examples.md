@@ -15,7 +15,7 @@
 * **only_active_mac** - позначка (1|0) для пошуку за параметром mac_address. Якщо встановлено 1 - повертатиметься лише за активною mac_address
 
 Приклад запиту:
-```shell     
+```shell linenums="1"
 curl --location --request GET "http://${WILDCORE_SERVER}/api/v1/device-interface/search?device_id=${DEVICE_ID}&interface_name=${INTERFACE_NAME}" \     
 --header "X-Auth-Key: ${AUTH_KEY}"      
 ```     
@@ -117,7 +117,7 @@ curl --location --request GET "http://${WILDCORE_SERVER}/api/v1/device-interface
 Повернення діагностичної інформації з пристрою
 
 ### Приклад запиту:    
-```shell     
+```shell linenums="1"
 curl --location --request GET "http://${WILDCORE_SERVER}/api/v1/component/diagnostic/interface/${INTERFACE_ID}/diag?from=${FROM}" \     
 --header "X-Auth-Key: ${AUTH_KEY}"     
 ```     

@@ -1,12 +1,12 @@
 *На даний момент єдиний спосіб інсталяції та роботи надається в докері за допомогою wca-tool.*
 
 #### 1. Встановіть актуальну версію wca-tool    
-```shell     
+```shell linenums="1"
 sudo curl -L "https://releases.wildcore.tools/wca-tool/latest/wca-tool-$(uname -s)-$(uname -m)" -o /usr/local/bin/wca-tool && sudo chmod +x /usr/local/bin/wca-tool     
 ```     
 
 #### 2. Виконайте команду для встановлення DMS
-```shell     
+```shell linenums="1"
 sudo wca-tool --key=YOUR_AGENT_KEY install      
 ```     
 **Процес встановлення займає деякий час (зазвичай 10-15 хвилин).**    
@@ -16,7 +16,7 @@ sudo wca-tool --key=YOUR_AGENT_KEY install
 
 
 Якщо встановлення пройшло успішно, з’явиться повідомлення
-```shell     
+```{ .shell .no-copy }
 WildcoreDMS success installed!     
 Now, you can use wildcoreDMS by URL: http://<service ip|domain>:8088     
 Default login/password - admin/admin     

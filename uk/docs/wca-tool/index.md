@@ -7,25 +7,25 @@
 
 Щоб встановити або оновити інструмент `wca-tool`, виконайте наступну команду:
 
-``` shell
+``` shell linenums="1"
 sudo curl -L "https://releases.wildcore.tools/wca-tool/latest/wca-tool-$(uname -s)-$(uname -m)" -o /usr/local/bin/wca-tool && sudo chmod +x /usr/local/bin/wca-tool
 ```  
 Щоб перевірити правильність встановлення, виконайте наступну команду:
 
-``` 
+```shell linenums="1"
 wca-tool --version
 ``` 
 
 Консоль має повернути номер встановленої версії:
 
-```
+```{ .shell .no-copy }
 wca-tool version 0.5.1
 ```
 
 ## Використання
 Щоб отримати повний список доступних функцій, виконайте команду `wca-tool --help`:
 
-```
+```{ .shell .no-copy }
 $ wca-tool --help
 NAME:
    wca-tool - Cli tool for install/update/upgrade wildcoreDMS
@@ -58,7 +58,7 @@ COPYRIGHT:
 #### Встановлення WildcoreDMS
 
 Щоб встановити WildcoreDMS, виконайте наступну команду:
-```
+```shell linenums="1"
 sudo wca-tool --key=YOUR_AGENT_KEY install 
 ```
 
@@ -66,7 +66,7 @@ sudo wca-tool --key=YOUR_AGENT_KEY install
 
 Щоб оновити **WildcoreDMS**, виконайте наступну команду:
 
-```
+```shell linenums="1"
 sudo wca-tool update 
 ```
 
@@ -77,7 +77,7 @@ sudo wca-tool update
 
 Якщо у вас вже встановлена найновіша версія, буде виведено наступне повідомлення:
 
-```
+``` { .shell .no-copy }
 $ wca-tool update
 INFO[2024-02-29 00:10:32] Received update command                      
 INFO[2024-02-29 00:10:32] Enabled check version before update          
@@ -87,7 +87,7 @@ INFO[2024-02-29 00:10:32] Istalled latest version, exiting...
 
 Ви можете використовувати цю команду в `cron`, наприклад:
 
-```
+```shell linenums="1"
 0 0 * * * wca-tool update
 ```
 
@@ -96,7 +96,7 @@ INFO[2024-02-29 00:10:32] Istalled latest version, exiting...
 
 #### Оновлення WildcoreDMS до конкретної версії
 
-```
+```shell linenums="1"
 sudo wca-tool update --dev --version=RELEASE_VERSION
 ```
 
@@ -120,7 +120,7 @@ sudo wca-tool update --dev --version=RELEASE_VERSION
 
 Якщо процес створення резервної копії пройшов успішно, буде виведено наступне повідомлення:
 
-```
+```{ .shell .no-copy }
 Backup /opt/wildcore-dms-backups/290270907272424.tar.gz success created! 
 If you need - you can restore backup by command ./wca-tool restore --path <backup path>
 ```
@@ -131,12 +131,12 @@ If you need - you can restore backup by command ./wca-tool restore --path <backu
 
 Щоб відновитися з резервної копії, виконайте команду
 
-```
+```shell linenums="1"
 wca-tool restore --path /opt/wildcore-dms-backups/290270907272424.tar.gz
 ```
 
 Якщо процес відновлення пройшов успішно, буде виведено наступне повідомлення:
 
-```
+``` {.shell .no-copy }
 WildcoreDMS success restored from backup /opt/wildcore-dms-backups/290270907272424.tar.gz!
 ```

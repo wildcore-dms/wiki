@@ -23,7 +23,7 @@
 
 
 ### Приклад конфігурації для nginx
-```      
+```nginx linenums="1"
 server {     
     listen 80;     
     listen 443 ssl;     

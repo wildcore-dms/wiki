@@ -38,7 +38,7 @@
 
     Each separate value has to be specified on its own line, i.e.
 
-    ``` 
+    ``` linenums="1"
     value_1
     value_2
     value_3

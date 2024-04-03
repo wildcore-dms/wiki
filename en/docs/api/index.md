@@ -13,7 +13,7 @@ Supporting methods for access:
 ### Use auth token
 **1. Create some user(with login api_user for example)**    
 **2. Over console utility generate auth token, over command**     
-```shell
+```shell linenums="1"
 wca user:generate-key api_user 365d
 ```
 _where arguments api_user - user login and 365d - key expiration._     

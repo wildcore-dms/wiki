@@ -30,13 +30,13 @@ Click _"create"_.
 
 #### 2. Generate an API key (token) for this user
 From the console:    
-```shell
+```shell linenums="1"
 wca user:generate-key mikbill 365d
 ```     
 where _mikbill_ is the username, and _365d_ is the key's expiration period.
 
 Example:
-```shell
+```{ .shell .no-copy}
 root@debian# wca user:generate-key mikbill 365d
 +--------+------------------------+-----------------------------------------------------+-----------------------------+
 |    ID  | User                   | Key                                                 | Expired At                  |
@@ -49,7 +49,7 @@ root@debian# wca user:generate-key mikbill 365d
      
 #### 3. If the billing admin panel operates on SSL, then Wildcore needs to be switched to SSL      
 **From the console (example for Ubuntu/Debian)**:
-```shell 
+```shell linenums="1"
 apt update
 apt -y install snapd nginx
 snap install core
@@ -61,7 +61,7 @@ certbot --nginx -d dms.ispnet.demo #  (не забываем открыть 80й
 where dms.ispnet.demo is your domain name       
 **Example Nginx config (before obtaining the certificate)**    
 
-```shell
+```shell linenums="1"
 cat /etc/nginx/sites-enabled/wildcore-proxy
 server {
 	listen 80;
@@ -142,7 +142,7 @@ In _Configuration ⇒ System Configuration_, the _Scheduler_ tab, activate synch
 In this example, synchronization will occur twice a day: at 4:00 and 12:00.
 
 For manual synchronization (relevant for the first run) – execute the command in the console:
-```
+```shell linenums="1"
 wca mikbill_integration:sync-clients
 ```    
 

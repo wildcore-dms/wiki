@@ -79,7 +79,7 @@ You can also add some conditions, for example, send only if the action ended wit
 ### Channel setup
 1. Go to the settings of the telegram sending channel
 2. Specify the name of the bot, the key and save
-3. Restart the bot with the ```wca supervisor:control telegram-bot restart``` command (so that the incoming message handler receives new settings)
+3. Restart the bot with the `wca supervisor:control telegram-bot restart` command (so that the incoming message handler receives new settings)
 
 ### Add contacts
 1. Go to account settings / change user and add the phone number used in telegram.

@@ -9,8 +9,8 @@
 Повний список компонентів можна переглянути на наступних вкладках.
 
 ## Керування компонентами (через консоль)
-**Список підтримуваних компонентів - ```wca component:list```**
-```shell     
+**Список підтримуваних компонентів - `wca component:list`**
+```{ .shell .no-copy}
 $ wca component:list     
 +--------------------------+------------------------------------------------------------------+---------+-----------+---------------+----------------+     
 | Key                      | Description                                                      | Enabled | Installed | Has installer | Has controller |     
@@ -39,9 +39,9 @@ $ wca component:list
 ```     
 **Керування компонентами**
 
-* ```wca component:control COMPONENT_NAME install``` - встановити компонент
-* ```wca component:control COMPONENT_NAME enable``` - увімкнути встановлений компонент
-* ```wca component:control COMPONENT_NAME disable``` - відключити встановлений компонент
+* `wca component:control COMPONENT_NAME install` - встановити компонент
+* `wca component:control COMPONENT_NAME enable` - увімкнути встановлений компонент
+* `wca component:control COMPONENT_NAME disable` - відключити встановлений компонент
 
 
 ## Компоненти всередині системи можуть

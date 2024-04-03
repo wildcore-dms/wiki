@@ -4,7 +4,7 @@
 ## Про роботу з wca cli
 
 **Виконайте команду `wca`, щоб отримати список підтримуваних команд**
-```shell     
+```shell linenums="1"
 $ wca     
 WildcoreDMS 0.17.018     
 
@@ -49,7 +49,7 @@ Available commands:
 
 **Кожна команда може мати власні аргументи та параметри. Щоб дізнатися, які параметри має команда - додайте `--help` після команди.**
 Наприклад,
-```shell     
+```shell linenums="1"
 $ wca switcher-core:call --help     
 Usage:     
   switcher-core:call [options] [--] <ip> <module> [<arguments>...]     

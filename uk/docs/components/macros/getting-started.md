@@ -128,7 +128,7 @@
 
         ![](../../assets/macros/macros_add_new_macros_template_tab_filled_out.png)
 
-        ```
+        ```twig linenums="1"
         show {{params.show_type}}
         ```
     

@@ -1,17 +1,18 @@
 ## Types of module data(OLTs)
 
 ### Interface 
-<pre><code>type Interface struct {
+```cpp linenums="1"
+type Interface struct {
     Name   string `json:"name,omitempty"`
     Parent int    `json:"parent,omitempty"`
     ID     int    `json:"id,omitempty"`
     Type   string `json:"type,omitempty"`
     OnuNum int    `json:"onu_num,omitempty"`
 } `json:"interface,omitempty"`
-</code></pre>
+```
 
 ### Vendor 
-```
+```cpp linenums="1"
 type Vendor struct {
     Vendor      string `json:"vendor"`
     Model       string `json:"model"`
@@ -30,7 +31,7 @@ type Vendor struct {
 ```
 
 ### ONT Status 
-```
+```cpp linenums="1"
 type Status struct {
     OnuDisabled any    `json:"_onu_disabled,omitempty"`
     Online      string `json:"online,omitempty"`
@@ -41,7 +42,7 @@ type Status struct {
 ```
 
 ### ONT Ident  (MAC-address/serial)
-```
+```cpp linenums="1"
 type Ident  struct {
     Value string `json:"value,omitempty"`
     Type  string `json:"type,omitempty"`
@@ -49,7 +50,7 @@ type Ident  struct {
 ```
 
 ### Reasons  
-```
+```cpp linenums="1"
 type Reasons struct {
     HistoryTable *[]struct {
         DownReason string `json:"down_reason"`
@@ -69,7 +70,7 @@ type Reasons struct {
 ```
 
 ### Counters 
-```
+```cpp linenums="1"
 type Counters struct {
     InErrors         any `json:"in_errors,omitempty"`
     OutErrors        any `json:"out_errors,omitempty"`
@@ -85,7 +86,7 @@ type Counters struct {
 ```
 
 ### Optical info
-```
+```cpp linenums="1"
 type Optical struct {
     OltRx    *float64 `json:"olt_rx,omitempty"`
     OltTx    *float64 `json:"olt_tx,omitempty"`
@@ -98,7 +99,7 @@ type Optical struct {
 ```
 ### UNI interface info
 In diagnostic - returns always as array of objects  
-``` 
+``` cpp linenums="1"
 type Uni []struct {
     Num        string `json:"num"`
     Status     string `json:"status"`
@@ -112,7 +113,7 @@ type Uni []struct {
 ```
 
 ### UNI interface info (ZTE)
-``` 
+``` cpp linenums="1"
 type Uni []struct {
     Num          string `json:"num"`
     Speed        string `json:"speed"`
@@ -125,7 +126,7 @@ type Uni []struct {
 
  
 ### FDB table 
-```cpp 
+```cpp linenums="1"
 type Fdb         []struct {
     VirtualPort int    `json:"_virtual_port"`
     VlanID      int    `json:"vlan_id"`
@@ -135,7 +136,7 @@ type Fdb         []struct {
 } `json:"fdb"`
 ```
 ### Configuration (ZTE)
-```
+```cpp linenums="1"
 type Configuration struct {
     Type           string `json:"type"`
     State          string `json:"state"`
@@ -160,7 +161,7 @@ type Configuration struct {
 ```
 
 ### GPON profiles for BDcom 
-```
+```cpp linenums="1"
 type Profiles      struct {
     Vlan []struct {
         ID         int    `json:"id"`
@@ -186,7 +187,7 @@ type Profiles      struct {
 ```
 
 ### Profiles (ZTE)
-```
+```cpp linenums="1"
 type Profiles struct {
     Line    []string `json:"line"`
     Remote  []string `json:"remote"`
@@ -198,7 +199,7 @@ type Profiles struct {
 ## Types of module data (switch)
 
 ### Interface (General)
-```
+```cpp linenums="1"
 type Interface struct {
     ID   string `json:"id"`
     Name string `json:"name"`
@@ -208,7 +209,7 @@ type Interface struct {
 ```
 
 ### Interface (Huawei)
-``` 
+``` cpp linenums="1"
 type Interface struct {
     ID         int    `json:"id"`
     Name       string `json:"name"`
@@ -222,7 +223,7 @@ type Interface struct {
 ```
 
 ### FDB 
-```
+```cpp linenums="1"
 type Fdb []struct {
     VlanID     string `json:"vlan_id"`
     Status     string `json:"status"`
@@ -231,7 +232,7 @@ type Fdb []struct {
 ```
 
 ### Link info (Dlink)
-```
+```cpp linenums="1"
 type LinkInfo []struct {
     MediumType       string `json:"medium_type"`
     Type             string `json:"type"`
@@ -246,7 +247,7 @@ type LinkInfo []struct {
 ```
 
 ### Link info (Huawei)
-```
+```cpp linenums="1"
 type LinkInfo []struct {
     OperStatus string `json:"oper_status"`
     NwayStatus string `json:"nway_status"`
@@ -258,7 +259,7 @@ type LinkInfo []struct {
 ```
 
 ### Errors 
-```
+```cpp linenums="1"
 type Errors struct {
     InErrors    string `json:"in_errors"`
     OutErrors   string `json:"out_errors"`
@@ -268,7 +269,7 @@ type Errors struct {
 ```
 
 ### Cable diagnostic (Dlink)
-```
+```cpp linenums="1"
 type CableDiag struct {
     Pairs []struct {
         Number int    `json:"number"`
@@ -278,7 +279,7 @@ type CableDiag struct {
 } `json:"cable_diag"`
 ```
 ### Cable diagnostic (Huawei)
-```
+```cpp linenums="1"
 type CableDiag struct {
     Status string `json:"status"`
     Length string `json:"length"`
@@ -286,7 +287,7 @@ type CableDiag struct {
 ```
 
 ### Counters 
-```
+```cpp linenums="1"
 type Counters struct {
     InOctets         string `json:"in_octets"`
     OutOctets        string `json:"out_octets"`
@@ -298,14 +299,14 @@ type Counters struct {
 ```
 
 ### Description 
-```
+```cpp linenums="1"
 type Description struct {
     Description string `json:"description"`
 } `json:"description"`
 ```
 
 ### Vlans 
-```
+```cpp linenums="1"
 type Vlans []struct {
 		ID   string `json:"id"`
 		Name string `json:"name"`

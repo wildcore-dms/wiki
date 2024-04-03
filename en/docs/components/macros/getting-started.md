@@ -127,7 +127,7 @@ In this section we will go through the macro creation process step-by-step.
 
         ![](../../assets/macros/macros_add_new_macros_template_tab_filled_out.png)
 
-        ```
+        ```twig linenums="1" title="Chosen template:"
         show {{params.show_type}}
         ```
     

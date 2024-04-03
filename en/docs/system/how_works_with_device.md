@@ -14,7 +14,7 @@ It is possible to specify ports in equipment access if your network uses non-sta
 Any interaction with the system is performed by calling certain modules switcher-core.
 Each vendor and model has its own set of modules.
 The list of supported modules by hardware can be obtained with the command
-```
+```shell linenums="1"
 wca switcher-core:modules DEVICE_IP
 ```
 

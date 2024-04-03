@@ -5,10 +5,8 @@ plugins:
 markdown_extensions:
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
   - attr_list
   - md_in_html
-  - pymdownx.superfences
   - attr_list
   - pymdownx.caret
   - pymdownx.mark
@@ -17,6 +15,15 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+        permalink: ➧
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
 site_name: WildcoreDMS
 site_url: http://127.0.0.1:8000/
 repo_url: https://github.com/wildcore-dms/wiki
@@ -25,6 +32,7 @@ theme:
   name: material
   features:
     - navigation.footer
+    - content.code.copy
   logo: assets/wildcore_logo.png
 extra:
   alternate:
@@ -37,20 +45,28 @@ extra:
 
 nav:
   - "Home": index.md
+
   - "Features": features/main.md
+
   - "Installation & Updating":
-     - "Getting started": installation-and-updating/getting-started.md
-     - "Updating": installation-and-updating/update.md
-     - "System requirements": installation-and-updating/requirements.md
+    - "Getting started": installation-and-updating/getting-started.md
+    - "Updating": installation-and-updating/update.md
+    - "System requirements": installation-and-updating/requirements.md
+
   - "Web interface":
-      - "Overview": web-interface/main.md
-      - "Dashboard Overview": web-interface/dashboard-overview.md
-      - "After install": web-interface/web-after-install.md
-      - "Use proxy": web-interface/use-proxy.md
+    - "Overview": web-interface/main.md
+    - "Dashboard Overview": web-interface/dashboard-overview.md
+    - "After install": web-interface/web-after-install.md
+    - "Use proxy": web-interface/use-proxy.md
+
   - "Console": cli/index.md
+
   - "Working with equipment": system/how_works_with_device.md
+
   - "Hardware Poller": system/poller.md
+
   - "About components": components/index.md
+
   - "Components":
     - "Events": components/events.md
     - "Notifications": components/notifications.md
@@ -59,36 +75,61 @@ nav:
     - "OLTs control": components/olts_control.md
     - "Registration of ONU": components/onts_registration.md
     - "Macros":
-        - "Getting started": components/macros/getting-started.md
-        - "Parameter type options": components/macros/parameter_type_options.md
-        - "Twig template examples": components/macros/twig-examples.md
+      - "Getting started": components/macros/getting-started.md
+      - "Parameter type options": components/macros/parameter_type_options.md
+      - "Twig template examples": components/macros/twig-examples.md
+
     - "Config backups": components/oxidized.md
-      #- "ICMP pinger": components/pinger.md
-    #- "Import Prometheus": components/prometheus_wrapper.md
-    #- "Search devices": components/search_device.md
-    #- "Switches": components/switches.md
-    #- "D-Link Switches": components/dlink_switches.md
-    #- "Edge-Core Switches": components/edgecore_switches.md
-    #- "Huawei switches": components/huawei_switches.md
-    #- "BDcom olts": components/bdcom_olts.md
-    #- "C-Data Olts": components/c_data_interfaces.md
-    #- "ZTE Olts": components/zte_olts.md
-    #- "Mikrotik routers": components/router_os.md
-    # - "Macros": components/macros.md
+
     - "Sensors": components/sensors.md
+
     - "Billing MikBill": components/mikbill_integration.md
+
     - "Billing NoDeny Plus": components/nodeny_plus.md
-    #- "Registration of ONU on Huawei": components/huawei_onts_registration.md
+
   - "API":
-      - "Main": api/index.md
-      - "Examples": api/examples.md
-      - "Objects":
-          - "General responses": api/objects/objects.md
-          - "Modules(diagnostic)": api/objects/module_responses.md
+    - "Main": api/index.md
+    - "Examples": api/examples.md
+    - "Objects":
+      - "General responses": api/objects/objects.md
+      - "Modules(diagnostic)": api/objects/module_responses.md
 
   - "WCA-TOOL utility": wca-tool/index.md
-  - "Troubleshooting": troubleshooting/index.md
-  - "Prices": prices.md
-  - "Contacts": contact/contacts.md
-  - "Changelog": changelog.md
 
+  - "Troubleshooting": 
+    - "WildcoreDMS": troubleshooting/agent/general.md
+    - "Device specific":
+      - "OLTs":
+        - "BDCOM": troubleshooting/device-specific/olts/bdcom.md
+        - "C-Data": troubleshooting/device-specific/olts/c-data.md
+        - "GCOM": troubleshooting/device-specific/olts/gcom.md
+        - "Huawei": troubleshooting/device-specific/olts/huawei.md
+        - "V-Solution": troubleshooting/device-specific/olts/v-solution.md
+        - "ZTE": troubleshooting/device-specific/olts/zte.md
+      - "Switches":
+        - "Alcatel": troubleshooting/device-specific/switches/alcatel.md
+        - "Cisco": troubleshooting/device-specific/switches/cisco.md
+        - "Dell": troubleshooting/device-specific/switches/dell.md
+        - "D-link": troubleshooting/device-specific/switches/d-link.md
+        - "Edge-core": troubleshooting/device-specific/switches/edge-core.md
+        - "Eltex": troubleshooting/device-specific/switches/eltex.md
+        - "HP": troubleshooting/device-specific/switches/hp.md
+        - "Huawei": troubleshooting/device-specific/switches/huawei.md
+        - "Juniper": troubleshooting/device-specific/switches/juniper.md
+        - "Mikrotik": troubleshooting/device-specific/switches/mikrotik.md
+        - "Raisecom": troubleshooting/device-specific/switches/raisecom.md
+        - "TP-Link": troubleshooting/device-specific/switches/tp-link.md
+        - "UBNT": troubleshooting/device-specific/switches/ubnt.md
+      - "Routers":
+          - "Mikrotik": troubleshooting/device-specific/routers/mikrotik.md
+      - "Sensors":
+          - "Ping3": troubleshooting/device-specific/sensors/ping3.md
+    - "External apps":
+      - "Grafana": troubleshooting/external-apps/grafana.md
+      - "Prometheus": troubleshooting/external-apps/prometheus.md
+
+  - "Prices": prices.md
+
+  - "Contacts": contact/contacts.md
+
+  - "Changelog": changelog.md

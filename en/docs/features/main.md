@@ -37,7 +37,7 @@ With the system, you can obtain real-time information about the equipment.
 
 #### Equipment Management
 The system has certain hardware control elements, such as: rebooting the ONU, removing the ONU, changing port/ONU descriptions, and managing ports (turning on/off).    
-Additionally, it allows for expanding control independently through the use of [macros](../components/macros.md).
+Additionally, it allows for expanding control independently through the use of [macros](../components/macros/getting-started.md).
 
 !!! info
     Functionality may vary depending on the type of equipment, manufacturer, and model

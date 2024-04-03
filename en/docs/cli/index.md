@@ -4,7 +4,7 @@ This utility extends some functionality that is not available in the web interfa
 ## About working with wca cli
 
 **Run the command `wca` to get a list of supported commands**
-```shell
+```shell linenums="1"
 $ wca
 WildcoreDMS 0.17.018
 
@@ -49,7 +49,7 @@ Available commands:
 
 **Each command can have its own arguments and options. In order to find out what parameters the command has - add `--help` after the command.**
 For example,
-```shell
+```shell linenums="1"
 $ wca switcher-core:call --help
 Usage:
   switcher-core:call [options] [--] <ip> <module> [<arguments>...]
