@@ -16,6 +16,7 @@ sleep 10
 wca cache:flush
 wca cache:redis:flush-all
 ```
+If the problem or error persists, try the next section with solutions to various known problems.
 
 ## Step 1: Known errors and solutions to them
 

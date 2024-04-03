@@ -3,6 +3,8 @@
 
     Feel free to use the right side menu to jump to the section, that you're interested in.
 
+
+
 ## General BDCOM Issues
 | Problem | Description | Solution |
 | ------- | ----------- | -------- |

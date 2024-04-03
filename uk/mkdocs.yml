@@ -1,3 +1,29 @@
+plugins:
+  - search
+  - autorefs
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - attr_list
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - tables
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+        permalink: ➧
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
 site_name: WildcoreDMS wiki
 repo_url: https://github.com/wildcore-dms/wiki
 theme:
@@ -5,19 +31,8 @@ theme:
   name: material
   features:
     - navigation.footer
+    - content.code.copy
   logo: assets/wildcore_logo.png
-
-plugins:
-  - search
-  - autorefs
-markdown_extensions:
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
-  - attr_list
-  - md_in_html
-  - pymdownx.superfences
-  - attr_list
 
 extra:
   alternate:
@@ -29,20 +44,28 @@ extra:
       lang: uk
 nav:
   - "Головна": index.md
+
   - "Функціонал": features/main.md
+
   - "Встановлення та оновлення":
      - "Початок роботи": installation-and-updating/getting-started.md
      - "Оновлення": installation-and-updating/update.md
      - "Системні вимоги": installation-and-updating/requirements.md
+
   - "Веб-інтерфейс":
       - "Вигляд": web-interface/main.md
       - "Огляд Дешборду": web-interface/dashboard-overview.md
       - "Після встановлення": web-interface/web-after-install.md
       - "Використання проксі": web-interface/use-proxy.md
+
   - "Консоль": cli/index.md
+
   - "Робота з облананням": system/how_works_with_device.md
+
   - "Опитувач обладнанная": system/poller.md
+
   - "Про компоненти": components/index.md
+
   - "Компоненти":
       - "Макроси":
         - "З чого почати": components/macros/getting-started.md
@@ -54,22 +77,11 @@ nav:
       - "ОЛТи": components/olts.md
       - "Управління ОЛТ": components/olts_control.md
       - "Бекапи конфігурації": components/oxidized.md
-      #- "ICMP pinger": components/pinger.md
-      #- "Import Prometheus": components/prometheus_wrapper.md
-      #- "Search devices": components/search_device.md
-      #- "Switches": components/switches.md
-      #- "D-Link Switches": components/dlink_switches.md
-      #- "Edge-Core Switches": components/edgecore_switches.md
-      #- "Huawei switches": components/huawei_switches.md
-      #- "BDcom olts": components/bdcom_olts.md
-      #- "C-Data Olts": components/c_data_interfaces.md
-      #- "ZTE Olts": components/zte_olts.md
-      #- "Mikrotik routers": components/router_os.md
       - "Реєстрація ОНУ": components/onts_registration.md
       - "Пристрої моніторингу": components/sensors.md
       - "Біллінг MikBill": components/mikbill_integration.md
       - "Біллінг NoDeny Plus": components/nodeny_plus.md
-    #- "Registration of ONU on Huawei": components/huawei_onts_registration.md
+
   - "АПІ":
       - "Головна": api/index.md
       - "Приклади": api/examples.md
@@ -78,7 +90,43 @@ nav:
           - "Відповіть модулів (дігностика)": api/objects/module_responses.md
 
   - "WCA-TOOL": wca-tool/index.md
-  - "Вирішення проблем": troubleshooting/index.md
+
+  - "Вирішення проблем": 
+    - "WildcoreDMS": troubleshooting/agent/general.md
+    - "Обладнання":
+      - "OLT":
+        - "BDCOM": troubleshooting/device-specific/olts/bdcom.md
+        - "C-Data": troubleshooting/device-specific/olts/c-data.md
+      # ! DO NOT DELETE ! #
+        # - "GCOM": troubleshooting/device-specific/olts/gcom.md
+        # - "Huawei": troubleshooting/device-specific/olts/huawei.md
+        # - "V-Solution": troubleshooting/device-specific/olts/v-solution.md
+        # - "ZTE": troubleshooting/device-specific/olts/zte.md
+      # - "Switches":
+      #   - "Alcatel": troubleshooting/device-specific/switches/alcatel.md
+      #   - "Cisco": troubleshooting/device-specific/switches/cisco.md
+      #   - "Dell": troubleshooting/device-specific/switches/dell.md
+      #   - "D-link": troubleshooting/device-specific/switches/d-link.md
+      #   - "Edge-core": troubleshooting/device-specific/switches/edge-core.md
+      #   - "Eltex": troubleshooting/device-specific/switches/eltex.md
+      #   - "HP": troubleshooting/device-specific/switches/hp.md
+      #   - "Huawei": troubleshooting/device-specific/switches/huawei.md
+      #   - "Juniper": troubleshooting/device-specific/switches/juniper.md
+      #   - "Mikrotik": troubleshooting/device-specific/switches/mikrotik.md
+      #   - "Raisecom": troubleshooting/device-specific/switches/raisecom.md
+      #   - "TP-Link": troubleshooting/device-specific/switches/tp-link.md
+      #   - "UBNT": troubleshooting/device-specific/switches/ubnt.md
+      # - "Routers":
+      #     - "Mikrotik": troubleshooting/device-specific/routers/mikrotik.md
+      # - "Sensors":
+      #     - "Ping3": troubleshooting/device-specific/sensors/ping3.md
+    - "Зовнішні застосунки":
+      # - "Grafana": troubleshooting/external-apps/grafana.md
+      - "Prometheus": troubleshooting/external-apps/prometheus.md
+    # ! DO NOT DELETE ! #
+
   - "Вартість": prices.md
+
   - "Контакти": contact/contacts.md
+
   - "Історія версій": changelog.md

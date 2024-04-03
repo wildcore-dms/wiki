@@ -24,11 +24,12 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+
 site_name: WildcoreDMS
 site_url: http://127.0.0.1:8000/
 repo_url: https://github.com/wildcore-dms/wiki
 theme:
-  language: uk
+  language: en
   name: material
   features:
     - navigation.footer
