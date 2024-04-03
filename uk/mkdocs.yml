@@ -97,9 +97,10 @@ nav:
       - "OLT":
         - "BDCOM": troubleshooting/device-specific/olts/bdcom.md
         - "C-Data": troubleshooting/device-specific/olts/c-data.md
+        - "Huawei": troubleshooting/device-specific/olts/huawei.md
+
       # ! DO NOT DELETE ! #
         # - "GCOM": troubleshooting/device-specific/olts/gcom.md
-        # - "Huawei": troubleshooting/device-specific/olts/huawei.md
         # - "V-Solution": troubleshooting/device-specific/olts/v-solution.md
         # - "ZTE": troubleshooting/device-specific/olts/zte.md
       # - "Switches":

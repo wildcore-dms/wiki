@@ -1,4 +1,9 @@
-!!! abstract "Overview"
-    This page provides various error cases and a solution for them for the Huawei OLT devices.
+!!! abstract "Огляд"
+    Ця сторінка надає різноманітні помилки, з якими ви можете зустрітися під час роботи з OLT обладнанням Huawei, та способи їх вирішення.
 
-    Feel free to use the right side menu to jump to the section, that you're interested in.
+    Скористайтеся меню справа, щоб перейти до розділу, який вас цікавить.
+
+## Huawei (MA56xx/MA58xx), GPON
+| Проблема | Опис | Вирішення |
+| ------- | ----------- | -------- |
+| Серійні номера у форматі НЕХ. | Так є за замовчуванням. | Додайте `"sn_as_ascii": true` у меню Керування пристроями - Моделі - Модель_Вашого_Пристрою - панель Додаткові параметри. Змініть режим відображення Tree на Code, щоб мати змогу вручну вписати цю опцію. |
