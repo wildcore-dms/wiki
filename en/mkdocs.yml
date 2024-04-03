@@ -102,32 +102,33 @@ nav:
       - "OLTs":
         - "BDCOM": troubleshooting/device-specific/olts/bdcom.md
         - "C-Data": troubleshooting/device-specific/olts/c-data.md
-        - "GCOM": troubleshooting/device-specific/olts/gcom.md
-        - "Huawei": troubleshooting/device-specific/olts/huawei.md
-        - "V-Solution": troubleshooting/device-specific/olts/v-solution.md
-        - "ZTE": troubleshooting/device-specific/olts/zte.md
-      - "Switches":
-        - "Alcatel": troubleshooting/device-specific/switches/alcatel.md
-        - "Cisco": troubleshooting/device-specific/switches/cisco.md
-        - "Dell": troubleshooting/device-specific/switches/dell.md
-        - "D-link": troubleshooting/device-specific/switches/d-link.md
-        - "Edge-core": troubleshooting/device-specific/switches/edge-core.md
-        - "Eltex": troubleshooting/device-specific/switches/eltex.md
-        - "HP": troubleshooting/device-specific/switches/hp.md
-        - "Huawei": troubleshooting/device-specific/switches/huawei.md
-        - "Juniper": troubleshooting/device-specific/switches/juniper.md
-        - "Mikrotik": troubleshooting/device-specific/switches/mikrotik.md
-        - "Raisecom": troubleshooting/device-specific/switches/raisecom.md
-        - "TP-Link": troubleshooting/device-specific/switches/tp-link.md
-        - "UBNT": troubleshooting/device-specific/switches/ubnt.md
-      - "Routers":
-          - "Mikrotik": troubleshooting/device-specific/routers/mikrotik.md
-      - "Sensors":
-          - "Ping3": troubleshooting/device-specific/sensors/ping3.md
+      # ! DO NOT DELETE ! #
+        # - "GCOM": troubleshooting/device-specific/olts/gcom.md
+        # - "Huawei": troubleshooting/device-specific/olts/huawei.md
+        # - "V-Solution": troubleshooting/device-specific/olts/v-solution.md
+        # - "ZTE": troubleshooting/device-specific/olts/zte.md
+      # - "Switches":
+      #   - "Alcatel": troubleshooting/device-specific/switches/alcatel.md
+      #   - "Cisco": troubleshooting/device-specific/switches/cisco.md
+      #   - "Dell": troubleshooting/device-specific/switches/dell.md
+      #   - "D-link": troubleshooting/device-specific/switches/d-link.md
+      #   - "Edge-core": troubleshooting/device-specific/switches/edge-core.md
+      #   - "Eltex": troubleshooting/device-specific/switches/eltex.md
+      #   - "HP": troubleshooting/device-specific/switches/hp.md
+      #   - "Huawei": troubleshooting/device-specific/switches/huawei.md
+      #   - "Juniper": troubleshooting/device-specific/switches/juniper.md
+      #   - "Mikrotik": troubleshooting/device-specific/switches/mikrotik.md
+      #   - "Raisecom": troubleshooting/device-specific/switches/raisecom.md
+      #   - "TP-Link": troubleshooting/device-specific/switches/tp-link.md
+      #   - "UBNT": troubleshooting/device-specific/switches/ubnt.md
+      # - "Routers":
+      #     - "Mikrotik": troubleshooting/device-specific/routers/mikrotik.md
+      # - "Sensors":
+      #     - "Ping3": troubleshooting/device-specific/sensors/ping3.md
     - "External apps":
-      - "Grafana": troubleshooting/external-apps/grafana.md
+      # - "Grafana": troubleshooting/external-apps/grafana.md
       - "Prometheus": troubleshooting/external-apps/prometheus.md
-
+    # ! DO NOT DELETE ! #
   - "Prices": prices.md
 
   - "Contacts": contact/contacts.md
