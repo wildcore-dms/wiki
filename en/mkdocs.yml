@@ -55,9 +55,10 @@ nav:
     - "System requirements": installation-and-updating/requirements.md
 
   - "Web interface":
+    - "After install": web-interface/web-after-install.md
     - "Overview": web-interface/main.md
     - "Dashboard Overview": web-interface/dashboard-overview.md
-    - "After install": web-interface/web-after-install.md
+    - "User Settings Overview": web-interface/user-settings-overview.md
     - "Use proxy": web-interface/use-proxy.md
 
   - "Console": cli/index.md
