@@ -13,7 +13,7 @@
     ![](../../assets/macros/macros_role_permissions_settings.png)
 
 !!! danger "Попередження"
-    Макроси працюють лише на присторях, що підтримують `multi_console_command`, список яких можна знайти [тут](https://github.com/meklis/switcher-core/blob/master/docs/DEVICES.md).
+    Макроси працюють лише на присторях, що підтримують `multi_console_command`, список яких можна знайти [тут](https://htmlpreview.github.io/?https://raw.githubusercontent.com/meklis/switcher-core/master/docs/device_info.html).
 
 !!! tip "Підказка"
     Ви можете знайти та завантажити приклади макросів на нашій [демо сторінці](https://demo.wildcore.tools/config/macros), а також знайти детальні пояснення деяких прикладів макросів на сторінці [Приклади шаблонів Twig](./twig-examples.md).

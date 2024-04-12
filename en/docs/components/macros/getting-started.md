@@ -14,7 +14,7 @@
     ![](../../assets/macros/macros_role_permissions_settings.png)
 
 !!! danger "Warning"
-    Macros only work on Devices that support `multi_console_command`, see [more](https://github.com/meklis/switcher-core/blob/master/docs/DEVICES.md).
+    Macros only work on Devices that support `multi_console_command`, see [more](https://htmlpreview.github.io/?https://raw.githubusercontent.com/meklis/switcher-core/master/docs/device_info.html).
 
 !!! tip
     You can find and download macro examples on our [demo website](https://demo.wildcore.tools/config/macros) and find detailed explanations of some sample macros on the [Twig template examples](./twig-examples.md) page.
