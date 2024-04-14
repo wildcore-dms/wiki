@@ -20,7 +20,36 @@ This section gives an overview of the current user's Login and Role and allows y
 | Name | Allows you to change the display name for the current user. |
 | New password | Allows you to change the password for the current user. |
 | Confirm password | Required field in case you want to change the password. |
+| 2FA | Allows you to protect your account with a Two-Factor Authentication app. |
 
+### How to set up and use 2FA
+1. Click on the **Enable** button next to **2FA**.
+
+    ![](../assets/user-settings/2fa_enable.png)
+
+2. A pop-up window with instructions appears.
+
+    ![](../assets/user-settings/2fa_qr.png)
+
+    Download the [Google Authenthicator](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) app from Play Store and add a new authentication code generator. You can scan the QR code or enter the generated code shown below it manually.
+
+3. Once you have it added, a new PIN code will be generated on your device every 30 seconds. Enter it into the **PIN code** field below the QR code and press submit.
+
+    If the code you entered is valid, a success notification will appear.
+
+    ![](../assets/user-settings/2fa_connected.png)
+
+    
+
+    If you encounter a <span style="color:#ffffff; background-color:red;">Pin-code is wrong</span> message, make sure you entered the generator code and the 6-digit code it generated correctly and in time. Once the previous code expires and a new one is generated, it is no longer valid.
+
+4. Now, when you log in with your credentials correctly you will be asked to provide the 2FA code as well.
+
+    ![](../assets/user-settings/2fa_login.png)
+
+    When 2FA is enabled you can no longer sign in without it. 
+    
+    **Be sure to make a secure copy of the code that was used to add the code generator.**
 
 ## Portal Settings
 This section provides settings related to various display features.
