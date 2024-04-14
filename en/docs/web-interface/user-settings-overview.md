@@ -13,14 +13,14 @@ This section gives an overview of the current user's Login and Role and allows y
 
 | Field | Description |
 | ----- | ----------- |
-| Your login | The login name of the current user. |
-| ID | ID of the current user. |
-| Your role | The current role assigned to the current user. |
-| Language | Allows you to select the system wide display language for this user. |
-| Name | Allows you to change the display name for the current user. |
-| New password | Allows you to change the password for the current user. |
-| Confirm password | Required field in case you want to change the password. |
-| 2FA | Allows you to protect your account with a Two-Factor Authentication app. |
+| **Your login** | The login name of the current user. |
+| **ID** | ID of the current user. |
+| **Your role** | The current role assigned to the current user. |
+| **Language** | Allows you to select the system wide display language for this user. |
+| **Name** | Allows you to change the display name for the current user. |
+| **New password** | Allows you to change the password for the current user. |
+| **Confirm password** | Required field in case you want to change the password. |
+| **2FA** | Allows you to protect your account with a Two-Factor Authentication app. |
 
 ### How to set up and use 2FA
 1. Click on the **Enable** button next to **2FA**.
@@ -51,6 +51,8 @@ This section gives an overview of the current user's Login and Role and allows y
     
     **Be sure to make a secure copy of the code that was used to add the code generator.**
 
+    I.e. **GE2DSNBXGI4DQMQ** is the generator code in this demo, as can be seen in step 2.
+
 ## Portal Settings
 This section provides settings related to various display features.
 
@@ -59,30 +61,47 @@ This section provides settings related to various display features.
 ### Global
 | Field | Description |
 | ----- | ----------- |
-| Notifications place | Allows you to change where the notifications will appear for this user. |
+| **Notifications place** | Allows you to change where the notifications will appear for this user. |
 
 ### Device
-| Field | Description |
-| ----- | ----------- |
-| Expand PON tree | Toggles whether PON tree is exanded by default. |
-| Show device title | Allows you to change the device display title. |
-| Display statistic | Allows you to change the display type of the stastics. |
+| Field | Description | |
+| ----- | ----------- | - |
+| **Expand PON tree** | Toggles whether PON tree is exanded by default. |
+| **Show device title** | Allows you to change the device display title. |
+| | **Option:** Title | ![](../assets/user-settings/show_device_title_name.png) |
+| | **Option:** IP | ![](../assets/user-settings/show_device_title_ip.png) |
+| **Display statistic** | Allows you to change the display type of the device stastics. |
+| | **Option:** Split | ![](../assets/user-settings/split_statistic_split_1.png) ![](../assets/user-settings/split_statistic_split_2.png)|
+| | **Option:** All | ![](../assets/user-settings/split_statistic_all_1.png) ![](../assets/user-settings/split_statistic_all_2.png) |
 
 ### Device dashboard
-| Field | Description |
-| ----- | ----------- |
-| Show groups | Toggles whether devices are shown or hidden in groups. |
+| Field | Description | |
+| ----- | ----------- | - |
+| **Show groups** | Toggles whether devices are shown in groups. |
+| | **Option:** On | ![](../assets/user-settings/device_groups_on.png) |
+| | **Option:** Off | ![](../assets/user-settings/device_groups_off.png) |
 | Down devices on top | Toggles the display of the offline devices on top of others. |
 | Sort by | Allows you to change sorting type. |
 
 ## Notifications configuration
+
+Notifications are described on [this](../components/notifications.md) page.
 
 ## Strict access
 This section provides access-related settings.
 
 | Field | Description |
 | ----- | ----------- |
-| Enable strict access over IP | Allows you to restrict the IPs from which this user can be logged in. |
+| **Enable strict access over IP** | Allows you to restrict the IPs from which this user can be logged in. |
+
+### Configuration
+
+1. Enable the checkbox.
+2. Press the ++plus++ button to add a new entry.
+3. Enter the desired IP address, as well as the network identifier in CIDR format.
+4. Press **Save**.
+
+![](../assets/user-settings/strict_access.png)
 
 ## Active sessions
 This section displays the current active sessions for this user, when they were active last time, their IP address and the device type they are logged in from, as well as allows you to terminate active sessions manually.
