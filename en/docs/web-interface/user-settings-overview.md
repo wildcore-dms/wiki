@@ -80,8 +80,8 @@ This section provides settings related to various display features.
 | **Show groups** | Toggles whether devices are shown in groups. |
 | | **Option:** On | ![](../assets/user-settings/device_groups_on.png) |
 | | **Option:** Off | ![](../assets/user-settings/device_groups_off.png) |
-| Down devices on top | Toggles the display of the offline devices on top of others. |
-| Sort by | Allows you to change sorting type. |
+| **Down devices on top** | Toggles the display of the offline devices on top of others. |
+| **Sort by** | Allows you to change sorting type. |
 
 ## Notifications configuration
 

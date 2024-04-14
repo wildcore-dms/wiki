@@ -78,8 +78,6 @@
 | **Відображати в группах** | Перемикає відображення у группах. |
 | | **Опція:** Ввімкнено | ![](../assets/user-settings/device_groups_on.png) |
 | | **Опція:** Вимкнено | ![](../assets/user-settings/device_groups_off.png) |
-| Down devices on top | Toggles the display of the offline devices on top of others. |
-| Sort by | Allows you to change sorting type. |
 | **Впавші пристрої спочатку** | Перемикає відображення оффлайн пристроїв зверху інших. |
 | **Сортувати по** | Дозволяє змінити тип сортування списку пристроїв. |
 
