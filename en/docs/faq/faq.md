@@ -1,4 +1,4 @@
-!!! abstract "Огляд"
+!!! abstract
     This page provides answers to various common questions by our users.
 
     Feel free to use the right-side menu to jump to the section you are interested in.

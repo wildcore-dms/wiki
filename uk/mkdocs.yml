@@ -128,6 +128,8 @@ nav:
       - "Prometheus": troubleshooting/external-apps/prometheus.md
     # ! DO NOT DELETE ! #
 
+  - "FAQ": faq/faq.md
+
   - "Вартість": prices.md
 
   - "Контакти": contact/contacts.md
