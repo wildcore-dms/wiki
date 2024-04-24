@@ -80,6 +80,7 @@ nav:
     - "Macros":
       - "Getting started": components/macros/getting-started.md
       - "Parameter type options": components/macros/parameter_type_options.md
+      - "Special Template commands": components/macros/special-commands.md
       - "Twig template examples": components/macros/twig-examples.md
 
     - "Config backups": components/oxidized.md

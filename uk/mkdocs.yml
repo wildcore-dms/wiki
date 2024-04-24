@@ -72,6 +72,7 @@ nav:
       - "Макроси":
         - "З чого почати": components/macros/getting-started.md
         - "Опції типів параметрів": components/macros/parameter_type_options.md
+        - "Спеціальні команди Шаблонів": components/macros/special-commands.md
         - "Приклади шаблонів Twig": components/macros/twig-examples.md
       - "Події": components/events.md
       - "Сповіщення": components/notifications.md
