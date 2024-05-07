@@ -1,5 +1,5 @@
 ???+ note "0.23 (05.2024)"
-    **Нові можливості**
+    **New Features**
 
     - Added support for two-factor authentication via Google Authenticator. Detailed instructions are available [here](https://wiki.wildcore.tools/en/web-interface/user-settings-overview/).
     - Now you can set equipment/ONT coordinates using user geolocation.
