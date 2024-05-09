@@ -6,19 +6,19 @@ Objects represented in Golang format
 type ApiSuccessResponse struct {
 	StatusCode int                `json:"statusCode,omitempty"`
 	Meta       interface{}        `json:"meta,omitempty"`
-	Data       <a href="#diagnosticresponse" >DiagnosticResponse</a> `json:"data,omitempty"`
+	Data       DiagnosticResponse `json:"data,omitempty"`
 }
 ```
 ### DiagnosticResponse
 ```cpp linenums="1"
 type DiagnosticResponse struct {
-    Iface <a href="#deviceinterface">DeviceInterface</a>  `json:"iface,omitempty"`
+    Iface DeviceInterface `json:"iface,omitempty"`
     Diagnostic struct {
-        Data map[string]interface{} `json:"data,omitempty"` // <a href="./../module_responses">See modules in responses</a>
-        Meta map[string]<a href="#metadiagnostic">MetaDiagnostic</a> `json:"meta,omitempty"`
+        Data map[string]interface{} `json:"data,omitempty"`
+        Meta map[string] MetaDiagnostic `json:"meta,omitempty"`
     } `json:"diagnostic,omitempty"`
     DeviceStatus struct {
-        Data <a href="#system-device-module">SystemData</a> `json:"data,omitempty"`
+        Data SystemData `json:"data,omitempty"`
         Error *string `json:"error,omitempty"`
     } `json:"device_status,omitempty"`
 } 
@@ -42,7 +42,7 @@ type MetaDiagnostic struct {
 type DeviceInterface struct {
     CreatedAt     string                       `json:"created_at,omitempty"`
     UpdatedAt     string                       `json:"updated_at,omitempty"`
-    Device        <a href="#device">Device</a> `json:"device"`
+    Device        Device `json:"device"`
     BindKey       string                       `json:"bind_key,omitempty"`
     Name          string                       `json:"name,omitempty"`
     Type          string                       `json:"type,omitempty"`
@@ -67,8 +67,8 @@ type Device  struct {
     Location            string                 `json:"location,omitempty"`
     Name                string                 `json:"name,omitempty"`
     Description         string                 `json:"description,omitempty"`
-    Model               <a href="#devicemodel">DeviceModel</a>            `json:"model,omitempty"`
-    Access              <a href="#deviceaccess">DeviceAccess</a>           `json:"access,omitempty"`
+    Model               DeviceModel            `json:"model,omitempty"`
+    Access              DeviceAccess           `json:"access,omitempty"`
     Params              map[string]interface{} `json:"params,omitempty"`
     UpdatedAt           string                 `json:"updated_at,omitempty"`
     CreatedAt           string                 `json:"created_at,omitempty"`

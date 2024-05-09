@@ -1,8 +1,17 @@
-???+ note "0.23 (03.2024)"
+???+ note "0.23 (05.2024)"
+    **New Features**
+
+    - Added support for two-factor authentication via Google Authenticator. Detailed instructions are available [here](https://wiki.wildcore.tools/en/web-interface/user-settings-overview/).
+    - Now you can set equipment/ONT coordinates using user geolocation.
+    - Analytics now displays error growth on ports.
+    - Added daily growth statistics on the interface card with graphical representation.
+    - Added protection against brute force attacks, which will be enabled by default. Also created an action named `security:auth_attempts` for configuring notification sending.
+    - Added a new component `onts_registration` for universal ONT registration (ZTE, Huawei, C-Data, BDcom).
+    - Now you can filter values in the list in macro parameters.
+    
     [More...](./changelogs/0.23.md)
 
-
-??? note "0.22 (04.2024)"
+???+ note "0.22 (03.2024)"
     **New features** 
      
     - Added new device types - ICMP device. You can use them to set a ping (for example, a subscriber, or power control), without working with it
