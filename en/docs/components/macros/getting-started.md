@@ -142,11 +142,8 @@ In this section we will go through the macro creation process step-by-step.
         | ![](../../assets/macros/macros_edit_button.png) | Edit | Use this button to edit a saved macro. |
         | ![](../../assets/macros/macros_delete_button.png) | Delete | Use this button to delete a macro. |
         | ![](../../assets/macros/macros_clone_button.png) | Clone | Use this button to create a copy of a macro. |
-        | ![](../../assets/macros/macros_export_button.png) | Export | Use this button to save a macro locally in `JSON` format.<br> The **Roles** seleted are removed for safety. |         
-
-           
-
-
+        | ![](../../assets/macros/macros_export_button.png) | Export | Use this button to save a macro locally in `JSON` format.<br> The **Roles** seleted are removed for safety. |
+        
 ## Macro usage
 
 To use the macro created in the **Creating a basic macro** section, navigate to the **Device**/**Port** you specified for it and select the **Macros** tab.

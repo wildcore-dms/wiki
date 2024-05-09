@@ -60,11 +60,11 @@ nav:
     - "Overview": web-interface/main.md
     - "Dashboard Overview": web-interface/dashboard-overview.md
     - "User Settings Overview": web-interface/user-settings-overview.md
-    - "Use proxy": web-interface/use-proxy.md
+    - "How to use proxy": web-interface/use-proxy.md
 
   - "Console": cli/index.md
 
-  - "Working with equipment": system/how_works_with_device.md
+  - "Working with hardware": system/working-with-hardware.md
 
   - "Hardware Poller": system/poller.md
 
@@ -76,7 +76,9 @@ nav:
     - "Autodiscovery": components/autodiscovery.md
     - "OLTs": components/olts.md
     - "OLTs control": components/olts_control.md
-    - "Registration of ONU": components/onts_registration.md
+    - "ONTs Registration":
+      - "Getting started": components/onts-registration/onts-registration.md
+      - "Registration workflow": components/onts-registration/registration-workflow.md
     - "Macros":
       - "Getting started": components/macros/getting-started.md
       - "Parameter type options": components/macros/parameter_type_options.md

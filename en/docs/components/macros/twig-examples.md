@@ -14,7 +14,7 @@
 
 This example demonstrates a basic **Template** setup without any **Parameters**, that simply displays information.
 
-### Common tab
+### **Common tab**
 
 !!! quote ""
     1. **Name:** `Display ONU configuration`

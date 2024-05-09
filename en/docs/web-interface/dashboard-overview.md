@@ -58,12 +58,19 @@ When it's enabled, additional interface elements appear.
 
 ![](../assets/dashboard-overview/db_pinger.png)
 
-Provides a brief summary of statuses of all the ICMP devices.
+Provides a brief summary of statuses of all the devices.
+
+It checks host availability through `ICMP` and displays their color-coded statuses.
+
+!!! note
+    In case there was no answer through `ICMP`, it also checks through `TCP` (ports `22`, `23`, `80`). This can be the reason of notifications about connection attempts from unknow login (anonymous or unknown).
+
+    In case the host is unavailable, it's polling will not be performed neither in background, nor through the web interface.
 
 | Status | Description |
-| -- | ---- |
-| Up | Device is online. |
-| Down | Device is offline or has problems. |
+| ------ | ----------- |
+| Up | Host is available. |
+| Down | Host is offline. |
 
 ### ONT statuses
 

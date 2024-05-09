@@ -120,6 +120,16 @@
 
             ![](../../assets/macros/parameter_types_dropdown_variables_value-source_example_template.png)
 
+!!! quote ""
+    ![](../../assets/macros/parameter_types_dropdown_variables_item_filter.png)
+
+    This input field allows you to define a JS conditional expression, that filters values in the drop-down menu.
+
+    ??? info
+        If the condition evaluates to ``true`` the item will be shown.
+
+        If the condition evaluates to ``false`` the item will be hidden.
+
 
 
 ### Input field with value source

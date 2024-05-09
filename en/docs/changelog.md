@@ -1,4 +1,8 @@
-???+ note "0.22 (03.2024)"
+???+ note "0.23 (03.2024)"
+    [More...](./changelogs/0.23.md)
+
+
+??? note "0.22 (04.2024)"
     **New features** 
      
     - Added new device types - ICMP device. You can use them to set a ping (for example, a subscriber, or power control), without working with it
