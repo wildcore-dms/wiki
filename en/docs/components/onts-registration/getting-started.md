@@ -15,13 +15,16 @@
 ## How It Works
 After detecting an unregistered ONT, it appears in the list (on the panel, for all devices, and on the device itself).
 
-Clicking the "Register" button opens the registration form. The fields are dynamically generated based on parameters prepared by the engineer.
+Clicking the "Register" button opens the registration form. The fields are dynamically generated based on parameters prepared by the registration configuration.
 
 When you fill out the form and press the registration button, a list of commands is generated based on the template, entered parameters, and parameters obtained from the device and the unregistered ONT.
 
 If the template compilation is successful, the commands will be executed on the OLT. 
 
 After successful registration, a notification of successful registration will be displayed, and it will automatically redirect to the new ONT.
+
+!!! note
+    To view the registration templates your account needs to have suffiecient permissions.
 
 !!! note
 
@@ -38,7 +41,7 @@ After successful registration, a notification of successful registration will be
 
 ## Overview of the Registration process
 !!! tip
-    A thorough guide to registration of an ONT can be found on the [**Registration workflow**](./registration-workflow.md) page.
+    A thorough guide to registration of an ONT can be found on the [**Registration template macro creation**](./registration-macro.md) and [**ONT registration on the Device page**](./registration-device.md) pages.
 
 1. Create a registration macro on the **ONTs Registration** page.
 

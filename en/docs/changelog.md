@@ -82,7 +82,7 @@
         - Mikrotik CRS switches (RouterOS firmware)
         - Raisecom ISCOM switches
         - Ping3
-    - In the ONU registration component, the ability to divide the template into blocks has been added, more details here - [ONT Registration](./components/onts_registration.md)
+    - In the ONU registration component, the ability to divide the template into blocks has been added, more details here - [ONT Registration](./components/onts-registration/getting-started.md)
     - Integration with MikBill billing
     - Before accessing the equipment, it checks if the device is reachable via ICMP (can be disabled in settings)
 

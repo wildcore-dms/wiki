@@ -1,6 +1,4 @@
-# Sample registration workflow for C-Data FW16xx devices
-
-## Create a macro on the ONTs registration page
+# Registration template macro creation
 
 !!! tip
     If you are unfamiliar with the **Macros** system, a thorough guide and descriptions of all the fields and parameters can be found in the [**Macros**](../../components/macros/getting-started.md) section of this documentation.
@@ -79,14 +77,3 @@
 
     If the macro worked, you should see a similar output in the **Live result** field.
     ![](../../assets/onu_registration/onu_registration_page_new_macro_template_live.png)
-
-## ONT registration from the Device page
-1. Go to the Device you wish to register an ONT for, select the **Unregistered ONTs** tab and press the **Register** button.
-
-    ![](../../assets/onu_registration/onu_registration_device_page.png)
-
-2. A pop-up window will appear. Select the desired Line profile and Service profile from drop-down menus. You can **Preview** the macro before execution or press **Execute** button.
-    ![](../../assets/onu_registration/onu_registration_device_page_register_execute.png)
-
-3. If everything went correctly, you will be redirected to the newly registered ONT page.
-    ![](../../assets/onu_registration/onu_registration_device_page_register_success.png)

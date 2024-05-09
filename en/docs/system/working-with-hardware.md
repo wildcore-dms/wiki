@@ -6,7 +6,7 @@ via **console**(ssh/telnet), as well as via **API** (for RouterOS).
 
 It is possible to specify ports in hardware access if your network uses non-standard ports
 
-![](../../assets/device_access_editing.png)
+![](../assets/device_access_editing.png)
 
 ## Parameter settings for working with hardware
 

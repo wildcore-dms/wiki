@@ -64,7 +64,7 @@ The system includes a component for ONU registration, allowing registration by f
 Unregistered (new) ONUs are displayed in a widget on the main page and in the device dashboard.
 
 !!! tip 
-    Learn more about [ONU registration](../components/onts_registration.md)
+    Learn more about [ONU registration](../components/onts-registration/getting-started.md)
 
 !!! note
     Works for Huawei and ZTE OLTs. 
