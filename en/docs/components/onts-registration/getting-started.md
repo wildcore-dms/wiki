@@ -8,7 +8,7 @@
 
     ![](../../assets/onu_registration/onu_registration_page.png)
 
-    Additionally, there a **Unregistered ONTs** widgen on the **Dashboard**, which lists the detected unregistered ONTs automatically.
+    Additionally, there is a **Unregistered ONTs** widget on the **Dashboard**, which lists the detected unregistered ONTs automatically.
 
     ![](../../assets/dashboard-overview/db_ont_unreg.png)
 
@@ -33,7 +33,7 @@ After successful registration, a notification of successful registration will be
     In case of an error in any of the commands, the execution of commands will be stopped.
     The error may occur after entering commands for ONT registration itself.
 
-    In this case, you need to find the ONT under which it was registered and manually configure it on the OLT (or delete it and try to register again).
+    In this case, you need to find the ONT number under which it was registered and manually configure it on the OLT (or delete it and try to register again).
 
     [**Twig**](https://twig.symfony.com/) template engine is used for the registration Macros. Refer to the official documentation for the template mechanism to learn about available functions, such as branching (if-else).
 

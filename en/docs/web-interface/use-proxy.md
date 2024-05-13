@@ -24,7 +24,7 @@ You can make these changes both through the web interface (on the `/config/syste
 
 ### NGINX Setup with HTTPS
 
-1. Install both **NGINX** and `Certbot`.
+1. Install both **NGINX** and **Certbot**.
 2. Configure your DNS domain name to point to your server address.
 3. Apply the following configuration for **NGINX**:
     ``` nginx

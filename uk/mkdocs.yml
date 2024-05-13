@@ -62,7 +62,7 @@ nav:
 
   - "Консоль": cli/index.md
 
-  - "Робота з облананням": system/how_works_with_device.md
+  - "Робота з облананням": system/working-with-hardware.md
 
   - "Опитувач обладнанная": system/poller.md
 
@@ -79,8 +79,11 @@ nav:
       - "Autodiscovery": components/autodiscovery.md
       - "ОЛТи": components/olts.md
       - "Управління ОЛТ": components/olts_control.md
+      - "Реєстрація ОНУ":
+        - "Початок роботи": components/onts-registration/getting-started.md
+        - "Створення макроса шаблону рєєстрації": components/onts-registration/registration-macro.md
+        - "Рєєстрація ОНУ на сторінці пристрою" : components/onts-registration/registration-device.md
       - "Бекапи конфігурації": components/oxidized.md
-      - "Реєстрація ОНУ": components/onts_registration.md
       - "Пристрої моніторингу": components/sensors.md
       - "Біллінг MikBill": components/mikbill_integration.md
       - "Біллінг NoDeny Plus": components/nodeny_plus.md

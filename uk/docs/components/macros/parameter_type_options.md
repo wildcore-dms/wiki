@@ -120,7 +120,15 @@
 
             ![](../../assets/macros/parameter_types_dropdown_variables_value-source_example_template.png)
 
+!!! quote ""
+    ![](../../assets/macros/parameter_types_dropdown_variables_item_filter.png)
 
+    Це текстове поле приймає JavaScript-вирази та дозволяє відфільтрувати значення у випадаючому меню.
+
+    ??? info "Інформація"
+        Якщо умова приймає значення `true`, то елемент буде показано.
+
+        Якщо умова приймає значення `false`, то елемент буде показано.
 
 ### Текстове поле зі змінною
 
