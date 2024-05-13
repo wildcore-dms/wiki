@@ -137,7 +137,7 @@ nav:
       - "Prometheus": troubleshooting/external-apps/prometheus.md
     # ! DO NOT DELETE ! #
   
-  - "FAQ": faq/faq.md
+  - "FAQ": faq.md
 
   - "Prices": prices.md
 
