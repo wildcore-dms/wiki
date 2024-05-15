@@ -144,4 +144,4 @@ nav:
   - "Contacts": contact/contacts.md
 
   - "Changelog": changelog.md
-  - "Supported hardware": https://htmlpreview.github.io/?https://raw.githubusercontent.com/meklis/switcher-core/master/docs/device_info.html
+  - "Supported hardware": supported-hardware.md
