@@ -54,7 +54,7 @@ _Усі перераховані вище компоненти надаютьс�
 * Mikrotik (роутери)
 * Ping3 (пристрої моніторингу)
 
-Повний список підтримуваного обладнання за моделями - [https://github.com/meklis/switcher-core/blob/master/docs/DEVICES.md](https://github.com/meklis/switcher-core/blob/master/docs/DEVICES.md)
+Повний список підтримуваного обладнання та функціоналу - [тут]([https://github.com/meklis/switcher-core/blob/master/docs/DEVICES.md](https://htmlpreview.github.io/?https://raw.githubusercontent.com/meklis/switcher-core/master/docs/device_info.html))
 
 
 ### ❗ Ми не працюємо з рф та рб
