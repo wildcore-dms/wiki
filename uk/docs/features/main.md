@@ -61,7 +61,7 @@
 Нереєстровані (нові) ONUs відображаються у віджеті на головній сторінці та на панелі управління пристроєм.
 
 !!! tip
-    Дізнайтеся більше про [реєстрацію ONUs](../components/onts_registration.md)
+    Дізнайтеся більше про [реєстрацію ONUs](../components/onts-registration/getting-started.md)
 
 !!! note
     Працює для OLTs Huawei та ZTE.
