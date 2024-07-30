@@ -1,4 +1,14 @@
-???+ note "0.23 (05.2024)"
+???+ note "0.24 (07.2024)"
+
+    - 📜 Added history of interface status changes
+    - 🔄 Implemented trap capture (currently only collects link/status changes of ONU across all switches and BDcom GP36xx)
+    - 📊 Added export to Excel for selections from analytics and interfaces
+    - 📅 Added date of last link status change
+    - 🚫 Removed support for old ONU registration components (huawei_onts_registration/zte_onts_registration)
+        
+    [More...](./changelogs/0.24.md)
+
+??? note "0.23 (05.2024)"
     **New Features**
 
     - Added support for two-factor authentication via Google Authenticator. Detailed instructions are available [here](https://wiki.wildcore.tools/en/web-interface/user-settings-overview/).
@@ -11,7 +21,7 @@
     
     [More...](./changelogs/0.23.md)
 
-???+ note "0.22 (03.2024)"
+??? note "0.22 (03.2024)"
     **New features** 
      
     - Added new device types - ICMP device. You can use them to set a ping (for example, a subscriber, or power control), without working with it
