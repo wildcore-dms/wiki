@@ -1,5 +1,15 @@
-???+ note "0.24 (07.2024)"
+???+ note "0.25 (01.2025)"
+    **Key Changes** 🔑    
 
+    1. 🌐 **Autotopology:** Automatically determines and records connections between devices using LLDP and FDB.
+    2. 📈 **Interface Speed Collection:** Adds real-time data for link/port utilization analysis.
+    3. 🛡️ **Access Encryption:** Introduced encryption for device access (includes instructions).
+    4. 🗺️ **New "Topology" Page:** Visualize network connections as a tree structure.
+    5. 🖼️ **Dashboard Improvements:** Updated grid (12 → 24 columns) and added dynamic resizing for widgets.
+
+    [More...](./changelogs/0.25.md)
+
+??? note "0.24 (07.2024)"
     - 📜 Added history of interface status changes
     - 🔄 Implemented trap capture (currently only collects link/status changes of ONU across all switches and BDcom GP36xx)
     - 📊 Added export to Excel for selections from analytics and interfaces
