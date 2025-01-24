@@ -32,3 +32,34 @@
     ```
     cd /opt/wildcore-dms && docker compose up -d --build
     ```
+   
+## Encryption of Equipment Access
+
+!!! note "Starting from version 0.25, encryption of equipment access using SHA-AES-256 is supported"
+!!! note "For new installations, encryption will be enabled by default."
+
+To encrypt access after the update, run the following command:
+```shell
+sudo wca security:enable-encryption
+```
+
+Example output:
+```shell
+$ sudo wca security:enable-encryption
+
+                
+    This command will encrypt access to the equipment in the database!
+    The action is irreversible!!
+    If you lose your decryption key, you will lose your passwords!!!
+
+        
+Are you sure you want to proceed? (y/n, default: no)? y
+Encryption key not generated, trying to create
+Encrypt password created - %&h0p5E&EQe*Ihj
+Access 'Access L2' encrypted!
+Encryption success enabled!
+```
+
+The first step in encryption is generating a password (if not already created) and saving it to the file `/opt/wildcore-dms/.encrypt_passwd`.
+
+!!! warning "If the password is changed or lost, access will be unreadable."

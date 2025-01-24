@@ -67,13 +67,16 @@ nav:
   - "Опитувач обладнанная": system/poller.md
 
   - "Про компоненти": components/index.md
-
   - "Компоненти":
       - "Макроси":
         - "З чого почати": components/macros/getting-started.md
         - "Опції типів параметрів": components/macros/parameter_type_options.md
         - "Спеціальні команди Шаблонів": components/macros/special-commands.md
         - "Приклади шаблонів Twig": components/macros/twig-examples.md
+      - "З'єднання":
+        - "Опис": components/links/describe.md
+        - "Автоматична топологія": components/links/autotopology.md
+        - "Навантаження з'єднань": components/links/utilization.md
       - "Події": components/events.md
       - "Сповіщення": components/notifications.md
       - "Autodiscovery": components/autodiscovery.md

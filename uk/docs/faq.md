@@ -31,4 +31,34 @@
 6. Виконайте наступну команду на новому сервері:
     ```
     cd /opt/wildcore-dms && docker compose up -d --build
-    ```
+    ``` 
+   
+## Шифрування доступів до обладнання 
+!!! note "Доступно з версії 0.25"
+!!! note "Для нових інсталяцій шифрування буде ввімкнено за замовчуванням."
+
+Щоб після оновлення зашифрувати доступи, виконайте команду:
+```shell
+sudo wca security:enable-encryption
+```
+
+Приклад виконання:
+```shell
+$ sudo wca security:enable-encryption
+
+                
+    This command will encrypt access to the equipment in the database!
+    The action is irreversible!!
+    If you lose your decryption key, you will lose your passwords!!!
+
+        
+Are you sure you want to proceed? (y/n, default: no)? y
+Encryption key not generated, trying to create
+Encrypt password created - %&h0p5E&EQe*Ihj
+Access 'Access L2' encrypted!
+Encryption success enabled!
+```
+
+Першим кроком при шифруванні буде створено пароль (якщо він не був створений раніше) і збережено у файлі `/opt/wildcore-dms/.encrypt_passwd`.
+
+!!! warning "У разі зміни або втрати пароля доступи будуть неможливі для читання."

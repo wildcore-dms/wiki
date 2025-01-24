@@ -72,6 +72,10 @@ nav:
 
   - "Components":
     - "Events": components/events.md
+    - "Links":
+        - "Basic": components/links/describe.md
+        - "Autotopology": components/links/autotopology.md
+        - "Link utilization": components/links/utilization.md
     - "Notifications": components/notifications.md
     - "Autodiscovery": components/autodiscovery.md
     - "OLTs": components/olts.md
