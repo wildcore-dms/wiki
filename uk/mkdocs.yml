@@ -60,7 +60,9 @@ nav:
       - "Огляд Параметрів аккаунту": web-interface/user-settings-overview.md
       - "Використання проксі": web-interface/use-proxy.md
 
-  - "Консоль": cli/index.md
+  - "Консоль":
+      - "Опис": cli/index.md
+      - "Імпорт пристроїв": cli/import-devices.md
 
   - "Робота з облананням": system/working-with-hardware.md
 
@@ -90,6 +92,7 @@ nav:
       - "Пристрої моніторингу": components/sensors.md
       - "Біллінг MikBill": components/mikbill_integration.md
       - "Біллінг NoDeny Plus": components/nodeny_plus.md
+      - "Інтеграція Userside": components/us_integration.md
 
   - "АПІ":
       - "Головна": api/index.md
@@ -102,6 +105,7 @@ nav:
 
   - "Вирішення проблем": 
     - "WildcoreDMS": troubleshooting/agent/general.md
+    - "Оптимізація": troubleshooting/optimization.md
     - "Обладнання":
       - "OLT":
         - "BDCOM": troubleshooting/device-specific/olts/bdcom.md

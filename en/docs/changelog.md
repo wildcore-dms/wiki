@@ -1,4 +1,23 @@
-???+ note "0.25 (01.2025)"
+???+ note "0.26 (08.2025)"
+    **Key Changes** 🔑      
+
+    ⚙️ **Hardware Handling**    
+
+    - 🛠️ Extended diagnostics: Introduced SFP module diagnostics and system temperature monitoring for more devices.
+    
+    💻 **Backend & API**
+
+    - 🚀 New functionality: Added device import from CSV and integration with Userside.
+    
+    🖥️ **Frontend (Web Panel)**    
+
+     - ✨ Added SFP information display, improved filters, enhanced stability, and more user-friendly event names instead of technical keys.
+     - 🎨 Usability: Improved table and filter display for more comfortable work  
+
+    [More...](./changelogs/0.26.md)
+
+
+??? note "0.25 (01.2025)"
     **Key Changes** 🔑    
 
     1. 🌐 **Autotopology:** Automatically determines and records connections between devices using LLDP and FDB.

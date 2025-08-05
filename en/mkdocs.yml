@@ -62,7 +62,9 @@ nav:
     - "User Settings Overview": web-interface/user-settings-overview.md
     - "How to use proxy": web-interface/use-proxy.md
 
-  - "Console": cli/index.md
+  - "Console":
+      - "Main": cli/index.md
+      - "Import devices": cli/import-devices.md
 
   - "Working with hardware": system/working-with-hardware.md
 
@@ -97,6 +99,7 @@ nav:
     - "Billing MikBill": components/mikbill_integration.md
 
     - "Billing NoDeny Plus": components/nodeny_plus.md
+    - "Userside integration": components/us_integration.md
 
   - "API":
     - "Main": api/index.md
@@ -107,8 +110,9 @@ nav:
 
   - "WCA-TOOL utility": wca-tool/index.md
 
-  - "Troubleshooting": 
+  - "Troubleshooting":
     - "WildcoreDMS": troubleshooting/agent/general.md
+    - "Optimization": troubleshooting/optimization.md
     - "Device specific":
       - "OLTs":
         - "BDCOM": troubleshooting/device-specific/olts/bdcom.md
