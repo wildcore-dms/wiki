@@ -1,6 +1,11 @@
 # **WildcoreDMS** - monitoring, diagnostics and device management system.
 ![](./assets/main-logo.png)
 
+
+!!! warning "We are not working with Russian Federation and Belarus"
+
+
+
 ### Our goal
 Provide the installer / operator with a convenient tool for diagnosing the network, equipment and a specific subscriber,
 thereby:
@@ -114,6 +119,3 @@ thereby:
 
 !!! tip
     [Here](https://htmlpreview.github.io/?https://raw.githubusercontent.com/meklis/switcher-core/master/docs/device_info.html) you can find the full list of supported hardware by models.
-
-
-!!! warning "We are not working with Russian Federation and Belarus"
