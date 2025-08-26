@@ -10,7 +10,7 @@
 
 ???+ note "0.26 (08.2025)"
     **Key Changes** 🔑      
-
+    
     ⚙️ **Hardware Handling**    
 
     - 🛠️ Extended diagnostics: Introduced SFP module diagnostics and system temperature monitoring for more devices.
