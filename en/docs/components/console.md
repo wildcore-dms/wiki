@@ -1,43 +1,37 @@
-# Компонент «Консоль» 
 
-!!! info "Доступно з версії 0.27"
+# Component "Console"
 
+!!! info "Available since version 0.27"
 
 ## Purpose
-- Connecting to the device console (Telnet/SSH) из Wildcore.
-- Automatic login/password input по saved в системе кредам.
-- Access via web interface (на базе ttyd) и из CLI.
-- Log saving (общения с оборудованием) 
+- Connect to equipment console (Telnet/SSH) from Wildcore.
+- Automatic login/password input using stored credentials in the system.
+- Access via web interface (based on ttyd) and from CLI.
+- Saving logs (communication with equipment).
 ---
 
-## Configuration 
-### Enabling the component    
+## Configuration
+### Enabling the component
 
-* В админке включите компонент «Консоль» (по умолчанию выключен).
-* Refresh the page, откройте Настройки → Консоль и включите опцию «Enable web».
-* Подождите ~1 минуту, пока поднимется веб-сервис.
-* Configure role permissions (см. ниже).
-
-<iframe width="100%" height="415"
-  src="https://www.youtube.com/embed/g1KEANz6v7M">
-</iframe>
-
+* In the admin panel enable the "Console" component (disabled by default).
+* Refresh the page, open Settings → Console and enable the "Enable web" option.
+* Wait about ~1 minute until the web service is started.
+* Configure role permissions (see below).
 
 ### Permissions (RBAC)
-Доступно три разрешения:    
+Three permissions are available:
 
-* Allow access to console — доступ к Telnet/SSH без авто-логина.
-* Allow access to console с автоматической авторизацией — авторизация по логин/пароль сохраненных в системе
-* Access to view equipment logs
+* Allow access to console — access to Telnet/SSH without auto-login.
+* Allow access to console with automatic authorization — authorization via login/password stored in the system.
+* Allow viewing equipment session logs.
 
-!!! note "Выбор Telnet/SSH происходит автоматически по конфигурации устройства"
+!!! note "Telnet/SSH is chosen automatically based on device configuration"
 
+### Nginx Configuration (WebSocket/Upgrade)
+If you are proxying wildcore through nginx (for example, to add a certificate) — you also need to configure your external nginx to work with the socket.  
+Add this configuration:
 
-### Configuration Nginx (WebSocket/Upgrade)
-Если у вас настроено проксирование wildcore через nginx (например, для добавления сертификата) - необходимо сконфигурировать так же ваш внешний nginx для работы с сокетом.      
-Добавьте эту конфигурацию
-
-```title="блок location {} в nginx"
+```title="location {} block in nginx"
 set $connection_header "";
 set $upgrade_header "";
 if ($http_upgrade) {
@@ -50,24 +44,20 @@ proxy_set_header Connection $connection_header;
 
 ## Usage
 ### Via WEB
-<iframe width="100%" height="415"
-src="https://www.youtube.com/embed/g1KEANz6v7M">
-</iframe>   
+**Two links will appear in the device card:**
 
-**Two links will appear in the device card:**  
+* Console — without automatic login
+* Console (autologin) — opens the console and automatically logs in with stored system credentials
 
-* Console - without auto-login
-* Console (auto-login) - открытие консоли и автоматический логин по доступам с системы 
+Role permissions allow controlling which button is available.
 
-Specific buttons can be enabled via role permissions  
-
-### Via CLI 
-Connection with auto-login:
+### Via CLI
+Autologin connection:
 ```shell
 wca console:open <device_ip>
-```   
+```
 
-Connection with manual login/password entry:
+Manual login/password entry:
 ```shell
 wca console:open <device_ip> -l
-```   
+```
