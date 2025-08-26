@@ -79,6 +79,7 @@ nav:
         - "Autotopology": components/links/autotopology.md
         - "Link utilization": components/links/utilization.md
     - "Notifications": components/notifications.md
+    - "Web console": components/console.md
     - "Autodiscovery": components/autodiscovery.md
     - "OLTs": components/olts.md
     - "OLTs control": components/olts_control.md

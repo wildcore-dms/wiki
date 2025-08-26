@@ -28,14 +28,21 @@
 1. Встановіть **NGINX** та **Certbot**.
 2. Зконфігуруйте ваш DNS так, щоб ім'я домену вказувало на адресу вашого сервера.
 3. Застосуйте наступну конфігурацію для **NGINX**:
-    ``` nginx
-    cat /etc/nginx/sites-enabled/wildcore-proxy
+    ```title="/etc/nginx/sites-enabled/wildcore-proxy.conf" 
     server {
     listen 80;
     root /var/www/html;
     index index.html index.htm index.nginx-debian.html;
     server_name ІМЯ_ВАШОГО_ДОМЕНУ;
     location / {
+       set $connection_header "";
+       set $upgrade_header "";
+       if ($http_upgrade) {
+           set $upgrade_header $http_upgrade;
+           set $connection_header "upgrade";
+       }
+       proxy_set_header Upgrade $upgrade_header;
+       proxy_set_header Connection $connection_header;
        proxy_pass      http://localhost:8088;
        proxy_set_header X-Forwarded-For $remote_addr;
        proxy_set_header Host $host;
@@ -45,8 +52,8 @@
         }
     }
     ```
-4. Змініть наступні рядки в `/opt/wildcore-dms/.env`:
-    ```
+4. Змініть наступні рядки в конфігурації:
+    ```title="/opt/wildcore-dms/.env"
     NGINX_EXPOSE=0.0.0.0:8088 -> NGINX_EXPOSE=127.0.0.1:8088
     PROXY_ENABLED=no          -> PROXY_ENABLED=yes
     ```

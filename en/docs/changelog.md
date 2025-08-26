@@ -1,3 +1,13 @@
+???+ note "0.27 (08.2025)"
+
+    **Key changes** 🔑     
+    
+    - Added support for a web console to work with equipment – [description](../components/console.md);  
+    - Refactored switch interface cards – separated FDB and signal levels;
+    - Added display of ARP and Direct Routes for L3-type devices.
+
+    [More...](./changelogs/0.27.md)    
+
 ???+ note "0.26 (08.2025)"
     **Key Changes** 🔑      
 

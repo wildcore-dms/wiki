@@ -80,6 +80,7 @@ nav:
         - "Автоматична топологія": components/links/autotopology.md
         - "Навантаження з'єднань": components/links/utilization.md
       - "Події": components/events.md
+      - "Веб-Консоль": components/console.md
       - "Сповіщення": components/notifications.md
       - "Autodiscovery": components/autodiscovery.md
       - "ОЛТи": components/olts.md
