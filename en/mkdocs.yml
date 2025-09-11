@@ -94,6 +94,7 @@ nav:
       - "Twig template examples": components/macros/twig-examples.md
 
     - "Config backups": components/oxidized.md
+    - "Attachments": components/attachments.md
 
     - "Sensors": components/sensors.md
 

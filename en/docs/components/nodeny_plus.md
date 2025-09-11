@@ -28,7 +28,7 @@ The component allows you to interact with NoDeny plus billing.
     *  From admin go to Settings->Modules->WildcoreDMS
        ![olts](./../assets/nodeny_plus_billing_config.png)
        1. Web address of wildcore system, for example - http://wildcore.company.com:8088    
-       2. User auth key. The [block below](#generate-auth-key-for-billing-) describes how to generate a key
+       2. User auth key. The [block below](#generate-auth-key-for-billing) describes how to generate a key
        3. Where to get diagnostic data from. Could be from cache or device. If a cache is specified, to update the diag data you need to click 'update' on the device on the wildcore page
 
 

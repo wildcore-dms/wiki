@@ -1,8 +1,13 @@
+???+ note "0.28"
+    **🚀New components**
+
+    * **📸[Attachments](./components/attachments.md)** - upload media associated with a device in it's management panel;
+
 ???+ note "0.27 (08.2025)"
 
     **Key changes** 🔑     
     
-    - Added support for a web console to work with equipment – [description](../components/console.md);  
+    - Added support for a web console to work with equipment – [description](./components/console.md);  
     - Refactored switch interface cards – separated FDB and signal levels;
     - Added display of ARP and Direct Routes for L3-type devices.
 
