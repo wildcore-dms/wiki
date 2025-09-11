@@ -90,6 +90,7 @@ nav:
         - "Створення макроса шаблону рєєстрації": components/onts-registration/registration-macro.md
         - "Рєєстрація ОНУ на сторінці пристрою" : components/onts-registration/registration-device.md
       - "Бекапи конфігурації": components/oxidized.md
+      - "Вкладення": components/attachments.md
       - "Пристрої моніторингу": components/sensors.md
       - "Біллінг MikBill": components/mikbill_integration.md
       - "Біллінг NoDeny Plus": components/nodeny_plus.md
