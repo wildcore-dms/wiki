@@ -16,10 +16,11 @@
 | **Memory** | 6 GB |
 | **Storage** | 100 GB avaliable space, preferably SSD |
 
-| Supported Operating Systems | Status |
-| ---- | ---- |
-| **MacOS** | Not tested |
-| **WSL2** | Not tested |
+| Supported Operating Systems | Status     |
+|-----------------------------|------------|
+| **Ubuntu 22+**              | Working    |
+| **Debian 12+**              | Working |
+ 
 
 | Required software |
 | ---- |
