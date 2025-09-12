@@ -29,23 +29,34 @@ You can make these changes both through the web interface (on the `/config/syste
 1. Install both **NGINX** and **Certbot**.
 2. Configure your DNS domain name to point to your server address.
 3. Apply the following configuration for **NGINX**:
-   ```nginx
-   cat /etc/nginx/sites-enabled/wildcore-proxy
+
+   ```nginx title="/etc/nginx/sites-enabled/wildcore-proxy.conf"
    server {
-   listen 80;
-   root /var/www/html;
-   index index.html index.htm index.nginx-debian.html;
-   server_name YOUR_DOMAIN_NAME;
-   location / {
-      proxy_pass      http://localhost:8088;
-      proxy_set_header X-Forwarded-For $remote_addr;
-      proxy_set_header Host $host;
-      proxy_set_header X-Forwarded-Proto $scheme;
-      proxy_set_header X-Forwarded-Host $host;
-      proxy_set_header X-Forwarded-Server $host;
-       }
+      listen 80;
+      root /var/www/html;
+      index index.html index.htm index.nginx-debian.html;
+      server_name YOUR_DOMAIN_NAME;
+
+      client_max_body_size 500M;
+      location / {
+         set $connection_header "";
+         set $upgrade_header "";
+         if ($http_upgrade) {
+            set $upgrade_header $http_upgrade;
+            set $connection_header "upgrade";
+         }
+         proxy_set_header  Upgrade $upgrade_header;
+         proxy_set_header  Connection $connection_header;
+         proxy_pass        http://127.0.0.1:8088;
+         proxy_set_header  X-Forwarded-For $remote_addr;
+         proxy_set_header  Host $host;
+         proxy_set_header  X-Forwarded-Proto $scheme;
+         proxy_set_header  X-Forwarded-Host $host;
+         proxy_set_header  X-Forwarded-Server $host;
+      }
    }
    ```
+
 4. Change the following lines in `/opt/wildcore-dms/.env`:
    ```
    NGINX_EXPOSE=0.0.0.0:8088 -> NGINX_EXPOSE=127.0.0.1:8088
