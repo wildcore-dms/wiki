@@ -95,6 +95,7 @@ nav:
 
     - "Config backups": components/oxidized.md
     - "Attachments": components/attachments.md
+    - "QR code Generator": components/qr-code-generator.md
 
     - "Sensors": components/sensors.md
 
