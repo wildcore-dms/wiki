@@ -1,9 +1,9 @@
 ???+ note "0.29"
     **🚀New components**
 
-    * **📸[QR Code Generator](./components/qr-code-generator.md)** - generate and print a QR label for your devices/interfaces with a direct link to it's dashboard;
+    - **📸[QR Code Generator](./components/qr-code-generator.md)** - generate and print a QR label for your devices/interfaces with a direct link to it's dashboard;
 
-???+ note "0.28"
+??? note "0.28"
 
     **🚀New components** 
     
@@ -23,7 +23,7 @@
 
     [More...](./changelogs/0.27.md)
 
-???+ note "0.26 (08.2025)"
+??? note "0.26 (08.2025)"
 **Key Changes** 🔑
 
     ⚙️ **Hardware Handling**
