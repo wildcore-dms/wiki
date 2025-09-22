@@ -70,31 +70,32 @@ nav:
 
   - "Про компоненти": components/index.md
   - "Компоненти":
+      - "Autodiscovery": components/autodiscovery.md
+      - "Бекапи конфігурації": components/oxidized.md
+      - "Біллінг MikBill": components/mikbill_integration.md
+      - "Біллінг NoDeny Plus": components/nodeny_plus.md
+      - "Веб-Консоль": components/console.md
+      - "Вкладення": components/attachments.md
+      - "Генератор QR кодів": components/qr-code-generator.md
+      - "З'єднання":
+        - "Опис": components/links/describe.md
+        - "Автоматична топологія": components/links/autotopology.md
+        - "Навантаження з'єднань": components/links/utilization.md
+      - "Інтеграція Userside": components/us_integration.md
       - "Макроси":
         - "З чого почати": components/macros/getting-started.md
         - "Опції типів параметрів": components/macros/parameter_type_options.md
         - "Спеціальні команди Шаблонів": components/macros/special-commands.md
         - "Приклади шаблонів Twig": components/macros/twig-examples.md
-      - "З'єднання":
-        - "Опис": components/links/describe.md
-        - "Автоматична топологія": components/links/autotopology.md
-        - "Навантаження з'єднань": components/links/utilization.md
-      - "Події": components/events.md
-      - "Веб-Консоль": components/console.md
-      - "Сповіщення": components/notifications.md
-      - "Autodiscovery": components/autodiscovery.md
       - "ОЛТи": components/olts.md
-      - "Управління ОЛТ": components/olts_control.md
+      - "Події": components/events.md
+      - "Пристрої моніторингу": components/sensors.md
       - "Реєстрація ОНУ":
         - "Початок роботи": components/onts-registration/getting-started.md
         - "Створення макроса шаблону рєєстрації": components/onts-registration/registration-macro.md
         - "Рєєстрація ОНУ на сторінці пристрою" : components/onts-registration/registration-device.md
-      - "Бекапи конфігурації": components/oxidized.md
-      - "Вкладення": components/attachments.md
-      - "Пристрої моніторингу": components/sensors.md
-      - "Біллінг MikBill": components/mikbill_integration.md
-      - "Біллінг NoDeny Plus": components/nodeny_plus.md
-      - "Інтеграція Userside": components/us_integration.md
+      - "Сповіщення": components/notifications.md
+      - "Управління ОЛТ": components/olts_control.md
 
   - "АПІ":
       - "Головна": api/index.md

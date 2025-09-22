@@ -73,36 +73,32 @@ nav:
   - "About components": components/index.md
 
   - "Components":
+    - "Attachments": components/attachments.md
+    - "Autodiscovery": components/autodiscovery.md
+    - "Billing MikBill": components/mikbill_integration.md
+    - "Billing NoDeny Plus": components/nodeny_plus.md
+    - "Config backups": components/oxidized.md
     - "Events": components/events.md
     - "Links":
         - "Basic": components/links/describe.md
         - "Autotopology": components/links/autotopology.md
         - "Link utilization": components/links/utilization.md
+    - "Macros":
+      - "Getting started": components/macros/getting-started.md
+      - "Parameter type options": components/macros/parameter_type_options.md
+      - "Special Template commands": components/macros/special-commands.md
+      - "Twig template examples": components/macros/twig-examples.md
     - "Notifications": components/notifications.md
-    - "Web console": components/console.md
-    - "Autodiscovery": components/autodiscovery.md
     - "OLTs": components/olts.md
     - "OLTs control": components/olts_control.md
     - "ONTs Registration":
       - "Getting started": components/onts-registration/getting-started.md
       - "Registration template macro creation": components/onts-registration/registration-macro.md
       - "ONT registration on the Device page" : components/onts-registration/registration-device.md
-    - "Macros":
-      - "Getting started": components/macros/getting-started.md
-      - "Parameter type options": components/macros/parameter_type_options.md
-      - "Special Template commands": components/macros/special-commands.md
-      - "Twig template examples": components/macros/twig-examples.md
-
-    - "Config backups": components/oxidized.md
-    - "Attachments": components/attachments.md
     - "QR code Generator": components/qr-code-generator.md
-
     - "Sensors": components/sensors.md
-
-    - "Billing MikBill": components/mikbill_integration.md
-
-    - "Billing NoDeny Plus": components/nodeny_plus.md
     - "Userside integration": components/us_integration.md
+    - "Web console": components/console.md
 
   - "API":
     - "Main": api/index.md
