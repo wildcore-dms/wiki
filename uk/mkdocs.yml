@@ -59,6 +59,7 @@ nav:
       - "Огляд Дешборду": web-interface/dashboard-overview.md
       - "Огляд Параметрів аккаунту": web-interface/user-settings-overview.md
       - "Використання проксі": web-interface/use-proxy.md
+      - "Генерація API ключа": web-interface/api-key-generation.md
 
   - "Консоль":
       - "Опис": cli/index.md
