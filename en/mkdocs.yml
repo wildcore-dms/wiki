@@ -61,6 +61,7 @@ nav:
     - "Dashboard Overview": web-interface/dashboard-overview.md
     - "User Settings Overview": web-interface/user-settings-overview.md
     - "How to use proxy": web-interface/use-proxy.md
+    - "API Key Generation" : web-interface/api-key-generation.md
 
   - "Console":
       - "Main": cli/index.md

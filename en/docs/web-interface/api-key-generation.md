@@ -1,11 +1,11 @@
-# API-Key Generation
+# API Key Generation
 
 !!! abstract "Overview"
-    This page provides an overview of the **API-Key generation** functionality through the Web-Interface.
+    This page provides an overview of the **API Key generation** functionality through the Web-Interface.
 
-    In case you need an API-Key (for example for integration with other services, such as billing) they are easy to issue and revoke through the Web-Interface.
+    In case you need an API Key (for example for integration with other services, such as billing) they are easy to issue and revoke through the Web-Interface.
 
-## Creating an API-Key
+## Creating an API Key
 
 To do this you have two options:
 
