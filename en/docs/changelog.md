@@ -1,4 +1,16 @@
-???+ note "0.29"
+???+ note "0.30 (06.2026)"
+
+    **Key changes** 🔑
+
+    - 🗺️ "Nearby objects" search and a major map speed-up for thousands of objects;
+    - 🛠️ Full support for C-Data FD1700S (FW3), link aggregation (LACP) and per-port VLANs on ZTE C600, and free ONU numbers during registration;
+    - 🧩 New console command constructs (`<confirm>`, `<prompt>`, `<stream_timeout>`, …);
+    - 💻 Syntax highlighting in the macro template editor and customizable mobile navigation;
+    - ⚙️ Full OpenAPI/Swagger docs, caching/performance, and more reliable event-to-alert sync.
+
+    [More...](./changelogs/0.30.md)
+
+??? note "0.29"
     **🚀New components**
 
     - **📸[QR Code Generator](./components/qr-code-generator.md)** - generate and print a QR label for your devices/interfaces with a direct link to it's dashboard;

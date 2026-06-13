@@ -77,3 +77,15 @@
 
     If the macro worked, you should see a similar output in the **Live result** field.
     ![](../../assets/onu_registration/onu_registration_page_new_macro_template_live.png)
+
+!!! tip "Special constructs in a registration template"
+    A registration template can use the same [special commands](../../components/macros/special-commands.md) as regular macros. They are useful when the OLT, during ONU registration:
+
+    - **asks for confirmation** — append `<confirm="y">` (the answer is always sent) or `<confirm-if="y","Are you sure">` (the answer is sent only if the prompt actually appears) to the command;
+    - **requires an extra ++enter++** to complete the command — add `<cr>`;
+    - **responds slowly** to the registration command — extend the wait time with `<stream_timeout=3>`.
+
+    Example of a command with conditional confirmation:
+    ``` twig
+    ont add {{iface._port}} {{free.first}} sn-auth {{ont._serial_hex}} ont-lineprofile-id {{params.line.id}} ont-srvprofile-id {{params.srv.id}}<confirm-if="y","Are you sure">
+    ```
