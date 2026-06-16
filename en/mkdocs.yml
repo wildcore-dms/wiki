@@ -59,6 +59,8 @@ nav:
     - "After install": web-interface/web-after-install.md
     - "Overview": web-interface/main.md
     - "Dashboard Overview": web-interface/dashboard-overview.md
+    - "Mobile bottom navigation": web-interface/mobile-navigation.md
+    - "Objects nearby": web-interface/nearby-objects.md
     - "User Settings Overview": web-interface/user-settings-overview.md
     - "How to use proxy": web-interface/use-proxy.md
     - "API Key Generation" : web-interface/api-key-generation.md
@@ -102,11 +104,10 @@ nav:
     - "Web console": components/console.md
 
   - "API":
-    - "Main": api/index.md
-    - "Examples": api/examples.md
-    - "Objects":
-      - "General responses": api/objects/objects.md
-      - "Modules(diagnostic)": api/objects/module_responses.md
+    - "Getting started": api/index.md
+    - "Groups & sections": api/groups.md
+    - "Examples (curl)": api/examples.md
+    - "Generating scripts with AI": api/ai-codegen.md
 
   - "WCA-TOOL utility": wca-tool/index.md
 

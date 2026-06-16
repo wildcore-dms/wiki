@@ -57,6 +57,8 @@ nav:
       - "Вигляд": web-interface/main.md
       - "Після встановлення": web-interface/web-after-install.md
       - "Огляд Дешборду": web-interface/dashboard-overview.md
+      - "Нижня навігація (мобільні)": web-interface/mobile-navigation.md
+      - "Об'єкти поруч": web-interface/nearby-objects.md
       - "Огляд Параметрів аккаунту": web-interface/user-settings-overview.md
       - "Використання проксі": web-interface/use-proxy.md
       - "Генерація API ключа": web-interface/api-key-generation.md
@@ -99,11 +101,10 @@ nav:
       - "Управління ОЛТ": components/olts_control.md
 
   - "АПІ":
-      - "Головна": api/index.md
-      - "Приклади": api/examples.md
-      - "Об'єкти":
-          - "Відповіть АПІ": api/objects/objects.md
-          - "Відповіть модулів (дігностика)": api/objects/module_responses.md
+      - "З чого почати": api/index.md
+      - "Групи та розділи": api/groups.md
+      - "Приклади (curl)": api/examples.md
+      - "Генерація скриптів через ШІ": api/ai-codegen.md
 
   - "WCA-TOOL": wca-tool/index.md
 

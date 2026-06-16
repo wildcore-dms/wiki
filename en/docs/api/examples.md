@@ -1,131 +1,165 @@
-# Examples
+# Request examples (curl)
 
+Ready-to-use examples by group. All examples use variables — set them once:
 
-## Search interface by parameters 
-Returning as array, may be several results.
-Parameters are not exclusive (the more parameters passed, the more matches there can be founded).
-Possible query parameters:
-
-* **device_id** - device id in wildcore
-* **device_ip** - device IP address
-* **interface_name** - name of interface. For example - epon0/1:1, or 1/3
-* **interface_bind_key** - a representative unique ID of an interface on a device. built based on interface name and hardware type
-* **ont_ident** - serial number or MAC-address of ONU
-* **mac_address** - client mac address, received from FDB
-* **only_active_mac** - flag (1|0) for searching by parameter mac_address. If setted 1 - will be returned only by active mac_address
-
-Example of request:
-```shell linenums="1"
-curl --location --request GET "http://${WILDCORE_SERVER}/api/v1/device-interface/search?device_id=${DEVICE_ID}&interface_name=${INTERFACE_NAME}" \
---header "X-Auth-Key: ${AUTH_KEY}" 
+```shell
+WC="https://demo.wildcore.tools"      # your server address
+KEY="YOUR_KEY"                         # the X-Auth-Key token
 ```
 
-Example of response: 
-```json linenums="1"
+Every authenticated request carries the `X-Auth-Key: $KEY` header. Exact parameters for
+each method are in [Swagger](index.md).
+
+## Authentication (auth)
+
+Session sign-in with login/password — returns a session key:
+
+```shell
+curl "$WC/api/v1/auth" \
+  -X POST -H "Content-Type: application/json" \
+  -d '{"login":"api_user","password":"••••••"}'
+```
+
+Verify the token with any protected method, e.g. the device list (below).
+
+## Devices (device)
+
+Device list / device by IP:
+
+```shell
+curl "$WC/api/v1/device"            -H "X-Auth-Key: $KEY"
+curl "$WC/api/v1/device?ip=10.1.0.6" -H "X-Auth-Key: $KEY"
+```
+
+Detect a device model by IP and access profile:
+
+```shell
+curl "$WC/api/v1/device-detect" \
+  -X POST -H "Content-Type: application/json" -H "X-Auth-Key: $KEY" \
+  -d '{"ip":"10.1.0.6","access_id":6}'
+```
+
+## Interfaces (device-interface)
+
+### Search interface by parameters
+
+Returns an array (there may be several results). Parameters are not exclusive — the more
+you pass, the more precise the search:
+
+* **device_id** — device id in Wildcore;
+* **device_ip** — device IP address;
+* **interface_name** — interface name (e.g. `epon0/1:1` or `1/3`);
+* **interface_bind_key** — the interface's unique key on the device;
+* **ont_ident** — ONU serial number or MAC;
+* **mac_address** — client MAC from FDB;
+* **only_active_mac** — `1|0`, search only active MACs.
+
+```shell
+curl "$WC/api/v1/device-interface/search?device_id=495&interface_name=1/13" \
+  -H "X-Auth-Key: $KEY"
+```
+
+Example response (trimmed):
+
+```json
 {
-    "statusCode": 200,
-    "meta": null,
-    "data": [
-        {
-            "created_at": "2023-09-20 15:11:08",
-            "updated_at": "2023-09-21 15:59:56",
-            "device": {
-                "ip": "10.1.0.6",
-                "location": "Kyiv",
-                "name": "sw-ak",
-                "description": "",
-                "model": {
-                    "name": "D-Link DES-1228/ME",
-                    "key": "dlink_des_1228_me",
-                    "params": [],
-                    "vendor": "D-Link",
-                    "model": "DES-1228/ME",
-                    "type": "SWITCH",
-                    "controller": "\\WCC\\Switches\\Controllers\\SwitchesController",
-                    "pollers": {
-                        "system": 300,
-                        "counters": 120,
-                        "fdb_table": 600,
-                        "sys_resources": 120,
-                        "interfaces_list": 1800,
-                        "interfaces_status": 120
-                    },
-                    "icon": "/upload/icons/des-1228-me.jpg",
-                    "id": 24
-                },
-                "access": {
-                    "params": {
-                        "sw_core_connection": {
-                            "snmp_port": 161,
-                            "console_port": 22,
-                            "snmp_repeats": 3,
-                            "snmp_version": "2c",
-                            "snmp_timeout_sec": 4,
-                            "mikrotik_api_port": 55055,
-                            "console_timeout_sec": 300,
-                            "console_connection_type": "ssh"
-                        }
-                    },
-                    "name": "",
-                    "id": 6
-                },
-                "params": null,
-                "updated_at": "2023-09-22 00:43:07",
-                "created_at": "2023-09-20 15:10:49",
-                "mac": "FC:75:16:00:00:00",
-                "serial": "",
-                "group": {
-                    "created_at": "2023-05-10 12:17:00",
-                    "name": "All",
-                    "description": "",
-                    "id": 5
-                },
-                "pollers": null,
-                "coordinates": null,
-                "enabled": true,
-                "id": 495
-            },
-            "bind_key": "13",
-            "name": "1/13",
-            "type": "FE",
-            "params": {
-                "billing": {
-                    "nodeny_plus": {
-                        "id": 1161,
-                        "link": "http://127.0.0.1/cgi-bin/stat.pl/cgi-bin/stat.pl?a=user&uid=1161",
-                        "name": "",
-                        "state": "on"
-                    }
-                }
-            },
-            "billing_link": "http://127.0.0.1/cgi-bin/stat.pl/cgi-bin/stat.pl?a=user&uid=1161",
-            "ip": "",
-            "agreement": "11619",
-            "description": "",
-            "status": "Up",
-            "poll_enabled": true,
-            "parent_bind_key": "",
-            "coordinates": null,
-            "comment": "",
-            "id": 96252
-        }
-    ]
+  "statusCode": 200,
+  "meta": null,
+  "data": [
+    {
+      "id": 96252,
+      "name": "1/13",
+      "type": "FE",
+      "status": "Up",
+      "bind_key": "13",
+      "description": "",
+      "device": { "id": 495, "ip": "10.1.0.6", "name": "sw-ak", "location": "Kyiv" }
+    }
+  ]
 }
 ```
 
-## Device diagnostic 
-Returning diagnostic information from device 
+### ONU list with filters and pagination
 
-### Example of request:   
-```shell linenums="1"
-curl --location --request GET "http://${WILDCORE_SERVER}/api/v1/component/diagnostic/interface/${INTERFACE_ID}/diag?from=${FROM}" \
---header "X-Auth-Key: ${AUTH_KEY}"
+```shell
+curl "$WC/api/v1/device-interface/ont-list" \
+  -X PUT -H "Content-Type: application/json" -H "X-Auth-Key: $KEY" \
+  -d '{"device_id":495,"limit":50,"offset":0}'
 ```
 
-* **FROM** Variants: 
-    * **device** - Load from device
-    * **cache** - Load from cache (If cache not exist or expired - will loading from device)
-    * **store** - Load from cache
-* **INTERFACE_ID** - ID of interface, returned in _interface.id_
+## Search & objects nearby (portal)
 
-[See detailed response objects here](./objects/objects.md)
+Global search across the system:
+
+```shell
+curl "$WC/api/v1/portal/search?query=00:11:22" -H "X-Auth-Key: $KEY"
+```
+
+Nearest objects by coordinates (devices/ONUs near a point):
+
+```shell
+curl "$WC/api/v1/portal/nearest-elements?lat=50.4501&lon=30.5234&distance=1000" \
+  -H "X-Auth-Key: $KEY"
+```
+
+## Events & monitoring (events, pinger, analytics)
+
+Events by filter:
+
+```shell
+curl "$WC/api/v1/component/events?not_resolved=1" -H "X-Auth-Key: $KEY"
+```
+
+Reachability statuses (pinger):
+
+```shell
+curl "$WC/api/v1/component/pinger/statuses" -H "X-Auth-Key: $KEY"
+```
+
+Widget: number of ONUs with a bad optical signal:
+
+```shell
+curl "$WC/api/v1/component/analytics/widgets/bad-signals" -H "X-Auth-Key: $KEY"
+```
+
+## Macros & ONU registration
+
+List macros and run a macro on a device:
+
+```shell
+curl "$WC/api/v1/component/macros/list" -H "X-Auth-Key: $KEY"
+
+curl "$WC/api/v1/component/macros/execute" \
+  -X POST -H "Content-Type: application/json" -H "X-Auth-Key: $KEY" \
+  -d '{"device":{"id":495},"macros":{"id":12},"from":"device"}'
+```
+
+Unregistered ONUs on a device:
+
+```shell
+curl "$WC/api/v1/component/onts_registration/unregistered?device_id=495" \
+  -H "X-Auth-Key: $KEY"
+```
+
+## Users & access (user, user-role)
+
+```shell
+curl "$WC/api/v1/user"                    -H "X-Auth-Key: $KEY"
+curl "$WC/api/v1/user-role-permissions"   -H "X-Auth-Key: $KEY"
+```
+
+## System (system)
+
+System configuration and server info:
+
+```shell
+curl "$WC/api/v1/system/configuration" -H "X-Auth-Key: $KEY"
+curl "$WC/api/v1/system/info"          -H "X-Auth-Key: $KEY"
+```
+
+---
+
+!!! tip "Can't find the method you need?"
+    Every method with exact parameters and schemas is in your server's Swagger
+    (`/swagger/`). A handy way to assemble a script for your task right away —
+    [Generating scripts with AI](./ai-codegen.md).

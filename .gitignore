@@ -1,3 +1,4 @@
 .idea
 dist
-/en/site
+.venv
+/*/site/
