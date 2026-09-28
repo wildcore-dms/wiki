@@ -63,6 +63,14 @@ nav:
       - "Використання проксі": web-interface/use-proxy.md
       - "Генерація API ключа": web-interface/api-key-generation.md
 
+  - "Вхід через SSO (OIDC)":
+      - "Загальне налаштування": sso/index.md
+      - "Keycloak": sso/keycloak.md
+      - "Authentik": sso/authentik.md
+      - "Google Workspace": sso/google.md
+      - "Microsoft Entra ID": sso/entra-id.md
+      - "Auth0": sso/auth0.md
+
   - "Консоль":
       - "Опис": cli/index.md
       - "Імпорт пристроїв": cli/import-devices.md

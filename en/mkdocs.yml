@@ -65,6 +65,14 @@ nav:
     - "How to use proxy": web-interface/use-proxy.md
     - "API Key Generation" : web-interface/api-key-generation.md
 
+  - "Single Sign-On (OIDC)":
+    - "General setup": sso/index.md
+    - "Keycloak": sso/keycloak.md
+    - "Authentik": sso/authentik.md
+    - "Google Workspace": sso/google.md
+    - "Microsoft Entra ID": sso/entra-id.md
+    - "Auth0": sso/auth0.md
+
   - "Console":
       - "Main": cli/index.md
       - "Import devices": cli/import-devices.md
