@@ -2,7 +2,7 @@
 
     **Key changes** 🔑
 
-    - 🔐 Single Sign-On (OpenID Connect): Keycloak, Authentik, Google Workspace, Microsoft Entra ID, Auth0 and others, with roles assigned from provider groups — [guide](./sso/index.md);
+    - 🔐 Single Sign-On (OpenID Connect): Keycloak, Authentik, Google Workspace, Microsoft Entra ID, Auth0, Authelia and others, with roles assigned from provider groups — [guide](./sso/index.md);
     - 🌙 Dark theme and refreshed web panel design, field hints on device cards;
     - 📡 ONU signal history (min/max), ONU blacklist, ONU registration fixes for BDcom GP3600 and C-Data FD16xxV3;
     - 🔎 DHCP Snooping for D-Link, BDcom and C-Data;

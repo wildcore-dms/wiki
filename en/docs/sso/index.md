@@ -20,7 +20,8 @@ This page covers the provider-independent part. Step-by-step guides for specific
 | Google Workspace | [Google setup](./google.md) |
 | Microsoft Entra ID (Azure AD) | [Entra ID setup](./entra-id.md) |
 | Auth0 | [Auth0 setup](./auth0.md) |
-| Others (Authelia, Zitadel, GitLab, ...) | [see below](#other) |
+| Authelia | [Authelia setup](./authelia.md) |
+| Others (Zitadel, GitLab, Okta, ...) | [see below](#other) |
 
 ## How it works
 
@@ -260,24 +261,7 @@ Errors are shown on the login page and written to the application log.
 
 ## Other providers { #other }
 
-**Authelia** — the client is described in the Authelia configuration:
-
-```yaml
-identity_providers:
-  oidc:
-    clients:
-      - client_id: wildcore
-        client_secret: '<secret hash>'
-        redirect_uris: ['https://dms.example.com/api/v1/auth/oidc/callback']
-        scopes: [openid, email, profile, groups]
-        token_endpoint_auth_method: client_secret_basic
-        require_pkce: true
-        pkce_challenge_method: S256
-```
-
-The issuer is the Authelia address (e.g. `https://auth.example.com`). Groups come in the `groups`
-claim only with the `groups` scope (the wizard sets this for the `authelia` provider).
-`identity_providers.oidc.jwks` must contain an RSA key.
+**Authelia** — see the separate [Authelia setup](./authelia.md) guide.
 
 **Any other** (Zitadel, GitLab, Okta, ...): check the requirements, register a client (step 1),
 see which claims carry email, login and groups, and run `wca auth:configure` with the `other` provider.

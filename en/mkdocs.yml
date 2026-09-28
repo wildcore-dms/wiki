@@ -72,6 +72,7 @@ nav:
     - "Google Workspace": sso/google.md
     - "Microsoft Entra ID": sso/entra-id.md
     - "Auth0": sso/auth0.md
+    - "Authelia": sso/authelia.md
 
   - "Console":
       - "Main": cli/index.md

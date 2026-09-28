@@ -20,7 +20,8 @@
 | Google Workspace | [Налаштування Google](./google.md) |
 | Microsoft Entra ID (Azure AD) | [Налаштування Entra ID](./entra-id.md) |
 | Auth0 | [Налаштування Auth0](./auth0.md) |
-| Інші (Authelia, Zitadel, GitLab, ...) | [див. нижче](#other) |
+| Authelia | [Налаштування Authelia](./authelia.md) |
+| Інші (Zitadel, GitLab, Okta, ...) | [див. нижче](#other) |
 
 ## Як це працює
 
@@ -266,24 +267,7 @@ wca user:reset-password <login>
 
 ## Інші провайдери { #other }
 
-**Authelia** — клієнт описується у конфігурації Authelia:
-
-```yaml
-identity_providers:
-  oidc:
-    clients:
-      - client_id: wildcore
-        client_secret: '<хеш секрету>'
-        redirect_uris: ['https://dms.example.com/api/v1/auth/oidc/callback']
-        scopes: [openid, email, profile, groups]
-        token_endpoint_auth_method: client_secret_basic
-        require_pkce: true
-        pkce_challenge_method: S256
-```
-
-Issuer — адреса Authelia (наприклад `https://auth.example.com`). Групи приходять у claim
-`groups` лише за scope `groups` (майстер з провайдером `authelia` виставляє це сам).
-У `identity_providers.oidc.jwks` має бути RSA-ключ.
+**Authelia** — див. окрему інструкцію [Налаштування Authelia](./authelia.md).
 
 **Будь-який інший** (Zitadel, GitLab, Okta, ...): перевірте вимоги, зареєструйте клієнт
 (крок 1), подивіться, у яких claims приходять email, логін та групи, і запустіть

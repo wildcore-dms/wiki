@@ -2,7 +2,7 @@
 
     **Ключові зміни** 🔑
 
-    - 🔐 Вхід через SSO (OpenID Connect): Keycloak, Authentik, Google Workspace, Microsoft Entra ID, Auth0 та інші, з призначенням ролей за групами провайдера — [інструкція](./sso/index.md);
+    - 🔐 Вхід через SSO (OpenID Connect): Keycloak, Authentik, Google Workspace, Microsoft Entra ID, Auth0, Authelia та інші, з призначенням ролей за групами провайдера — [інструкція](./sso/index.md);
     - 🌙 Темна тема та оновлене оформлення веб-панелі, підказки до полів на картках пристроїв;
     - 📡 Історія рівнів сигналу ONU (мін/макс), чорний список ONU, виправлення реєстрації ONU на BDcom GP3600 та C-Data FD16xxV3;
     - 🔎 DHCP Snooping для D-Link, BDcom та C-Data;
