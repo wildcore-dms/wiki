@@ -31,8 +31,8 @@ Data is available both in real time and from polling history.
     - ONUs: status (Online/Offline/LOS/PowerOff), serial number/MAC, RX/TX/OLT-RX signal levels,
       distance, temperature, disconnect reasons and history, vendor and firmware;
     - ONU Ethernet ports and their VLANs, ONU IP address, MAC table behind the ONU;
-    - **signal level history** with min/max and deviation from the current value;
-    - **DHCP Snooping** and **ONU blacklist**;
+    - **[signal level history](../system/onu-signal-history.md)** with min/max and deviation from the current value;
+    - **[DHCP Snooping](../system/dhcp-snooping.md)** and **[ONU blacklist](../system/onu-blacklist.md)**;
     - traffic and errors on physical ports and ONUs;
     - link aggregation (LACP) and per-port VLANs (ZTE C600).
 
@@ -88,10 +88,34 @@ Polling intervals are configured per model, device and individual port —
   only notifications about hardware available to them.
 - Integration with Prometheus/Alertmanager and Grafana.
 
-## Analytics
+## Analytics and data history
 
-Network-wide reports with filters and Excel export: device and ONU statuses, ONU signal levels,
-duplicate MAC addresses and ONUs, ports with growing errors, state history.
+The **"Analytics"** section — network-wide reports with filters, charts and Excel export:
+
+| Report | What it shows |
+|--------|---------------|
+| **Device statuses** | Device availability over time: when and how many devices were down |
+| **ONU statuses** | ONU state history (Online / Offline / LOS / PowerOff) by OLT and group |
+| **ONU signal levels** | ONU distribution by signal level, ONUs outside the normal range (normal RX/OLT RX limits are set in the settings) |
+| **Increasing errors** | Ports and ONUs with growing error counters, with a chart per interface |
+| **Duplicate MAC addresses** | The same MAC on several ports/ONUs (uplinks are ignored) — finding cloned routers and loops |
+| **Duplicate ONUs** | The same ONU serial or MAC on different OLTs/ports |
+
+**What is stored and for how long:**
+
+- **polling metrics** — port and ONU states, signal levels, traffic, errors, CPU/RAM load, device
+  availability. Charts, analytics and events are built on them. Retention is set by
+  `PROMETHEUS_RETENTION_TIME` (**30 days** by default) — see
+  [System configuration](../installation-and-updating/env-configuration.md);
+- **interface and ONU state history** — the uptime table and disconnect reasons on the port/ONU page;
+- **FDB history** — on which port/ONU and when each MAC address was seen;
+- **ONU signal level limits** — min/max since the last reset, see
+  [ONU signal level history](../system/onu-signal-history.md);
+- **logs** — user actions, hardware calls, poller, scheduler, SNMP traps, web console sessions.
+
+!!! note
+    Analytics shows data for **all** devices regardless of the user's groups, so grant access to
+    administrators only.
 
 ## Map, topology and links
 
@@ -114,7 +138,7 @@ duplicate MAC addresses and ONUs, ports with growing errors, state history.
 ## Web interface
 
 - Customizable **[dashboard](../web-interface/dashboard-overview.md)** with widgets.
-- **Dark and light themes**, field hints, Ukrainian, English and Russian languages.
+- **[Dark and light themes](../web-interface/theme.md)**, field hints, Ukrainian, English and Russian languages.
 - Adapted for phones and tablets, with **[bottom navigation](../web-interface/mobile-navigation.md)**.
 - Works as an **app (PWA)** — installs on a phone or computer (HTTPS required).
   [Installation guide](https://support.google.com/chrome/answer/9658361).
@@ -147,5 +171,6 @@ duplicate MAC addresses and ONUs, ports with growing errors, state history.
 The system runs in **Docker** — no need to install dependencies and libraries manually.
 Installation and updates are done by the **[wca-tool](../wca-tool/index.md)** utility, and
 maintenance by [`wca`](../cli/index.md) console commands (CSV device import, managing components,
-users, cache, etc.).
+users, cache, etc.). System parameters are in the [`.env`](../installation-and-updating/env-configuration.md)
+file and partly in the web interface.
 Additional capabilities are added as [components](../components/index.md).

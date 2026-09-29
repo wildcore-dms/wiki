@@ -42,7 +42,7 @@ system-wide settings → access → model → device
 | [`access`](#access) | model, device | all | Own credentials instead of the access |
 | [`sw_core_connection`](#sw_core_connection) | model, device | all | Ports, console protocol, timeouts, SNMP version |
 | [`disable_save_description_on_physical_ifaces`](#disable_save_description_on_physical_ifaces) | model, device | OLT | Local PON port descriptions |
-| [`load_snooping_info`](#load_snooping_info) | model, device | OLT | Load DHCP Snooping in ONU information |
+| [`load_snooping_info`](#load_snooping_info) | model, device | OLT | Load DHCP Snooping automatically in the ONU card |
 | [`modules_loading`](#modules_loading) | model, device | OLT | Which data to load in the ONU list and ONU card |
 | [`show_optical_info_from_history`](#show_optical_info_from_history) | model | OLT | Signal levels in the ONU list from history instead of the hardware |
 | [`optical_load_only`](#optical_load_only) | model | OLT | Which optical values to request for the ONU list |
@@ -76,8 +76,11 @@ Only the needed fields can be set — the rest come from the access.
 
 ### `sw_core_connection` { #sw_core_connection }
 
-Hardware connection parameters. The same values can be set for an
-[access](./device-access.md#connection) in the UI, and here — for a model or a single device.
+Hardware connection parameters for a model or a single device. System-wide defaults are set in
+[System configuration or `.env`](../installation-and-updating/env-configuration.md#swc), most of
+them also in an [access](./device-access.md#connection). The `console_wait_byte_sec` and
+`mikrotik_api_port` keys are not in the access form — for individual hardware they can be set only here.
+Summary of levels — [Working with hardware](../system/working-with-hardware.md#connection-levels).
 
 ```json
 {
@@ -124,9 +127,10 @@ be kept locally in WildcoreDMS. ONU descriptions are still synced.
 
 ### `load_snooping_info` { #load_snooping_info }
 
-Enables loading the **DHCP Snooping** table in ONU information. Disabled by default: on some
-models bindings are matched to ONUs through the FDB table, which can noticeably slow down
-opening the ONU card.
+Enables **automatic** loading of the [DHCP Snooping](../system/dhcp-snooping.md) table together with
+the rest of ONU information. Without it the table in the ONU card can be requested with the
+"Get info" button. Disabled by default: on some models bindings are matched to ONUs through the
+FDB table, which can noticeably slow down opening the ONU card.
 
 ```json
 { "load_snooping_info": true }

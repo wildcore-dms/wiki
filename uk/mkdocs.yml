@@ -52,6 +52,7 @@ nav:
      - "Початок роботи": installation-and-updating/getting-started.md
      - "Оновлення": installation-and-updating/update.md
      - "Системні вимоги": installation-and-updating/requirements.md
+     - "Налаштування системи (.env)": installation-and-updating/env-configuration.md
 
   - "Веб-інтерфейс":
       - "Вигляд": web-interface/main.md
@@ -59,6 +60,7 @@ nav:
       - "Огляд Дешборду": web-interface/dashboard-overview.md
       - "Нижня навігація (мобільні)": web-interface/mobile-navigation.md
       - "Об'єкти поруч": web-interface/nearby-objects.md
+      - "Темна тема та підказки": web-interface/theme.md
       - "Огляд Параметрів аккаунту": web-interface/user-settings-overview.md
       - "Використання проксі": web-interface/use-proxy.md
       - "Генерація API ключа": web-interface/api-key-generation.md
@@ -86,7 +88,11 @@ nav:
       - "Опис": cli/index.md
       - "Імпорт пристроїв": cli/import-devices.md
 
-  - "Робота з облананням": system/working-with-hardware.md
+  - "Робота з обладнанням":
+      - "Загальне": system/working-with-hardware.md
+      - "DHCP Snooping": system/dhcp-snooping.md
+      - "Чорний список ONU": system/onu-blacklist.md
+      - "Історія рівнів сигналу ONU": system/onu-signal-history.md
 
   - "Опитувач обладнанная": system/poller.md
 

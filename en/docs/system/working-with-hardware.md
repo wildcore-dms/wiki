@@ -1,63 +1,89 @@
 # Working with hardware
 
-## Interaction with hardware
-The wildcore system can communicate with the hardware via **snmp version 2c**,
-via **console**(ssh/telnet), as well as via **API** (for RouterOS).
+!!! abstract "Overview"
 
-It is possible to specify ports in hardware access if your network uses non-standard ports
+    How WildcoreDMS connects to hardware, where connection parameters come from, how response
+    caching works and how to get "live" data.
 
-![](../assets/device_access_editing.png)
+## Access methods
 
-## Parameter settings for working with hardware
+WildcoreDMS works with hardware via:
 
-### Polling the hardware
-#### Getting standardized output via switcher-core modules
-Any interaction with the system is performed by calling certain switcher-core modules.
+- **SNMP v1/v2c** — the main data source: port and ONU state, counters, FDB, signal levels;
+- **console (Telnet/SSH)** — data unavailable over SNMP, ONU registration, [macros](../components/macros/getting-started.md), [web console](../components/console.md);
+- **API** — for Mikrotik RouterOS;
+- **ICMP** — checking device availability before accessing it (can be disabled with `SWC_CHECK_ICMP_PING`).
 
-Each vendor and model has its own set of modules.
+What can be retrieved from a specific model depends on its set of modules. The modules of a
+device are shown by:
 
-The list of modules by supported hardware can be obtained via the command
-```shell linenums="1"
-wca switcher-core:modules DEVICE_IP
+```shell
+wca switcher-core:modules <device IP>
 ```
 
-#### Displaying information in the web interface
-The system aims to display "live" information from the hardware.
+Full list of models and capabilities — [Supported hardware](../supported-hardware.md).
 
-But, considering that an acceptable page loading speed is also required, we made a compromise in the form of response caching.
+## Connection parameters: where they come from { #connection-levels }
 
-To view which information was received from the system cache and which from the hardware, expand the "Meta info" (Status-info) block on the hardware page with interfaces or on the ONU page.
-![](../assets/meta_info_loading.png)
+Credentials and connection parameters are set on several levels. Each next level overrides the
+previous one:
 
-The screenshot above shows the name of the module, as well as the source from which the data was received:
+```
+system (.env / web) → access → model → device
+```
 
-* `from cache (DATE)`: data received from the cache, and DATE indicates when this data was cached.
-* `Online`: data received from the hardware.
+| Level | Where | What can be set |
+|-------|-------|-----------------|
+| **System** | `Configuration > System configuration` → "Working with devices", or `.env` — see [System configuration (.env)](../installation-and-updating/env-configuration.md#swc) | Defaults for all devices |
+| **Access** | [`Device management > Accesses`](../management/device-access.md) | Communities, login/password, console type, ports, timeouts, SNMP version |
+| **Model** | [Model additional parameters](../management/custom-parameters.md#sw_core_connection) | Credentials (`access`) and connection parameters (`sw_core_connection`) |
+| **Device** | [Device additional parameters](../management/custom-parameters.md#sw_core_connection) | Same as for the model — for a single device |
 
-If you need to get "live" data - click the "Reload info" button (refreshing the page may take some time, usually around 15-30 seconds).
+Not every parameter is available on every level:
 
-It is also worth mentioning that some of the data could be displayed in Prometheus (for example, signal levels) and the "Reload info" button will not update this information.
+| Parameter | System (web / `.env`) | Access (web) | Model / device (JSON) |
+|-----------|:---------------------:|:------------:|:---------------------:|
+| Console type (Telnet/SSH) | ✓ | ✓ | ✓ |
+| Console port | ✓ | ✓ | ✓ |
+| Console timeout | ✓ | ✓ | ✓ |
+| Console data wait | ✓ | — | ✓ |
+| SNMP version | ✓ | ✓ | ✓ |
+| SNMP port | ✓ | ✓ | ✓ |
+| SNMP timeout and retries | ✓ | ✓ | ✓ |
+| Mikrotik API port | ✓ | — | ✓ |
+| Communities, login, password | — | ✓ | ✓ |
+| Simultaneous requests to hardware | `.env` only | — | — |
+| Response cache lifetime | `.env` only | — | — |
+
+## Cache and "live" data
+
+WildcoreDMS aims to show up-to-date hardware data, but to keep pages fast, hardware responses
+are **cached**. Cached data is considered fresh for the time set by
+`SWC_CACHE_ACTUALIZE_TIMEOUT_SEC`; after that it is requested from the hardware again.
+
+On a device, port or ONU page the **"Device calling"** block shows where each kind of data came from:
+
+- **from cache (time)** — cached data and when it was received;
+- **Online** — data just received from the hardware.
+
+To get fresh data click **"Refresh"** on the page — the request to the hardware may take 15–30
+seconds, and longer for large OLTs.
 
 !!! info
-    For more details about which data from which hardware is taken from Prometheus, see the description of the components by the type of hardware you're interested in.
+    Some data (charts, signal level history, analytics) comes from polling history rather than
+    directly from the hardware, so the "Refresh" button doesn't change it. History is updated by
+    the [poller](./poller.md) on schedule.
 
-## Global settings
-![](../assets/switcher_core_config.png)
+## Tuning a specific model or device
 
-## Additional settings
-### Model/Device parameters
+Behavior for specific hardware is changed with model or device **additional parameters**:
+local PON port descriptions, the data set for the ONU list and card, Huawei serial number
+format, automatic cable diagnostics, etc. — see
+[Model and device custom parameters](../management/custom-parameters.md).
 
-!!! tip
-    Full list of parameters — [Model and device custom parameters](../management/custom-parameters.md).
+## Hardware features
 
-#### Local PON description
-Add the following parameter in the **Additional parameters** tab of a model or a device to disable the saving of PON port description synchronization and be able to set it up locally.
-
-`"disable_save_description_on_physical_ifaces": true`
-
-![](../assets/device_management_additional_parameters.png)
-
-![](../assets/device_management_additional_parameters_test.png)
-
-!!! info
-    Please note that to manually type the parameter in the field you have to change **Tree** display type to **Code** in the center of the toolbar of the parameters' tab.
+- [DHCP Snooping](./dhcp-snooping.md) — MAC/IP/VLAN bindings on switches and OLTs;
+- [ONU blacklist](./onu-blacklist.md);
+- [ONU signal level history](./onu-signal-history.md);
+- [Hardware Poller](./poller.md) — background data collection.

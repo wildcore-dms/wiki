@@ -42,7 +42,7 @@
 | [`access`](#access) | модель, пристрій | усі | Власні облікові дані замість доступу |
 | [`sw_core_connection`](#sw_core_connection) | модель, пристрій | усі | Порти, протокол консолі, тайм-аути, версія SNMP |
 | [`disable_save_description_on_physical_ifaces`](#disable_save_description_on_physical_ifaces) | модель, пристрій | OLT | Локальні описи PON-портів |
-| [`load_snooping_info`](#load_snooping_info) | модель, пристрій | OLT | Завантажувати DHCP Snooping в інформації про ONU |
+| [`load_snooping_info`](#load_snooping_info) | модель, пристрій | OLT | Автоматично завантажувати DHCP Snooping в картці ONU |
 | [`modules_loading`](#modules_loading) | модель, пристрій | OLT | Які дані завантажувати у списку ONU та картці ONU |
 | [`show_optical_info_from_history`](#show_optical_info_from_history) | модель | OLT | Рівні сигналу у списку ONU з історії, а не з обладнання |
 | [`optical_load_only`](#optical_load_only) | модель | OLT | Які оптичні показники запитувати у списку ONU |
@@ -76,8 +76,11 @@
 
 ### `sw_core_connection` { #sw_core_connection }
 
-Параметри підключення до обладнання. Ті самі значення можна задати в
-[доступі](./device-access.md#connection) через інтерфейс, а тут — для моделі або окремого пристрою.
+Параметри підключення до обладнання для моделі або окремого пристрою. Системні значення за
+замовчуванням задаються в [Конфігурації системи або `.env`](../installation-and-updating/env-configuration.md#swc),
+більшість із них — також у [доступі](./device-access.md#connection). Ключі `console_wait_byte_sec`
+та `mikrotik_api_port` у формі доступу відсутні — для окремого обладнання їх можна задати лише тут.
+Зведена таблиця рівнів — [Робота з обладнанням](../system/working-with-hardware.md#connection-levels).
 
 ```json
 {
@@ -124,9 +127,10 @@
 
 ### `load_snooping_info` { #load_snooping_info }
 
-Вмикає завантаження таблиці **DHCP Snooping** в інформації про ONU. За замовчуванням вимкнено:
-на частині моделей прив'язки до ONU визначаються через таблицю FDB, і це може помітно
-сповільнювати відкриття картки ONU.
+Вмикає **автоматичне** завантаження таблиці [DHCP Snooping](../system/dhcp-snooping.md) разом з
+іншою інформацією про ONU. Без параметра таблицю в картці ONU можна запросити кнопкою
+«Отримати інформацію». За замовчуванням вимкнено: на частині моделей прив'язки до ONU
+визначаються через таблицю FDB, і це може помітно сповільнювати відкриття картки ONU.
 
 ```json
 { "load_snooping_info": true }
