@@ -67,7 +67,8 @@ sudo wca user:generate-key billing 365d
 | `wca device:update` | Edit a device (interactive) |
 | `wca device:delete <id>` | Delete a device by ID |
 | `wca device:delete-in-group <group_id>` | Delete **all devices** of a group |
-| `wca device:import <file.csv> [-g <group_id>] [-s <separator>]` | Import devices from CSV — see [Import devices](./import-devices.md) |
+| `wca device:import [file] [-g <group_id>] [-s <separator>]` | Import devices from a CSV file or standard input (`|`) — see [Import and export](./import-devices.md) |
+| `wca device:export [-f <file>] [-g <group_id>] [--include-disabled]` | Export devices into CSV of the same format — see [Import and export](./import-devices.md#export) |
 | `wca device-access:list` | List [accesses](../management/device-access.md) |
 | `wca device-access:add` | Create an access (interactive) |
 | `wca device-access:edit <id>` | Edit an access |

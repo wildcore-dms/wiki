@@ -1,58 +1,99 @@
-## Що таке компоненти?
-Компоненти — це спеціальні плагіни для wildcoreDMS, які дозволяють розширити базовий функціонал системи.
-Компоненти можна підключати та відключати до системи залежно від потреби (на момент бета-тестування ви отримуєте доступ до всіх компонентів).
+# Про компоненти
 
-## Яку функціональність надають компоненти
-Є компоненти, які розширюють підтримуване обладнання (наприклад, C-Data або BDcom OLT).
-Також є компоненти, які реалізують роботу з Prometheus, що дозволяє будувати графіки або отримувати з нього поточні метрики.
-Або за допомогою компонента «Сповіщення» ви можете налаштувати надсилання подій або дій користувача в Telegram або Email.
-Повний список компонентів можна переглянути на наступних вкладках.
+!!! abstract "Огляд"
 
-## Керування компонентами (через консоль)
-**Список підтримуваних компонентів - `wca component:list`**
-```{ .shell .no-copy}
-$ wca component:list     
-+--------------------------+------------------------------------------------------------------+---------+-----------+---------------+----------------+     
-| Key                      | Description                                                      | Enabled | Installed | Has installer | Has controller |     
-+--------------------------+------------------------------------------------------------------+---------+-----------+---------------+----------------+     
-| all_ok_billing           | Integration with AllOkBilling system                             | No      | Yes       | Yes           | Yes            |     
-| analytics                | View live and historical device data                             | Yes     | Yes       | Yes           | Yes            |     
-| autodiscovery            | Scan networks and automatic add devices                          | Yes     | Yes       | Yes           | Yes            |     
-| diagnostic               | Rest API interfaces for network diag                             | Yes     | Yes       | Yes           | Yes            |     
-| events                   | Realize events functional                                        | Yes     | Yes       | Yes           | Yes            |     
-| fdb_history              | Realize API for working with history DFB                         | Yes     | Yes       | Yes           | No             |     
-| huawei_onts_registration | ONTs registration for Huawei OLTs                                | Yes     | Yes       | Yes           | Yes            |     
-| links                    | Allow to build dependecies tree                                  | Yes     | Yes       | Yes           | Yes            |     
-| live_traffic             | Rest API interfaces for search devices over IP or MAC-address    | Yes     | Yes       | Yes           | Yes            |     
-| notifications            | Sending notifications over Telegram/Email                        | Yes     | Yes       | Yes           | Yes            |     
-| olts                     | Working with OLTs                                                | Yes     | Yes       | Yes           | Yes            |     
-| olts_control             | ONU management component (change description, overwrite, delete) | Yes     | Yes       | Yes           | Yes            |     
-| pinger                   | ICMP pinger                                                      | Yes     | Yes       | Yes           | Yes            |     
-| pon_boxes                | Allow to create pon maps                                         | Yes     | Yes       | Yes           | Yes            |     
-| prometheus_wrapper       | Prometheus integration(Working with Prometheus API)              | Yes     | Yes       | Yes           | Yes            |     
-| router_os                | Working with routerOS                                            | Yes     | Yes       | Yes           | Yes            |     
-| search_device            | Rest API interfaces for search devices over IP or MAC-address    | Yes     | Yes       | Yes           | Yes            |     
-| switches                 | Component for get info from L2 switches                          | Yes     | Yes       | Yes           | Yes            |     
-| switches_control         | Component for management ports on L2 switches                    | Yes     | Yes       | Yes           | Yes            |     
-| zte_unregistered_onts    | ONTs registration on ZTE OLTs                                    | Yes     | Yes       | Yes           | Yes            |     
-+--------------------------+------------------------------------------------------------------+---------+-----------+---------------+----------------+     
-```     
-**Керування компонентами**
+    Функціонал WildcoreDMS складається з **компонентів** — модулів, які можна вмикати та вимикати
+    залежно від потреб. Компонент додає сторінки та кнопки у веб-інтерфейсі, права для ролей,
+    фонові задачі, консольні команди та методи API. Якщо компонент вимкнено — відповідних
+    сторінок, вкладок і кнопок в інтерфейсі немає.
 
-* `wca component:control COMPONENT_NAME install` - встановити компонент
-* `wca component:control COMPONENT_NAME enable` - увімкнути встановлений компонент
-* `wca component:control COMPONENT_NAME disable` - відключити встановлений компонент
+## Який компонент який функціонал дає
 
+### Робота з обладнанням
 
-## Компоненти всередині системи можуть
-* Розширте можливості Rest API (додайте власні кінцеві точки)
-* Слухати та реагувати на події в системі (спостерігачі подій)
-* Розгорнути список консольних команд (команда `wca`)
-* Розширте список правил для ролей користувачів
-* Взаємодія як з системою, так і з іншими компонентами
-* Виконувати міграції (змінювати структуру бази даних)
-* Керуйте командами в планувальнику
+| Компонент | Ключ | Що дає |
+|-----------|------|--------|
+| [OLT](./olts.md) | `olts` | Сторінка OLT: дерево ONU, фізичні та PON-порти, сторінка ONU, DHCP Snooping, чорний список ONU, фонове опитування OLT |
+| [Керування OLT](./olts_control.md) | `olts_control` | Дії з ONU (перезавантаження, вимкнення, видалення, скидання, опис), керування UNI- та фізичними портами |
+| [Комутатори](./switches.md) | `switches` | Сторінка комутатора: порти, VLAN, помилки, FDB, діагностика кабелю та SFP, сторінка порту |
+| [Керування комутаторами](./switches_control.md) | `switches_control` | Перезавантаження, збереження конфігурації, очищення лічильників, стан/швидкість/опис порту, VLAN на портах |
+| [Маршрутизатори](./routers.md) | `routers` | L3-обладнання: ARP, FDB, прямі маршрути |
+| [Mikrotik RouterOS](./router_os.md) | `router_os` | Маршрутизатори Mikrotik через API: інтерфейси, DHCP, ARP, черги, BGP |
+| [Датчики](./sensors.md) | `sensor_devices` | Пристрої моніторингу (датчики) та керування їх режимами |
+| [Пінгер](./pinger.md) | `pinger` | Контроль доступності по ICMP, ICMP-пристрої, відсоток доступності, журнал падінь |
+| [Графіки](./prometheus_wrapper.md) | `prometheus_wrapper` | Графіки трафіку, помилок, сигналу, CPU/RAM з історії |
+| [Трафік у реальному часі](./live_traffic.md) | `live_traffic` | Графік трафіку порту/ONU онлайн |
+| [Історія FDB](./fdb_history.md) | `fdb_history` | Історія MAC-адрес на портах та ONU |
+| [Веб-консоль](./console.md) | `console` | Термінал до обладнання в браузері з автовходом і журналом сесій |
+| [Макроси](./macros/getting-started.md) | `macros` | Власні сценарії консольних команд з параметрами |
+| [Реєстрація ONU](./onts-registration/getting-started.md) | `onts_registration` | Незареєстровані ONU та реєстрація за шаблоном |
+| [Бекапи конфігурації](./oxidized.md) | `oxidized` | Резервне копіювання конфігурацій обладнання з історією змін |
+| SNMP-трапи | `trapservice` | Прийом SNMP-трапів — миттєва реакція на зміну стану порту/ONU |
 
+### Мережа та топологія
 
+| Компонент | Ключ | Що дає |
+|-----------|------|--------|
+| [З'єднання](./links/describe.md) | `links` | Зв'язки між пристроями, топологія (дерево, граф), траси на карті |
+| [Автотопологія](./links/autotopology.md) | `auto_topology` | Автоматична побудова з'єднань за LLDP/FDB |
+| [Autodiscovery](./autodiscovery.md) | `autodiscovery` | Пошук нових пристроїв у мережі та автоматичне додавання |
 
+### Події, аналітика, сповіщення
 
+| Компонент | Ключ | Що дає |
+|-----------|------|--------|
+| [Події](./events.md) | `events` | Генерація подій за правилами (падіння пристрою/порту, помилки, сигнал) |
+| [Сповіщення](./notifications.md) | `notifications` | Надсилання подій та дій в Telegram і Email |
+| Аналітика | `analytics` | Звіти по мережі: статуси, сигнали, дублікати MAC/ONU, ріст помилок — див. [Функціонал](../features/main.md#analytics) |
+
+### Інтеграції та API
+
+| Компонент | Ключ | Що дає |
+|-----------|------|--------|
+| [MikBill](./mikbill_integration.md) | `mikbill_integration` | Синхронізація абонентів, дані білінгу на сторінці порту/ONU |
+| [NoDeny Plus](./nodeny_plus.md) | `nodeny_plus` | Інтеграція з білінгом NoDeny Plus |
+| [Userside](./us_integration.md) | `userside_integration` | Синхронізація пристроїв і координат з Userside |
+| [Діагностика](./diagnostic.md) | `diagnostic` | API діагностики абонента для білінгів (JSON/HTML-картка), ARP-пінг |
+| [Пошук пристроїв](./search_device.md) | `search_device` | API пошуку абонента за MAC/IP (FDB, ARP) |
+
+### Інструменти
+
+| Компонент | Ключ | Що дає |
+|-----------|------|--------|
+| [Вкладення](./attachments.md) | `attachments` | Фото та документи до пристроїв, портів, ONU |
+| [Генератор QR-кодів](./qr-code-generator.md) | `qr-generator` | QR-наліпки з посиланням на сторінку об'єкта |
+
+!!! info "Залежності"
+    Компоненти керування (`olts_control`, `switches_control`) працюють лише разом з базовими
+    (`olts`, `switches`). Список залежностей — `wca component:dependencies`.
+
+## Керування компонентами
+
+### У веб-інтерфейсі
+
+`Конфігурація > Конфігурація системи` → вкладка **«Компоненти»**: список компонентів зі станом,
+кнопки встановлення, увімкнення та вимкнення. Там же — налаштування компонентів
+(див. [Налаштування системи](../installation-and-updating/env-configuration.md#web)).
+
+### У консолі
+
+```shell
+sudo wca component:list                               # список компонентів та їх стан
+sudo wca component:control <ключ> install             # встановити
+sudo wca component:control <ключ> enable              # увімкнути
+sudo wca component:control <ключ> disable             # вимкнути
+sudo wca component:dependencies                       # залежності
+```
+
+!!! note
+    Компоненти інтеграцій зі сторонніми системами за замовчуванням вимкнені — увімкніть потрібні
+    після налаштування параметрів підключення.
+
+## Що може компонент
+
+- додавати сторінки, вкладки, картки та кнопки у веб-інтерфейсі;
+- додавати права для [ролей](../management/roles.md);
+- додавати методи [API](../api/index.md);
+- додавати [консольні команди](../cli/index.md) (з префіксом ключа компонента, напр. `olts:`);
+- додавати фонові задачі в планувальник та обробники подій системи;
+- мати власні параметри в [Налаштуваннях системи](../installation-and-updating/env-configuration.md).

@@ -86,15 +86,20 @@ nav:
 
   - "Консоль":
       - "Команди (wca)": cli/index.md
-      - "Імпорт пристроїв": cli/import-devices.md
+      - "Імпорт та експорт пристроїв": cli/import-devices.md
 
   - "Робота з обладнанням":
       - "Загальне": system/working-with-hardware.md
+      - "Список пристроїв і сторінка пристрою": system/device-page.md
+      - "OLT": system/olt.md
+      - "ONU": system/onu.md
+      - "Комутатори та L3": system/switches.md
+      - "Mikrotik RouterOS": system/routeros.md
+      - "ICMP-пристрої та Пінгер": system/icmp-devices.md
       - "DHCP Snooping": system/dhcp-snooping.md
       - "Чорний список ONU": system/onu-blacklist.md
       - "Історія рівнів сигналу ONU": system/onu-signal-history.md
-
-  - "Опитувач обладнанная": system/poller.md
+      - "Опитувач обладнання": system/poller.md
 
   - "Про компоненти": components/index.md
   - "Компоненти":
@@ -105,25 +110,35 @@ nav:
       - "Веб-Консоль": components/console.md
       - "Вкладення": components/attachments.md
       - "Генератор QR кодів": components/qr-code-generator.md
+      - "Графіки (prometheus_wrapper)": components/prometheus_wrapper.md
+      - "Діагностика (API)": components/diagnostic.md
       - "З'єднання":
         - "Опис": components/links/describe.md
         - "Автоматична топологія": components/links/autotopology.md
         - "Навантаження з'єднань": components/links/utilization.md
       - "Інтеграція Userside": components/us_integration.md
+      - "Історія FDB": components/fdb_history.md
+      - "Комутатори": components/switches.md
+      - "Керування комутаторами": components/switches_control.md
       - "Макроси":
         - "З чого почати": components/macros/getting-started.md
         - "Опції типів параметрів": components/macros/parameter_type_options.md
         - "Спеціальні команди Шаблонів": components/macros/special-commands.md
         - "Приклади шаблонів Twig": components/macros/twig-examples.md
+      - "Маршрутизатори (L3)": components/routers.md
+      - "Mikrotik RouterOS": components/router_os.md
       - "ОЛТи": components/olts.md
+      - "Управління ОЛТ": components/olts_control.md
+      - "Пінгер": components/pinger.md
       - "Події": components/events.md
+      - "Пошук пристроїв (API)": components/search_device.md
       - "Пристрої моніторингу": components/sensors.md
       - "Реєстрація ОНУ":
         - "Початок роботи": components/onts-registration/getting-started.md
         - "Створення макроса шаблону рєєстрації": components/onts-registration/registration-macro.md
         - "Рєєстрація ОНУ на сторінці пристрою" : components/onts-registration/registration-device.md
       - "Сповіщення": components/notifications.md
-      - "Управління ОЛТ": components/olts_control.md
+      - "Трафік у реальному часі": components/live_traffic.md
 
   - "АПІ":
       - "З чого почати": api/index.md

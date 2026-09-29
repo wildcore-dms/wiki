@@ -6,6 +6,9 @@
     by serial number or MAC address that can't register on the OLT. This helps understand why a new
     ONU "isn't visible" or doesn't register.
 
+!!! info "Component"
+    [OLTs](../components/olts.md) (`olts`).
+
 ## Where to view
 
 ### Tab on the OLT page
@@ -38,8 +41,8 @@ current data from the hardware.
 
 | Vendor | Models | Identifier |
 |--------|--------|------------|
-| **C-Data** | EPON OLTs | MAC address |
-| **C-Data** | FD16xxV3 (GPON) | Serial number |
+| **C-Data** (EPON) | FD1204SN, FD1208S, FD1216S-R1 | MAC address |
+| **C-Data** (GPON) | FD1601, FD1604, FD1608, FD1616 (FW 3) | Serial number |
 
 ## Permissions
 

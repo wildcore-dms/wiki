@@ -67,7 +67,8 @@ sudo wca user:generate-key billing 365d
 | `wca device:update` | Змінити пристрій (інтерактивно) |
 | `wca device:delete <id>` | Видалити пристрій за ID |
 | `wca device:delete-in-group <group_id>` | Видалити **всі пристрої** групи |
-| `wca device:import <файл.csv> [-g <group_id>] [-s <роздільник>]` | Імпорт пристроїв з CSV — див. [Імпорт пристроїв](./import-devices.md) |
+| `wca device:import [файл] [-g <group_id>] [-s <роздільник>]` | Імпорт пристроїв з CSV-файлу або стандартного вводу (`|`) — див. [Імпорт та експорт](./import-devices.md) |
+| `wca device:export [-f <файл>] [-g <group_id>] [--include-disabled]` | Експорт пристроїв у CSV того ж формату — див. [Імпорт та експорт](./import-devices.md#export) |
 | `wca device-access:list` | Список [доступів](../management/device-access.md) |
 | `wca device-access:add` | Створити доступ (інтерактивно) |
 | `wca device-access:edit <id>` | Змінити доступ |

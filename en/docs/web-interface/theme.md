@@ -30,7 +30,7 @@ The switch is available in the mobile layout too.
 
 ![Dashboard in the dark theme](../assets/features/dark-dashboard.png)
 
-## Field hints
+## Field hints { #hints }
 
 Next to card and field names on device, OLT and ONU pages there is a **"?"** icon. Hover over it
 (tap on a phone) to see an explanation: what the value means, its units and where it comes from.

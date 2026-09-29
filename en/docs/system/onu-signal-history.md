@@ -6,6 +6,9 @@
     level of every ONU and the time of the last change. This shows whether the signal "floats" even
     if it's fine at the moment of viewing — e.g. because of a bad connector or a bent cable.
 
+!!! info "Components"
+    Collection — [OLTs](../components/olts.md) (`olts`) and the poller; charts — [Charts](../components/prometheus_wrapper.md).
+
 ## What is stored
 
 For every ONU the system stores:

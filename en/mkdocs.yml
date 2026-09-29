@@ -88,15 +88,21 @@ nav:
 
   - "Console":
       - "Commands (wca)": cli/index.md
-      - "Import devices": cli/import-devices.md
+      - "Import and export devices": cli/import-devices.md
 
   - "Working with hardware":
     - "General": system/working-with-hardware.md
+    - "Device list and device page": system/device-page.md
+    - "OLT": system/olt.md
+    - "ONU": system/onu.md
+    - "Switches and L3": system/switches.md
+    - "Mikrotik RouterOS": system/routeros.md
+    - "ICMP devices and Pinger": system/icmp-devices.md
     - "DHCP Snooping": system/dhcp-snooping.md
     - "ONU blacklist": system/onu-blacklist.md
     - "ONU signal level history": system/onu-signal-history.md
+    - "Hardware Poller": system/poller.md
 
-  - "Hardware Poller": system/poller.md
 
   - "About components": components/index.md
 
@@ -105,17 +111,22 @@ nav:
     - "Autodiscovery": components/autodiscovery.md
     - "Billing MikBill": components/mikbill_integration.md
     - "Billing NoDeny Plus": components/nodeny_plus.md
+    - "Charts (prometheus_wrapper)": components/prometheus_wrapper.md
     - "Config backups": components/oxidized.md
+    - "Diagnostic (API)": components/diagnostic.md
     - "Events": components/events.md
+    - "FDB history": components/fdb_history.md
     - "Links":
         - "Basic": components/links/describe.md
         - "Autotopology": components/links/autotopology.md
         - "Link utilization": components/links/utilization.md
+    - "Live traffic": components/live_traffic.md
     - "Macros":
       - "Getting started": components/macros/getting-started.md
       - "Parameter type options": components/macros/parameter_type_options.md
       - "Special Template commands": components/macros/special-commands.md
       - "Twig template examples": components/macros/twig-examples.md
+    - "Mikrotik RouterOS": components/router_os.md
     - "Notifications": components/notifications.md
     - "OLTs": components/olts.md
     - "OLTs control": components/olts_control.md
@@ -123,8 +134,13 @@ nav:
       - "Getting started": components/onts-registration/getting-started.md
       - "Registration template macro creation": components/onts-registration/registration-macro.md
       - "ONT registration on the Device page" : components/onts-registration/registration-device.md
+    - "Pinger": components/pinger.md
     - "QR code Generator": components/qr-code-generator.md
+    - "Routers (L3)": components/routers.md
+    - "Search devices (API)": components/search_device.md
     - "Sensors": components/sensors.md
+    - "Switches": components/switches.md
+    - "Switches control": components/switches_control.md
     - "Userside integration": components/us_integration.md
     - "Web console": components/console.md
 

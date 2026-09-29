@@ -1,57 +1,99 @@
-## What are components?
-Components are special plug-ins for wildcoreDMS that allow you to expand the basic functionality of the system.
-Components can be connected and disconnected to the system, depending on the need (at the time of beta testing, you get access to all components).
+# About components
 
-## What functionality the components bring
-There are components that extend the supported hardware (eg C-Data or BDcom OLTs).
-There are also components that implement work with Prometheus, which allows you to build graphs or get current metrics from it.
-Or, using the Notifications component, you can configure sending events or user actions to Telegram or Email.
-A complete list of components can be viewed on the following tabs.
+!!! abstract "Overview"
 
-## Manage components (via console)
-**List of supported components - `wca component:list`**
-```{ .shell .no-copy}
-$ wca component:list
-+--------------------------+------------------------------------------------------------------+---------+-----------+---------------+----------------+
-| Key                      | Description                                                      | Enabled | Installed | Has installer | Has controller |
-+--------------------------+------------------------------------------------------------------+---------+-----------+---------------+----------------+
-| all_ok_billing           | Integration with AllOkBilling system                             | No      | Yes       | Yes           | Yes            |
-| analytics                | View live and historical device data                             | Yes     | Yes       | Yes           | Yes            |
-| autodiscovery            | Scan networks and automatic add devices                          | Yes     | Yes       | Yes           | Yes            |
-| diagnostic               | Rest API interfaces for network diag                             | Yes     | Yes       | Yes           | Yes            |
-| events                   | Realize events functional                                        | Yes     | Yes       | Yes           | Yes            |
-| fdb_history              | Realize API for working with history DFB                         | Yes     | Yes       | Yes           | No             |
-| huawei_onts_registration | ONTs registration for Huawei OLTs                                | Yes     | Yes       | Yes           | Yes            |
-| links                    | Allow to build dependecies tree                                  | Yes     | Yes       | Yes           | Yes            |
-| live_traffic             | Rest API interfaces for search devices over IP or MAC-address    | Yes     | Yes       | Yes           | Yes            |
-| notifications            | Sending notifications over Telegram/Email                        | Yes     | Yes       | Yes           | Yes            |
-| olts                     | Working with OLTs                                                | Yes     | Yes       | Yes           | Yes            |
-| olts_control             | ONU management component (change description, overwrite, delete) | Yes     | Yes       | Yes           | Yes            |
-| pinger                   | ICMP pinger                                                      | Yes     | Yes       | Yes           | Yes            |
-| pon_boxes                | Allow to create pon maps                                         | Yes     | Yes       | Yes           | Yes            |
-| prometheus_wrapper       | Prometheus integration(Working with Prometheus API)              | Yes     | Yes       | Yes           | Yes            |
-| router_os                | Working with routerOS                                            | Yes     | Yes       | Yes           | Yes            |
-| search_device            | Rest API interfaces for search devices over IP or MAC-address    | Yes     | Yes       | Yes           | Yes            |
-| switches                 | Component for get info from L2 switches                          | Yes     | Yes       | Yes           | Yes            |
-| switches_control         | Component for management ports on L2 switches                    | Yes     | Yes       | Yes           | Yes            |
-| zte_unregistered_onts    | ONTs registration on ZTE OLTs                                    | Yes     | Yes       | Yes           | Yes            |
-+--------------------------+------------------------------------------------------------------+---------+-----------+---------------+----------------+
+    WildcoreDMS functionality is made of **components** — modules that can be enabled and disabled
+    as needed. A component adds pages and buttons to the web interface, role permissions, background
+    tasks, console commands and API methods. If a component is disabled, its pages, tabs and buttons
+    are not shown.
+
+## Which component provides which functionality
+
+### Working with hardware
+
+| Component | Key | What it provides |
+|-----------|-----|------------------|
+| [OLTs](./olts.md) | `olts` | OLT page: ONU tree, physical and PON ports, ONU page, DHCP Snooping, ONU blacklist, background OLT polling |
+| [OLTs control](./olts_control.md) | `olts_control` | ONU actions (reboot, disable, delete, reset, description), UNI and physical port control |
+| [Switches](./switches.md) | `switches` | Switch page: ports, VLANs, errors, FDB, cable and SFP diagnostics, port page |
+| [Switches control](./switches_control.md) | `switches_control` | Reboot, save configuration, clear counters, port state/speed/description, VLANs on ports |
+| [Routers](./routers.md) | `routers` | L3 hardware: ARP, FDB, direct routes |
+| [Mikrotik RouterOS](./router_os.md) | `router_os` | Mikrotik routers via API: interfaces, DHCP, ARP, queues, BGP |
+| [Sensors](./sensors.md) | `sensor_devices` | Monitoring devices (sensors) and their mode control |
+| [Pinger](./pinger.md) | `pinger` | ICMP availability monitoring, ICMP devices, availability percentage, outage log |
+| [Charts](./prometheus_wrapper.md) | `prometheus_wrapper` | Traffic, error, signal, CPU/RAM charts from history |
+| [Live traffic](./live_traffic.md) | `live_traffic` | Real-time port/ONU traffic chart |
+| [FDB history](./fdb_history.md) | `fdb_history` | MAC address history on ports and ONUs |
+| [Web console](./console.md) | `console` | Browser terminal to hardware with auto-login and session log |
+| [Macros](./macros/getting-started.md) | `macros` | Custom console command scenarios with parameters |
+| [ONT registration](./onts-registration/getting-started.md) | `onts_registration` | Unregistered ONUs and template-based registration |
+| [Config backups](./oxidized.md) | `oxidized` | Hardware configuration backups with change history |
+| SNMP traps | `trapservice` | Receiving SNMP traps — instant reaction to port/ONU state changes |
+
+### Network and topology
+
+| Component | Key | What it provides |
+|-----------|-----|------------------|
+| [Links](./links/describe.md) | `links` | Links between devices, topology (tree, graph), routes on the map |
+| [Autotopology](./links/autotopology.md) | `auto_topology` | Automatic link building via LLDP/FDB |
+| [Autodiscovery](./autodiscovery.md) | `autodiscovery` | Finding new devices in the network and adding them automatically |
+
+### Events, analytics, notifications
+
+| Component | Key | What it provides |
+|-----------|-----|------------------|
+| [Events](./events.md) | `events` | Rule-based events (device/port down, errors, signal) |
+| [Notifications](./notifications.md) | `notifications` | Sending events and actions to Telegram and Email |
+| Analytics | `analytics` | Network reports: statuses, signals, duplicate MACs/ONUs, growing errors — see [Features](../features/main.md#analytics) |
+
+### Integrations and API
+
+| Component | Key | What it provides |
+|-----------|-----|------------------|
+| [MikBill](./mikbill_integration.md) | `mikbill_integration` | Subscriber sync, billing data on the port/ONU page |
+| [NoDeny Plus](./nodeny_plus.md) | `nodeny_plus` | NoDeny Plus billing integration |
+| [Userside](./us_integration.md) | `userside_integration` | Device and coordinate sync with Userside |
+| [Diagnostic](./diagnostic.md) | `diagnostic` | Subscriber diagnostics API for billing (JSON/HTML card), ARP ping |
+| [Search devices](./search_device.md) | `search_device` | API to find a subscriber by MAC/IP (FDB, ARP) |
+
+### Tools
+
+| Component | Key | What it provides |
+|-----------|-----|------------------|
+| [Attachments](./attachments.md) | `attachments` | Photos and documents for devices, ports, ONUs |
+| [QR code Generator](./qr-code-generator.md) | `qr-generator` | QR labels linking to the object page |
+
+!!! info "Dependencies"
+    Control components (`olts_control`, `switches_control`) work only together with the base ones
+    (`olts`, `switches`). Dependency list — `wca component:dependencies`.
+
+## Managing components
+
+### In the web interface
+
+`Configuration > System configuration` → **"Components"** tab: the component list with state,
+install, enable and disable buttons. Component settings are there too
+(see [System configuration](../installation-and-updating/env-configuration.md#web)).
+
+### In the console
+
+```shell
+sudo wca component:list                               # components and their state
+sudo wca component:control <key> install              # install
+sudo wca component:control <key> enable               # enable
+sudo wca component:control <key> disable              # disable
+sudo wca component:dependencies                       # dependencies
 ```
-**Component Management**
 
-* `wca component:control COMPONENT_NAME install` - install component
-* `wca component:control COMPONENT_NAME enable` - enable installed component
-* `wca component:control COMPONENT_NAME disable` - disable installed component
+!!! note
+    Third-party integration components are disabled by default — enable the ones you need after
+    configuring connection parameters.
 
+## What a component can do
 
-## Components inside the system can
-* Extend Rest API capabilities (add your own endpoints)
-* Listen and respond to events in the system (event observers)
-* Expand the list of console commands (command `wca`)
-* Expand the list of rules for user roles
-* Interact both with the system and with other components
-* Perform migrations (change the structure of the database)
-* Manage commands in the scheduler
-
-
-
+- add pages, tabs, cards and buttons to the web interface;
+- add [role](../management/roles.md) permissions;
+- add [API](../api/index.md) methods;
+- add [console commands](../cli/index.md) (prefixed with the component key, e.g. `olts:`);
+- add scheduler tasks and system event handlers;
+- have its own parameters in [System configuration](../installation-and-updating/env-configuration.md).

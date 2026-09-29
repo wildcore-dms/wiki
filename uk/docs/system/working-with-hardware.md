@@ -82,9 +82,43 @@ WildcoreDMS прагне показувати актуальні дані з о�
 Huawei, автоматична діагностика кабелю тощо — див.
 [Додаткові параметри моделей і пристроїв](../management/custom-parameters.md).
 
-## Функції обладнання
+## Функціонал і компоненти { #components }
 
-- [DHCP Snooping](./dhcp-snooping.md) — прив'язки MAC/IP/VLAN на комутаторах та OLT;
-- [Чорний список ONU](./onu-blacklist.md);
-- [Історія рівнів сигналу ONU](./onu-signal-history.md);
-- [Опитувач обладнання](./poller.md) — фоновий збір даних.
+Можливості роботи з обладнанням надають [компоненти](../components/index.md). Якщо компонент
+вимкнено — відповідних сторінок, вкладок і кнопок немає.
+
+| Функціонал | Компонент |
+|------------|-----------|
+| Сторінка OLT, дерево ONU, сторінка ONU, DHCP Snooping та чорний список на OLT | [OLT](../components/olts.md) `olts` |
+| Дії з ONU та портами OLT | [Керування OLT](../components/olts_control.md) `olts_control` |
+| Реєстрація ONU | [Реєстрація ONU](../components/onts-registration/getting-started.md) `onts_registration` |
+| Сторінка комутатора та порту, діагностика кабелю/SFP, DHCP Snooping на комутаторах | [Комутатори](../components/switches.md) `switches` |
+| Дії з комутатором і портами, VLAN | [Керування комутаторами](../components/switches_control.md) `switches_control` |
+| ARP, FDB, прямі маршрути L3-обладнання | [Маршрутизатори](../components/routers.md) `routers` |
+| Mikrotik RouterOS | [Mikrotik RouterOS](../components/router_os.md) `router_os` |
+| Доступність по ICMP, ICMP-пристрої | [Пінгер](../components/pinger.md) `pinger` |
+| Графіки трафіку, помилок, сигналу, ресурсів | [Графіки](../components/prometheus_wrapper.md) `prometheus_wrapper` |
+| Трафік у реальному часі | [Трафік у реальному часі](../components/live_traffic.md) `live_traffic` |
+| Історія MAC-адрес | [Історія FDB](../components/fdb_history.md) `fdb_history` |
+| Веб-консоль | [Веб-консоль](../components/console.md) `console` |
+| Макроси | [Макроси](../components/macros/getting-started.md) `macros` |
+| Бекапи конфігурації | [Бекапи конфігурації](../components/oxidized.md) `oxidized` |
+| Миттєва реакція на SNMP-трапи | SNMP-трапи `trapservice` |
+| Датчики | [Датчики](../components/sensors.md) `sensor_devices` |
+| API діагностики та пошуку абонента для білінгів | [Діагностика](../components/diagnostic.md) `diagnostic`, [Пошук пристроїв](../components/search_device.md) `search_device` |
+
+## Розділи
+
+| Сторінка | Що описано |
+|----------|------------|
+| [Список пристроїв і сторінка пристрою](./device-page.md) | Пошук пристроїв, ліва панель, загальні вкладки та картки порту/ONU |
+| [Робота з OLT](./olt.md) | Дерево ONT, фізичні інтерфейси, незареєстровані ONU, сторінка PON-порту |
+| [Сторінка ONU](./onu.md) | Статус, сигнал, UNI-порти, FDB, лічильники, дії з ONU |
+| [Комутатори та L3-обладнання](./switches.md) | Порти, VLAN, ARP/FDB/маршрути, сторінка порту, діагностика кабелю та SFP |
+| [Mikrotik RouterOS](./routeros.md) | Інтерфейси, DHCP, ARP, черги, BGP |
+| [ICMP-пристрої та Пінгер](./icmp-devices.md) | Контроль доступності будь-якого вузла |
+| [DHCP Snooping](./dhcp-snooping.md) | Прив'язки MAC/IP/VLAN на комутаторах та OLT |
+| [Чорний список ONU](./onu-blacklist.md) | Заблоковані ONU на OLT |
+| [Історія рівнів сигналу ONU](./onu-signal-history.md) | Мін/макс сигналу, скидання меж |
+| [Опитувач обладнання](./poller.md) | Фоновий збір даних та інтервали |
+| [Датчики](../components/sensors.md) | Пристрої моніторингу (температура, живлення тощо) |

@@ -7,6 +7,9 @@
     on which port/ONU and how long the lease remains. This helps quickly find a subscriber by IP or
     check whether their equipment gets an address.
 
+!!! info "Components"
+    On OLTs — [OLTs](../components/olts.md) (`olts`), on switches — [Switches](../components/switches.md) (`switches`).
+
 ## Where to view
 
 | Place | What is shown |
@@ -43,9 +46,13 @@ device or model.
 
 | Vendor | Models | Notes |
 |--------|--------|-------|
-| **D-Link** | DES-3200, DES-30xx, DES-1228/ME, DGS-3000, DGS-3100, DGS-3120, DGS-3420 | The DHCP relay mode is shown too. The DGS-1100/1210 series is not supported (the hardware doesn't provide this data) |
-| **BDcom** | EPON/GPON OLTs, including P3608B, GP3600 | Data over SNMP, console fallback if the firmware doesn't support it. Precise ONU matching |
-| **C-Data** | FD-EPON, FD11xx, FD16xxV3, FD17xxV3 | ONU matching (by ONU number or via FDB) |
+| **ZTE** | C600, C610 (FW 1.2), C6xx series | Bindings per ONU |
+| **BDcom** | P3310B/C/D, P3608B, P3612-2TE, P3616-2TE, P36xx series, GP3600-04/08/16, GP3600 series | Data over SNMP, console fallback if the firmware doesn't support it. Precise ONU matching |
+| **C-Data** | FD1104SN, FD1108S, FD1204SN, FD1208S, FD1216S-R1, FD1601/1604/1608/1616 (incl. FW 3), FD1700S (FW 3) | ONU matching (by ONU number or via FDB) |
+| **V-Solution** | V1600D8, V1600D16, V1600 series | |
+| **D-Link** | DES-3200 (10/18/28 — A1 and C1; 26/C1; 28F/C1; 52/C1), DES-3026, DES-3028/3028G, DES-1228/ME, DGS-3000-10TC/20L/26TC, DGS-3100-24TG, DGS-3120-24SC/A2, DGS-3420-26SC/28SC | The DHCP relay mode is shown too. DGS-1100/1210 (ME), DES-3526 and DES-3200-26/A1 are not supported |
+| **Raisecom** | ISCOM, ISCOM 2600 | |
+| **Alcatel** | Alcatel switches | |
 
 ## Permissions
 

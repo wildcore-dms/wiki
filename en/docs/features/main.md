@@ -88,7 +88,7 @@ Polling intervals are configured per model, device and individual port —
   only notifications about hardware available to them.
 - Integration with Prometheus/Alertmanager and Grafana.
 
-## Analytics and data history
+## Analytics and data history { #analytics }
 
 The **"Analytics"** section — network-wide reports with filters, charts and Excel export:
 
