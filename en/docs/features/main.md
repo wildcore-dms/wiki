@@ -1,102 +1,151 @@
-# Core Functions
+# Main features
 
+!!! abstract "Overview"
 
-### Real-time Equipment Operation
-This method of obtaining information is best suited for accurate and fast equipment diagnostics.
+    WildcoreDMS is a network hardware monitoring and management system for internet service
+    providers: OLTs (GPON/EPON), switches, routers and sensors in one web interface, with metric
+    history, events, notifications and tools for support staff and installers.
 
-#### Displaying Equipment Information and Status
-With the system, you can obtain real-time information about the equipment.
+## Supported hardware
 
-- **For OLT**
-    - Availability via SNMP and ICMP
-    - CPU/RAM/Temperature
-    - Port list
-    - MAC/SN of ONUs
-    - ONU status
-    - FDB table
-    - Signal levels
-    - List and status of Ethernet ports on ONUs
-    - Causes of downtime
-    - Traffic
-    - Errors
+More than 150 models from over 20 vendors, including:
+
+- **OLTs:** Huawei MA56xx/MA58xx (GPON/EPON), ZTE C3xx/C6xx, BDcom P3xxx/GP3600, C-Data FD11xx/FD12xx/FD16xx/FD17xx, V-Solution, GCOM;
+- **Switches:** D-Link, Edge-core, Huawei, Cisco, Juniper, HP/HPE, Dell, Eltex, Raisecom, TP-Link, Mikrotik (RouterOS/SwOS), Arista, Alcatel, Allied Telesis, Extreme and others;
+- **Routers:** Mikrotik RouterOS;
+- **Other:** ICMP devices (ping any host), sensors/monitoring devices.
+
+Full list with each model's capabilities — [Supported hardware](../supported-hardware.md).
+Hardware is accessed via **SNMP v1/v2c**, **console (Telnet/SSH)** and **API** (RouterOS).
+
+!!! info
+    Functionality may vary depending on the hardware type, vendor and model.
+
+## Hardware information and state
+
+Data is available both in real time and from polling history.
+
+- **OLTs**
+    - SNMP and ICMP availability, CPU/RAM/temperature, uptime;
+    - PON ports, ONU tree, PON port load, SFP modules;
+    - ONUs: status (Online/Offline/LOS/PowerOff), serial number/MAC, RX/TX/OLT-RX signal levels,
+      distance, temperature, disconnect reasons and history, vendor and firmware;
+    - ONU Ethernet ports and their VLANs, ONU IP address, MAC table behind the ONU;
+    - **signal level history** with min/max and deviation from the current value;
+    - **DHCP Snooping** and **ONU blacklist**;
+    - traffic and errors on physical ports and ONUs;
+    - link aggregation (LACP) and per-port VLANs (ZTE C600).
 
 ![](../assets/olts.webp)
 
-
-- **For Switch**
-    - Availability via SNMP and ICMP
-    - CPU/RAM/Temperature
-    - Port status
-    - Errors
-    - Traffic
-    - FDB table
-    - Cable diagnostics (DDM SFP module)
+- **Switches**
+    - availability, CPU/RAM/temperature;
+    - port state, speed, description, VLANs, errors, traffic, state change history;
+    - FDB table and **FDB history** (where and when a MAC address was seen);
+    - SFP modules and optical levels (DDM), cable diagnostics;
+    - LLDP neighbors;
+    - ARP and routes on L3 hardware, DHCP Snooping.
 
 ![](../assets/switches.webp)
 
+- **Mikrotik RouterOS** — interfaces, ARP, DHCP servers and leases, address lists, simple queues, BGP sessions.
 
-#### Equipment Management
-The system has certain hardware control elements, such as: rebooting the ONU, removing the ONU, changing port/ONU descriptions, and managing ports (turning on/off).    
-Additionally, it allows for expanding control independently through the use of [macros](../components/macros/getting-started.md).
+Every value shows where it came from — the cache (with a date) or directly from the hardware;
+the **"Refresh info"** button requests fresh data.
+See [Working with hardware](../system/working-with-hardware.md).
 
-!!! info
-    Functionality may vary depending on the type of equipment, manufacturer, and model
+## Hardware management
 
-### Adapted for Mobile Devices and Tablets
-The web interface of the system is built on the basis of [SPA](https://en.wikipedia.org/wiki/Single-page_application).    
-The interface operates without page reload, representing a full-fledged web application.    
-Thus, even with "slow" internet speed, the user can use the system.    
+- **ONUs:** reboot, reset, delete (deregister), enable/disable, clear counters, change description,
+  manage UNI ports;
+- **Switch ports:** enable/disable, speed, description, VLANs on ports, clear counters;
+- **Device:** reboot, save configuration;
+- **[ONU registration](../components/onts-registration/getting-started.md)** via a simple form:
+  unregistered ONUs are shown on the dashboard and on the OLT page, free ONU numbers are suggested.
+  Works on Huawei, ZTE, BDcom, C-Data and others — the registration template is tailored to your network;
+- **[Macros](../components/macros/getting-started.md)** — your own console command scenarios with
+  parameters, conditions and confirmations for any action not available out of the box;
+- **[Web console](../components/console.md)** — a terminal to the hardware right in the browser,
+  with auto-login and a session log.
 
-!!! tip
-    The system allows for operation as a Progressive Web Application (PWA).    
-    For it to work, the system requires operating through HTTPS.   
-    Here you can find installation instructions for applications [support.google.com](https://support.google.com/chrome/answer/9658361?hl=en&co=GENIE.Platform%3DiOS).   
+All actions are recorded in the action log.
 
+## Background data collection
 
-### Events and Notifications
-The use of [Prometheus](https://prometheus.io/) and [PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/) queries gives the flexibility to configure event generation. Out of the box, event generation is configured for device or interface failure, error growth, and poor signal.
+Pollers collect port and ONU state, signal levels, FDB, traffic, errors, device resources, etc.
+in the background. The data is used for interface history, charts, analytics and events.
+Polling intervals are configured per model, device and individual port —
+[Hardware Poller](../system/poller.md). The system also receives **SNMP traps**
+(link and ONU state changes) for an instant reaction.
 
-Notifications can be configured via Email or Telegram. The system's notification feature ensures that a specific user receives only the notifications they need. For example, in case of equipment failure, notifications are received only by users with access to that equipment.
+## Events and notifications
 
+- Events are generated by rules based on [Prometheus](https://prometheus.io/) and
+  [PromQL](https://prometheus.io/docs/prometheus/latest/querying/basics/). Out of the box:
+  device or port failure, growing errors, bad ONU signal. Rules can be changed and your own added —
+  [Events](../components/events.md).
+- [Notifications](../components/notifications.md) — **Email** and **Telegram**. Each user receives
+  only notifications about hardware available to them.
+- Integration with Prometheus/Alertmanager and Grafana.
 
-### Registration of new ONUs
-The system includes a component for ONU registration, allowing registration by filling out a simple form.      
-Unregistered (new) ONUs are displayed in a widget on the main page and in the device dashboard.
+## Analytics
 
-!!! tip 
-    Learn more about [ONU registration](../components/onts-registration/getting-started.md)
+Network-wide reports with filters and Excel export: device and ONU statuses, ONU signal levels,
+duplicate MAC addresses and ONUs, ports with growing errors, state history.
 
-!!! note
-    Works for Huawei and ZTE OLTs. 
+## Map, topology and links
 
-### Background Information Collection from Equipment
-Background pollers collect information about FDB, port/ONU status, errors, traffic, and more.    
-This data is used to obtain interface history, build graphs, and generate notifications.
+- Devices and ONUs on the **map** (Google, OpenStreetMap, OpenTopoMap), links between them with
+  route editing; setting coordinates from the map or phone geolocation.
+- **[Objects nearby](../web-interface/nearby-objects.md)** — devices and ONUs near you or a given
+  point, with a route to them.
+- **[Links](../components/links/describe.md)** between devices,
+  **[autotopology](../components/links/autotopology.md)** via LLDP/FDB, topology as a tree and a graph,
+  [link utilization](../components/links/utilization.md).
 
-### Equipment on map
-Allow set map coordinates and see devices and ONTs on map   
-!!! note Detail on maps
-    ![map](../assets/map.png)
+## Search and diagnostics
 
-### Flexible Access Rights Configuration for Users
-Thanks to advanced access rights and roles configuration, you have the ability to restrict certain functionality for users.   
-For example, you can prohibit a technician from mounting or managing PON ports or restarting equipment.    
-Additionally, equipment is divided into groups, and there is an option to limit visibility of groups and equipment for a specific user.
+- Global search: devices, ports and ONUs by name, IP, description, contract number, ONU serial/MAC,
+  FDB history, and by tags (`#tag`).
+- Subscriber lookup by MAC/IP through ARP/FDB tables, FDB history.
+- Diagnostics: ICMP ping, ARP ping, traceroute, subscriber port diagnostics for billing.
+- Favorite interfaces and tags for quick access to important ports.
 
-### Equipment Configuration Collection
-The system uses a tool called [Oxidized](https://github.com/ytti/oxidized) for configuration collection.     
-You can view the current equipment configuration without accessing it directly and also see the history of changes.    
+## Web interface
 
-!!! tip       
-    If desired, you can store the configuration in Git.
+- Customizable **[dashboard](../web-interface/dashboard-overview.md)** with widgets.
+- **Dark and light themes**, field hints, Ukrainian, English and Russian languages.
+- Adapted for phones and tablets, with **[bottom navigation](../web-interface/mobile-navigation.md)**.
+- Works as an **app (PWA)** — installs on a phone or computer (HTTPS required).
+  [Installation guide](https://support.google.com/chrome/answer/9658361).
+- **[Attachments](../components/attachments.md)** (photos, documents) for devices, ports and ONUs.
+- **[QR codes](../components/qr-code-generator.md)** for hardware labels linking to its page.
 
+## Users and security
 
-### Works in Docker
-We use [Docker](https://en.wikipedia.org/wiki/Docker).     
-Thanks to Docker, you no longer have to install software of specific versions, deal with dependencies, and install necessary libraries.    
-All you need to install the system is to download and run the [wca-tool](../wca-tool/index.md) utility.    
-The utility will install Docker and other necessary software for running.
+- **[Roles and permissions](../management/roles.md)** — detailed permissions for viewing and every
+  action (e.g. an installer can register ONUs but not manage PON ports).
+- **[Device groups](../management/device-groups.md)** — every user sees only their own hardware.
+- **[Single Sign-On](../sso/index.md)** (OpenID Connect): Keycloak, Authentik, Google Workspace,
+  Microsoft Entra ID, Auth0, Authelia — with roles assigned from groups.
+- Two-factor authentication, IP sign-in restrictions, brute-force protection,
+  encryption of hardware credentials.
+- [API keys](../web-interface/api-key-generation.md) with expiration and active session management.
 
+## Integrations and API
 
-!!! tip
-    **[wca-tool](../wca-tool/index.md)** is a specialized utility for installing and updating the system
+- **Billing systems:** [MikBill](../components/mikbill_integration.md), [NoDeny Plus](../components/nodeny_plus.md),
+  [Userside](../components/us_integration.md) — subscriber data next to the port/ONU and diagnostics from billing.
+- **[Config backups](../components/oxidized.md)** with [Oxidized](https://github.com/ytti/oxidized)
+  and change history (optionally stored in Git).
+- **[REST API](../api/index.md)** with full OpenAPI/Swagger documentation and
+  [examples](../api/examples.md) for integrating with your systems.
+- Metrics in Prometheus, access to Grafana and Alertmanager from the web interface.
+
+## Installation and updates
+
+The system runs in **Docker** — no need to install dependencies and libraries manually.
+Installation and updates are done by the **[wca-tool](../wca-tool/index.md)** utility, and
+maintenance by [`wca`](../cli/index.md) console commands (CSV device import, managing components,
+users, cache, etc.).
+Additional capabilities are added as [components](../components/index.md).
