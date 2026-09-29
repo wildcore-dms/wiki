@@ -71,6 +71,7 @@ nav:
     - "Devices": management/devices.md
     - "Device groups": management/device-groups.md
     - "Device models": management/device-models.md
+    - "Custom parameters": management/custom-parameters.md
     - "Users": management/users.md
     - "Roles and permissions": management/roles.md
 

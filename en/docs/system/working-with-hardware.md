@@ -46,6 +46,10 @@ It is also worth mentioning that some of the data could be displayed in Promethe
 
 ## Additional settings
 ### Model/Device parameters
+
+!!! tip
+    Full list of parameters — [Model and device custom parameters](../management/custom-parameters.md).
+
 #### Local PON description
 Add the following parameter in the **Additional parameters** tab of a model or a device to disable the saving of PON port description synchronization and be able to set it up locally.
 

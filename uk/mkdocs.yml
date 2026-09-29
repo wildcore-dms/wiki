@@ -69,6 +69,7 @@ nav:
       - "Пристрої": management/devices.md
       - "Групи пристроїв": management/device-groups.md
       - "Моделі обладнання": management/device-models.md
+      - "Додаткові параметри": management/custom-parameters.md
       - "Користувачі": management/users.md
       - "Ролі та права": management/roles.md
 

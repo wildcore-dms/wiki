@@ -26,7 +26,7 @@ Click **"Create new access"** or the edit button next to an existing one.
 | **RW community** | SNMP community for writing — required for SNMP actions (port description, enabling/disabling a port, etc.) |
 | **Login** / **Password** | Console credentials (Telnet/SSH): used by macros, ONU registration, the web console and modules that work over the console |
 
-### Connection parameters
+### Connection parameters { #connection }
 
 By default the system-wide connection parameters are used
 (*"Used default connections parameters"*). To set custom ones for this access, click

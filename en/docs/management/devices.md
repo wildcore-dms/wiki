@@ -64,7 +64,7 @@ Row buttons edit and delete the device.
 ### Other blocks
 
 - **Additional parameters** — JSON with working parameters overriding the model's ones.
-  Example — [Local PON description](../system/working-with-hardware.md#local-pon-description).
+  Full list — [Model and device custom parameters](./custom-parameters.md).
 - **Links** — the device's connections to others (uplink/downlink). See
   [Links](../components/links/describe.md).
 - **Coordinates** — the device position on the map: the pin button lets you pick a point on the map.

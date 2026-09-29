@@ -35,7 +35,7 @@ individual pollers or change their intervals for the whole model. See
 [Hardware Poller](../system/poller.md).
 
 **Additional parameters** — JSON with working parameters for all devices of the model
-(e.g. [local PON description](../system/working-with-hardware.md#local-pon-description)).
+(full list — [Model and device custom parameters](./custom-parameters.md)).
 Parameters in the device card take precedence over the model's.
 
 Click **"Save"** after making changes.
