@@ -8,7 +8,6 @@
 
 - "Reboot device", "Clear counters", "Save config on device" buttons — [Switches](../system/switches.md#device-actions)
 - "Edit port" (admin state, speed) and description editing on the port page
-- The "VLANs" tab with VLAN control on ports
 
 ## How it works
 
@@ -30,7 +29,7 @@ Changes are not saved to the switch configuration automatically — use the "Sav
 | **Allow set description** | Port description |
 | **Allow set admin state** | Enabling/disabling a port |
 | **Allow set admin speed** | Speed/duplex |
-| **VLAN control** | The "VLANs" tab |
+| **VLAN control** | The "VLANs" tab (view, some D-Link models) |
 
 !!! note
     Component permissions are **not granted** by default — give them to the required [roles](../management/roles.md).

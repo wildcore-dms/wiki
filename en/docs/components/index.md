@@ -16,7 +16,7 @@
 | [OLTs](./olts.md) | `olts` | OLT page: ONU tree, physical and PON ports, ONU page, DHCP Snooping, ONU blacklist, background OLT polling |
 | [OLTs control](./olts_control.md) | `olts_control` | ONU actions (reboot, disable, delete, reset, description), UNI and physical port control |
 | [Switches](./switches.md) | `switches` | Switch page: ports, VLANs, errors, FDB, cable and SFP diagnostics, port page |
-| [Switches control](./switches_control.md) | `switches_control` | Reboot, save configuration, clear counters, port state/speed/description, VLANs on ports |
+| [Switches control](./switches_control.md) | `switches_control` | Reboot, save configuration, clear counters, port state/speed/description |
 | [Routers](./routers.md) | `routers` | L3 hardware: ARP, FDB, direct routes |
 | [Mikrotik RouterOS](./router_os.md) | `router_os` | Mikrotik routers via API: interfaces, DHCP, ARP, queues, BGP |
 | [Sensors](./sensors.md) | `sensor_devices` | Monitoring devices (sensors) and their mode control |

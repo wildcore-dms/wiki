@@ -58,7 +58,7 @@ See [Working with hardware](../system/working-with-hardware.md).
 
 - **ONUs:** reboot, reset, delete (deregister), enable/disable, clear counters, change description,
   manage UNI ports;
-- **Switch ports:** enable/disable, speed, description, VLANs on ports, clear counters;
+- **Switch ports:** enable/disable, speed, description, clear counters;
 - **Device:** reboot, save configuration;
 - **[ONU registration](../components/onts-registration/getting-started.md)** via a simple form:
   unregistered ONUs are shown on the dashboard and on the OLT page, free ONU numbers are suggested.

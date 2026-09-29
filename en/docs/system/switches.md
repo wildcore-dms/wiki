@@ -3,7 +3,7 @@
 !!! abstract "Overview"
 
     The switch page shows all ports with their state, VLANs, traffic, errors and MAC addresses, lets
-    you manage ports and VLANs, run cable and SFP diagnostics. For L3 hardware ARP, FDB and direct
+    you manage ports, run cable and SFP diagnostics. For L3 hardware ARP, FDB and direct
     route tables are also available.
 
     Supported: D-Link, Edge-core, Huawei, Cisco, Juniper, HP/HPE, Dell, Eltex, Raisecom, TP-Link,
@@ -11,7 +11,7 @@
     Available data and actions depend on the model.
 
 !!! info "Components"
-    Viewing — [Switches](../components/switches.md) (`switches`), L3 tabs — [Routers](../components/routers.md) (`routers`); device and port actions, VLANs — [Switches control](../components/switches_control.md) (`switches_control`); charts — [Charts](../components/prometheus_wrapper.md), [Live traffic](../components/live_traffic.md); FDB history — [FDB history](../components/fdb_history.md).
+    Viewing — [Switches](../components/switches.md) (`switches`), L3 tabs — [Routers](../components/routers.md) (`routers`); device and port actions — [Switches control](../components/switches_control.md) (`switches_control`); charts — [Charts](../components/prometheus_wrapper.md), [Live traffic](../components/live_traffic.md); FDB history — [FDB history](../components/fdb_history.md).
 
 Common page elements (left panel, "Events", "Macros", "History log", "Topology", "Pinger" tabs, etc.)
 are described on [Device list and device page](./device-page.md).
@@ -50,14 +50,11 @@ All ports in one table:
 The refresh button next to the tab name or **"Refresh"** on the left panel requests fresh data from
 the hardware.
 
-## "VLANs" tab
-
-![VLANs on ports](../assets/hardware/switch-vlans.png)
-
-A "port × VLAN" matrix: for each port you see which VLANs it is in and how (`U` — untagged, `T` —
-tagged). The action button next to a port opens a form to add or remove VLANs on the port and change
-the mode. The tab is available if the model supports VLAN management and you have the
-**"VLAN control"** permission.
+!!! note "VLANs tab"
+    For some D-Link models with the **"VLAN control"** permission a "VLANs" tab with a "port × VLAN"
+    matrix may be shown. It currently works in view mode only — VLANs on ports are shown in the
+    **"VLANs"** column of the port table. To change VLANs use [macros](../components/macros/getting-started.md)
+    or the console.
 
 ## L3 hardware tabs { #l3 }
 
@@ -69,7 +66,6 @@ For routers and L3 switches (except Mikrotik RouterOS — see [its own page](./r
 | **ARPs** | ARP table: IP ↔ MAC ↔ interface/VLAN |
 | **FDB** | MAC table of the whole device |
 | **Direct routes** | Networks directly connected to interfaces |
-| **VLANs** | Same as for a switch |
 
 ## Port page
 
@@ -81,9 +77,11 @@ Top buttons:
 |--------|--------|------------|
 | **Go to device** | Back to the switch page | — |
 | **Refresh** | Request fresh port data | — |
-| **Edit port** | The **"Port configuration"** form: admin state (enable/disable the port) and admin speed (auto, 10/100/1000, duplex) | Allow set admin state, Allow set admin speed |
+| **Change port state** | The **"Port configuration"** form: **Admin state** (Enabled / Disabled) and **Admin speed** (Auto or a fixed speed-duplex — options depend on the port, e.g. 10-Full, 100-Full) | Allow set admin state, Allow set admin speed |
 | **Clear counters** | Reset the port counters | Allow clear counters |
 | **Macros** | Run a macro for the port | List and execute macros |
+
+![Port configuration](../assets/hardware/modal-edit-port.png)
 
 Port cards:
 
@@ -112,6 +110,6 @@ Port cards:
 | Changing port description | **Allow set description** |
 | Enabling/disabling a port | **Allow set admin state** |
 | Changing port speed | **Allow set admin speed** |
-| VLAN management | **VLAN control** |
+| "VLANs" tab (view) | **VLAN control** |
 
 See [Roles and permissions](../management/roles.md).

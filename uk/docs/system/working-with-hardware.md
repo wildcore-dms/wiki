@@ -93,7 +93,7 @@ Huawei, автоматична діагностика кабелю тощо — 
 | Дії з ONU та портами OLT | [Керування OLT](../components/olts_control.md) `olts_control` |
 | Реєстрація ONU | [Реєстрація ONU](../components/onts-registration/getting-started.md) `onts_registration` |
 | Сторінка комутатора та порту, діагностика кабелю/SFP, DHCP Snooping на комутаторах | [Комутатори](../components/switches.md) `switches` |
-| Дії з комутатором і портами, VLAN | [Керування комутаторами](../components/switches_control.md) `switches_control` |
+| Дії з комутатором і портами | [Керування комутаторами](../components/switches_control.md) `switches_control` |
 | ARP, FDB, прямі маршрути L3-обладнання | [Маршрутизатори](../components/routers.md) `routers` |
 | Mikrotik RouterOS | [Mikrotik RouterOS](../components/router_os.md) `router_os` |
 | Доступність по ICMP, ICMP-пристрої | [Пінгер](../components/pinger.md) `pinger` |

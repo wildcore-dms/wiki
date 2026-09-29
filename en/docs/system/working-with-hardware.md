@@ -92,7 +92,7 @@ its pages, tabs and buttons are not shown.
 | ONU and OLT port actions | [OLTs control](../components/olts_control.md) `olts_control` |
 | ONU registration | [ONT registration](../components/onts-registration/getting-started.md) `onts_registration` |
 | Switch and port page, cable/SFP diagnostics, DHCP Snooping on switches | [Switches](../components/switches.md) `switches` |
-| Switch and port actions, VLANs | [Switches control](../components/switches_control.md) `switches_control` |
+| Switch and port actions | [Switches control](../components/switches_control.md) `switches_control` |
 | ARP, FDB, direct routes of L3 hardware | [Routers](../components/routers.md) `routers` |
 | Mikrotik RouterOS | [Mikrotik RouterOS](../components/router_os.md) `router_os` |
 | ICMP availability, ICMP devices | [Pinger](../components/pinger.md) `pinger` |
