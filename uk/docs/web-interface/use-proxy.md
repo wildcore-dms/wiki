@@ -13,11 +13,11 @@
 
 Ви маєте змінити наступні налаштування:
 
-`PROXY_ENABLED=true`
+`PROXY_ENABLED=yes`
 
 Заголовок `PROXY_REAL_IP_HEADER` має співпадати з тим, що вказано в конфігурації проксі.
 
-Ви можете зробити ці зміні і через веб-інтерфейс (сторінка `/config/system/configuration`, вкладка Параметри агента), і у файлі `/opt/wildcore-dms/.env`.
+Ви можете зробити ці зміні і через веб-інтерфейс (`Конфігурація > Конфігурація системи` → розділ «Безпека», див. [Налаштування системи](../installation-and-updating/env-configuration.md)), і у файлі `/opt/wildcore-dms/.env`.
 
 !!! warning "Увага"
     Впевніться, що порти `80` і `443` відкриті та доступні ззовні (не заблоконі через `ufw`, `iptables` і налаштований форвардінг через `NAT`, якщо ви його використовуєте).
@@ -36,6 +36,18 @@
     server_name ІМЯ_ВАШОГО_ДОМЕНУ;
 
     client_max_body_size 500M;
+
+    # Стиснення відповідей (gzip)
+    gzip on;
+    gzip_comp_level 5;
+    gzip_min_length 1024;
+    gzip_proxied any;
+    gzip_vary on;
+    gzip_types text/plain text/css text/xml text/javascript
+           application/javascript application/x-javascript application/json
+           application/xml application/xml+rss application/manifest+json
+           image/svg+xml;
+
     location / {
        set $connection_header "";
        set $upgrade_header "";
@@ -63,3 +75,28 @@
 5. Отримайте сертифікат через `Certbot` за допомогою наступної команди: 
 
     `certbot --nginx -d ІМЯ_ВАШОГО_ДОМЕНУ`
+
+### Стиснення відповідей (gzip) { #gzip }
+
+Блок `gzip` у конфігурації вище вмикає стиснення відповідей на проксі. Це помітно прискорює роботу
+веб-панелі через повільні канали та мобільний інтернет: списки пристроїв, ONU, подій та інші
+відповіді API (JSON) стискаються в кілька разів.
+
+| Директива | Значення |
+|-----------|----------|
+| `gzip on` | Увімкнути стиснення |
+| `gzip_comp_level 5` | Рівень стиснення (1–9). 5 — баланс між розміром і навантаженням на CPU |
+| `gzip_min_length 1024` | Не стискати відповіді менші за 1 КБ — для них виграшу немає |
+| `gzip_proxied any` | Стискати відповіді й тоді, коли перед NGINX стоїть ще один проксі/CDN |
+| `gzip_vary on` | Додавати заголовок `Vary: Accept-Encoding` для коректного кешування |
+| `gzip_types` | Типи вмісту для стиснення: HTML/CSS/JS, JSON відповіді API, SVG, маніфест застосунку. `text/html` стискається завжди |
+
+Перевірити, що стиснення працює:
+
+```bash
+curl -s -o /dev/null -w '%{size_download}\n' -H 'Accept-Encoding: gzip' https://dms.example.com/
+curl -sI -H 'Accept-Encoding: gzip' https://dms.example.com/ | grep -i content-encoding
+```
+
+У відповіді має бути `Content-Encoding: gzip`. Після змін застосуйте конфігурацію:
+`sudo nginx -t && sudo systemctl reload nginx`.

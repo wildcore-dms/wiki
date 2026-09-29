@@ -87,7 +87,7 @@ nav:
     - "Authelia": sso/authelia.md
 
   - "Console":
-      - "Main": cli/index.md
+      - "Commands (wca)": cli/index.md
       - "Import devices": cli/import-devices.md
 
   - "Working with hardware":

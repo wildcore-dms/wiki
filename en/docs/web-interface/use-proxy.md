@@ -15,11 +15,11 @@ You can set up a proxy for the system through **NGINX**/**Apache** or any other 
 The system needs to be informed that a proxy is being used.
 You have to change the following settings:
 
-`PROXY_ENABLED=true`
+`PROXY_ENABLED=yes`
 
 `Proxy_REAL_IP_HEADER` header name must match the value specified in the proxy configuration.
 
-You can make these changes both through the web interface (on the `/config/system/configuration` page, Agent parameters tab), and in the `/opt/wildcore-dms/.env` file.
+You can make these changes both through the web interface (`Configuration > System configuration` → "Security" section, see [System configuration](../installation-and-updating/env-configuration.md)), and in the `/opt/wildcore-dms/.env` file.
 
 !!! warning
     Make sure ports `80` and `443` are open and available for the outside world (not blocked by `ufw`, `iptables` and forwared through `NAT` if you're using one).
@@ -38,6 +38,18 @@ You can make these changes both through the web interface (on the `/config/syste
       server_name YOUR_DOMAIN_NAME;
 
       client_max_body_size 500M;
+
+      # Response compression (gzip)
+      gzip on;
+      gzip_comp_level 5;
+      gzip_min_length 1024;
+      gzip_proxied any;
+      gzip_vary on;
+      gzip_types text/plain text/css text/xml text/javascript
+             application/javascript application/x-javascript application/json
+             application/xml application/xml+rss application/manifest+json
+             image/svg+xml;
+
       location / {
          set $connection_header "";
          set $upgrade_header "";
@@ -66,3 +78,28 @@ You can make these changes both through the web interface (on the `/config/syste
 6. Get a sertificate through `Certbot` by running the following command:
 
    `certbot --nginx -d YOUR_DOMAIN_NAME`
+
+### Response compression (gzip) { #gzip }
+
+The `gzip` block in the configuration above enables response compression on the proxy. It
+noticeably speeds up the web panel over slow links and mobile internet: device, ONU and event
+lists and other API responses (JSON) are compressed several times.
+
+| Directive | Meaning |
+|-----------|---------|
+| `gzip on` | Enable compression |
+| `gzip_comp_level 5` | Compression level (1–9). 5 is a balance between size and CPU load |
+| `gzip_min_length 1024` | Don't compress responses smaller than 1 KB — no gain for them |
+| `gzip_proxied any` | Compress responses even when another proxy/CDN sits in front of NGINX |
+| `gzip_vary on` | Add the `Vary: Accept-Encoding` header for correct caching |
+| `gzip_types` | Content types to compress: HTML/CSS/JS, API JSON responses, SVG, app manifest. `text/html` is always compressed |
+
+Check that compression works:
+
+```bash
+curl -s -o /dev/null -w '%{size_download}\n' -H 'Accept-Encoding: gzip' https://dms.example.com/
+curl -sI -H 'Accept-Encoding: gzip' https://dms.example.com/ | grep -i content-encoding
+```
+
+The response must contain `Content-Encoding: gzip`. Apply the configuration after changes:
+`sudo nginx -t && sudo systemctl reload nginx`.

@@ -45,7 +45,8 @@ Saved values are written to the same `.env` file.
 !!! warning
     - Line format is `PARAMETER=value`, no spaces around `=`. Quote values with spaces:
       `APP_NAME="My ISP DMS"`.
-    - Boolean parameters accept `yes` / `no`.
+    - Boolean parameters (shown as `yes` / `no` in the tables) accept any of the value pairs:
+      `yes` / `no`, `true` / `false` or `1` / `0` (case-insensitive).
     - Don't change parameters that are not listed here unless support advised you to.
     - Examples below use **placeholder** values (`dms.example.com`, `<password>`, etc.) —
       substitute your own.

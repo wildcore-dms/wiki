@@ -85,7 +85,7 @@ nav:
       - "Authelia": sso/authelia.md
 
   - "Консоль":
-      - "Опис": cli/index.md
+      - "Команди (wca)": cli/index.md
       - "Імпорт пристроїв": cli/import-devices.md
 
   - "Робота з обладнанням":
