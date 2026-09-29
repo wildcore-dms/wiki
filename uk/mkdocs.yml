@@ -63,6 +63,15 @@ nav:
       - "Використання проксі": web-interface/use-proxy.md
       - "Генерація API ключа": web-interface/api-key-generation.md
 
+  - "Керування":
+      - "Огляд": management/index.md
+      - "Доступи до обладнання": management/device-access.md
+      - "Пристрої": management/devices.md
+      - "Групи пристроїв": management/device-groups.md
+      - "Моделі обладнання": management/device-models.md
+      - "Користувачі": management/users.md
+      - "Ролі та права": management/roles.md
+
   - "Вхід через SSO (OIDC)":
       - "Загальне налаштування": sso/index.md
       - "Keycloak": sso/keycloak.md

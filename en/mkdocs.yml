@@ -65,6 +65,15 @@ nav:
     - "How to use proxy": web-interface/use-proxy.md
     - "API Key Generation" : web-interface/api-key-generation.md
 
+  - "Management":
+    - "Overview": management/index.md
+    - "Device accesses": management/device-access.md
+    - "Devices": management/devices.md
+    - "Device groups": management/device-groups.md
+    - "Device models": management/device-models.md
+    - "Users": management/users.md
+    - "Roles and permissions": management/roles.md
+
   - "Single Sign-On (OIDC)":
     - "General setup": sso/index.md
     - "Keycloak": sso/keycloak.md

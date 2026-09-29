@@ -22,3 +22,6 @@ src="https://www.youtube.com/embed/nHPfLxmZQko">
 
 _Also, you can set model manually, if are you sure_ 
 
+
+!!! tip
+    Detailed description of management sections (accesses, devices, groups, models, users, roles) is in the [Management](../management/index.md) section.
