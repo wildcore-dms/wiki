@@ -46,7 +46,7 @@ The set of groups depends on installed components. The main ones:
 |-------|----------------|
 | **Web portal** | Access to the web interface, dashboard editing (own and global), global search |
 | **System** | System settings, system status, scheduler and its reports, action log, device and poller logs, running the poller. **"Allow authorize another users (generate keys)"** — administrators only |
-| **User management** | Managing users, allowed IPs, updating own information, viewing users |
+| **User management** | Managing users, allowed IPs, updating own information, viewing users, generating [API keys](../web-interface/api-key-generation.md) |
 | **Device management** | Viewing devices, managing devices, accesses, groups, interfaces, favorite interfaces/tags |
 | **External apps** | Access to Grafana (also as admin), Prometheus, Alertmanager, phpMyAdmin |
 | **Analytics** | The analytics section — **for all devices regardless of groups** |

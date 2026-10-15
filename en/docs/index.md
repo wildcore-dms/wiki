@@ -95,6 +95,7 @@ thereby:
 | huawei_s2350_28tp           | Huawei S2350-28TP-EI-AC             | SWITCH   |
 | huawei_smart_ax             | Huawei MA56xx/MA58xx series         | OLT      |
 | juniper_jnp204_series       | Juniper JNP204 series               | ROUTER   |
+| juniper_mx80                | Juniper MX80 series                 | ROUTER   |
 | juniper_qfx51xx_series      | Juniper QFX5100 series              | SWITCH   |
 | mikrotik_crs                | Mikrotik CRS                        | SWITCH   |
 | mikrotik_router_os          | Mikrotik RouterOS                   | ROUTEROS |

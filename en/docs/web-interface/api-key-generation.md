@@ -5,6 +5,11 @@
 
     In case you need an API Key (for example for integration with other services, such as billing) they are easy to issue and revoke through the Web-Interface.
 
+!!! info "Permissions"
+    Creating a key requires the **"Generate API keys"** permission (User management group, since
+    0.31). Without it the `Create API key` button is not shown. Creating a key for another user also
+    requires the user management permission. See [Roles](../management/roles.md).
+
 ## Creating an API Key
 
 To do this you have two options:

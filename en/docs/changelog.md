@@ -1,4 +1,4 @@
-???+ note "0.31 (09.2026)"
+???+ note "0.31 (10.2026)"
 
     **Key changes** 🔑
 
@@ -6,6 +6,7 @@
     - 🌙 Dark theme and refreshed web panel design, field hints on device cards;
     - 📡 ONU signal history (min/max), ONU blacklist, ONU registration fixes for BDcom GP3600 and C-Data FD16xxV3;
     - 🔎 DHCP Snooping for D-Link, BDcom and C-Data;
+    - 🌐 BGP sessions on Juniper, Extreme and Mikrotik routers with background monitoring, Juniper MX80 support;
     - 📱 Fixed PWA "endless loading", modern SSH algorithms for new firmware.
 
     [More...](./changelogs/0.31.md)

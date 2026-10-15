@@ -28,7 +28,7 @@
 | **Leases** | DHCP leases: IP, MAC, hostname, DHCP server, status, lease time and expiration, last seen |
 | **DHCP servers** | Servers: name, interface, address pool, lease time |
 | **Simple queues** | Simple queues: name, target (IP), limit-at, max-limit, type, dynamic/disabled |
-| **BGP sessions** | Name, local and remote address, remote AS, status, uptime |
+| **BGP sessions** | Local AS, Router ID, number of established sessions; for each peer — remote address and AS, IPv4/IPv6, local address, state, time in current state, last error. RouterOS v6 and v7 are supported — see [BGP sessions](./switches.md#bgp) |
 
 Data is refreshed with the tab's refresh button. Interface traffic history is collected by the
 [poller](./poller.md).

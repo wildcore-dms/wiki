@@ -2,16 +2,17 @@
 
 !!! abstract "Overview"
 
-    Working with L3 hardware (routers, L3 switches): ports, device-wide ARP and FDB tables, direct routes, VLANs.
+    Working with L3 hardware (routers, L3 switches): ports, device-wide ARP and FDB tables, direct routes, VLANs, BGP sessions.
 
 ## What it provides
 
 - "Ports", "ARPs", "FDB", "Direct routes", "VLANs" tabs — [L3 hardware](../system/switches.md#l3)
+- "BGP sessions" tab and background BGP session monitoring (Juniper, Extreme) — [BGP sessions](../system/switches.md#bgp)
 - The L3 device port page
 
 ## How it works
 
-Data is retrieved over SNMP: ports, counters, ARP and FDB tables, direct routes. The [poller](../system/poller.md) collects ARP tables in the background — they are also used to find a subscriber by IP ([Search devices](./search_device.md)).
+Data is retrieved over SNMP: ports, counters, ARP and FDB tables, direct routes, BGP peers. The [poller](../system/poller.md) collects ARP tables and BGP session state in the background — they are also used to find a subscriber by IP ([Search devices](./search_device.md)).
 
 ## Permissions
 

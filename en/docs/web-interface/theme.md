@@ -20,8 +20,10 @@ The switch is available in the mobile layout too.
 
 ### How it works
 
-- Two themes are available — **light** (default) and **dark**.
-- The choice is **remembered in the browser** on this device: on another computer or phone the
+- Two themes are available — **light** and **dark**.
+- Until you pick a theme manually, the panel **follows the operating system or browser theme**
+  and switches along with it (e.g. with automatic night mode).
+- A manual choice is **remembered in the browser** on this device: on another computer or phone the
   theme has to be chosen separately. It's not saved in the account settings.
 - The theme is applied instantly in all open tabs and is set before the page loads — no light
   "flash".

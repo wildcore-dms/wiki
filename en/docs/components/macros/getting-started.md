@@ -89,7 +89,7 @@ In this section we will go through the macro creation process step-by-step.
 
         - **Property**: This is the `{{params}}` object property name, used to access its value in the **Template** by using `{{params.property}}`.
         - **Property display name**: Provide a short description for your property, which will be displayed in the macro execution pop-up.
-        - **Required** checkbox: Specify whether the parameter must be selected during macro execution.
+        - **Required** toggle: Specify whether the parameter must be selected during macro execution.
         - To help you choose the right **Parameter type**, refer to the [**Parameter type options**](./parameter_type_options.md).
         - **Visibility condition**: This field defines whether the macro is shown. For example, `!iface` hides it from the device's `Interface` panel.
 
@@ -97,6 +97,14 @@ In this section we will go through the macro creation process step-by-step.
     ??? example
         
         ![](../../assets/macros/macros_add_new_macros_parameter_card_filled_out.png)
+
+    !!! tip "Collapsed cards"
+        Saved parameters are shown collapsed: only **Property**, display name, **Required** and
+        **Parameter type** are visible. The other fields (options, value source, regular expression,
+        visibility condition, etc.) expand with the arrow button on the right of the card. A new
+        parameter, as well as a parameter whose type was changed, opens expanded.
+
+        ![](../../assets/macros/macros_parameters_collapsed.png)
 
     !!! tip 
         

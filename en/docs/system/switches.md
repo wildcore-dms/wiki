@@ -66,6 +66,36 @@ For routers and L3 switches (except Mikrotik RouterOS — see [its own page](./r
 | **ARPs** | ARP table: IP ↔ MAC ↔ interface/VLAN |
 | **FDB** | MAC table of the whole device |
 | **Direct routes** | Networks directly connected to interfaces |
+| **BGP sessions** | Router BGP peers — see [below](#bgp). Shown if the model supports BGP |
+
+## BGP sessions { #bgp }
+
+![BGP sessions](../assets/hardware/router-bgp.png)
+
+The **"BGP sessions"** tab is available for **Juniper** routers (JNP204, MX80, QFX5100),
+**Extreme XOS** and **Mikrotik RouterOS** (on the [RouterOS page](./routeros.md)). The counter on
+the tab is the number of established sessions.
+
+Above the table — **Local AS**, **Router ID** and **Established** (established sessions / all sessions).
+
+| Column | What it shows |
+|--------|---------------|
+| **Remote address** | BGP peer address |
+| **Remote AS** | Peer AS |
+| **IP** | IPv4 or IPv6 |
+| **Local address** | Local address of the session |
+| **Status** | **Established**, BGP state (Idle, Connect, Active, OpenSent, OpenConfirm) or **Disabled** (administratively disabled session) |
+| **In current state** | How long the session has been in its current state (uptime for an established one) |
+| **Last error** | Last NOTIFICATION message with a readable description (e.g. "Hold timer expired", "Cease / Configuration change") and the error code in brackets |
+
+The table can be sorted and filtered by address, AS, IP version and state.
+
+!!! info "Monitoring and events"
+    For Juniper and Extreme the background `bgp_sessions` [poller](./poller.md) is enabled by
+    default (every 5 minutes; the interval is changed in the [model](../management/device-models.md)).
+    It exports session state and uptime metrics to Prometheus and creates [events](../components/events.md)
+    when a session goes down/up, flaps (re-establishes), is changed or removed. Reconnect attempts of a
+    down session (Idle → Connect → Active) don't create separate events.
 
 ## Port page
 
