@@ -15,9 +15,16 @@
 ### In the web interface
 
 Menu `Configuration > System configuration` (requires the **"Read/edit system settings"**
-permission). Parameters are grouped into sections ("Web panel", "System", "Security",
-"Working with devices", component sections). The default value is shown next to each field.
-Saved values are written to the same `.env` file.
+permission). Parameters are split into two tabs:
+
+- **"System configuration"** — "Web panel", "System", "Working with devices" and component
+  sections;
+- **"Security"** — "Sign-in" (session, sign-in methods, SSO), "Security" (brute-force
+  protection, password strength) and "Proxy" sections, plus the list of blocked IP addresses —
+  see [Security and sign-in](../management/security.md).
+
+The default value is shown next to each field. Saved values are written to the same `.env`
+file; only the parameters of the open tab are saved.
 
 !!! note
     Parameters of the "System" section (poller and web server threads, metrics retention)
@@ -84,14 +91,19 @@ Saved values are written to the same `.env` file.
 !!! info
     Parameters of this section are applied after `sudo docker compose up -d` in `/opt/wildcore-dms`.
 
-### Security and proxy
+### Security, sign-in and proxy { #security }
+
+"Security" tab, see [Security and sign-in](../management/security.md).
 
 | Parameter | UI name | Description | Values | Default |
 |-----------|---------|-------------|--------|---------|
 | `API_KEY_EXPIRATION` | API key expiration | User session lifetime after sign-in, seconds | number, e.g. `864000` (10 days) | `864000` |
+| `AUTH_METHODS` | Sign-in methods | Sign-in with login/password (`internal`), via [SSO](../sso/index.md) (`oidc`) or both | `internal`, `oidc`, `internal,oidc` | `internal` |
+| `AUTH_AUTO_INITIATE` | Redirect to SSO immediately | If SSO is the only sign-in method, the login page goes straight to the provider | `yes` / `no` | `no` |
+| `OIDC_*` | SSO: ... | SSO sign-in parameters, see [Single Sign-On](../sso/index.md#configure) | — | — |
 | `RATE_LIMITER_ENABLED` | Brute force protection | Block an IP after failed sign-in attempts | `yes` / `no` | `yes` |
 | `RATE_LIMITER_ATTEMPTS` | Incorrect login/password attempts | Number of failed attempts (within 10 minutes) after which the IP is blocked | number | `3` |
-| `RATE_LIMITER_TIME` | Blocking by IP timeout | How long an IP is blocked, seconds. Unblock manually: `wca security:reset:ipblock <IP>` | number | `3600` |
+| `RATE_LIMITER_TIME` | Blocking by IP timeout | How long an IP is blocked, seconds. To unblock manually see [Unblocking](../management/security.md#unblock) | number | `3600` |
 | `SECURE_CHECK_PASSWORD_STRENGTH` | Check password strength | Require passwords of 8+ characters with upper/lowercase letters, a digit and a special character | `yes` / `no` | `yes` |
 | `TRUSTED_HOST_NETWORK_LIST` | Trusted networks list | Addresses/networks allowed to call the API **without a key** (for integrations, e.g. billing). List only trusted servers. Empty — disabled | comma separated, e.g. `192.0.2.10,192.0.2.0/28` | empty |
 | `PROXY_ENABLED` | Proxy enabled | Take the client IP from the proxy header. Enable only if WildcoreDMS runs behind a [proxy](../web-interface/use-proxy.md) | `yes` / `no` | `no` |
@@ -172,9 +184,7 @@ See also [Optimization](../troubleshooting/optimization.md).
 
 | Parameter | Description | Values | Default |
 |-----------|-------------|--------|---------|
-| `AUTH_METHODS` | Sign-in methods | `internal`, `oidc` or both, comma separated | `internal` |
-| `AUTH_AUTO_INITIATE` | Go straight to the SSO provider | `yes` / `no` | `no` |
-| `OIDC_*` | SSO sign-in parameters | see [Single Sign-On](../sso/index.md#configure) | — |
+| `OIDC_REDIRECT_URI`, `OIDC_FRONTEND_CALLBACK_URL` | SSO addresses when WildcoreDMS is published under a non-standard path, see [Single Sign-On](../sso/index.md#configure) | URL | empty |
 | `API_STRICT_RULES` | Deny API calls that have no permissions defined | `yes` / `no` | `yes` |
 | `SECURE_ENCRYPT_ACCESSES` | Encryption of hardware credentials in the DB. Enable with `sudo wca security:enable-encryption`, not manually — see [FAQ](../faq.md) | `yes` / `no` | `no` |
 

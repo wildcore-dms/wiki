@@ -14,6 +14,7 @@
 | Device management → **Device models** | [Device models](./device-models.md) | pollers and additional parameters for all devices of a model |
 | Users management → **Users** | [Users](./users.md) | accounts, role, device groups, status |
 | Users management → **Roles** | [Roles and permissions](./roles.md) | permission sets assigned to users |
+| Configuration → System configuration → **Security** | [Security and sign-in](./security.md) | sign-in methods and SSO, brute-force protection, unblocking IPs |
 
 ## Initial setup order
 

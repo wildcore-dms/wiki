@@ -74,6 +74,7 @@ nav:
       - "Додаткові параметри": management/custom-parameters.md
       - "Користувачі": management/users.md
       - "Ролі та права": management/roles.md
+      - "Безпека та вхід": management/security.md
 
   - "Вхід через SSO (OIDC)":
       - "Загальне налаштування": sso/index.md

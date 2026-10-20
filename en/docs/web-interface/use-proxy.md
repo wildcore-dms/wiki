@@ -19,7 +19,7 @@ You have to change the following settings:
 
 `Proxy_REAL_IP_HEADER` header name must match the value specified in the proxy configuration.
 
-You can make these changes both through the web interface (`Configuration > System configuration` → "Security" section, see [System configuration](../installation-and-updating/env-configuration.md)), and in the `/opt/wildcore-dms/.env` file.
+You can make these changes both through the web interface (`Configuration > System configuration` → "Security" tab, "Proxy" card, see [System configuration](../installation-and-updating/env-configuration.md)), and in the `/opt/wildcore-dms/.env` file.
 
 !!! warning
     Make sure ports `80` and `443` are open and available for the outside world (not blocked by `ufw`, `iptables` and forwared through `NAT` if you're using one).

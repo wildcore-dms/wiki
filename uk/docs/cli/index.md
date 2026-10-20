@@ -53,7 +53,7 @@ sudo wca user:generate-key billing 365d
 | Команда | Опис |
 |---------|------|
 | `wca auth:configure` | Покроковий майстер налаштування способів входу та SSO (OpenID Connect) — див. [Вхід через SSO](../sso/index.md) |
-| `wca security:reset:ipblock [ip]` | Розблокувати IP, заблокований захистом від перебору паролів. Без аргументу — розблокувати всі |
+| `wca security:reset:ipblock [ip] [--login=<login>]` | Розблокувати IP, заблокований захистом від перебору паролів. `--login` — усі IP, з яких входили під цим логіном. Без аргументів — розблокувати всі. Див. [Безпека та вхід](../management/security.md#unblock) |
 | `wca security:enable-encryption [-f]` | Увімкнути шифрування облікових даних обладнання в БД. **Незворотна операція** — див. [FAQ](../faq.md) |
 | `wca security:generate-encrypt-key [-f]` | Згенерувати ключ шифрування (зазвичай викликається автоматично при увімкненні шифрування) |
 | `wca system:recalc-sessions` | Перерахувати активні сесії користувачів |

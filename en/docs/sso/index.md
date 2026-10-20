@@ -143,6 +143,22 @@ Then the wizard prints the redirect URI to register in the provider, offers to m
 roles to provider groups (for Keycloak it generates an import JSON), saves the settings and
 restarts the request handlers.
 
+### In the web interface
+
+`Configuration > System configuration` → **"Security"** tab → **"Sign-in"** card
+(requires the **"Read/edit system settings"** permission). It contains the same parameters as
+`.env` below (SSO parameter names start with "SSO:"), except `OIDC_REDIRECT_URI` and
+`OIDC_FRONTEND_CALLBACK_URL`. After **"Save"** the settings are applied immediately.
+
+- The **client secret** is not shown in the interface. An empty field keeps the current secret,
+  a new value replaces it.
+- The interface does not check the provider address — check it manually (step 2) or with the
+  wizard.
+- Role-to-group mapping is set in the role card (step 4); the Keycloak import JSON is generated
+  only by the wizard.
+
+See also [Security and sign-in](../management/security.md).
+
 ### Manually in `.env`
 
 The parameters live in `/opt/wildcore-dms/.env`:

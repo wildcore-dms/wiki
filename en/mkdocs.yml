@@ -76,6 +76,7 @@ nav:
     - "Custom parameters": management/custom-parameters.md
     - "Users": management/users.md
     - "Roles and permissions": management/roles.md
+    - "Security and sign-in": management/security.md
 
   - "Single Sign-On (OIDC)":
     - "General setup": sso/index.md

@@ -53,7 +53,7 @@ sudo wca user:generate-key billing 365d
 | Command | Description |
 |---------|-------------|
 | `wca auth:configure` | Step-by-step wizard for sign-in methods and SSO (OpenID Connect) — see [Single Sign-On](../sso/index.md) |
-| `wca security:reset:ipblock [ip]` | Unblock an IP blocked by brute-force protection. Without an argument — unblock all |
+| `wca security:reset:ipblock [ip] [--login=<login>]` | Unblock an IP blocked by brute-force protection. `--login` — all IPs the login was tried from. Without arguments — unblock all. See [Security and sign-in](../management/security.md#unblock) |
 | `wca security:enable-encryption [-f]` | Enable encryption of hardware credentials in the DB. **Irreversible** — see [FAQ](../faq.md) |
 | `wca security:generate-encrypt-key [-f]` | Generate the encryption key (usually called automatically when enabling encryption) |
 | `wca system:recalc-sessions` | Recalculate active user sessions |
